@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155305456263",
+    "project_id": "vantan-connect",
+    "storage_bucket": "vantan-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155305456263:android:219a59223dbc3177a1be22",
+        "android_client_info": {
+          "package_name": "com.example.vantan_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155305456263-a6pcp8min0r93n5qb8dh7fpulmtc7von.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARx-js85t6qD0hVJz7ubLg9cdDIFGL6JM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155305456263-a6pcp8min0r93n5qb8dh7fpulmtc7von.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
