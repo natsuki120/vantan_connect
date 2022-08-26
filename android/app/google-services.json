@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:155305456263:android:219a59223dbc3177a1be22",
+        "mobilesdk_app_id": "1:155305456263:android:ea5c0129f37c41d0a1be22",
         "android_client_info": {
           "package_name": "com.example.vantan_connect"
         }
@@ -29,6 +29,13 @@
             {
               "client_id": "155305456263-a6pcp8min0r93n5qb8dh7fpulmtc7von.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "155305456263-b6m37ao0pgurtrtg338g7kr6juj2me7h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vantanConnect"
+              }
             }
           ]
         }
