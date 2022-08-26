@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: changeColorOnDarkMode(ThemeData(brightness: Brightness.dark)),
+      theme: changeColorOnDarkMode(ThemeData(brightness: Brightness.light)),
       home: const InitialPage(),
     );
   }
