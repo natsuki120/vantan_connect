@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">155305456263-a6pcp8min0r93n5qb8dh7fpulmtc7von.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">155305456263</string>
+    <string name="google_api_key" translatable="false">AIzaSyARx-js85t6qD0hVJz7ubLg9cdDIFGL6JM</string>
+    <string name="google_app_id" translatable="false">1:155305456263:android:ea5c0129f37c41d0a1be22</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyARx-js85t6qD0hVJz7ubLg9cdDIFGL6JM</string>
+    <string name="google_storage_bucket" translatable="false">vantan-connect.appspot.com</string>
+    <string name="project_id" translatable="false">vantan-connect</string>
+</resources>
