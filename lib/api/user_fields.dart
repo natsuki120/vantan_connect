@@ -1,6 +1,6 @@
 class UserFields {
-  static String name = 'name';
-  static String attendance = 'attendance';
+  static String name = '名前';
+  static String attendance = '出席状況';
   List<String> getFields() => [name, attendance];
 }
 

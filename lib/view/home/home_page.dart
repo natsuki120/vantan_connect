@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/api/gsheet.dart';
-import 'package:vantan_connect/api/user_fields.dart';
+import 'package:vantan_connect/model/user_data_of_attendance.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+  HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  User? user;
 
   Future getUsers(String name) async {
-    final user = await getByName(name);
-    print(user);
+    user = await getByName(name);
+    setState(() {});
   }
 
   @override
@@ -21,10 +28,8 @@ class HomePage extends StatelessWidget {
               child: ElevatedButton(
                 child: Text('データ送信'),
                 onPressed: () {
-                  final userInfo = [
-                    {UserFields.name: 'nao', UserFields.attendance: '欠席'}
-                  ];
-                  insert(userInfo);
+                  final user = [User('nao', '出席').toJson()];
+                  insert(user);
                 },
               ),
             ),
@@ -32,10 +37,15 @@ class HomePage extends StatelessWidget {
               child: ElevatedButton(
                 child: Text('データ受信'),
                 onPressed: () {
-                  getUsers('nao');
+                  getUsers('aiueo');
                 },
               ),
             ),
+            Center(
+              child: Text(
+                user == null ? '' : '${user!.name}は${user!.attendance}しています',
+              ),
+            )
           ],
         ),
       ),

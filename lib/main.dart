@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: changeColorOnDarkMode(
         ThemeData(brightness: Brightness.light),
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
