@@ -1,6 +1,6 @@
 import 'package:gsheets/gsheets.dart';
 import 'package:vantan_connect/api/user_fields.dart';
-import 'package:vantan_connect/model/user_state.dart';
+import 'package:vantan_connect/model/user_data_of_attendance.dart';
 
 const credintial = r'''{
   "type": "service_account",
@@ -43,15 +43,8 @@ Future<void> insert(List<Map<String, dynamic>> rowList) async {
   await userSheets!.values.map.appendRows(rowList);
 }
 
-Future<UserState?> getByName(String name) async {
-  if (userSheets == null) {
-    return null;
-  }
+Future<User> getByName(String name) async {
   final json = await userSheets!.values.map.rowByKey(name, fromColumn: 1);
-  if (json == null) {
-    print('q');
-    return null;
-  } else {
-    return UserState.fromJson(json);
-  }
+  print(json);
+  return User.fromJson(json!);
 }
