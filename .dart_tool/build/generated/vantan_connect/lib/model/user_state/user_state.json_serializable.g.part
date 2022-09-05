@@ -5,10 +5,12 @@
 _$_UserState _$$_UserStateFromJson(Map<String, dynamic> json) => _$_UserState(
       name: json['name'] as String? ?? '',
       attendance: json['attendance'] as String? ?? '',
+      attendedDay: json['attendedDay'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$$_UserStateToJson(_$_UserState instance) =>
     <String, dynamic>{
       'name': instance.name,
       'attendance': instance.attendance,
+      'attendedDay': instance.attendedDay,
     };

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/molecule/common/indicator.dart';
+import 'package:vantan_connect/component/molecule/indicator.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/login/login_complete_page.dart';
 import '../../component/button/no_color_button.dart';
