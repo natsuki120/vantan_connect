@@ -17,12 +17,7 @@ class ConfirmPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SpaceBox(height: 72),
-            FourIndicator(
-              firstPercent: 1,
-              secondPercent: 1,
-              thirdPercent: 1,
-              forthPercent: 1,
-            ),
+            FourIndicator(first: 1, second: 1, third: 1, forth: 1),
             SpaceBox(height: 64),
             Text(
               'ご確認ください',

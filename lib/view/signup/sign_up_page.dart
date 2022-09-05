@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/const/space_box.dart';
-import '../../component/organism/guidance_message.dart';
 import '../../component/molecule/indicator.dart';
 import '../login/login_page.dart';
 import 'component/get_sms_code_button.dart';
@@ -17,12 +16,7 @@ class SignUpPage extends StatelessWidget {
         child: Column(
           children: [
             SpaceBox(height: 72),
-            const FourIndicator(
-              firstPercent: 1,
-              secondPercent: 0,
-              thirdPercent: 0,
-              forthPercent: 0,
-            ),
+            const FourIndicator(first: 1, second: 0, third: 0, forth: 0),
             // GuidanceMessage(
             //   mainText: '電話番号の照合',
             //   subText: '入学した際にバンタンへ登録された電話番号を入力してください。入力された番号宛に認証コードを送信します。',

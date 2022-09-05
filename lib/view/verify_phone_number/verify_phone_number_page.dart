@@ -17,12 +17,7 @@ class VerifyPhoneNumberPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            FourIndicator(
-              firstPercent: 1,
-              secondPercent: 1,
-              thirdPercent: 0,
-              forthPercent: 0,
-            ),
+            FourIndicator(first: 1, second: 1, third: 0, forth: 0),
             GuidanceMessage(),
             InputSmsCodeField(),
             SpaceBox(height: 47),
