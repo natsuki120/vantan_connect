@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/atom/common/primary_color_button.dart';
-import 'package:vantan_connect/component/molecule/common/indicator.dart';
+import 'package:vantan_connect/component/atom/primary_color_button.dart';
+import 'package:vantan_connect/component/molecule/indicator.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/const/style_by_platform.dart';
 import '../const/color_schemes.g.dart';
@@ -29,7 +29,7 @@ class ConfirmPage extends StatelessWidget {
               style: headLineSmall(bold, colorScheme!.onBackground),
             ),
             SpaceBox(height: 510),
-            PrimaryColorButton(text: '同意して登録', nextPage: Container()),
+            // PrimaryColorButton(text: '同意して登録', voidCallBack: Container()),
             SpaceBox(height: 23),
             Center(
               child: GestureDetector(

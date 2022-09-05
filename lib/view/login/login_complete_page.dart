@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/atom/common/primary_color_button.dart';
-import 'package:vantan_connect/component/molecule/common/indicator.dart';
+import 'package:vantan_connect/component/atom/primary_color_button.dart';
+import 'package:vantan_connect/component/molecule/indicator.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import '../../const/color_schemes.g.dart';
 import '../../const/style_by_platform.dart';
@@ -32,7 +32,7 @@ class LoginCompletePage extends StatelessWidget {
                 height: 383,
                 child: Image.asset('images/login_complete.png')),
             SpaceBox(height: 105),
-            PrimaryColorButton(text: '始める', nextPage: Container()),
+            // PrimaryColorButton(text: '始める', voidCallBack: Container(), textStyle: null,),
           ],
         ),
       ),

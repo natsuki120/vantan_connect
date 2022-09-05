@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/atom/common/primary_color_button.dart';
-import 'package:vantan_connect/component/atom/common/visibility_icon.dart';
-import 'package:vantan_connect/component/guidance_message.dart';
-import 'package:vantan_connect/component/molecule/common/indicator.dart';
+import 'package:vantan_connect/component/atom/primary_color_button.dart';
+import 'package:vantan_connect/component/atom/visibility_icon.dart';
+import 'package:vantan_connect/component/organism/guidance_message.dart';
+import 'package:vantan_connect/component/molecule/indicator.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/login/get_sms_code_page.dart';
 import 'package:vantan_connect/view/verify_phone_number/component/return_previous_page_button.dart';
@@ -31,10 +31,10 @@ class _LoginPageState extends State<LoginPage> {
               secondPercent: 0,
               thirdPercent: 0,
             ),
-            GuidanceMessage(
-              mainText: 'ログイン',
-              subText: '登録されている電話番号またはアカウント番号と、登録時に設定したパスワードを入力してください',
-            ),
+            // GuidanceMessage(
+            //   mainText: 'ログイン',
+            //   subText: '登録されている電話番号またはアカウント番号と、登録時に設定したパスワードを入力してください',
+            // ),
             SpaceBox(height: 42),
             TextFormField(
               decoration: InputDecoration(
@@ -66,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: visibility,
             ),
             SpaceBox(height: 32),
-            PrimaryColorButton(text: '本人確認へ', nextPage: GetSmsCodePage()),
+            // PrimaryColorButton(text: '本人確認へ', voidCallBack: GetSmsCodePage()),
             SpaceBox(height: 23),
             Center(
               child: GestureDetector(

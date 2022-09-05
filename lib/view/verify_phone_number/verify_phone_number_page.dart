@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/verify_phone_number/component/input_sms_code_field.dart';
-import '../../component/molecule/common/indicator.dart';
+import '../../component/molecule/indicator.dart';
 import 'component/guidance_message.dart';
 import 'component/re_send_sms_code.dart';
 import 'component/return_previous_page_button.dart';

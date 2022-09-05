@@ -8,6 +8,7 @@ class UserState with _$UserState {
   const factory UserState({
     @Default('') String name,
     @Default('') String attendance,
+    @Default(0) int attendedDay,
   }) = _UserState;
 
   factory UserState.fromJson(Map<String, dynamic> json) =>
