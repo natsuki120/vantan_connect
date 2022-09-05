@@ -173,6 +173,7 @@ abstract class _UserState implements UserState {
       final String attendance,
       final int attendedDay}) = _$_UserState;
 
+
   factory _UserState.fromJson(Map<String, dynamic> json) =
       _$_UserState.fromJson;
 
