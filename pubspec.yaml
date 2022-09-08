@@ -40,6 +40,9 @@ dependencies:
   freezed_annotation:
   json_annotation:
   gsheets: ^0.4.2
+  image_picker: ^0.8.5+3
+  firebase_storage: ^10.3.7
+  cached_network_image: ^3.2.2
 
 dev_dependencies:
   flutter_test:

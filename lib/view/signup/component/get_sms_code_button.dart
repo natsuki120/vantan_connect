@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/service/sign_in_service.dart';
-import '../../../const/color_schemes.g.dart';
+import '../../../component/atom/color_schemes.g.dart';
 
 class GetSmsCodeButton extends StatelessWidget {
   const GetSmsCodeButton({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../const/color_schemes.g.dart';
+import '../atom/color_schemes.g.dart';
 
 class ColorButton extends StatelessWidget {
   const ColorButton({

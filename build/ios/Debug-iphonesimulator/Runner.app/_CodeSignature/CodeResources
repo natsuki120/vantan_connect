@@ -6,7 +6,7 @@
 	<dict>
 		<key>AppFrameworkInfo.plist</key>
 		<data>
-		E9JtVX3y69tg0aOODFcuFW1dIEM=
+		TsHk0H1Eny0vQ4S4SNJAJsXRTig=
 		</data>
 		<key>AppIcon20x20@2x.png</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		mHYh+kIlxOoi/nEmoVjvco5YhO8=
+		Fr83UH/eOURm2fTcRHKeA9WUDdU=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -110,15 +110,23 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
+<<<<<<< HEAD
 		R1mKptr6Aq/Ph9oh4KJqAOlriWs=
+=======
+		HQ1CNN30PlF6A8rPAX6jawGWh9M=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
-		2WH3EkzfNpYxRzEQezsUEM18s6A=
+		85iaADE5tc/NukRC+KGdiZaZ0ZA=
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
+<<<<<<< HEAD
 		N9tC8O4MMWxPKe2dAPTlyA/301Q=
+=======
+		r/wKQsHbgdvIcvQo+cvIJCav8kg=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -130,7 +138,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		0z+3W83pIKfjdu4jYzGRLlgrKcY=
+		ysxdykVUUeBsRqjKinxwbVowpWk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -146,19 +154,31 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/isolate_snapshot_data</key>
 		<data>
-		eQjUSN4q35Uzd/55EBjW4jV/nYU=
+		+udtKIRyAcIS6rTHnYkqPRthPjk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
+<<<<<<< HEAD
 		3wz2hO7N534ZT7VSiU0qQhHYcYs=
+=======
+		ANSAO+noZk6oAY9FLbNiilbeKGo=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
+		<data>
+		EuCtopc75SYUAHHOigYaHA0wlhg=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/vm_snapshot_data</key>
 		<data>
-		EGrx+ceECFYMCwgndwmfZXgJFDU=
+		h8pEgB2abbws6A/J7VE0iurKhow=
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
+<<<<<<< HEAD
 		bDWJXZ2Ksk6byDpyL7Ety/EqCqA=
+=======
+		WRLApTgLGFkWi9S6mAym22LDQiA=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -168,9 +188,37 @@
 		<data>
 		W3DHBLZGA33hc31TBdvH/S22op8=
 		</data>
+		<key>Frameworks/FMDB.framework/FMDB</key>
+		<data>
+		57+yOdjjuRU4nV6YMRNWQF8NEtU=
+		</data>
+		<key>Frameworks/FMDB.framework/Info.plist</key>
+		<data>
+		geZu0EiOxtOvZCHNk4K1FS5qCJ8=
+		</data>
+		<key>Frameworks/FMDB.framework/_CodeSignature/CodeResources</key>
+		<data>
+		ghDt8rFsZrAUDTBNUofyTIOlCko=
+		</data>
+		<key>Frameworks/FirebaseAppCheckInterop.framework/FirebaseAppCheckInterop</key>
+		<data>
+		7b88ceVQqYDdkooOkrBagS2ZQmE=
+		</data>
+		<key>Frameworks/FirebaseAppCheckInterop.framework/Info.plist</key>
+		<data>
+		Aqdl/Nil5nD3HNTV5hqqZIYyPDI=
+		</data>
+		<key>Frameworks/FirebaseAppCheckInterop.framework/_CodeSignature/CodeResources</key>
+		<data>
+		IWzOnrdE8sDev8JhylaPKaUYiBw=
+		</data>
 		<key>Frameworks/FirebaseAuth.framework/FirebaseAuth</key>
 		<data>
+<<<<<<< HEAD
 		LR3OunP3N5dEFg8TqydV8UCIODE=
+=======
+		Vg2t5AGC2DmfanQyNLnX6Td8+cw=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
 		<data>
@@ -180,9 +228,25 @@
 		<data>
 		sc9XulE9cOFXgs8mtayFvG51wJE=
 		</data>
+		<key>Frameworks/FirebaseAuthInterop.framework/FirebaseAuthInterop</key>
+		<data>
+		cokRROTWB/p04yjMbkxgmkSzHbA=
+		</data>
+		<key>Frameworks/FirebaseAuthInterop.framework/Info.plist</key>
+		<data>
+		9tgovQ13rov5oEJzMZtM2vX3RQo=
+		</data>
+		<key>Frameworks/FirebaseAuthInterop.framework/_CodeSignature/CodeResources</key>
+		<data>
+		bMzqz/0/YCUMwDNFnwVmgXSVf8Y=
+		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
+<<<<<<< HEAD
 		PLInULz9ISCKZ6jMDVxbFidJ5Gs=
+=======
+		Fc4yVQuDvevPhhqB4isMOpNieaM=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -194,7 +258,11 @@
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/FirebaseCoreDiagnostics</key>
 		<data>
+<<<<<<< HEAD
 		kMmsDV8iJMiOHZ4BMGq29fifNb0=
+=======
+		ZyqzhZIkQE5Mt+RWKVn7YoVRLaU=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
 		<data>
@@ -204,9 +272,25 @@
 		<data>
 		aJO75qn0wfboqq3oP84eD0npMjM=
 		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension</key>
+		<data>
+		VEKb6IwQhSMlMRSuHoQjQtL7c9g=
+		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/Info.plist</key>
+		<data>
+		zhP4oHuq5cwxk0+m0I7Brk5PPZo=
+		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/_CodeSignature/CodeResources</key>
+		<data>
+		BarKxjxD3so1AA3D1LgtCnrNOqk=
+		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
 		<data>
+<<<<<<< HEAD
 		HuX6wV/IXXyYmUtM8wzHiFJif9k=
+=======
+		SDESIf0kXj/pNAKtxAU2/1FeJVY=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
 		<data>
@@ -216,9 +300,33 @@
 		<data>
 		CyeNE8BaRGK6J7B9GZg7jhoI1Jg=
 		</data>
+		<key>Frameworks/FirebaseStorage.framework/FirebaseStorage</key>
+		<data>
+		OmE/nU2wc4QaciriRfa8xFPXfJA=
+		</data>
+		<key>Frameworks/FirebaseStorage.framework/Info.plist</key>
+		<data>
+		9qRuRBuVoodMBW3Qs2WuUGH6Zr8=
+		</data>
+		<key>Frameworks/FirebaseStorage.framework/_CodeSignature/CodeResources</key>
+		<data>
+		CJwnCZwakbb06bI6uWQmHi2WJc4=
+		</data>
+		<key>Frameworks/FirebaseStorageInternal.framework/FirebaseStorageInternal</key>
+		<data>
+		BR5EFkcRbnYz2m6hfZ83lrHWiZE=
+		</data>
+		<key>Frameworks/FirebaseStorageInternal.framework/Info.plist</key>
+		<data>
+		CI5JDj0eKsw4/5jHjJFW+pw/M0o=
+		</data>
+		<key>Frameworks/FirebaseStorageInternal.framework/_CodeSignature/CodeResources</key>
+		<data>
+		10DVQ2pie8Afr1doQRuPUsirGPw=
+		</data>
 		<key>Frameworks/Flutter.framework/Flutter</key>
 		<data>
-		XQz4B96hgK1LGU4I2MUzIcGsJmg=
+		RbDjhfNE87Fs6gx2xOpO+TbXAD4=
 		</data>
 		<key>Frameworks/Flutter.framework/Headers/Flutter.h</key>
 		<data>
@@ -282,11 +390,11 @@
 		</data>
 		<key>Frameworks/Flutter.framework/Headers/FlutterViewController.h</key>
 		<data>
-		Q3r7sTHoNIBT8yAHHi1CJOHApog=
+		UCKxCRw4ftESNOrjckKsTk5MwvI=
 		</data>
 		<key>Frameworks/Flutter.framework/Info.plist</key>
 		<data>
-		noyPpMfAav48P397Qy3mepFUKh8=
+		cD/SFHerNr5Irscr71/WfqemFsU=
 		</data>
 		<key>Frameworks/Flutter.framework/Modules/module.modulemap</key>
 		<data>
@@ -294,15 +402,19 @@
 		</data>
 		<key>Frameworks/Flutter.framework/_CodeSignature/CodeResources</key>
 		<data>
-		yG7apwx81jgtg/lnEyzQeEh/7/A=
+		kQCH9CKMwF+E/sP/knar+9mWHsI=
 		</data>
 		<key>Frameworks/Flutter.framework/icudtl.dat</key>
 		<data>
-		5zcJ5BY+w7z+M0to6P+uUWPn04o=
+		q5acp6rOkQ+ckG1e10c6ecrMr8U=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<data>
+<<<<<<< HEAD
 		Y7aC+NGOV5oxSFmuXj5du0duhqg=
+=======
+		la/6+Um7DbZywMtOxRm7V/uGXBU=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
 		<data>
@@ -314,7 +426,11 @@
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
 		<data>
+<<<<<<< HEAD
 		r6lewbLQ92IShpYYaf9OTuClclM=
+=======
+		D6+GRF6lW7XrQ1FzvJKzhylClhw=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
 		<data>
@@ -326,7 +442,11 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
+<<<<<<< HEAD
 		Ldh1n9X1fPeQQHfudywSsFTWi4I=
+=======
+		lKMcLFdl63NkImN4teHw3ulSxTw=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -335,6 +455,18 @@
 		<key>Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources</key>
 		<data>
 		mJPL5y0Z+wxt2BxoSy9ppvPgSa4=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/Info.plist</key>
+		<data>
+		oJERRJLgILDmLkr1981VeekeRH8=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/_CodeSignature/CodeResources</key>
+		<data>
+		9FmUpDOfqqQ8TwSJSBE/8ddeGv0=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios</key>
+		<data>
+		0p2ZhPISdoG0JZ9akSy4UqK4C20=
 		</data>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
 		<data>
@@ -346,11 +478,43 @@
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
+<<<<<<< HEAD
 		jb5ukc8lUhPWAMuabtBLCllic7k=
 		</data>
 		<key>Info.plist</key>
 		<data>
 		DDOjQqJsIxZb4Eo0lwB3BaspNmM=
+=======
+		iz30KhWMkcxp34ls1pAPKJtTvy8=
+		</data>
+		<key>Frameworks/path_provider_ios.framework/Info.plist</key>
+		<data>
+		if5wsKfJPG2oK9Qh6bV1C3xL1d4=
+		</data>
+		<key>Frameworks/path_provider_ios.framework/_CodeSignature/CodeResources</key>
+		<data>
+		FACQUnVk1oLraD8Wt6PW3eCKEyk=
+		</data>
+		<key>Frameworks/path_provider_ios.framework/path_provider_ios</key>
+		<data>
+		RfuvRAbFLpi6srtLr+YwvrWkmEs=
+		</data>
+		<key>Frameworks/sqflite.framework/Info.plist</key>
+		<data>
+		6RdVq0NcMyo+Tpgdi8bIFTaWz3w=
+		</data>
+		<key>Frameworks/sqflite.framework/_CodeSignature/CodeResources</key>
+		<data>
+		7v1GJwFwJAJ2I8Yy1d8hPwZif24=
+		</data>
+		<key>Frameworks/sqflite.framework/sqflite</key>
+		<data>
+		gh4VeIQUU5ZhTmKEkDzDtF1e+1k=
+		</data>
+		<key>Info.plist</key>
+		<data>
+		Coz3xnDi9auaup39L5xp7JsAnik=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -371,7 +535,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HvMNaysbwvmfab4yQCamWTuf/ApsPJXOj2cLUOJOWDo=
+			ZewAT3qa2Eymb9isycy5D/pSpFBsEhFjCoY0I8m+BYc=
 			</data>
 		</dict>
 		<key>AppIcon20x20@2x.png</key>
@@ -504,7 +668,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			stAS+Um8qVjZm0ZeONdweFS67hBOfK+UO3ZEX2aajbY=
+			yTPOrQ3UzoPJHpYMzekgLZKoYRbqe8E3UB1SalG1yks=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -553,21 +717,29 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			vdqN+R+ycvnJsBhfNYi7LIScrFq4Y5i+6VWiJsDPgXI=
+=======
+			XHubNlLAoew02cSZZTyFIGUUuON1Tmfb5Uo0E9SMou4=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Te4ceyazB0btZ+MzP0KoJ/8ddM4nxEjyFgYtwvjMuyk=
+			F5eso6WFjNZ3xF2PtIJY3OWSUnnInZwdgEkS5dxnfco=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			I9nYDmuxY5cqi4klCiDLRxNWj0A+hr9c818xrIcSjGc=
+=======
+			ngPDMC7h1ht6ObWIm5SVaU+z6Q8Li+cOtsJeYpjf3AU=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -588,7 +760,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rS2sz+XBCHOuBstkH3QT/D3Upna3s1lmW31zcDc9BMY=
+			J1DX6RSQ41gszxIJKzFtEnLSzMmDV8Y5IWgLfdxHNwM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -616,28 +788,43 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C7/dHOIHQrKZs9QJ05ge+h+ASynlvfrCK18NZnYRNOw=
+			eSIT6ez3qoVubFYyO1nZwI2rBt+8+ysx4WZAsR28p80=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			weM0IMBHdS1iAnlKwXxlOcEKA6ELTo/5WhQblHkfjxo=
+=======
+			PiuI9yDUnpZjnZ2fPhfLzv3kS0AJ9X1pHhmS7v98G7I=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xs8p7rurNO49r6C4C/TnmAHHs2chn5hoqfF/oRLXkV4=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/vm_snapshot_data</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cK33CI3s1P2SzbU//6hag8jxyl1KnDk2YkEoRBtUvuc=
+			nfs3sjv7oinwH9C9t8WvFHN0xSlF9POWHw5G1/7TY2A=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			RUv8n9wn2LuymTP77cX571mqAtHZWqjM0/aZ+efjtzY=
+=======
+			io+qJur5mcdv+jmdq2i9kPadcY5DZh+UilXoMMLYU8o=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -654,11 +841,57 @@
 			DWJWITlI6gZxblxww0RuTO/fUF+z0ewjSLHvFEfjYf4=
 			</data>
 		</dict>
+		<key>Frameworks/FMDB.framework/FMDB</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WlgMvOuOOUa+JSFr1JQ2v2OZUHTkl8ZriK1vd5CRY7E=
+			</data>
+		</dict>
+		<key>Frameworks/FMDB.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7TOlH7b6e1r/35oq11ycf2H7/DnD64Eh5iNvLAdEHTw=
+			</data>
+		</dict>
+		<key>Frameworks/FMDB.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1KjeZuEqbOLPr/Yo6/Jk68tC2yJMufoK/jM0y+tRomU=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseAppCheckInterop.framework/FirebaseAppCheckInterop</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IZpFyyBqWnynTpNLaIDdf/mbqj4nPMwN3KxfMpoHfMw=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseAppCheckInterop.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			H8ZMpoPnpbmmDQ6CMWI/SVkKUtVkHJXSZCNWvgcpan0=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseAppCheckInterop.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lmLIx3CiV80L9aQdQF//deutpXvP/53L5fECGfhNj/o=
+			</data>
+		</dict>
 		<key>Frameworks/FirebaseAuth.framework/FirebaseAuth</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			j6ChEhRVvVa0nmC48TGfW1Ksy1PyFCr+3ooPOKoqScg=
+=======
+			Df35Kz9d3hh/0EmMPygtX1i/7Q3e1sKDSZ+Hr0UWWG8=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
@@ -675,11 +908,36 @@
 			7/jBLYCPOl7P6bdIy4FiD6A2w4aDR/zYJmE30MrqWwk=
 			</data>
 		</dict>
+		<key>Frameworks/FirebaseAuthInterop.framework/FirebaseAuthInterop</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dTKgPccF8B9b/piTvxro97R9fjCC4A+WGTT5ppBhzkY=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseAuthInterop.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uTsXMAw8flnNKr6nh5QZQYHtEH6WMcPb9bfwHYLwTow=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseAuthInterop.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9Ksv6PR/QyntEmjM6PTZeba1RkjLePV52aqcT+htjHQ=
+			</data>
+		</dict>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			MYQZzaKySehg/etrfJ/TfL6/I7gY04KV6eOJqsU3o70=
+=======
+			Tc0OLUOXAa53BFt9o7fBWiV1Xt5fBadUOob9HaIN4uY=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -700,7 +958,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			bNcVdC+3FYa3gj3v+rI0+jowFcLw9K2ZbqB+VLtjzqA=
+=======
+			snShf11WyFcitC7ne/csC0HB9sWNH6qVjuqin0bIrU0=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
@@ -717,11 +979,36 @@
 			Sk/BCEpoXS4jXz0vwjudigquAKlCq0UwsIg/tpEWTYY=
 			</data>
 		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HnzJHyIm/2LQaV0X6r+SjLTK3CLfwn1X9LYYetI8mTY=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TkN50qwm7tlyP4VNyt7HS0Gaald42H0mBjYtGMxOLVM=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HiJ5hywXmpfzr4D69dTWTmnG0h66A+hD03/L9COci70=
+			</data>
+		</dict>
 		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			/AC8Zrx/hDhn8MXu90rVp5xA0sgPvm2dhbkcJpxmv1k=
+=======
+			ZKlb2jmwzR7wpCcZDWY48az5R/iXcuFkCiuqeEQoDAQ=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
@@ -738,11 +1025,53 @@
 			RCGhgqgobtpI5xx3XrByt5rBQ4+Bo3tStcqSaLlgzOc=
 			</data>
 		</dict>
+		<key>Frameworks/FirebaseStorage.framework/FirebaseStorage</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			C8sFSK9HVNa29mwPjLclXL1fGg0lxPZSndUF7MGm/fI=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseStorage.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			25nprOHnt98QSZQzxw/ikbdcYDOzzExzmF2ly6AZSuU=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseStorage.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wV6tA5hdtJKf4uF/ED05w2/TypnJj4z7n7H4ks9x5TM=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseStorageInternal.framework/FirebaseStorageInternal</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BrB7PHZZwxs7fPwUS0QuDSvfE4qw6w0agQQQaiPga8w=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseStorageInternal.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XP628EqSREJFOGMnNPu6vm+svFhS2/YYHZUmw9hpAuI=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseStorageInternal.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OEz1W/pgm3wqGIJBtknxmaaDqUpP+nd5YtXerqdxGVU=
+			</data>
+		</dict>
 		<key>Frameworks/Flutter.framework/Flutter</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			adPVImsS42+NWq6vmhm1oO06Lf7SaYusSsX8eEPXctI=
+			oUmbY/3kbFPmkCJzrLLGX2Z/JHleWjW/Whnhu4Ux3cA=
 			</data>
 		</dict>
 		<key>Frameworks/Flutter.framework/Headers/Flutter.h</key>
@@ -854,14 +1183,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TEZV6yflvdLz+8NOLbYifS8EwNzhPtmGY7HU0bFzNAk=
+			C0fpf8JWYFfVJpaZWQrws4doHE19mmLZH79B8kp6ATs=
 			</data>
 		</dict>
 		<key>Frameworks/Flutter.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OfwPyeONiR3LQJ9wnJ4sB/KrlMQRiI+QbHOJJ96kpIw=
+			iSSQOr473ybTbnD+gyLB0RHi593SIeRDcEcguCNNlLg=
 			</data>
 		</dict>
 		<key>Frameworks/Flutter.framework/Modules/module.modulemap</key>
@@ -875,21 +1204,25 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yzS0YCYrctcadPx4AQypbHONVQqfFnvLbHbikJmoGFw=
+			onjzTq0O5Jlr2MF00xb9Zp69RN22k38EWBpgtJFr2Bc=
 			</data>
 		</dict>
 		<key>Frameworks/Flutter.framework/icudtl.dat</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yNAOslsdK6e70q88cOrqlKovbuH0GiUDe+ICgawnSrQ=
+			sA+D9pONLsc1rI+XDHefj/KAY7kac9Ait6lUu4UjHDg=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			2l6BrF29vzi998g5NFZvv/qGm88gsyX3rrNdWgW/5dY=
+=======
+			j4+Vbq54PeWOivRoCatJmtXk7aYHXlANBaThxM8qlIg=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
@@ -910,7 +1243,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			e9DPlB3EYdSISHHiHYnGq244SWKmP4RsOoLuQGeR++U=
+=======
+			AGfzYb7O93HV7HQCHc9w1FRWQik5oYYWomVR8Jibwwc=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
@@ -931,7 +1268,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			DbFjDj2khG3YvsNW0TyHUkJvA5Fbg5BDYzDfRxDUdDc=
+=======
+			wgSiRlch4iEiT19JmYp/k/wP9vUbyWd26t8s5HMnhRA=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -946,6 +1287,27 @@
 			<key>hash2</key>
 			<data>
 			L5AnaW82qVXM0CUkoHcPc6uG5gQccqWG7LyvNPKnPn0=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1KmsT0vrA7DKo22z9q6b+usgBMQ27H9T3c61xTG76yg=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MuqkAvYgcrwwdKJUHGMrjj1lS440eUAXBvM+D1OLPMU=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jalMn2JG5FHUssDJQWhkrsT2AsIe2ObcmFRf/JktFZI=
 			</data>
 		</dict>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
@@ -966,7 +1328,53 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			vg95LA6uBK/nIH5O3KVoQXO2finW23IPhdZkiDKBg48=
+=======
+			dEtF/M6tD59Q87kKAKzxC2EFXgmNZCKZBYocah4TBXY=
+			</data>
+		</dict>
+		<key>Frameworks/path_provider_ios.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9ZU/l8rt072xddZGm6D3VZrqgrgMNvM4Tac5b5uXSrg=
+			</data>
+		</dict>
+		<key>Frameworks/path_provider_ios.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U6ZNTiXBObdMT7DfDirXeqn+GVSGGiD9kJuJz/yCBfI=
+			</data>
+		</dict>
+		<key>Frameworks/path_provider_ios.framework/path_provider_ios</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/BcxHH/vIVDowk2GGqXrStMvGJvWzV0TSRhhLHYQZwA=
+			</data>
+		</dict>
+		<key>Frameworks/sqflite.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ldDMpPvDWZz0M6nJsUdHoixSX+yZpJID7R3S/O1o5vo=
+			</data>
+		</dict>
+		<key>Frameworks/sqflite.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yGnjKxYtmFnkWAFMTsp4P2No2Sheb7RVNTLA2GMnxVQ=
+			</data>
+		</dict>
+		<key>Frameworks/sqflite.framework/sqflite</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GRmvfXgyPbKzuj3TvzjL/GxM199kzW56UkypZ2Cqee4=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>gRPCCertificates-Cpp.bundle/Info.plist</key>

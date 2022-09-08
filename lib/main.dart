@@ -2,8 +2,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/api/gsheet.dart';
 import 'package:vantan_connect/view/home/home_page.dart';
+<<<<<<< HEAD
+=======
+import 'package:vantan_connect/view/initial/initial_page.dart';
+import 'package:vantan_connect/view/login.dart';
+import 'package:vantan_connect/view/profile_page.dart';
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 import 'firebase_options.dart';
-import 'const/color_schemes.g.dart';
+import 'component/atom/color_schemes.g.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

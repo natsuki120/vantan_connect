@@ -1,4 +1,4 @@
-#Sat Aug 27 16:17:53 JST 2022
+#Tue Sep 06 16:30:16 JST 2022
 base.2=/Users/natsuki/AndroidStudioProjects/vantan_connect/build/app/intermediates/dex/debug/mergeDexDebug/classes3.dex
 path.2=classes3.dex
 base.1=/Users/natsuki/AndroidStudioProjects/vantan_connect/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex

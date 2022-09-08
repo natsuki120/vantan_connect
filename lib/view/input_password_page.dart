@@ -3,8 +3,13 @@ import 'package:vantan_connect/component/guidance_message.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/confirm_page.dart';
 import 'package:vantan_connect/view/verify_phone_number/component/return_previous_page_button.dart';
+<<<<<<< HEAD
 import '../component/molecule/common/indicator.dart';
 import '../const/color_schemes.g.dart';
+=======
+import '../component/organism/indicator.dart';
+import '../component/atom/color_schemes.g.dart';
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 
 class InputPasswordPage extends StatefulWidget {
   const InputPasswordPage({Key? key}) : super(key: key);

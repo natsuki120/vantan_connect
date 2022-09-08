@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:vantan_connect/component/atom/common/primary_color_button.dart';
 import 'package:vantan_connect/component/molecule/common/indicator.dart';
+=======
+import 'package:vantan_connect/component/organism/indicator.dart';
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 import 'package:vantan_connect/const/space_box.dart';
-import 'package:vantan_connect/const/style_by_platform.dart';
-import '../const/color_schemes.g.dart';
+import 'package:vantan_connect/component/molecule/style_by_platform.dart';
+import '../component/atom/color_schemes.g.dart';
 
 class ConfirmPage extends StatelessWidget {
   const ConfirmPage({super.key});

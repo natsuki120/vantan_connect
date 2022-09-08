@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../const/color_schemes.g.dart';
-import '../../../const/style_by_platform.dart';
+import '../../../component/atom/color_schemes.g.dart';
+import '../../../component/molecule/style_by_platform.dart';
 
 class GuidanceMessage extends StatelessWidget {
   const GuidanceMessage({super.key});

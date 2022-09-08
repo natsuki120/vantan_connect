@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		2WH3EkzfNpYxRzEQezsUEM18s6A=
+		85iaADE5tc/NukRC+KGdiZaZ0ZA=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		0z+3W83pIKfjdu4jYzGRLlgrKcY=
+		ysxdykVUUeBsRqjKinxwbVowpWk=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -34,15 +34,23 @@
 		</data>
 		<key>flutter_assets/isolate_snapshot_data</key>
 		<data>
-		eQjUSN4q35Uzd/55EBjW4jV/nYU=
+		+udtKIRyAcIS6rTHnYkqPRthPjk=
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
+<<<<<<< HEAD
 		3wz2hO7N534ZT7VSiU0qQhHYcYs=
+=======
+		ANSAO+noZk6oAY9FLbNiilbeKGo=
+		</data>
+		<key>flutter_assets/shaders/ink_sparkle.frag</key>
+		<data>
+		EuCtopc75SYUAHHOigYaHA0wlhg=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>flutter_assets/vm_snapshot_data</key>
 		<data>
-		EGrx+ceECFYMCwgndwmfZXgJFDU=
+		h8pEgB2abbws6A/J7VE0iurKhow=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -65,7 +73,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rS2sz+XBCHOuBstkH3QT/D3Upna3s1lmW31zcDc9BMY=
+			J1DX6RSQ41gszxIJKzFtEnLSzMmDV8Y5IWgLfdxHNwM=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -93,21 +101,32 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C7/dHOIHQrKZs9QJ05ge+h+ASynlvfrCK18NZnYRNOw=
+			eSIT6ez3qoVubFYyO1nZwI2rBt+8+ysx4WZAsR28p80=
 			</data>
 		</dict>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			weM0IMBHdS1iAnlKwXxlOcEKA6ELTo/5WhQblHkfjxo=
+=======
+			PiuI9yDUnpZjnZ2fPhfLzv3kS0AJ9X1pHhmS7v98G7I=
+			</data>
+		</dict>
+		<key>flutter_assets/shaders/ink_sparkle.frag</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xs8p7rurNO49r6C4C/TnmAHHs2chn5hoqfF/oRLXkV4=
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>flutter_assets/vm_snapshot_data</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cK33CI3s1P2SzbU//6hag8jxyl1KnDk2YkEoRBtUvuc=
+			nfs3sjv7oinwH9C9t8WvFHN0xSlF9POWHw5G1/7TY2A=
 			</data>
 		</dict>
 	</dict>

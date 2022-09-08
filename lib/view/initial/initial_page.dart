@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../const/color_schemes.g.dart';
+import '../../component/atom/color_schemes.g.dart';
 import 'component/app_title.dart';
 import 'component/guid_auth.dart';
 

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/const/space_box.dart';
+<<<<<<< HEAD
 import '../../component/guidance_message.dart';
 import '../../component/molecule/common/indicator.dart';
+=======
+import '../../component/organism/indicator.dart';
+>>>>>>> a341bdf (✨ create profile page and function edit profile)
 import '../login/login_page.dart';
 import 'component/get_sms_code_button.dart';
 import 'component/input_phone_number.dart';
