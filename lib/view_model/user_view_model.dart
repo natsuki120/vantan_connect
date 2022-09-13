@@ -51,14 +51,14 @@ class UserViewModel extends StateNotifier<UserState> {
       profileText: profileText,
       userImagePath: userImagePath,
     );
+    print('更新しました');
     await UserRepository().updateUserInfo(state);
   }
 }
 
 // final logoutProvider = StateProvider((ref) => null);
 
-final userViewModel =
-    StateNotifierProvider.autoDispose<UserViewModel, UserState>(
+final userViewModel = StateNotifierProvider<UserViewModel, UserState>(
   (ref) {
     // ref.watch(logoutProvider);
     return UserViewModel();

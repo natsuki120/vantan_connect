@@ -1,33 +1,31 @@
 import 'package:flutter/material.dart';
-import '../const/color_schemes.g.dart';
+import 'package:vantan_connect/component/molecule/text/description_text.dart';
+import 'package:vantan_connect/component/molecule/text/main_text.dart';
 import '../const/space_box.dart';
-import '../const/style_by_platform.dart';
 
 class GuidanceMessage extends StatelessWidget {
   const GuidanceMessage({
     super.key,
     required this.mainText,
     required this.subText,
+    required this.mainTextStyle,
+    required this.subTextStyle,
+    required this.mainTextAlign,
   });
 
   final String mainText;
+  final TextStyle mainTextStyle;
+  final TextAlign mainTextAlign;
   final String subText;
+  final TextStyle subTextStyle;
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SpaceBox(height: 64),
-        Text(
-          mainText,
-          style: headLineSmall(bold, colorScheme!.onBackground),
-        ),
-        SpaceBox(height: 24),
-        Text(
-          subText,
-          style: bodyMedium(medium, colorScheme!.onBackground),
-        ),
+        MainText(text: mainText, textStyle: mainTextStyle),
+        const SpaceBox(height: 24),
+        DescriptionText(text: subText, textStyle: subTextStyle),
       ],
     );
   }

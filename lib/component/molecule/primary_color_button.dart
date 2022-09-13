@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD:lib/component/atom/common/primary_color_button.dart
-import '../../../const/color_schemes.g.dart';
-=======
-
+import 'package:vantan_connect/component/molecule/style_by_platform.dart';
+import 'package:vantan_connect/component/molecule/text/main_text.dart';
 import '../atom/color_schemes.g.dart';
->>>>>>> a341bdf (✨ create profile page and function edit profile):lib/component/molecule/primary_color_button.dart
 
 class PrimaryColorButton extends StatelessWidget {
   const PrimaryColorButton({
     super.key,
     required this.text,
-    required this.nextPage,
+    required this.callback,
   });
 
   final String text;
-  final Widget nextPage;
+  final VoidCallback callback;
 
   @override
   Widget build(BuildContext context) {
@@ -23,19 +20,13 @@ class PrimaryColorButton extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: colorScheme!.primary,
-          onPrimary: colorScheme!.onPrimary,
+          foregroundColor: colorScheme!.onPrimary,
+          backgroundColor: colorScheme!.primary,
         ),
-        onPressed: () {
-          Navigator.of(context).pushReplacement(
-            MaterialPageRoute<Widget>(builder: (_) => nextPage),
-          );
-        },
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+        onPressed: callback,
+        child: MainText(
+          text: text,
+          textStyle: labelLarge(FontWeight.w600, colorScheme!.onPrimary),
         ),
       ),
     );

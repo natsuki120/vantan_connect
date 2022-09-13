@@ -8,77 +8,13 @@
 		<data>
 		TsHk0H1Eny0vQ4S4SNJAJsXRTig=
 		</data>
-		<key>AppIcon20x20@2x.png</key>
-		<data>
-		fj2z4WpPSTqndb/JQEgPoYW8j/Q=
-		</data>
-		<key>AppIcon20x20@2x~ipad.png</key>
-		<data>
-		fj2z4WpPSTqndb/JQEgPoYW8j/Q=
-		</data>
-		<key>AppIcon20x20@3x.png</key>
-		<data>
-		RQ4GDPQi7DLQmZSZRRJ79BIiQa4=
-		</data>
-		<key>AppIcon20x20~ipad.png</key>
-		<data>
-		cqh2GuGgk3/G8pkWq5SNIs8iIHQ=
-		</data>
-		<key>AppIcon29x29.png</key>
-		<data>
-		yWw7HfGNFHrUJJVBoHiNqnpCE4I=
-		</data>
-		<key>AppIcon29x29@2x.png</key>
-		<data>
-		K4aHZQq9HhiKvxEoBjfaYwZG7Uk=
-		</data>
-		<key>AppIcon29x29@2x~ipad.png</key>
-		<data>
-		K4aHZQq9HhiKvxEoBjfaYwZG7Uk=
-		</data>
-		<key>AppIcon29x29@3x.png</key>
-		<data>
-		Dersp3sib4SSZoCAP6OBsW0WCao=
-		</data>
-		<key>AppIcon29x29~ipad.png</key>
-		<data>
-		yWw7HfGNFHrUJJVBoHiNqnpCE4I=
-		</data>
-		<key>AppIcon40x40@2x.png</key>
-		<data>
-		NWh4viC01GIyxpxpWgB9DSZ+eV4=
-		</data>
-		<key>AppIcon40x40@2x~ipad.png</key>
-		<data>
-		NWh4viC01GIyxpxpWgB9DSZ+eV4=
-		</data>
-		<key>AppIcon40x40@3x.png</key>
-		<data>
-		MNA6Om2kzE2UK2cASqifjyQOcDk=
-		</data>
-		<key>AppIcon40x40~ipad.png</key>
-		<data>
-		fj2z4WpPSTqndb/JQEgPoYW8j/Q=
-		</data>
 		<key>AppIcon60x60@2x.png</key>
 		<data>
 		MNA6Om2kzE2UK2cASqifjyQOcDk=
 		</data>
-		<key>AppIcon60x60@3x.png</key>
-		<data>
-		vykqpuXU0HIMw+wu5LMHvdCJNwk=
-		</data>
 		<key>AppIcon76x76@2x~ipad.png</key>
 		<data>
 		TEis89bYJ5ERdh64hNbenveZwtg=
-		</data>
-		<key>AppIcon76x76~ipad.png</key>
-		<data>
-		FcVj1fviK1kLSgEuJv82EQ61Qtg=
-		</data>
-		<key>AppIcon83.5x83.5@2x~ipad.png</key>
-		<data>
-		jKlBkKg8cgjAMHQmD+TVDSqoPG0=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -110,11 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-<<<<<<< HEAD
-		R1mKptr6Aq/Ph9oh4KJqAOlriWs=
-=======
-		HQ1CNN30PlF6A8rPAX6jawGWh9M=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		pZ69sUemceYkVJGQ2vD5ja5dFtU=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -122,11 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-<<<<<<< HEAD
-		N9tC8O4MMWxPKe2dAPTlyA/301Q=
-=======
-		r/wKQsHbgdvIcvQo+cvIJCav8kg=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		EjuVxGU4C7rbj8qPwF9ZWaK4mM0=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -138,7 +66,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		ysxdykVUUeBsRqjKinxwbVowpWk=
+		qhB+TyOVKOsoVu9qqoUpFPSpYsE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -158,15 +86,11 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-<<<<<<< HEAD
-		3wz2hO7N534ZT7VSiU0qQhHYcYs=
-=======
-		ANSAO+noZk6oAY9FLbNiilbeKGo=
+		9O6AySnz4rgv5/G8TSnKZHr/+3k=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
 		EuCtopc75SYUAHHOigYaHA0wlhg=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/vm_snapshot_data</key>
 		<data>
@@ -174,11 +98,7 @@
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
-<<<<<<< HEAD
-		bDWJXZ2Ksk6byDpyL7Ety/EqCqA=
-=======
-		WRLApTgLGFkWi9S6mAym22LDQiA=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		BbN9iZEwr43/JpS3iYK77pHf27Y=
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -190,7 +110,7 @@
 		</data>
 		<key>Frameworks/FMDB.framework/FMDB</key>
 		<data>
-		57+yOdjjuRU4nV6YMRNWQF8NEtU=
+		P/6gq+H9ZWc5JSC3G1so2K+pmcI=
 		</data>
 		<key>Frameworks/FMDB.framework/Info.plist</key>
 		<data>
@@ -202,7 +122,7 @@
 		</data>
 		<key>Frameworks/FirebaseAppCheckInterop.framework/FirebaseAppCheckInterop</key>
 		<data>
-		7b88ceVQqYDdkooOkrBagS2ZQmE=
+		7+z2U3+KlHDguNambm8uaKgDmEE=
 		</data>
 		<key>Frameworks/FirebaseAppCheckInterop.framework/Info.plist</key>
 		<data>
@@ -214,11 +134,7 @@
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/FirebaseAuth</key>
 		<data>
-<<<<<<< HEAD
-		LR3OunP3N5dEFg8TqydV8UCIODE=
-=======
-		Vg2t5AGC2DmfanQyNLnX6Td8+cw=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		4xnhr1dAkdTimih7cGqfQkOh89Y=
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
 		<data>
@@ -230,7 +146,7 @@
 		</data>
 		<key>Frameworks/FirebaseAuthInterop.framework/FirebaseAuthInterop</key>
 		<data>
-		cokRROTWB/p04yjMbkxgmkSzHbA=
+		fR1wkqaXeHvaWCyJIs+c7mj5jS8=
 		</data>
 		<key>Frameworks/FirebaseAuthInterop.framework/Info.plist</key>
 		<data>
@@ -242,11 +158,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-<<<<<<< HEAD
-		PLInULz9ISCKZ6jMDVxbFidJ5Gs=
-=======
-		Fc4yVQuDvevPhhqB4isMOpNieaM=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		DqgpdsltQUd6vU/tRFzUn1ss5UQ=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -258,11 +170,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/FirebaseCoreDiagnostics</key>
 		<data>
-<<<<<<< HEAD
-		kMmsDV8iJMiOHZ4BMGq29fifNb0=
-=======
-		ZyqzhZIkQE5Mt+RWKVn7YoVRLaU=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		0qyJA967HYPkk9vX4bVbM0WnrTI=
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
 		<data>
@@ -274,7 +182,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension</key>
 		<data>
-		VEKb6IwQhSMlMRSuHoQjQtL7c9g=
+		NjD5Z6ROPfgpNnSjvD4QZBTD6XM=
 		</data>
 		<key>Frameworks/FirebaseCoreExtension.framework/Info.plist</key>
 		<data>
@@ -286,11 +194,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
 		<data>
-<<<<<<< HEAD
-		HuX6wV/IXXyYmUtM8wzHiFJif9k=
-=======
-		SDESIf0kXj/pNAKtxAU2/1FeJVY=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		8tsuPYyW60CsuGzHySC3fs4AcFM=
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
 		<data>
@@ -302,7 +206,7 @@
 		</data>
 		<key>Frameworks/FirebaseStorage.framework/FirebaseStorage</key>
 		<data>
-		OmE/nU2wc4QaciriRfa8xFPXfJA=
+		peJZOdv+DX1PpNtw+d5nA+bdIsw=
 		</data>
 		<key>Frameworks/FirebaseStorage.framework/Info.plist</key>
 		<data>
@@ -314,7 +218,7 @@
 		</data>
 		<key>Frameworks/FirebaseStorageInternal.framework/FirebaseStorageInternal</key>
 		<data>
-		BR5EFkcRbnYz2m6hfZ83lrHWiZE=
+		B8WSLdvP+NzL+/gcXVQNYUxV2lg=
 		</data>
 		<key>Frameworks/FirebaseStorageInternal.framework/Info.plist</key>
 		<data>
@@ -326,7 +230,7 @@
 		</data>
 		<key>Frameworks/Flutter.framework/Flutter</key>
 		<data>
-		RbDjhfNE87Fs6gx2xOpO+TbXAD4=
+		XgKD4sIT1kWMn0kobf25iZ+I1xM=
 		</data>
 		<key>Frameworks/Flutter.framework/Headers/Flutter.h</key>
 		<data>
@@ -410,11 +314,7 @@
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<data>
-<<<<<<< HEAD
-		Y7aC+NGOV5oxSFmuXj5du0duhqg=
-=======
-		la/6+Um7DbZywMtOxRm7V/uGXBU=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		QU0TqI8sAZXN8hIKLrKjA70b3wQ=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
 		<data>
@@ -426,11 +326,7 @@
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
 		<data>
-<<<<<<< HEAD
-		r6lewbLQ92IShpYYaf9OTuClclM=
-=======
-		D6+GRF6lW7XrQ1FzvJKzhylClhw=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		2ciG86MoRiGRyThruG+EMMwZLSU=
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
 		<data>
@@ -442,11 +338,7 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-<<<<<<< HEAD
-		Ldh1n9X1fPeQQHfudywSsFTWi4I=
-=======
-		lKMcLFdl63NkImN4teHw3ulSxTw=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+		QDc7YgLrm9+cWecC7GyHg6pmBg4=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -466,7 +358,7 @@
 		</data>
 		<key>Frameworks/image_picker_ios.framework/image_picker_ios</key>
 		<data>
-		0p2ZhPISdoG0JZ9akSy4UqK4C20=
+		i39jxCQWnxerOeZeIv8oMQMMPYk=
 		</data>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
 		<data>
@@ -478,14 +370,7 @@
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
-<<<<<<< HEAD
-		jb5ukc8lUhPWAMuabtBLCllic7k=
-		</data>
-		<key>Info.plist</key>
-		<data>
-		DDOjQqJsIxZb4Eo0lwB3BaspNmM=
-=======
-		iz30KhWMkcxp34ls1pAPKJtTvy8=
+		P7Y8HsjFtNHSWudJ8h4UYIeWl30=
 		</data>
 		<key>Frameworks/path_provider_ios.framework/Info.plist</key>
 		<data>
@@ -497,7 +382,7 @@
 		</data>
 		<key>Frameworks/path_provider_ios.framework/path_provider_ios</key>
 		<data>
-		RfuvRAbFLpi6srtLr+YwvrWkmEs=
+		t14zNmulDaa8kQSesnFH/zHyMJM=
 		</data>
 		<key>Frameworks/sqflite.framework/Info.plist</key>
 		<data>
@@ -509,12 +394,11 @@
 		</data>
 		<key>Frameworks/sqflite.framework/sqflite</key>
 		<data>
-		gh4VeIQUU5ZhTmKEkDzDtF1e+1k=
+		ztbZp7q8l+vG0POh/8X8gdit8u0=
 		</data>
 		<key>Info.plist</key>
 		<data>
 		Coz3xnDi9auaup39L5xp7JsAnik=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -538,97 +422,6 @@
 			ZewAT3qa2Eymb9isycy5D/pSpFBsEhFjCoY0I8m+BYc=
 			</data>
 		</dict>
-		<key>AppIcon20x20@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xNmihMEjAdD1DiSOxT7VGhmhAUe3dLIzCDmSULDUTFU=
-			</data>
-		</dict>
-		<key>AppIcon20x20@2x~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xNmihMEjAdD1DiSOxT7VGhmhAUe3dLIzCDmSULDUTFU=
-			</data>
-		</dict>
-		<key>AppIcon20x20@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			v5f50yM/M+E4mwn3uK3VN0EwDLg01selyjLL7TY6T7I=
-			</data>
-		</dict>
-		<key>AppIcon20x20~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WSXatQlFH57LsSzopiX51MEEcY7iDK/4sbUQMtHNiUY=
-			</data>
-		</dict>
-		<key>AppIcon29x29.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KFRC9poGtF2ded+AMhgVtUZHNUije3iBm2iVnHuO0jc=
-			</data>
-		</dict>
-		<key>AppIcon29x29@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KrZK+Kxyfqmcarnq/4R/RvvyqaCnigq8vzGA84UWRbQ=
-			</data>
-		</dict>
-		<key>AppIcon29x29@2x~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KrZK+Kxyfqmcarnq/4R/RvvyqaCnigq8vzGA84UWRbQ=
-			</data>
-		</dict>
-		<key>AppIcon29x29@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ncoJ9OXtVoTTxN/0H06LfLhktDgXLXK+BpMV+jYpMPk=
-			</data>
-		</dict>
-		<key>AppIcon29x29~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KFRC9poGtF2ded+AMhgVtUZHNUije3iBm2iVnHuO0jc=
-			</data>
-		</dict>
-		<key>AppIcon40x40@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1a0E3jIe83ysxae5YK/M5xvcuW+gIMSCScFUXdGg9Jc=
-			</data>
-		</dict>
-		<key>AppIcon40x40@2x~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1a0E3jIe83ysxae5YK/M5xvcuW+gIMSCScFUXdGg9Jc=
-			</data>
-		</dict>
-		<key>AppIcon40x40@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gJq/51xEB3DBPE4uRtCWA8IgU+nU4OInXcucHc+7LHU=
-			</data>
-		</dict>
-		<key>AppIcon40x40~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xNmihMEjAdD1DiSOxT7VGhmhAUe3dLIzCDmSULDUTFU=
-			</data>
-		</dict>
 		<key>AppIcon60x60@2x.png</key>
 		<dict>
 			<key>hash2</key>
@@ -636,32 +429,11 @@
 			gJq/51xEB3DBPE4uRtCWA8IgU+nU4OInXcucHc+7LHU=
 			</data>
 		</dict>
-		<key>AppIcon60x60@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PbCMt557AbnoH5VuOgrhAUjQ+v3j6nqnAEjfkFqlLP0=
-			</data>
-		</dict>
 		<key>AppIcon76x76@2x~ipad.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			bbdyZTDXHT9Sy1l5PraRMTuqBHluEp4eBDwKWKG//S8=
-			</data>
-		</dict>
-		<key>AppIcon76x76~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			I8E9Rj9dylwfFKFJNAA2AcKfEhj9RhAW2KIs71eaZl8=
-			</data>
-		</dict>
-		<key>AppIcon83.5x83.5@2x~ipad.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zuVl9eYhFlabZJgLIJ/Vyks9NzkBH1NDJQszoaLG62U=
 			</data>
 		</dict>
 		<key>Assets.car</key>
@@ -717,11 +489,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			vdqN+R+ycvnJsBhfNYi7LIScrFq4Y5i+6VWiJsDPgXI=
-=======
-			XHubNlLAoew02cSZZTyFIGUUuON1Tmfb5Uo0E9SMou4=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			czNAur2dc1rFyfCmB8WZaqN/YULEegiT2xXeOWCbGmU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -735,11 +503,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			I9nYDmuxY5cqi4klCiDLRxNWj0A+hr9c818xrIcSjGc=
-=======
-			ngPDMC7h1ht6ObWIm5SVaU+z6Q8Li+cOtsJeYpjf3AU=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			slFKfL3FHG4/4nbjbRyO2TNJ54fbMCYVXpkT2jRH+Fc=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -760,7 +524,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J1DX6RSQ41gszxIJKzFtEnLSzMmDV8Y5IWgLfdxHNwM=
+			hKbnd+m12rIPGnq+knEV3jy1XAE2LRBZw/OdJIE2Of4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -795,10 +559,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			weM0IMBHdS1iAnlKwXxlOcEKA6ELTo/5WhQblHkfjxo=
-=======
-			PiuI9yDUnpZjnZ2fPhfLzv3kS0AJ9X1pHhmS7v98G7I=
+			E9IzeTbquIjXDPt7XOkbuat1lyPCBzgAOgr0TvMsd14=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
@@ -806,7 +567,6 @@
 			<key>hash2</key>
 			<data>
 			xs8p7rurNO49r6C4C/TnmAHHs2chn5hoqfF/oRLXkV4=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/vm_snapshot_data</key>
@@ -820,11 +580,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			RUv8n9wn2LuymTP77cX571mqAtHZWqjM0/aZ+efjtzY=
-=======
-			io+qJur5mcdv+jmdq2i9kPadcY5DZh+UilXoMMLYU8o=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			4e4Oy+GKdIJR1Um5fSLPneiI6X94UjYpNRsegmKph74=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -845,7 +601,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WlgMvOuOOUa+JSFr1JQ2v2OZUHTkl8ZriK1vd5CRY7E=
+			mvAO0Q9bH7M66+GysIZPXj6libTgWc4V1tHGIWA2AN0=
 			</data>
 		</dict>
 		<key>Frameworks/FMDB.framework/Info.plist</key>
@@ -866,7 +622,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IZpFyyBqWnynTpNLaIDdf/mbqj4nPMwN3KxfMpoHfMw=
+			sqeVY8ODNObQDqAs5u2pyRAj4YWXNabmjOe09IcU/lQ=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAppCheckInterop.framework/Info.plist</key>
@@ -887,11 +643,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			j6ChEhRVvVa0nmC48TGfW1Ksy1PyFCr+3ooPOKoqScg=
-=======
-			Df35Kz9d3hh/0EmMPygtX1i/7Q3e1sKDSZ+Hr0UWWG8=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			AexlK9kpQEcbtHxVB7nxo/YVPyAiv1t8rDUArpDag8g=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
@@ -912,7 +664,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dTKgPccF8B9b/piTvxro97R9fjCC4A+WGTT5ppBhzkY=
+			hmj4M8wdcxoUJ0ccX0pt4SvHcI2lu98/zBI12pBhzfw=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAuthInterop.framework/Info.plist</key>
@@ -933,11 +685,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			MYQZzaKySehg/etrfJ/TfL6/I7gY04KV6eOJqsU3o70=
-=======
-			Tc0OLUOXAa53BFt9o7fBWiV1Xt5fBadUOob9HaIN4uY=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			fDXTsdZYbEu1ArVOXVQnZ8dfoBmJ+jstI5WNv9kX7a0=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -958,11 +706,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			bNcVdC+3FYa3gj3v+rI0+jowFcLw9K2ZbqB+VLtjzqA=
-=======
-			snShf11WyFcitC7ne/csC0HB9sWNH6qVjuqin0bIrU0=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			wM2Cc4tg0BycDFb2Q1wJjEPG9/d5aM41xRHZCBdMN04=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
@@ -983,7 +727,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HnzJHyIm/2LQaV0X6r+SjLTK3CLfwn1X9LYYetI8mTY=
+			cZ0SHGDqAKD39fhmUoMlT/w3vYAd3FdxrCgU9oO/t9M=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreExtension.framework/Info.plist</key>
@@ -1004,11 +748,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			/AC8Zrx/hDhn8MXu90rVp5xA0sgPvm2dhbkcJpxmv1k=
-=======
-			ZKlb2jmwzR7wpCcZDWY48az5R/iXcuFkCiuqeEQoDAQ=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			1wsZjB+9s84GDNRMQ211VI/iP82VmfEvbTjHkxSUA3E=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
@@ -1029,7 +769,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C8sFSK9HVNa29mwPjLclXL1fGg0lxPZSndUF7MGm/fI=
+			FQuqlsniIvYy8H+ZgJtgW7Ae8UQJmi1A/fTT1DvBba8=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseStorage.framework/Info.plist</key>
@@ -1050,7 +790,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BrB7PHZZwxs7fPwUS0QuDSvfE4qw6w0agQQQaiPga8w=
+			WevTOiZTPQLB+96uJsXgCMuL5oi1T4z7uVXxv392ekw=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseStorageInternal.framework/Info.plist</key>
@@ -1071,7 +811,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUmbY/3kbFPmkCJzrLLGX2Z/JHleWjW/Whnhu4Ux3cA=
+			eyPTzsSyIc/RD2lJiIAAPHwiFyX5wb5YwNh5D8k7FMI=
 			</data>
 		</dict>
 		<key>Frameworks/Flutter.framework/Headers/Flutter.h</key>
@@ -1218,11 +958,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			2l6BrF29vzi998g5NFZvv/qGm88gsyX3rrNdWgW/5dY=
-=======
-			j4+Vbq54PeWOivRoCatJmtXk7aYHXlANBaThxM8qlIg=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			VIjsARi0k7Q4GRNfXuUMhVVePOrmhc9/28pGZqxLcK4=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
@@ -1243,11 +979,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			e9DPlB3EYdSISHHiHYnGq244SWKmP4RsOoLuQGeR++U=
-=======
-			AGfzYb7O93HV7HQCHc9w1FRWQik5oYYWomVR8Jibwwc=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			BpZBaUT++olfZhFtKftfzFm+2nj+RjlouBNb0An/44M=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
@@ -1268,11 +1000,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			DbFjDj2khG3YvsNW0TyHUkJvA5Fbg5BDYzDfRxDUdDc=
-=======
-			wgSiRlch4iEiT19JmYp/k/wP9vUbyWd26t8s5HMnhRA=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			Fqp9SKw8fqoF+hEhh63txCECx56HCzEmh6/XG8lcrzg=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -1307,7 +1035,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jalMn2JG5FHUssDJQWhkrsT2AsIe2ObcmFRf/JktFZI=
+			T+6IaUtPKjYrg5VJEFNO4toeKlWtyubzfN/Q36oXknw=
 			</data>
 		</dict>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
@@ -1328,10 +1056,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			vg95LA6uBK/nIH5O3KVoQXO2finW23IPhdZkiDKBg48=
-=======
-			dEtF/M6tD59Q87kKAKzxC2EFXgmNZCKZBYocah4TBXY=
+			jtULx4ps1+hxE0VBxk3XJZCO3AN6vQ3TNVWVSNC6ZOo=
 			</data>
 		</dict>
 		<key>Frameworks/path_provider_ios.framework/Info.plist</key>
@@ -1352,7 +1077,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/BcxHH/vIVDowk2GGqXrStMvGJvWzV0TSRhhLHYQZwA=
+			xqKmF/MNSsDqC+/iikkIZ9Qr7sMQnO7rQg6v4XRuPFI=
 			</data>
 		</dict>
 		<key>Frameworks/sqflite.framework/Info.plist</key>
@@ -1373,8 +1098,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GRmvfXgyPbKzuj3TvzjL/GxM199kzW56UkypZ2Cqee4=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
+			SpyRM30imOj1VK6rq1W3HwRu5Wx/vCv81z8L2Zhncps=
 			</data>
 		</dict>
 		<key>gRPCCertificates-Cpp.bundle/Info.plist</key>

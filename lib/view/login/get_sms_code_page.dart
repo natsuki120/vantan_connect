@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:vantan_connect/component/molecule/common/indicator.dart';
-=======
-import 'package:vantan_connect/component/organism/indicator.dart';
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/login/login_complete_page.dart';
-import '../../component/button/tappable_text.dart';
 import '../../component/atom/color_schemes.g.dart';
 import '../signup/component/guidance_message.dart';
 import '../verify_phone_number/component/input_sms_code_field.dart';
@@ -22,8 +16,8 @@ class GetSmsCodePage extends StatelessWidget {
         padding: const EdgeInsets.only(top: 80, left: 25, right: 25),
         child: Column(
           children: [
-            ThreeIndicator(firstPercent: 1, secondPercent: 1, thirdPercent: 0),
-            GuidanceMessage(),
+            // ThreeIndicator(firstPercent: 1, secondPercent: 1, thirdPercent: 0),
+            Guidance(),
             InputSmsCodeField(),
             SpaceBox(height: 47),
             GestureDetector(

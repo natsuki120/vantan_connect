@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:vantan_connect/component/atom/common/primary_color_button.dart';
-import 'package:vantan_connect/component/molecule/common/indicator.dart';
-=======
-import 'package:vantan_connect/component/organism/indicator.dart';
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/component/molecule/style_by_platform.dart';
 import '../component/atom/color_schemes.g.dart';
+import '../component/molecule/primary_color_button.dart';
 
 class ConfirmPage extends StatelessWidget {
   const ConfirmPage({super.key});
@@ -21,19 +16,19 @@ class ConfirmPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SpaceBox(height: 72),
-            FourIndicator(
-              firstPercent: 1,
-              secondPercent: 1,
-              thirdPercent: 1,
-              forthPercent: 1,
-            ),
+            // FourIndicator(
+            //   firstPercent: 1,
+            //   secondPercent: 1,
+            //   thirdPercent: 1,
+            //   forthPercent: 1,
+            // ),
             SpaceBox(height: 64),
-            Text(
-              'ご確認ください',
-              style: headLineSmall(bold, colorScheme!.onBackground),
-            ),
+            // Text(
+            //   'ご確認ください',
+            //   style: headLineSmall(bold, colorScheme!.onBackground),
+            // ),
             SpaceBox(height: 510),
-            PrimaryColorButton(text: '同意して登録', nextPage: Container()),
+            // PrimaryColorButton(text: '同意して登録', nextPage: Container()),
             SpaceBox(height: 23),
             Center(
               child: GestureDetector(

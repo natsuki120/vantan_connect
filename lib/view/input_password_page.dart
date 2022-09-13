@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/guidance_message.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/confirm_page.dart';
-import 'package:vantan_connect/view/verify_phone_number/component/return_previous_page_button.dart';
-<<<<<<< HEAD
-import '../component/molecule/common/indicator.dart';
-import '../const/color_schemes.g.dart';
-=======
-import '../component/organism/indicator.dart';
 import '../component/atom/color_schemes.g.dart';
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 
 class InputPasswordPage extends StatefulWidget {
   const InputPasswordPage({Key? key}) : super(key: key);
@@ -30,17 +22,17 @@ class _InputPasswordPageState extends State<InputPasswordPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SpaceBox(height: 72),
-            const FourIndicator(
-              firstPercent: 1,
-              secondPercent: 1,
-              thirdPercent: 1,
-              forthPercent: 0,
-            ),
+            // const FourIndicator(
+            //   firstPercent: 1,
+            //   secondPercent: 1,
+            //   thirdPercent: 1,
+            //   forthPercent: 0,
+            // ),
             SpaceBox(height: 64),
-            GuidanceMessage(
-              mainText: 'パスワードを入力',
-              subText: 'ログイン時に必要となるパスワードの設定をしてください。',
-            ),
+            // GuidanceMessage(
+            //   mainText: 'パスワードを入力',
+            //   subText: 'ログイン時に必要となるパスワードの設定をしてください。',
+            // ),
             SpaceBox(height: 42),
             TextFormField(
               decoration: InputDecoration(

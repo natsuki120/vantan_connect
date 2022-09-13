@@ -5,99 +5,84 @@ const regular = 'regular';
 const medium = 'medium';
 const bold = 'bold';
 
-TextStyle bodyLarge(String weight, Color color) => TextStyle(
+TextStyle bodyLarge(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 16,
     );
 
-TextStyle bodyMedium(String weight, Color color) => TextStyle(
+TextStyle bodyMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
-      fontSize: 14,
+      fontWeight: weight,
+      fontSize: 15,
     );
 
-TextStyle bodySmall(String weight, Color color) => TextStyle(
+TextStyle bodySmall(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 12,
     );
 
-TextStyle displayLarge(String weight, Color color) => TextStyle(
+TextStyle displayLarge(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 58,
     );
-TextStyle displayMedium(String weight, Color color) => TextStyle(
+TextStyle displayMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 46,
     );
-TextStyle displaySmall(String weight, Color color) => TextStyle(
+TextStyle displaySmall(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 36,
     );
 
-TextStyle headLineLarge(String weight, Color color) => TextStyle(
+TextStyle headLineLarge(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 32,
     );
-TextStyle headLineMedium(String weight, Color color) => TextStyle(
+TextStyle headLineMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 28,
     );
-TextStyle headLineSmall(String weight, Color color) => TextStyle(
+TextStyle headLineSmall(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 24,
     );
 
-TextStyle labelLarge(String weight, Color color) => TextStyle(
+TextStyle labelLarge(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 14,
     );
-TextStyle labelMedium(String weight, Color color) => TextStyle(
+TextStyle labelMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 12,
     );
-TextStyle labelSmall(String weight, Color color) => TextStyle(
+TextStyle labelSmall(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 10,
     );
 
-TextStyle titleLarge(String weight, Color color) => TextStyle(
+TextStyle titleLarge(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 22,
     );
-TextStyle titleMedium(String weight, Color color) => TextStyle(
+TextStyle titleMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
-      fontSize: 24,
+      fontWeight: weight,
+      fontSize: 16,
     );
-TextStyle titleSmall(String weight, Color color) => TextStyle(
+TextStyle titleSmall(FontWeight weight, Color color) => TextStyle(
       color: color,
-      fontWeight: selectFontWeight(weight),
+      fontWeight: weight,
       fontSize: 14,
     );
-
-FontWeight? selectFontWeight(String fontWeightName) {
-  switch (fontWeightName) {
-    case regular:
-      fontWeight = FontWeight.w400;
-      break;
-    case medium:
-      fontWeight = FontWeight.w500;
-      break;
-    case bold:
-      fontWeight = FontWeight.w700;
-      break;
-  }
-  return fontWeight;
-}

@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		ysxdykVUUeBsRqjKinxwbVowpWk=
+		qhB+TyOVKOsoVu9qqoUpFPSpYsE=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -38,15 +38,11 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-<<<<<<< HEAD
-		3wz2hO7N534ZT7VSiU0qQhHYcYs=
-=======
-		ANSAO+noZk6oAY9FLbNiilbeKGo=
+		9O6AySnz4rgv5/G8TSnKZHr/+3k=
 		</data>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
 		EuCtopc75SYUAHHOigYaHA0wlhg=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 		</data>
 		<key>flutter_assets/vm_snapshot_data</key>
 		<data>
@@ -73,7 +69,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J1DX6RSQ41gszxIJKzFtEnLSzMmDV8Y5IWgLfdxHNwM=
+			hKbnd+m12rIPGnq+knEV3jy1XAE2LRBZw/OdJIE2Of4=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -108,10 +104,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			weM0IMBHdS1iAnlKwXxlOcEKA6ELTo/5WhQblHkfjxo=
-=======
-			PiuI9yDUnpZjnZ2fPhfLzv3kS0AJ9X1pHhmS7v98G7I=
+			E9IzeTbquIjXDPt7XOkbuat1lyPCBzgAOgr0TvMsd14=
 			</data>
 		</dict>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
@@ -119,7 +112,6 @@
 			<key>hash2</key>
 			<data>
 			xs8p7rurNO49r6C4C/TnmAHHs2chn5hoqfF/oRLXkV4=
->>>>>>> a341bdf (✨ create profile page and function edit profile)
 			</data>
 		</dict>
 		<key>flutter_assets/vm_snapshot_data</key>
