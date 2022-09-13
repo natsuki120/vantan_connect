@@ -1,6 +1,6 @@
 import 'package:gsheets/gsheets.dart';
 import 'package:vantan_connect/api/user_fields.dart';
-import 'package:vantan_connect/model/user_state.dart';
+import 'package:vantan_connect/model/user_state/user_state.dart';
 
 const credintial = r'''{
   "type": "service_account",

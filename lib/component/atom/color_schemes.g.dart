@@ -67,9 +67,11 @@ const darkColorScheme = ColorScheme(
 );
 
 ThemeData changeColorOnDarkMode(ThemeData themeData) {
-  if (themeData == ThemeData(brightness: Brightness.light)) {
+  if (themeData ==
+      ThemeData(brightness: Brightness.light, useMaterial3: true)) {
     colorScheme = lightColorScheme;
-  } else if (themeData == ThemeData(brightness: Brightness.dark)) {
+  } else if (themeData ==
+      ThemeData(brightness: Brightness.dark, useMaterial3: true)) {
     colorScheme = darkColorScheme;
   }
   return themeData;

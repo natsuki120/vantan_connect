@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD:lib/component/molecule/common/indicator.dart
-import 'package:vantan_connect/component/atom/common/indicator_elm.dart';
-=======
-import 'package:vantan_connect/component/molecule/indicator_elm.dart';
->>>>>>> a341bdf (✨ create profile page and function edit profile):lib/component/organism/indicator.dart
 import 'package:vantan_connect/const/space_box.dart';
+
+import '../molecule/indicator_elm.dart';
 
 class FourIndicator extends StatelessWidget {
   const FourIndicator({
@@ -13,33 +10,27 @@ class FourIndicator extends StatelessWidget {
     required this.secondPercent,
     required this.thirdPercent,
     required this.forthPercent,
+    required this.width,
+    required this.spaceWidth,
   });
 
   final double firstPercent;
   final double secondPercent;
   final double thirdPercent;
   final double forthPercent;
+  final double width;
+  final double spaceWidth;
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
-        IndicatorElement(
-          percent: firstPercent,
-          width: 84,
-        ),
-        IndicatorElement(
-          percent: secondPercent,
-          width: 84,
-        ),
-        IndicatorElement(
-          percent: thirdPercent,
-          width: 84,
-        ),
-        IndicatorElement(
-          percent: forthPercent,
-          width: 84,
-        ),
+        IndicatorElement(percent: firstPercent, width: width),
+        SpaceBox(width: spaceWidth),
+        IndicatorElement(percent: secondPercent, width: width),
+        SpaceBox(width: spaceWidth),
+        IndicatorElement(percent: thirdPercent, width: width),
+        SpaceBox(width: spaceWidth),
+        IndicatorElement(percent: forthPercent, width: width),
       ],
     );
   }
@@ -65,12 +56,12 @@ class ThreeIndicator extends StatelessWidget {
           percent: firstPercent,
           width: 113,
         ),
-        SpaceBox(width: 2),
+        const SpaceBox(width: 2),
         IndicatorElement(
           percent: secondPercent,
           width: 113,
         ),
-        SpaceBox(width: 2),
+        const SpaceBox(width: 2),
         IndicatorElement(
           percent: thirdPercent,
           width: 113,

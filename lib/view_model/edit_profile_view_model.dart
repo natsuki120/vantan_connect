@@ -21,10 +21,8 @@ class EditProfileViewModel extends StateNotifier<UserProfileState> {
   ImageProvider switchImageOrFile(UserState userState) {
     if (state.userImageFile == null) {
       state = state.copyWith(userImageFile: File(userState.userImagePath));
-      return NetworkImage(state.userImageFile!.path);
-    } else {
-      return FileImage(state.userImageFile!);
     }
+    return NetworkImage(state.userImageFile!.path);
   }
 }
 

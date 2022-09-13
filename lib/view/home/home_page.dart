@@ -1,13 +1,28 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/api/gsheet.dart';
 import 'package:vantan_connect/api/user_fields.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+import '../../ripository/user_repository.dart';
+import '../../view_model/user_view_model.dart';
 
-  Future getUsers(String name) async {
-    final user = await getByName(name);
-    print(user);
+class HomePage extends ConsumerStatefulWidget {
+  HomePage({super.key, required this.user});
+
+  final User? user;
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends ConsumerState<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    Future(() async {
+      await ref.watch(userViewModel.notifier).fetchUser(widget.user!.uid);
+    });
   }
 
   @override
@@ -30,11 +45,6 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               child: ElevatedButton(
-<<<<<<< HEAD
-                child: Text('データ受信'),
-                onPressed: () {
-                  getUsers('nao');
-=======
                 child: Text('出席する'),
                 onPressed: () async {
                   await UserRepository().sendAttendanceState(widget.user!.uid);
@@ -57,7 +67,6 @@ class HomePage extends StatelessWidget {
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   print('押されたよ');
->>>>>>> a341bdf (✨ create profile page and function edit profile)
                 },
               ),
             ),

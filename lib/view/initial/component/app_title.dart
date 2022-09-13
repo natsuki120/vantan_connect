@@ -18,7 +18,7 @@ class AppTitle extends StatelessWidget {
       ),
       child: Text(
         'バンタン専用の\nコミュニケーションアプリ',
-        style: headLineSmall(bold, colorScheme!.onPrimary),
+        // style: headLineSmall(bold, colorScheme!.onPrimary),
         textAlign: TextAlign.center,
       ),
     );

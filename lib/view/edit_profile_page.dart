@@ -1,13 +1,15 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hashtagable/widgets/hashtag_text_field.dart';
 import 'package:vantan_connect/view_model/edit_profile_view_model.dart';
-import 'package:vantan_connect/view_model/user_view_model.dart';
 import '../model/user_state/user_state.dart';
+import '../view_model/user_view_model.dart';
 
 class EditProfilePage extends StatelessWidget {
   const EditProfilePage(this.userState, {super.key});
   final UserState userState;
-
   @override
   Widget build(BuildContext context) {
     final nameController = TextEditingController(text: userState.name);
@@ -30,7 +32,10 @@ class EditProfilePage extends StatelessWidget {
                         child: CircleAvatar(
                           radius: 60,
                           backgroundImage:
-                              userProfile.switchImageOrFile(userState),
+                              userProfile.state.userImageFile == null
+                                  ? NetworkImage(userState.userImagePath)
+                                      as ImageProvider
+                                  : FileImage(userProfile.state.userImageFile!),
                         ),
                         onTap: () async {
                           await userProfile.setImageFromGallery();
@@ -48,6 +53,8 @@ class EditProfilePage extends StatelessWidget {
                     height: 8,
                   ),
                   TextField(
+                    keyboardType: TextInputType.multiline,
+                    maxLines: null,
                     controller: profileTextController,
                     decoration: const InputDecoration(
                       hintText: 'ひとこと',
@@ -60,15 +67,26 @@ class EditProfilePage extends StatelessWidget {
                     builder: (context, ref, child) {
                       return ElevatedButton(
                         onPressed: () async {
-                          final imageFromStorage = await ref
-                              .read(userViewModel.notifier)
-                              .sendUserImageToStorage(
-                                  userProfile.state.userImageFile!);
+                          EasyLoading.show(status: 'loading...');
+                          final String imageFromStorage;
+                          if (userProfile.state.userImageFile != null) {
+                            imageFromStorage = await ref
+                                .read(userViewModel.notifier)
+                                .sendUserImageToStorage(
+                                  userProfile.state.userImageFile != null
+                                      ? userProfile.state.userImageFile!
+                                      : File(userState.userImagePath),
+                                );
+                          } else {
+                            imageFromStorage = userState.userImagePath;
+                          }
                           await ref.read(userViewModel.notifier).updateUserInfo(
                                 nameController.text,
                                 profileTextController.text,
                                 imageFromStorage,
                               );
+                          EasyLoading.showSuccess('更新しました');
+                          Navigator.of(context).pop();
                         },
                         child: const Text('更新する'),
                       );
