@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/const/color_schemes.g.dart';
-import 'package:vantan_connect/const/style_by_platform.dart';
+import 'package:vantan_connect/component/atom/color_schemes.g.dart';
+import 'package:vantan_connect/component/molecule/style_by_platform.dart';
 
 class AppTitle extends StatelessWidget {
   const AppTitle({
@@ -18,7 +18,7 @@ class AppTitle extends StatelessWidget {
       ),
       child: Text(
         'バンタン専用の\nコミュニケーションアプリ',
-        style: headLineSmall(bold, colorScheme!.onPrimary),
+        // style: headLineSmall(bold, colorScheme!.onPrimary),
         textAlign: TextAlign.center,
       ),
     );

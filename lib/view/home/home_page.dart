@@ -1,9 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/ripository/user_repository.dart';
-import 'package:vantan_connect/test_attendance.dart';
-import 'package:vantan_connect/view_model/user_view_model.dart';
+import 'package:vantan_connect/api/gsheet.dart';
+import 'package:vantan_connect/api/user_fields.dart';
+
+import '../../ripository/user_repository.dart';
+import '../../view_model/user_view_model.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   HomePage({super.key, required this.user});
@@ -23,11 +25,8 @@ class _HomePageState extends ConsumerState<HomePage> {
     });
   }
 
-  // TODO リポジトリにめちゃくちゃ依存してるんですが、、、
-
   @override
   Widget build(BuildContext context) {
-    ref.watch(userViewModel);
     return Scaffold(
       body: Center(
         child: Column(
@@ -35,13 +34,11 @@ class _HomePageState extends ConsumerState<HomePage> {
           children: [
             Container(
               child: ElevatedButton(
-                child: Text('データ受信'),
-                onPressed: () async {
-                  await Navigator.of(context).pushReplacement(
-                      MaterialPageRoute<TestAttendance>(
-                          builder: (_) =>
-                              TestAttendance('CS4PkGDqObM8cNT2k1dQwjvERxE2')));
-                  print('押されたよ');
+                child: Text('データ送信'),
+                onPressed: () {
+                  final userInfo = [
+                    {UserFields.name: 'nao', UserFields.attendance: '欠席'}
+                  ];
                 },
               ),
             ),
@@ -49,7 +46,7 @@ class _HomePageState extends ConsumerState<HomePage> {
               child: ElevatedButton(
                 child: Text('出席する'),
                 onPressed: () async {
-                  await sendAttendanceState(widget.user!.uid);
+                  await UserRepository().sendAttendanceState(widget.user!.uid);
                   final snackBar = SnackBar(
                     backgroundColor: Colors.black,
                     content: Text('出席データを送信しました'),
@@ -72,8 +69,6 @@ class _HomePageState extends ConsumerState<HomePage> {
                 },
               ),
             ),
-            Text(
-                '${ref.watch(userViewModel.notifier).state.name}の出席日数は${ref.watch(userViewModel.notifier).state.attendedDay}日です')
           ],
         ),
       ),

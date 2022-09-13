@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../const/color_schemes.g.dart';
+import '../../../component/atom/color_schemes.g.dart';
 import '../../input_password_page.dart';
 import '../verify_phone_number_page.dart';
 

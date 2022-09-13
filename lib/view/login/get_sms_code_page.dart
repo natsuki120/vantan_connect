@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/molecule/indicator.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/login/login_complete_page.dart';
-import '../../component/button/no_color_button.dart';
-import '../../const/color_schemes.g.dart';
+import '../../component/atom/color_schemes.g.dart';
 import '../signup/component/guidance_message.dart';
 import '../verify_phone_number/component/input_sms_code_field.dart';
 import '../verify_phone_number/component/return_previous_page_button.dart';
@@ -18,8 +16,8 @@ class GetSmsCodePage extends StatelessWidget {
         padding: const EdgeInsets.only(top: 80, left: 25, right: 25),
         child: Column(
           children: [
-            ThreeIndicator(firstPercent: 1, secondPercent: 1, thirdPercent: 0),
-            GuidanceMessage(),
+            // ThreeIndicator(firstPercent: 1, secondPercent: 1, thirdPercent: 0),
+            Guidance(),
             InputSmsCodeField(),
             SpaceBox(height: 47),
             GestureDetector(

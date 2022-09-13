@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import '../../const/color_schemes.g.dart';
+import '../atom/color_schemes.g.dart';
 
 class PrimaryColorButton extends StatelessWidget {
   const PrimaryColorButton({
     super.key,
     required this.text,
-    required this.voidCallBack,
-    required this.textStyle,
+    required this.nextPage,
   });
 
   final String text;
-  final TextStyle textStyle;
-  final VoidCallback voidCallBack;
+  final Widget nextPage;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +21,17 @@ class PrimaryColorButton extends StatelessWidget {
           primary: colorScheme!.primary,
           onPrimary: colorScheme!.onPrimary,
         ),
-        onPressed: voidCallBack,
-        child: Text(text, style: textStyle),
+        onPressed: () {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute<Widget>(builder: (_) => nextPage),
+          );
+        },
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }

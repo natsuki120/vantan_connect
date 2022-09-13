@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/organism/guidance_message.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/confirm_page.dart';
-import 'package:vantan_connect/view/verify_phone_number/component/return_previous_page_button.dart';
-import '../component/molecule/indicator.dart';
-import '../const/color_schemes.g.dart';
+import '../component/atom/color_schemes.g.dart';
 
 class InputPasswordPage extends StatefulWidget {
   const InputPasswordPage({Key? key}) : super(key: key);
@@ -25,7 +22,12 @@ class _InputPasswordPageState extends State<InputPasswordPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SpaceBox(height: 72),
-            const FourIndicator(first: 1, second: 1, third: 1, forth: 0),
+            // const FourIndicator(
+            //   firstPercent: 1,
+            //   secondPercent: 1,
+            //   thirdPercent: 1,
+            //   forthPercent: 0,
+            // ),
             SpaceBox(height: 64),
             // GuidanceMessage(
             //   mainText: 'パスワードを入力',

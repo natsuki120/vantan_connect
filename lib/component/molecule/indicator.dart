@@ -1,40 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/atom/indicator_elm.dart';
+import 'package:vantan_connect/component/molecule/indicator_elm.dart';
 import 'package:vantan_connect/const/space_box.dart';
 
 class FourIndicator extends StatelessWidget {
   const FourIndicator({
-    required this.first,
-    required this.second,
-    required this.third,
-    required this.forth,
     super.key,
+    required this.firstPercent,
+    required this.secondPercent,
+    required this.thirdPercent,
+    required this.forthPercent,
   });
 
-  final double first;
-  final double second;
-  final double third;
-  final double forth;
-
+  final double firstPercent;
+  final double secondPercent;
+  final double thirdPercent;
+  final double forthPercent;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
         IndicatorElement(
-          percent: first,
+          percent: firstPercent,
           width: 84,
         ),
         IndicatorElement(
-          percent: second,
+          percent: secondPercent,
           width: 84,
         ),
         IndicatorElement(
-          percent: third,
+          percent: thirdPercent,
           width: 84,
         ),
         IndicatorElement(
-          percent: forth,
+          percent: forthPercent,
           width: 84,
         ),
       ],

@@ -1,6 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vantan_connect/vantan_life.dart';
 import 'package:vantan_connect/view/home/home_page.dart';
+import 'package:vantan_connect/view/profile_page.dart';
+
+import '../view_model/user_view_model.dart';
 
 class Login extends StatelessWidget {
   String infoText = '';
@@ -43,30 +48,34 @@ class Login extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                ElevatedButton(
-                  onPressed: () async {
-                    // 追加の処理
-                    try {
-                      // メール/パスワードでログイン
-                      final FirebaseAuth auth = FirebaseAuth.instance;
-                      final result = await auth.signInWithEmailAndPassword(
-                        email: email,
-                        password: password,
-                      );
-                      // ログインに成功した場合
-                      // チャット画面に遷移＋ログイン画面を破棄
-                      await Navigator.of(context).pushReplacement(
-                        MaterialPageRoute<HomePage>(builder: (context) {
-                          print(result.user!.uid);
-                          return HomePage(user: result.user!);
-                        }),
-                      );
-                    } catch (e) {
-                      /* --- 省略 --- */
-                    }
-                  },
-                  child: Text('ログイン'),
-                ),
+                Consumer(builder: (context, ref, child) {
+                  return ElevatedButton(
+                    onPressed: () async {
+                      // 追加の処理
+                      try {
+                        // メール/パスワードでログイン
+                        final auth = FirebaseAuth.instance;
+                        final result = await auth.signInWithEmailAndPassword(
+                          email: email,
+                          password: password,
+                        );
+                        await ref
+                            .read(userViewModel.notifier)
+                            .fetchUser(result.user!.uid);
+                        await Navigator.of(context).pushReplacement(
+                          MaterialPageRoute<HomePage>(
+                            builder: (context) {
+                              return VantanLife(user: result.user!);
+                            },
+                          ),
+                        );
+                      } catch (e) {
+                        /* --- 省略 --- */
+                      }
+                    },
+                    child: Text('ログイン'),
+                  );
+                }),
               ],
             ),
           ),

@@ -1,15 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/view/home/home_page.dart';
 import 'package:vantan_connect/view/login.dart';
 import 'firebase_options.dart';
-import 'const/color_schemes.g.dart';
+import 'component/atom/color_schemes.g.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(ProviderScope(child: MyApp()));
+  runApp(ProviderScope(child: const MyApp()));
 }
 
 //TODO formfieldのfocuscolorは変えない。太さを変える
@@ -25,9 +25,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: changeColorOnDarkMode(
-        ThemeData(brightness: Brightness.light),
+        ThemeData(brightness: Brightness.light, useMaterial3: true),
       ),
       home: Login(),
+      builder: EasyLoading.init(),
     );
   }
 }

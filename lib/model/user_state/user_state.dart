@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vantan_connect/api/user_fields.dart';
 part 'user_state.freezed.dart';
 part 'user_state.g.dart';
 
@@ -7,8 +6,11 @@ part 'user_state.g.dart';
 class UserState with _$UserState {
   const factory UserState({
     @Default('') String name,
+    @Default('') String profileText,
     @Default('') String attendance,
     @Default(0) int attendedDay,
+    @Default('') String accountNumber,
+    @Default('') String userImagePath,
   }) = _UserState;
 
   factory UserState.fromJson(Map<String, dynamic> json) =>
