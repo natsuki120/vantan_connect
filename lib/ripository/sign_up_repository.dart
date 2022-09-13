@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/model/user_state/user_state.dart';
+import '../model/user_state/user_state.dart';
 
 UserState? userInfo;
 

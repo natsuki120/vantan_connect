@@ -39,7 +39,6 @@ class _HomePageState extends ConsumerState<HomePage> {
                   final userInfo = [
                     {UserFields.name: 'nao', UserFields.attendance: '欠席'}
                   ];
-                  insert(userInfo);
                 },
               ),
             ),
