@@ -1,9 +1,7 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:vantan_connect/model/user_profile_state/user_profile_state.dart';
 import 'package:vantan_connect/model/user_state/user_state.dart';
 import 'package:vantan_connect/ripository/user_repository.dart';
 
