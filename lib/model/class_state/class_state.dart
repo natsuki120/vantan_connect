@@ -5,9 +5,11 @@ part 'class_state.g.dart';
 @freezed
 class ClassState with _$ClassState {
   const factory ClassState({
+    @Default('') String count,
     @Default('') String className,
-    @Default(0) int attendDay,
-    @Default(0) int allTime,
+    @Default('') String teacher,
+    @Default('') String weekDay,
+    @Default(<String>[]) List<String> start,
   }) = _ClassState;
 
   factory ClassState.fromJson(Map<String, dynamic> json) =>

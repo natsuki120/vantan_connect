@@ -20,9 +20,11 @@ ClassState _$ClassStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClassState {
+  String get count => throw _privateConstructorUsedError;
   String get className => throw _privateConstructorUsedError;
-  int get attendDay => throw _privateConstructorUsedError;
-  int get allTime => throw _privateConstructorUsedError;
+  String get teacher => throw _privateConstructorUsedError;
+  String get weekDay => throw _privateConstructorUsedError;
+  List<String> get start => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +37,12 @@ abstract class $ClassStateCopyWith<$Res> {
   factory $ClassStateCopyWith(
           ClassState value, $Res Function(ClassState) then) =
       _$ClassStateCopyWithImpl<$Res>;
-  $Res call({String className, int attendDay, int allTime});
+  $Res call(
+      {String count,
+      String className,
+      String teacher,
+      String weekDay,
+      List<String> start});
 }
 
 /// @nodoc
@@ -48,23 +55,33 @@ class _$ClassStateCopyWithImpl<$Res> implements $ClassStateCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? count = freezed,
     Object? className = freezed,
-    Object? attendDay = freezed,
-    Object? allTime = freezed,
+    Object? teacher = freezed,
+    Object? weekDay = freezed,
+    Object? start = freezed,
   }) {
     return _then(_value.copyWith(
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as String,
       className: className == freezed
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
               as String,
-      attendDay: attendDay == freezed
-          ? _value.attendDay
-          : attendDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      allTime: allTime == freezed
-          ? _value.allTime
-          : allTime // ignore: cast_nullable_to_non_nullable
-              as int,
+      teacher: teacher == freezed
+          ? _value.teacher
+          : teacher // ignore: cast_nullable_to_non_nullable
+              as String,
+      weekDay: weekDay == freezed
+          ? _value.weekDay
+          : weekDay // ignore: cast_nullable_to_non_nullable
+              as String,
+      start: start == freezed
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -76,7 +93,12 @@ abstract class _$$_ClassStateCopyWith<$Res>
           _$_ClassState value, $Res Function(_$_ClassState) then) =
       __$$_ClassStateCopyWithImpl<$Res>;
   @override
-  $Res call({String className, int attendDay, int allTime});
+  $Res call(
+      {String count,
+      String className,
+      String teacher,
+      String weekDay,
+      List<String> start});
 }
 
 /// @nodoc
@@ -91,23 +113,33 @@ class __$$_ClassStateCopyWithImpl<$Res> extends _$ClassStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? count = freezed,
     Object? className = freezed,
-    Object? attendDay = freezed,
-    Object? allTime = freezed,
+    Object? teacher = freezed,
+    Object? weekDay = freezed,
+    Object? start = freezed,
   }) {
     return _then(_$_ClassState(
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as String,
       className: className == freezed
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
               as String,
-      attendDay: attendDay == freezed
-          ? _value.attendDay
-          : attendDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      allTime: allTime == freezed
-          ? _value.allTime
-          : allTime // ignore: cast_nullable_to_non_nullable
-              as int,
+      teacher: teacher == freezed
+          ? _value.teacher
+          : teacher // ignore: cast_nullable_to_non_nullable
+              as String,
+      weekDay: weekDay == freezed
+          ? _value.weekDay
+          : weekDay // ignore: cast_nullable_to_non_nullable
+              as String,
+      start: start == freezed
+          ? _value._start
+          : start // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -116,24 +148,39 @@ class __$$_ClassStateCopyWithImpl<$Res> extends _$ClassStateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClassState implements _ClassState {
   const _$_ClassState(
-      {this.className = '', this.attendDay = 0, this.allTime = 0});
+      {this.count = '',
+      this.className = '',
+      this.teacher = '',
+      this.weekDay = '',
+      final List<String> start = const <String>[]})
+      : _start = start;
 
   factory _$_ClassState.fromJson(Map<String, dynamic> json) =>
       _$$_ClassStateFromJson(json);
 
   @override
   @JsonKey()
+  final String count;
+  @override
+  @JsonKey()
   final String className;
   @override
   @JsonKey()
-  final int attendDay;
+  final String teacher;
   @override
   @JsonKey()
-  final int allTime;
+  final String weekDay;
+  final List<String> _start;
+  @override
+  @JsonKey()
+  List<String> get start {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_start);
+  }
 
   @override
   String toString() {
-    return 'ClassState(className: $className, attendDay: $attendDay, allTime: $allTime)';
+    return 'ClassState(count: $count, className: $className, teacher: $teacher, weekDay: $weekDay, start: $start)';
   }
 
   @override
@@ -141,18 +188,22 @@ class _$_ClassState implements _ClassState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ClassState &&
+            const DeepCollectionEquality().equals(other.count, count) &&
             const DeepCollectionEquality().equals(other.className, className) &&
-            const DeepCollectionEquality().equals(other.attendDay, attendDay) &&
-            const DeepCollectionEquality().equals(other.allTime, allTime));
+            const DeepCollectionEquality().equals(other.teacher, teacher) &&
+            const DeepCollectionEquality().equals(other.weekDay, weekDay) &&
+            const DeepCollectionEquality().equals(other._start, _start));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(count),
       const DeepCollectionEquality().hash(className),
-      const DeepCollectionEquality().hash(attendDay),
-      const DeepCollectionEquality().hash(allTime));
+      const DeepCollectionEquality().hash(teacher),
+      const DeepCollectionEquality().hash(weekDay),
+      const DeepCollectionEquality().hash(_start));
 
   @JsonKey(ignore: true)
   @override
@@ -169,19 +220,25 @@ class _$_ClassState implements _ClassState {
 
 abstract class _ClassState implements ClassState {
   const factory _ClassState(
-      {final String className,
-      final int attendDay,
-      final int allTime}) = _$_ClassState;
+      {final String count,
+      final String className,
+      final String teacher,
+      final String weekDay,
+      final List<String> start}) = _$_ClassState;
 
   factory _ClassState.fromJson(Map<String, dynamic> json) =
       _$_ClassState.fromJson;
 
   @override
+  String get count;
+  @override
   String get className;
   @override
-  int get attendDay;
+  String get teacher;
   @override
-  int get allTime;
+  String get weekDay;
+  @override
+  List<String> get start;
   @override
   @JsonKey(ignore: true)
   _$$_ClassStateCopyWith<_$_ClassState> get copyWith =>

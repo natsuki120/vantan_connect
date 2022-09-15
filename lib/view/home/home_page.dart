@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/api/user_fields.dart';
-
 import '../../ripository/user_repository.dart';
 import '../../view_model/user_view_model.dart';
 

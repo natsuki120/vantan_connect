@@ -5,6 +5,7 @@ part 'user_state.g.dart';
 @freezed
 class UserState with _$UserState {
   const factory UserState({
+    @Default('') String id,
     @Default('') String name,
     @Default('') String profileText,
     @Default('') String attendance,
