@@ -18,6 +18,7 @@ class UserViewModel extends StateNotifier<UserState> {
     final userData = await UserRepository().fetchUserInfo(uid);
     userData.listen((userState) {
       state = state.copyWith(
+        id: userState.id,
         name: userState.name,
         userImagePath: userState.userImagePath,
         attendedDay: userState.attendedDay,

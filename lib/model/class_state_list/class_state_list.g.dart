@@ -10,8 +10,7 @@ _$_ClassStateList _$$_ClassStateListFromJson(Map<String, dynamic> json) =>
     _$_ClassStateList(
       classStateList: (json['classStateList'] as List<dynamic>?)
               ?.map(
-                (dynamic e) => ClassState.fromJson(e as Map<String, dynamic>),
-              )
+                  (dynamic e) => ClassState.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <ClassState>[],
     );

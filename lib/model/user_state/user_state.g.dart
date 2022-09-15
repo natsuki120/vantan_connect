@@ -7,6 +7,7 @@ part of 'user_state.dart';
 // **************************************************************************
 
 _$_UserState _$$_UserStateFromJson(Map<String, dynamic> json) => _$_UserState(
+      id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
       profileText: json['profileText'] as String? ?? '',
       attendance: json['attendance'] as String? ?? '',
@@ -17,6 +18,7 @@ _$_UserState _$$_UserStateFromJson(Map<String, dynamic> json) => _$_UserState(
 
 Map<String, dynamic> _$$_UserStateToJson(_$_UserState instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'name': instance.name,
       'profileText': instance.profileText,
       'attendance': instance.attendance,

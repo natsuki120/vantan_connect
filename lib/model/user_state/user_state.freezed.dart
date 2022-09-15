@@ -20,6 +20,7 @@ UserState _$UserStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserState {
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get profileText => throw _privateConstructorUsedError;
   String get attendance => throw _privateConstructorUsedError;
@@ -38,7 +39,8 @@ abstract class $UserStateCopyWith<$Res> {
   factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
       _$UserStateCopyWithImpl<$Res>;
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String profileText,
       String attendance,
       int attendedDay,
@@ -56,6 +58,7 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? profileText = freezed,
     Object? attendance = freezed,
@@ -64,6 +67,10 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
     Object? userImagePath = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -99,7 +106,8 @@ abstract class _$$_UserStateCopyWith<$Res> implements $UserStateCopyWith<$Res> {
       __$$_UserStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String profileText,
       String attendance,
       int attendedDay,
@@ -119,6 +127,7 @@ class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? profileText = freezed,
     Object? attendance = freezed,
@@ -127,6 +136,10 @@ class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     Object? userImagePath = freezed,
   }) {
     return _then(_$_UserState(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -159,7 +172,8 @@ class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_UserState implements _UserState {
   const _$_UserState(
-      {this.name = '',
+      {this.id = '',
+      this.name = '',
       this.profileText = '',
       this.attendance = '',
       this.attendedDay = 0,
@@ -169,6 +183,9 @@ class _$_UserState implements _UserState {
   factory _$_UserState.fromJson(Map<String, dynamic> json) =>
       _$$_UserStateFromJson(json);
 
+  @override
+  @JsonKey()
+  final String id;
   @override
   @JsonKey()
   final String name;
@@ -190,7 +207,7 @@ class _$_UserState implements _UserState {
 
   @override
   String toString() {
-    return 'UserState(name: $name, profileText: $profileText, attendance: $attendance, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath)';
+    return 'UserState(id: $id, name: $name, profileText: $profileText, attendance: $attendance, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath)';
   }
 
   @override
@@ -198,6 +215,7 @@ class _$_UserState implements _UserState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserState &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.profileText, profileText) &&
@@ -215,6 +233,7 @@ class _$_UserState implements _UserState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(profileText),
       const DeepCollectionEquality().hash(attendance),
@@ -237,7 +256,8 @@ class _$_UserState implements _UserState {
 
 abstract class _UserState implements UserState {
   const factory _UserState(
-      {final String name,
+      {final String id,
+      final String name,
       final String profileText,
       final String attendance,
       final int attendedDay,
@@ -247,6 +267,8 @@ abstract class _UserState implements UserState {
   factory _UserState.fromJson(Map<String, dynamic> json) =
       _$_UserState.fromJson;
 
+  @override
+  String get id;
   @override
   String get name;
   @override
