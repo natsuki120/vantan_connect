@@ -7,8 +7,8 @@ import '../atom/color_schemes.g.dart';
 import '../molecule/style_by_platform.dart';
 import '../organism/guidance_message.dart';
 
-void attendanceConfirmationModal(BuildContext context) {
-  showModalBottomSheet<Container>(
+void attendanceConfirmationModalTemplate(BuildContext context) async {
+  await showModalBottomSheet<Container>(
     backgroundColor: colorScheme!.background,
     isScrollControlled: true,
     context: context,
@@ -33,7 +33,12 @@ void attendanceConfirmationModal(BuildContext context) {
             ),
             const SpaceBox(height: 24),
             // 出席ボタン
-            const AttendanceButton(width: 342, height: 360),
+            const AttendanceButton(
+              width: 342,
+              height: 360,
+              text: 'タイトルタイトルタイトル',
+              imagePath: '',
+            ),
             const SpaceBox(height: 23),
             GuidanceButton(
               subText: '欠席遅刻早退欠席遅刻早退',

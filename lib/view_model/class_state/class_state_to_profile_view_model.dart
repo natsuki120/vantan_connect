@@ -23,4 +23,4 @@ class ClassStateToProfileViewModel extends StateNotifier<List<ClassState>> {
 }
 
 final classStateViewModel =
-    StateNotifierProvider((ref) => ClassStateToProfileViewModel());
+    StateNotifierProvider.autoDispose((ref) => ClassStateToProfileViewModel());

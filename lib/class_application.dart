@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/component/atom/color_schemes.g.dart';
 import 'package:vantan_connect/confirm_class_application.dart';
 import 'package:vantan_connect/model/class_state/class_state.dart';
-import 'package:vantan_connect/view_model/class_state_to_profile_view_model.dart';
+import 'package:vantan_connect/view_model/class_state/class_state_to_profile_view_model.dart';
 
 class ClassApplication extends ConsumerStatefulWidget {
   ClassApplication({super.key});

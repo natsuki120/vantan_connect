@@ -4,8 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/component/atom/color_schemes.g.dart';
 import 'package:vantan_connect/const/space_box.dart';
 import 'package:vantan_connect/view/edit_profile_page.dart';
-import 'package:vantan_connect/view_model/class_state_to_profile_view_model.dart';
-import '../view_model/user_view_model.dart';
+import 'package:vantan_connect/view_model/class_state/class_state_to_profile_view_model.dart';
+
+import '../view_model/user_state/user_view_model.dart';
 
 class ProfilePage extends ConsumerStatefulWidget {
   const ProfilePage({super.key});

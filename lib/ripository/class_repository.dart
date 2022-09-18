@@ -46,7 +46,7 @@ class ClassRepository {
       'uid': userState.id,
       'name': userState.name,
       'userImagePath': userState.userImagePath,
-      'className': [...classStateList.map((classState) => classState.className)]
+      // 'className': [...classStateList.map((classState) => classState.className)]
     });
   }
 

@@ -5,7 +5,7 @@ import 'package:vantan_connect/vantan_life.dart';
 import 'package:vantan_connect/view/home/home_page.dart';
 import 'package:vantan_connect/view/profile_page.dart';
 
-import '../view_model/user_view_model.dart';
+import '../view_model/user_state/user_view_model.dart';
 
 class Login extends StatelessWidget {
   String infoText = '';

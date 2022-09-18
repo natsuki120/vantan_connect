@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/ripository/user_repository.dart';
-import 'package:vantan_connect/view_model/user_view_model.dart';
+import 'package:vantan_connect/view_model/user_state/user_view_model.dart';
 
 class TestAttendance extends ConsumerStatefulWidget {
   const TestAttendance(this.uid, {super.key});
