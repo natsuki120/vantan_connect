@@ -8,21 +8,25 @@ part of 'class_state.dart';
 
 _$_ClassState _$$_ClassStateFromJson(Map<String, dynamic> json) =>
     _$_ClassState(
-      count: json['count'] as String? ?? '',
       className: json['className'] as String? ?? '',
-      teacher: json['teacher'] as String? ?? '',
+      endTime: json['endTime'] as String? ?? '',
+      frameCount: json['frameCount'] as int? ?? 0,
+      selectedBaseClass:
+          json['selectedBaseClass'] as List<dynamic>? ?? const [],
+      startTime: json['startTime'] as String? ?? '',
+      teacher: json['teacher'] as List<dynamic>? ?? const [],
+      timeTable: json['timeTable'] as int? ?? 0,
       weekDay: json['weekDay'] as String? ?? '',
-      start: (json['start'] as List<dynamic>?)
-              ?.map((dynamic e) => e as String)
-              .toList() ??
-          const <String>[],
     );
 
 Map<String, dynamic> _$$_ClassStateToJson(_$_ClassState instance) =>
     <String, dynamic>{
-      'count': instance.count,
       'className': instance.className,
+      'endTime': instance.endTime,
+      'frameCount': instance.frameCount,
+      'selectedBaseClass': instance.selectedBaseClass,
+      'startTime': instance.startTime,
       'teacher': instance.teacher,
+      'timeTable': instance.timeTable,
       'weekDay': instance.weekDay,
-      'start': instance.start,
     };

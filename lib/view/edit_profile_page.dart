@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hashtagable/widgets/hashtag_text_field.dart';
-import 'package:vantan_connect/view_model/edit_profile_view_model.dart';
+import 'package:vantan_connect/view_model/user_state/edit_profile_view_model.dart';
 import '../model/user_state/user_state.dart';
-import '../view_model/user_view_model.dart';
+import '../view_model/user_state/user_view_model.dart';
 
 class EditProfilePage extends StatelessWidget {
   const EditProfilePage(this.userState, {super.key});

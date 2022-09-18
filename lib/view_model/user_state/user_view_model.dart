@@ -3,10 +3,11 @@ import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:vantan_connect/model/user_state/user_state.dart';
+import 'package:vantan_connect/ripository/class_repository.dart';
 import 'package:vantan_connect/ripository/user_repository.dart';
 
 class UserViewModel extends StateNotifier<UserState> {
-  UserViewModel() : super(const UserState(name: '', attendedDay: 0));
+  UserViewModel() : super(const UserState());
 
   // Future<void> fetchNumberOfUserAttended() async {
   //   final userData = await fetchNumberOfUserAttend();
@@ -41,6 +42,18 @@ class UserViewModel extends StateNotifier<UserState> {
     final imageFromStorage =
         await UserRepository().sendUserImageToStorage(imageFile);
     return imageFromStorage;
+  }
+
+  Future<void> sendAttendance(UserState userState) async {
+    await UserRepository().sendAttendance(userState);
+  }
+
+  Future<void> sendAbsence(UserState userState) async {
+    await UserRepository().sendAbsence(userState);
+  }
+
+  Future<void> sendLateness(UserState userState) async {
+    await UserRepository().sendLateness(userState);
   }
 
   Future<void> updateUserInfo(

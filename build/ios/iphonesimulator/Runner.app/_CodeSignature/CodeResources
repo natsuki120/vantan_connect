@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		JmMRn61e5d5dtfxxYF0C1ZrITqQ=
+		HFfNv6CFM4j0LtUb+v3gA7Jaa7E=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ozm1FMQ3rgZIqgtVbOg2N19rHRo=
+		AtlKo1bGDb3sj3MTVwE51sbPjLM=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		5upgbNXIU8KO1bKPh6f9IN/vyxE=
+		kKWmu5wF1H2LNJOVDcbuJ/5mrys=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -76,6 +76,10 @@
 		<data>
 		0LQhd92WqbQW5Z8kV92rztw8GVY=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/images/attendance_img.png</key>
+		<data>
+		XtGCh7wF/7G7Wiyy5iAfpFuz8OY=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/images/login_complete.png</key>
 		<data>
 		TLlpkCe5G+xT76WUlzNc7QE979E=
@@ -90,7 +94,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		a5FwL+sY1wVlHcBxpVgyA/+btDk=
+		QfjVLUO3Af2pmj8HFFaArdy95F8=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -493,7 +497,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/9qCLHekCFepyU1it1BL9Z3EtVn6tFT7tcE9GhSfld4=
+			Ivdbtlhqd/qSb3yGXJjRMQa1WS9QRK99w4579g9+cAg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -507,14 +511,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XfjMli0bf8eEqeWbdwPjWGGGQhYaofqCMub0vrQ0kRk=
+			/gas6eVlEA0YjHzsvI2TRNVbYl/bS7WCUj1gckJIVW4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			btCp8xU5UTVMbGX+D/fl+g0JmZNGrSG0BD97E2W3NwY=
+			XvLobbikKlZvmF/jkMlY2vEPRRuysa49t5uF/LJ5z+g=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -545,6 +549,13 @@
 			hjrLUU+8yXZUUkQOULKq7IRIJL0dvua0Ax+XO/inqvA=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/images/attendance_img.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WTMrP406ClmvaqZglLMsEpAK67oYE+HoiRg+WZ7LSwM=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/images/login_complete.png</key>
 		<dict>
 			<key>hash2</key>
@@ -570,7 +581,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Px2TUBMEQVcTXrZX2oqPX0x4CNdMBb6cuQQiJUnlh5o=
+			UnCu5ZUEeItcxH+8ZD9VLsutMzuSJEG+FjiAtAigVv4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
