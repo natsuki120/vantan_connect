@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/component/molecule/text/description_text.dart';
 import 'package:vantan_connect/component/molecule/text/main_text.dart';
-import '../const/space_box.dart';
+import 'atom/space_box.dart';
 
 class GuidanceMessage extends StatelessWidget {
   const GuidanceMessage({

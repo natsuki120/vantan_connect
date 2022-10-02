@@ -1,45 +1,68 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/component/page/attendance_confirmation_model_page.dart';
-import 'package:vantan_connect/const/space_box.dart';
-import 'package:vantan_connect/examine_application.dart';
-import 'package:vantan_connect/view_model/applying_class_state_view_model.dart';
-import 'package:vantan_connect/view_model/class_state/class_state_to_profile_view_model.dart';
-import 'package:vantan_connect/view_model/student_state/absence_student_view_model.dart';
-import 'package:vantan_connect/view_model/student_state/attendance_student_view_model.dart';
-import 'package:vantan_connect/view_model/student_state/late_student_view_model.dart';
-import 'package:vantan_connect/view_model/user_state/user_view_model.dart';
+import 'package:vantan_connect/component/organism/guidance_message.dart';
+import 'package:vantan_connect/component/page/class_detail/class_detail_info_and_all_class_day/class_detail_and_all_class_day_page.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
+import 'package:vantan_connect/view_model/class_by_day_state/class_by_day_view_model.dart';
+import 'package:vantan_connect/view_model/class_state/class_state_view_model.dart';
 import 'component/atom/color_schemes.g.dart';
 import 'component/molecule/style_by_platform.dart';
+import 'component/page/attendance_confirmation_model_page.dart';
+import 'model/class_state/class_state.dart';
+import 'package:intl/intl.dart';
 
 class HomePage extends ConsumerStatefulWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   ConsumerState<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends ConsumerState<HomePage> {
+  String _time = '';
   @override
   void initState() {
     super.initState();
-    ref.read(classStateViewModel.notifier).fetchClassInfoToRegister();
-    ref.read(applyingClassStateViewModel.notifier).fetchApplyingClassInfo();
+    ref.read(classStateViewModel.notifier).fetchClassInfoToConfirmDetail();
+    ref.read(classByDayStateViewModel.notifier).fetchClassByDayInfo();
+    Timer.periodic(Duration(minutes: 1), _onTimer);
+  }
 
-    Future(() async {
-      await ref.read(attendanceStudentViewModel.notifier).fetchAttendanceUser();
-      await ref.read(absenceStudentViewModel.notifier).fetchAbsenceUser();
-      await ref.read(lateStudentViewModel.notifier).fetchLateUser();
-    });
+  void _onTimer(Timer timer) {
+    var now = DateTime.now();
+    var dateFormat = DateFormat('HH:mm');
+    var timeString = dateFormat.format(now);
+    setState(() => callModal());
+  }
+
+  void callModal() {
+    for (var classInfo in ref.watch(classByDayStateViewModel.notifier).state) {
+      if (classInfo.announce != null) {
+        if (DateFormat('HH:mm').format(DateTime.now()) ==
+            DateFormat('HH:mm').format(classInfo.announce!)) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            attendanceConfirmationModalPage(
+              context: context,
+              mainText: '${classInfo.timeTable}限 -${classInfo.className}',
+              classByDayState: classInfo,
+            );
+          });
+        }
+      }
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     ref.watch(classStateViewModel);
-    ref.watch(userViewModel);
+    ref.watch(classByDayStateViewModel);
+    print('再描画しました');
     return Scaffold(
+      backgroundColor: colorScheme.background,
       appBar: AppBar(
-        backgroundColor: colorScheme!.primaryContainer,
+        elevation: 2,
+        backgroundColor: colorScheme.surface,
         title: Text(
           'ホーム',
           style: titleMedium(
@@ -48,161 +71,61 @@ class _HomePageState extends ConsumerState<HomePage> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          // ElevatedButton(
-          //   onPressed: () => attendanceConfirmationModalTemplate(context),
-          //   child: Text('出席ボタン'),
-          // ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: ref
-                  .watch(classStateViewModel.notifier)
-                  .state
-                  .map((classInfo) => classInfo)
-                  .length,
-              itemBuilder: (context, index) {
-                final classInfo =
-                    ref.watch(classStateViewModel.notifier).state[index];
-                if ('${classInfo.startTime}' == '9:30') {
-                  print(classInfo);
-                  WidgetsBinding.instance.addPostFrameCallback((_) {
-                    attendanceConfirmationModalPage(
-                      context,
-                      '${classInfo.timeTable}限 -${classInfo.className}',
-                    );
-                  });
-                }
-                return Container();
-              },
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            Builder(builder: (context) {
+              callModal();
+              return Container();
+            }),
+            GuidanceMessage(
+              mainText: '授業一覧',
+              mainTextStyle:
+                  headLineSmall(FontWeight.w600, colorScheme.onBackground),
             ),
-          ),
-          // ElevatedButton(
-          //   onPressed: () => Navigator.of(context).push(
-          //     MaterialPageRoute<ClassApplication>(
-          //       builder: (_) => ClassApplication(),
-          //     ),
-          //   ),
-          //   child: Text('授業登録ボタン'),
-          // ),
-          Expanded(
-            child: Column(
-              children: [
-                Text('出席している生徒'),
-                SpaceBox(
-                  height: 20,
-                ),
-                Consumer(
-                  builder: (context, ref, child) {
-                    ref.watch(attendanceStudentViewModel);
-                    final atdStudents = ref
-                        .watch(attendanceStudentViewModel.notifier)
-                        .state
-                        .students;
-                    return Expanded(
-                      child: ListView.builder(
-                        itemCount: atdStudents.length,
-                        itemBuilder: (context, index) {
-                          final atdStudent = atdStudents[index];
-                          return Center(child: Text(atdStudent['name']));
-                        },
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                Text('欠席している生徒'),
-                SpaceBox(
-                  height: 20,
-                ),
-                Consumer(
-                  builder: (context, ref, child) {
-                    ref.watch(absenceStudentViewModel);
-                    final absStudents = ref
-                        .watch(absenceStudentViewModel.notifier)
-                        .state
-                        .students;
-                    return Expanded(
-                      child: ListView.builder(
-                        itemCount: absStudents.length,
-                        itemBuilder: (context, index) {
-                          final absStudent = absStudents[index];
-                          return Center(child: Text(absStudent['name']));
-                        },
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                Text('遅刻している生徒'),
-                SpaceBox(
-                  height: 20,
-                ),
-                Consumer(
-                  builder: (context, ref, child) {
-                    ref.watch(lateStudentViewModel);
-                    final lateStudents =
-                        ref.watch(lateStudentViewModel.notifier).state.students;
-                    return Expanded(
-                      child: ListView.builder(
-                        itemCount: lateStudents.length,
-                        itemBuilder: (context, index) {
-                          final lateStudent = lateStudents[index];
-                          return Center(child: Text(lateStudent['name']));
-                        },
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
-          Consumer(builder: (context, ref, child) {
-            ref.watch(applyingClassStateViewModel);
-            return Expanded(
+            SpaceBox(height: 20),
+            Expanded(
               child: ListView.builder(
-                itemCount: ref
-                    .watch(applyingClassStateViewModel.notifier)
-                    .state
-                    .length,
+                itemCount: ref.watch(classStateViewModel.notifier).state.length,
                 itemBuilder: (context, index) {
-                  final applyingClassInfo = ref
-                      .watch(applyingClassStateViewModel.notifier)
-                      .state[index];
-                  return GestureDetector(
-                    child: Column(
-                      children: [
-                        // Text(applyingClassInfo.name),
-                        // Text(applyingClassInfo.className
-                        //     .map((className) => className)
-                        //     .toString()),
-                      ],
-                    ),
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute<ExamineApplication>(
-                          builder: (_) => ExamineApplication(
-                            applyingClassState: applyingClassInfo,
+                  ClassState classInfo =
+                      ref.watch(classStateViewModel.notifier).state[index];
+                  return Column(
+                    children: [
+                      GestureDetector(
+                        child: Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: colorScheme.onBackground),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: GuidanceMessage(
+                            mainText: classInfo.className,
+                            mainTextStyle: labelMedium(
+                              FontWeight.w600,
+                              colorScheme.onBackground,
+                            ),
                           ),
                         ),
-                      );
-                    },
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => ClassDetailAndAllClassDayPage(
+                                classInfo: classInfo,
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                      SpaceBox(height: 20)
+                    ],
                   );
                 },
               ),
-            );
-          })
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

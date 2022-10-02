@@ -2,9 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/component/atom/color_schemes.g.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 import 'package:vantan_connect/view/edit_profile_page.dart';
-import 'package:vantan_connect/view_model/class_state/class_state_to_profile_view_model.dart';
+import 'package:vantan_connect/view_model/class_state/class_state_view_model.dart';
 
 import '../view_model/user_state/user_view_model.dart';
 
@@ -17,14 +17,6 @@ class ProfilePage extends ConsumerStatefulWidget {
 
 class _ProfilePageState extends ConsumerState<ProfilePage> {
   @override
-  void initState() {
-    super.initState();
-    Future(() async {
-      ref.read(classStateViewModel.notifier).fetchClassInfo();
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     ref
       ..watch(userViewModel)
@@ -35,9 +27,9 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
       appBar: AppBar(
         title: Text(
           'プロフィール',
-          style: TextStyle(color: colorScheme!.onBackground),
+          style: TextStyle(color: colorScheme.onBackground),
         ),
-        backgroundColor: colorScheme!.primaryContainer,
+        backgroundColor: colorScheme.primaryContainer,
       ),
       body: Column(
         children: [

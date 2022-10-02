@@ -29,7 +29,7 @@ class RowTextWrapper extends StatelessWidget {
         CommonContainer(
           width: width,
           height: height,
-          color: colorScheme!.primaryContainer,
+          color: colorScheme.primaryContainer,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

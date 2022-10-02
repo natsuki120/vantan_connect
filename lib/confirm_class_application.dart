@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/const/space_box.dart';
-import 'package:vantan_connect/view_model/class_state/class_state_to_profile_view_model.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
+import 'package:vantan_connect/view_model/class_state/class_state_view_model.dart';
 import 'package:vantan_connect/view_model/user_state/user_view_model.dart';
 import 'model/class_state/class_state.dart';
 

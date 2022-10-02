@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/vantan_life.dart';
 import 'package:vantan_connect/view/home/home_page.dart';
-import 'package:vantan_connect/view/profile_page.dart';
-
 import '../view_model/user_state/user_view_model.dart';
 
 class Login extends StatelessWidget {
@@ -27,6 +25,7 @@ class Login extends StatelessWidget {
             child: Column(
               children: [
                 TextField(
+                  key: Key('loginKey'),
                   decoration: InputDecoration(
                     hintText: 'Email',
                   ),
@@ -38,6 +37,7 @@ class Login extends StatelessWidget {
                   height: 8,
                 ),
                 TextField(
+                  key: Key('passwordKey'),
                   decoration: InputDecoration(
                     hintText: 'パスワード',
                   ),
@@ -65,7 +65,7 @@ class Login extends StatelessWidget {
                         await Navigator.of(context).pushReplacement(
                           MaterialPageRoute<HomePage>(
                             builder: (context) {
-                              return VantanLife(user: result.user!);
+                              return VantanLife();
                             },
                           ),
                         );
@@ -73,7 +73,7 @@ class Login extends StatelessWidget {
                         /* --- 省略 --- */
                       }
                     },
-                    child: Text('ログイン'),
+                    child: Text('ログインする'),
                   );
                 }),
               ],

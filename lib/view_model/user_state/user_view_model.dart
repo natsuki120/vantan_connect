@@ -3,20 +3,16 @@ import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:vantan_connect/model/user_state/user_state.dart';
-import 'package:vantan_connect/ripository/class_repository.dart';
-import 'package:vantan_connect/ripository/user_repository.dart';
+import 'package:vantan_connect/ripository/user/user_repository.dart';
+import 'package:vantan_connect/ripository/user/user_repository_impl.dart';
 
 class UserViewModel extends StateNotifier<UserState> {
-  UserViewModel() : super(const UserState());
+  UserViewModel(this.userRepository) : super(const UserState());
 
-  // Future<void> fetchNumberOfUserAttended() async {
-  //   final userData = await fetchNumberOfUserAttend();
-  //   state =
-  //       state.copyWith(name: userData.name, attendedDay: userData.attendedDay);
-  // }
+  final UserRepository userRepository;
 
   Future<void> fetchUser(String uid) async {
-    final userData = await UserRepository().fetchUserInfo(uid);
+    final userData = await userRepository.fetchUserInfo(uid);
     userData.listen((userState) {
       state = state.copyWith(
         id: userState.id,
@@ -29,6 +25,7 @@ class UserViewModel extends StateNotifier<UserState> {
   }
 
   //　TODO　これここに入れるもんなの？
+  // TODO 多分service層に入れる
   Future<void> setImageFromGallery(File? image) async {
     final pickedFile = await ImagePicker().pickImage(
       source: ImageSource.gallery,
@@ -40,20 +37,25 @@ class UserViewModel extends StateNotifier<UserState> {
 
   Future<String> sendUserImageToStorage(File imageFile) async {
     final imageFromStorage =
-        await UserRepository().sendUserImageToStorage(imageFile);
+        await userRepository.sendUserImageToStorage(imageFile);
     return imageFromStorage;
   }
 
   Future<void> sendAttendance(UserState userState) async {
-    await UserRepository().sendAttendance(userState);
+    await userRepository.sendAttendance(userState);
   }
 
   Future<void> sendAbsence(UserState userState) async {
-    await UserRepository().sendAbsence(userState);
+    await userRepository.sendAbsence(userState);
   }
 
   Future<void> sendLateness(UserState userState) async {
-    await UserRepository().sendLateness(userState);
+    await userRepository.sendLateness(userState);
+  }
+
+  Future<void> sendAttendanceStatus(
+      UserState userState, String status, String? reason) async {
+    await userRepository.sendAttendanceStatus(userState, status, reason);
   }
 
   Future<void> updateUserInfo(
@@ -64,15 +66,9 @@ class UserViewModel extends StateNotifier<UserState> {
       userImagePath: userImagePath,
     );
     print('更新しました');
-    await UserRepository().updateUserInfo(state);
+    await userRepository.updateUserInfo(state);
   }
 }
 
-// final logoutProvider = StateProvider((ref) => null);
-
 final userViewModel = StateNotifierProvider<UserViewModel, UserState>(
-  (ref) {
-    // ref.watch(logoutProvider);
-    return UserViewModel();
-  },
-);
+    (ref) => UserViewModel(UserRepositoryImpl()));

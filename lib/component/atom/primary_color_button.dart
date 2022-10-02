@@ -18,8 +18,8 @@ class PrimaryColorButton extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: colorScheme!.primary,
-          onPrimary: colorScheme!.onPrimary,
+          primary: colorScheme.primary,
+          onPrimary: colorScheme.onPrimary,
         ),
         onPressed: () {
           Navigator.of(context).pushReplacement(

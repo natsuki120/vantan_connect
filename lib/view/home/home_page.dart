@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/api/user_fields.dart';
-import '../../ripository/user_repository.dart';
+import '../../ripository/user/user_repository_impl.dart';
 import '../../view_model/user_state/user_view_model.dart';
 
 class HomePage extends ConsumerStatefulWidget {
@@ -44,7 +44,8 @@ class _HomePageState extends ConsumerState<HomePage> {
               child: ElevatedButton(
                 child: Text('出席する'),
                 onPressed: () async {
-                  await UserRepository().sendAttendanceState(widget.user!.uid);
+                  await UserRepositoryImpl()
+                      .sendAttendanceState(widget.user!.uid);
                   final snackBar = SnackBar(
                     backgroundColor: Colors.black,
                     content: Text('出席データを送信しました'),

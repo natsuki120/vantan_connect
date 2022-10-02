@@ -11,7 +11,7 @@ _$_ApplyingClassState _$$_ApplyingClassStateFromJson(
     _$_ApplyingClassState(
       id: json['id'] as String? ?? '',
       className: (json['className'] as List<dynamic>?)
-              ?.map((dynamic e) => e as String)
+              ?.map((e) => e as String)
               .toList() ??
           const <String>[],
       name: json['name'] as String? ?? '',

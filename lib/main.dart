@@ -2,6 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vantan_connect/component/template/attendance_confirmation_template.dart';
+import 'package:vantan_connect/component/template/timetable_template.dart';
+import 'package:vantan_connect/view/initial/initial_page.dart';
 import 'package:vantan_connect/view/login.dart';
 import 'firebase_options.dart';
 import 'component/atom/color_schemes.g.dart';
@@ -24,10 +27,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: changeColorOnDarkMode(
-        ThemeData(brightness: Brightness.light, useMaterial3: true),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        useMaterial3: true,
       ),
-      home: Login(),
+      home: InitialPage(),
       builder: EasyLoading.init(),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/component/molecule/indicator_elm.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 
 class FourIndicator extends StatelessWidget {
   const FourIndicator({

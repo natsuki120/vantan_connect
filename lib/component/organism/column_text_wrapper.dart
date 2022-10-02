@@ -3,7 +3,7 @@ import 'package:vantan_connect/component/atom/color_schemes.g.dart';
 import 'package:vantan_connect/component/molecule/check_box/common_container.dart';
 import 'package:vantan_connect/component/molecule/text/description_text.dart';
 import 'package:vantan_connect/component/molecule/text/main_text.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 
 class ColumnTextWrapper extends StatelessWidget {
   const ColumnTextWrapper({
@@ -30,7 +30,7 @@ class ColumnTextWrapper extends StatelessWidget {
         CommonContainer(
           width: width,
           height: height,
-          color: colorScheme!.primaryContainer,
+          color: colorScheme.primaryContainer,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

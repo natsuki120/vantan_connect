@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/component/molecule/text/description_text.dart';
 import 'package:vantan_connect/component/molecule/text/main_text.dart';
-import '../../const/space_box.dart';
+import '../atom/space_box.dart';
 
 class GuidanceMessage extends StatelessWidget {
   GuidanceMessage({
@@ -30,7 +30,7 @@ class GuidanceMessage extends StatelessWidget {
             textStyle: mainTextStyle!,
             textAlign: mainTextAlign,
           ),
-        const SpaceBox(height: 24),
+        const SpaceBox(height: 20),
         if (subText != '' && subTextStyle is TextStyle)
           DescriptionText(text: subText!, textStyle: subTextStyle!),
       ],

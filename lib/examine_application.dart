@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 import 'package:vantan_connect/model/applying_class_state/applying_class_state.dart';
 
 class ExamineApplication extends StatelessWidget {

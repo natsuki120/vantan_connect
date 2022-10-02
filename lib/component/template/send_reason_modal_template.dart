@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/organism/check_box.dart';
+import 'package:vantan_connect/component/organism/check_box/check_box_which_has_text_and_icon.dart';
 import 'package:vantan_connect/component/organism/guidance_button.dart';
 import 'package:vantan_connect/component/organism/guidance_message.dart';
 import 'package:vantan_connect/component/organism/radio_button.dart';
 import 'package:vantan_connect/component/organism/write_reason_box.dart';
 import 'package:vantan_connect/component/template/confirm_send_reason_modal_template.dart';
-import '../../const/space_box.dart';
+import '../atom/space_box.dart';
 import '../atom/color_schemes.g.dart';
 import '../molecule/style_by_platform.dart';
 
@@ -17,7 +17,7 @@ void sendReasonModalTemplate(BuildContext context) {
     //ドラッグ可能にする（高さもハーフサイズからフルサイズになる様子）
     isScrollControlled: true,
     context: context,
-    backgroundColor: colorScheme!.background,
+    backgroundColor: colorScheme.background,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
     ),
@@ -34,7 +34,7 @@ void sendReasonModalTemplate(BuildContext context) {
                 GuidanceMessage(
                   mainText: 'タイトルタイトル',
                   mainTextStyle:
-                      titleLarge(FontWeight.w600, colorScheme!.onBackground),
+                      titleLarge(FontWeight.w600, colorScheme.onBackground),
                 ),
                 StatefulBuilder(builder: (context, setState) {
                   return Row(
@@ -101,29 +101,29 @@ void sendReasonModalTemplate(BuildContext context) {
                   subText: 'せつめいせつめいせつめいせつめいせつめいせつめい',
                   mainTextStyle: titleLarge(
                     FontWeight.w600,
-                    colorScheme!.onBackground,
+                    colorScheme.onBackground,
                   ),
                   subTextStyle: bodyMedium(
                     FontWeight.w300,
-                    colorScheme!.onBackground,
+                    colorScheme.onBackground,
                   ),
                 ),
-                const SpaceBox(height: 40),
-                const CheckBox(text: '1限 -  UI/UX'),
-                const SpaceBox(height: 10),
-                const CheckBox(text: '2限 - UI/UX'),
-                const SpaceBox(height: 10),
-                const CheckBox(text: '3限 - 空きコマ'),
-                const SpaceBox(height: 10),
-                const CheckBox(text: '4限 - 空きコマ'),
-                const SpaceBox(height: 10),
-                const CheckBox(text: '5限 - AWSプラクティショナー'),
-                const SpaceBox(height: 10),
-                const CheckBox(text: '6限 - AWSプラクティショナー'),
-                const SpaceBox(height: 23),
-                const SpaceBox(height: 30),
-                const WriteReasonBox(),
-                const SpaceBox(height: 64),
+                // const SpaceBox(height: 40),
+                // const CheckBox(text: '1限 -  UI/UX'),
+                // const SpaceBox(height: 10),
+                // const CheckBox(text: '2限 - UI/UX'),
+                // const SpaceBox(height: 10),
+                // const CheckBox(text: '3限 - 空きコマ'),
+                // const SpaceBox(height: 10),
+                // const CheckBox(text: '4限 - 空きコマ'),
+                // const SpaceBox(height: 10),
+                // const CheckBox(text: '5限 - AWSプラクティショナー'),
+                // const SpaceBox(height: 10),
+                // const CheckBox(text: '6限 - AWSプラクティショナー'),
+                // const SpaceBox(height: 23),
+                // const SpaceBox(height: 30),
+                // const WriteReasonBox(),
+                // const SpaceBox(height: 64),
                 GuidanceButton(
                   mainText: '確認',
                   mainCallback: () => confirmSendReasonModalTemplate(context),

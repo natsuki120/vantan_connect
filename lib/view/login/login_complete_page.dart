@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 import '../../component/atom/color_schemes.g.dart';
 import '../../component/molecule/primary_color_button.dart';
 import '../../component/molecule/style_by_platform.dart';

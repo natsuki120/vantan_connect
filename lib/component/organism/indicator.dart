@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 
 import '../molecule/indicator_elm.dart';
 
