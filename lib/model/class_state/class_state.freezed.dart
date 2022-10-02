@@ -23,11 +23,11 @@ mixin _$ClassState {
   String get className => throw _privateConstructorUsedError;
   String get endTime => throw _privateConstructorUsedError;
   int get frameCount => throw _privateConstructorUsedError;
-  List<dynamic> get selectedBaseClass => throw _privateConstructorUsedError;
+  List<dynamic> get selectableBaseClass => throw _privateConstructorUsedError;
   String get startTime => throw _privateConstructorUsedError;
+  String get announceTime => throw _privateConstructorUsedError;
   List<dynamic> get teacher => throw _privateConstructorUsedError;
   int get timeTable => throw _privateConstructorUsedError;
-  String get weekDay => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,11 +44,11 @@ abstract class $ClassStateCopyWith<$Res> {
       {String className,
       String endTime,
       int frameCount,
-      List<dynamic> selectedBaseClass,
+      List<dynamic> selectableBaseClass,
       String startTime,
+      String announceTime,
       List<dynamic> teacher,
-      int timeTable,
-      String weekDay});
+      int timeTable});
 }
 
 /// @nodoc
@@ -64,11 +64,11 @@ class _$ClassStateCopyWithImpl<$Res> implements $ClassStateCopyWith<$Res> {
     Object? className = freezed,
     Object? endTime = freezed,
     Object? frameCount = freezed,
-    Object? selectedBaseClass = freezed,
+    Object? selectableBaseClass = freezed,
     Object? startTime = freezed,
+    Object? announceTime = freezed,
     Object? teacher = freezed,
     Object? timeTable = freezed,
-    Object? weekDay = freezed,
   }) {
     return _then(_value.copyWith(
       className: className == freezed
@@ -83,13 +83,17 @@ class _$ClassStateCopyWithImpl<$Res> implements $ClassStateCopyWith<$Res> {
           ? _value.frameCount
           : frameCount // ignore: cast_nullable_to_non_nullable
               as int,
-      selectedBaseClass: selectedBaseClass == freezed
-          ? _value.selectedBaseClass
-          : selectedBaseClass // ignore: cast_nullable_to_non_nullable
+      selectableBaseClass: selectableBaseClass == freezed
+          ? _value.selectableBaseClass
+          : selectableBaseClass // ignore: cast_nullable_to_non_nullable
               as List<dynamic>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      announceTime: announceTime == freezed
+          ? _value.announceTime
+          : announceTime // ignore: cast_nullable_to_non_nullable
               as String,
       teacher: teacher == freezed
           ? _value.teacher
@@ -99,10 +103,6 @@ class _$ClassStateCopyWithImpl<$Res> implements $ClassStateCopyWith<$Res> {
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
               as int,
-      weekDay: weekDay == freezed
-          ? _value.weekDay
-          : weekDay // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -118,11 +118,11 @@ abstract class _$$_ClassStateCopyWith<$Res>
       {String className,
       String endTime,
       int frameCount,
-      List<dynamic> selectedBaseClass,
+      List<dynamic> selectableBaseClass,
       String startTime,
+      String announceTime,
       List<dynamic> teacher,
-      int timeTable,
-      String weekDay});
+      int timeTable});
 }
 
 /// @nodoc
@@ -140,11 +140,11 @@ class __$$_ClassStateCopyWithImpl<$Res> extends _$ClassStateCopyWithImpl<$Res>
     Object? className = freezed,
     Object? endTime = freezed,
     Object? frameCount = freezed,
-    Object? selectedBaseClass = freezed,
+    Object? selectableBaseClass = freezed,
     Object? startTime = freezed,
+    Object? announceTime = freezed,
     Object? teacher = freezed,
     Object? timeTable = freezed,
-    Object? weekDay = freezed,
   }) {
     return _then(_$_ClassState(
       className: className == freezed
@@ -159,13 +159,17 @@ class __$$_ClassStateCopyWithImpl<$Res> extends _$ClassStateCopyWithImpl<$Res>
           ? _value.frameCount
           : frameCount // ignore: cast_nullable_to_non_nullable
               as int,
-      selectedBaseClass: selectedBaseClass == freezed
-          ? _value._selectedBaseClass
-          : selectedBaseClass // ignore: cast_nullable_to_non_nullable
+      selectableBaseClass: selectableBaseClass == freezed
+          ? _value._selectableBaseClass
+          : selectableBaseClass // ignore: cast_nullable_to_non_nullable
               as List<dynamic>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      announceTime: announceTime == freezed
+          ? _value.announceTime
+          : announceTime // ignore: cast_nullable_to_non_nullable
               as String,
       teacher: teacher == freezed
           ? _value._teacher
@@ -175,10 +179,6 @@ class __$$_ClassStateCopyWithImpl<$Res> extends _$ClassStateCopyWithImpl<$Res>
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
               as int,
-      weekDay: weekDay == freezed
-          ? _value.weekDay
-          : weekDay // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -190,12 +190,12 @@ class _$_ClassState implements _ClassState {
       {this.className = '',
       this.endTime = '',
       this.frameCount = 0,
-      final List<dynamic> selectedBaseClass = const [],
+      final List<dynamic> selectableBaseClass = const [],
       this.startTime = '',
+      this.announceTime = '',
       final List<dynamic> teacher = const [],
-      this.timeTable = 0,
-      this.weekDay = ''})
-      : _selectedBaseClass = selectedBaseClass,
+      this.timeTable = 0})
+      : _selectableBaseClass = selectableBaseClass,
         _teacher = teacher;
 
   factory _$_ClassState.fromJson(Map<String, dynamic> json) =>
@@ -210,17 +210,20 @@ class _$_ClassState implements _ClassState {
   @override
   @JsonKey()
   final int frameCount;
-  final List<dynamic> _selectedBaseClass;
+  final List<dynamic> _selectableBaseClass;
   @override
   @JsonKey()
-  List<dynamic> get selectedBaseClass {
+  List<dynamic> get selectableBaseClass {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_selectedBaseClass);
+    return EqualUnmodifiableListView(_selectableBaseClass);
   }
 
   @override
   @JsonKey()
   final String startTime;
+  @override
+  @JsonKey()
+  final String announceTime;
   final List<dynamic> _teacher;
   @override
   @JsonKey()
@@ -232,13 +235,10 @@ class _$_ClassState implements _ClassState {
   @override
   @JsonKey()
   final int timeTable;
-  @override
-  @JsonKey()
-  final String weekDay;
 
   @override
   String toString() {
-    return 'ClassState(className: $className, endTime: $endTime, frameCount: $frameCount, selectedBaseClass: $selectedBaseClass, startTime: $startTime, teacher: $teacher, timeTable: $timeTable, weekDay: $weekDay)';
+    return 'ClassState(className: $className, endTime: $endTime, frameCount: $frameCount, selectableBaseClass: $selectableBaseClass, startTime: $startTime, announceTime: $announceTime, teacher: $teacher, timeTable: $timeTable)';
   }
 
   @override
@@ -251,11 +251,12 @@ class _$_ClassState implements _ClassState {
             const DeepCollectionEquality()
                 .equals(other.frameCount, frameCount) &&
             const DeepCollectionEquality()
-                .equals(other._selectedBaseClass, _selectedBaseClass) &&
+                .equals(other._selectableBaseClass, _selectableBaseClass) &&
             const DeepCollectionEquality().equals(other.startTime, startTime) &&
+            const DeepCollectionEquality()
+                .equals(other.announceTime, announceTime) &&
             const DeepCollectionEquality().equals(other._teacher, _teacher) &&
-            const DeepCollectionEquality().equals(other.timeTable, timeTable) &&
-            const DeepCollectionEquality().equals(other.weekDay, weekDay));
+            const DeepCollectionEquality().equals(other.timeTable, timeTable));
   }
 
   @JsonKey(ignore: true)
@@ -265,11 +266,11 @@ class _$_ClassState implements _ClassState {
       const DeepCollectionEquality().hash(className),
       const DeepCollectionEquality().hash(endTime),
       const DeepCollectionEquality().hash(frameCount),
-      const DeepCollectionEquality().hash(_selectedBaseClass),
+      const DeepCollectionEquality().hash(_selectableBaseClass),
       const DeepCollectionEquality().hash(startTime),
+      const DeepCollectionEquality().hash(announceTime),
       const DeepCollectionEquality().hash(_teacher),
-      const DeepCollectionEquality().hash(timeTable),
-      const DeepCollectionEquality().hash(weekDay));
+      const DeepCollectionEquality().hash(timeTable));
 
   @JsonKey(ignore: true)
   @override
@@ -289,11 +290,11 @@ abstract class _ClassState implements ClassState {
       {final String className,
       final String endTime,
       final int frameCount,
-      final List<dynamic> selectedBaseClass,
+      final List<dynamic> selectableBaseClass,
       final String startTime,
+      final String announceTime,
       final List<dynamic> teacher,
-      final int timeTable,
-      final String weekDay}) = _$_ClassState;
+      final int timeTable}) = _$_ClassState;
 
   factory _ClassState.fromJson(Map<String, dynamic> json) =
       _$_ClassState.fromJson;
@@ -305,15 +306,15 @@ abstract class _ClassState implements ClassState {
   @override
   int get frameCount;
   @override
-  List<dynamic> get selectedBaseClass;
+  List<dynamic> get selectableBaseClass;
   @override
   String get startTime;
+  @override
+  String get announceTime;
   @override
   List<dynamic> get teacher;
   @override
   int get timeTable;
-  @override
-  String get weekDay;
   @override
   @JsonKey(ignore: true)
   _$$_ClassStateCopyWith<_$_ClassState> get copyWith =>

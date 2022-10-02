@@ -5,9 +5,7 @@ import 'package:vantan_connect/view/profile_page.dart';
 import 'home_page.dart';
 
 class VantanLife extends StatefulWidget {
-  const VantanLife({super.key, required this.user});
-
-  final User user;
+  const VantanLife({super.key});
 
   @override
   State<VantanLife> createState() => _VantanLifeState();
@@ -15,7 +13,7 @@ class VantanLife extends StatefulWidget {
 
 class _VantanLifeState extends State<VantanLife> {
   static List<Widget> pageList = [
-    const HomePage(),
+    HomePage(),
     Container(),
     Container(),
     Container(),
@@ -35,8 +33,9 @@ class _VantanLifeState extends State<VantanLife> {
       body: pageList[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: colorScheme!.onPrimaryContainer,
-        backgroundColor: colorScheme!.primaryContainer,
+        selectedItemColor: colorScheme.onSurfaceVariant,
+        unselectedItemColor: colorScheme.onSurfaceVariant,
+        backgroundColor: colorScheme.surface,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(

@@ -1,14 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/model/attendance_student_state/attendance_student_state.dart';
 
-import '../../ripository/user_repository.dart';
+import '../../ripository/user/user_repository_impl.dart';
 
 class AttendanceStudentViewModel extends StateNotifier<AttendanceStudentState> {
   AttendanceStudentViewModel() : super(AttendanceStudentState());
 
   Future<void> fetchAttendanceUser() async {
     try {
-      final userData = await UserRepository().fetchAttendanceUser();
+      final userData = await UserRepositoryImpl().fetchAttendanceUser();
       userData.listen((students) {
         state = state.copyWith(students: students.students);
       });

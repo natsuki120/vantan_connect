@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/component/molecule/primary_color_button.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 import '../molecule/tappable_text.dart';
 
 class GuidanceButton extends StatelessWidget {
@@ -16,7 +16,7 @@ class GuidanceButton extends StatelessWidget {
   String? mainText;
   String? subText;
   TextStyle? textStyle;
-  VoidCallback? mainCallback;
+  GestureTapCallback? mainCallback;
   VoidCallback? subCallback;
 
   @override

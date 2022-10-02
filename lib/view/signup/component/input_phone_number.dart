@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 
 TextEditingController firstPhoneController = TextEditingController();
 TextEditingController secondPhoneController = TextEditingController();

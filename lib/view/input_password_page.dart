@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 import 'package:vantan_connect/view/confirm_page.dart';
 import '../component/atom/color_schemes.g.dart';
 
@@ -39,7 +39,7 @@ class _InputPasswordPageState extends State<InputPasswordPage> {
                 labelText: 'パスワード',
                 border: OutlineInputBorder(),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: colorScheme!.outline),
+                  borderSide: BorderSide(color: colorScheme.outline),
                 ),
                 suffixIcon: IconButton(
                   onPressed: () {
@@ -60,7 +60,7 @@ class _InputPasswordPageState extends State<InputPasswordPage> {
                 labelText: '確認用パスワード',
                 border: OutlineInputBorder(),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: colorScheme!.outline),
+                  borderSide: BorderSide(color: colorScheme.outline),
                 ),
                 suffixIcon: IconButton(
                   onPressed: () {
@@ -81,8 +81,8 @@ class _InputPasswordPageState extends State<InputPasswordPage> {
               height: 50,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: colorScheme!.primary,
-                  onPrimary: colorScheme!.onPrimary,
+                  primary: colorScheme.primary,
+                  onPrimary: colorScheme.onPrimary,
                 ),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute<ConfirmPage>(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../const/space_box.dart';
+import '../atom/space_box.dart';
 import '../atom/color_schemes.g.dart';
 import '../guidance_message.dart';
 import '../molecule/style_by_platform.dart';
@@ -12,7 +12,7 @@ class StartUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorScheme!.primary,
+      backgroundColor: colorScheme.primary,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -20,7 +20,7 @@ class StartUpPage extends StatelessWidget {
           GuidanceMessage(
             mainText: 'バンタン専用の\nコミュニケーションアプリ',
             mainTextStyle:
-                headLineSmall(FontWeight.w600, colorScheme!.onPrimary),
+                headLineSmall(FontWeight.w600, colorScheme.onPrimary),
             mainTextAlign: TextAlign.center,
             subText: '',
             subTextStyle:
@@ -31,7 +31,7 @@ class StartUpPage extends StatelessWidget {
             children: [
               BackgroundImageWithShape(
                 imagePath: 'images/women.png',
-                color: colorScheme!.background,
+                color: colorScheme.background,
                 radius: const Radius.elliptical(900, 100),
               ),
               Column(
@@ -42,7 +42,7 @@ class StartUpPage extends StatelessWidget {
                     mainCallback: () {},
                     subCallback: () {},
                     textStyle:
-                        labelLarge(FontWeight.w600, colorScheme!.onBackground),
+                        labelLarge(FontWeight.w600, colorScheme.onBackground),
                   ),
                   const SpaceBox(height: 60),
                 ],

@@ -22,7 +22,7 @@ class GuidAuth extends StatelessWidget {
           height: size.height * 0.4,
           child: DecoratedBox(
             decoration: BoxDecoration(
-              color: colorScheme!.background,
+              color: colorScheme.background,
               // TODO デザインが少し違う。端末サイズを超過するcontainerを許容するロジックを考える
               borderRadius: const BorderRadius.vertical(
                 top: Radius.elliptical(900, 100),
@@ -39,8 +39,8 @@ class GuidAuth extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: colorScheme!.primary,
-                          onPrimary: colorScheme!.onPrimary,
+                          primary: colorScheme.primary,
+                          onPrimary: colorScheme.onPrimary,
                         ),
                         onPressed: () {
                           Navigator.of(context).pushReplacement(
@@ -66,7 +66,7 @@ class GuidAuth extends StatelessWidget {
                         child: Text(
                           'ログイン',
                           style: TextStyle(
-                            color: colorScheme!.onBackground,
+                            color: colorScheme.onBackground,
                             fontWeight: FontWeight.bold,
                           ),
                           textAlign: TextAlign.center,

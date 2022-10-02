@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/component/organism/guidance_message.dart';
-import '../../const/space_box.dart';
+import 'package:vantan_connect/model/class_by_day_state/class_by_day_state.dart';
+import 'package:vantan_connect/view_model/attendance_status_state/attendance_status_state_view_model.dart';
+import '../atom/space_box.dart';
 import '../../view_model/user_state/user_view_model.dart';
 import '../atom/color_schemes.g.dart';
 import '../molecule/style_by_platform.dart';
@@ -14,12 +16,14 @@ class AttendanceButton extends StatelessWidget {
     required this.height,
     required this.text,
     required this.imagePath,
+    required this.classByDayState,
   });
 
   final String text;
   final double width;
   final double height;
   final String imagePath;
+  final ClassByDayState classByDayState;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +35,7 @@ class AttendanceButton extends StatelessWidget {
             height: height,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: colorScheme!.primaryContainer,
+              color: colorScheme.primaryContainer,
             ),
             child: Column(
               children: [
@@ -40,7 +44,7 @@ class AttendanceButton extends StatelessWidget {
                   mainText: text,
                   mainTextStyle: headLineMedium(
                     FontWeight.w600,
-                    colorScheme!.onPrimaryContainer,
+                    colorScheme.onPrimaryContainer,
                   ),
                 ),
                 Container(
@@ -54,8 +58,12 @@ class AttendanceButton extends StatelessWidget {
           onTap: () async {
             EasyLoading.show(status: 'loading...');
             await ref
-                .read(userViewModel.notifier)
-                .sendAttendance(ref.watch(userViewModel.notifier).state);
+                .read(attendanceStatusViewModel.notifier)
+                .sendAttendanceStatus(
+                    userState: ref.watch(userViewModel.notifier).state,
+                    classByDayState: classByDayState,
+                    status: '',
+                    reason: '');
             EasyLoading.showSuccess('出席データを送信しました');
             Navigator.of(context).pop();
           },

@@ -4,7 +4,7 @@ import 'package:vantan_connect/component/guidance_message.dart';
 import 'package:vantan_connect/component/molecule/style_by_platform.dart';
 import 'package:vantan_connect/component/organism/background_image_with_shape.dart';
 import 'package:vantan_connect/component/organism/guidance_button.dart';
-import 'package:vantan_connect/const/space_box.dart';
+import 'package:vantan_connect/component/atom/space_box.dart';
 
 class StartupTemplate extends StatelessWidget {
   const StartupTemplate({super.key});
@@ -12,7 +12,7 @@ class StartupTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorScheme!.primary,
+      backgroundColor: colorScheme.primary,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -20,18 +20,17 @@ class StartupTemplate extends StatelessWidget {
           GuidanceMessage(
             mainText: 'タイトルタイトル\nタイトルタイトル',
             mainTextStyle:
-                headLineSmall(FontWeight.w600, colorScheme!.onPrimary),
+                headLineSmall(FontWeight.w600, colorScheme.onPrimary),
             mainTextAlign: TextAlign.center,
             subText: '',
-            subTextStyle:
-                headLineSmall(FontWeight.w600, colorScheme!.onPrimary),
+            subTextStyle: headLineSmall(FontWeight.w600, colorScheme.onPrimary),
           ),
           Stack(
             alignment: AlignmentDirectional.bottomCenter,
             children: [
               BackgroundImageWithShape(
                 imagePath: 'images/women.png',
-                color: colorScheme!.background,
+                color: colorScheme.background,
                 radius: const Radius.elliptical(900, 100),
               ),
               Column(
@@ -42,7 +41,7 @@ class StartupTemplate extends StatelessWidget {
                     subText: 'aaaaaa',
                     subCallback: () {},
                     textStyle:
-                        labelLarge(FontWeight.w600, colorScheme!.onBackground),
+                        labelLarge(FontWeight.w600, colorScheme.onBackground),
                   ),
                   const SpaceBox(height: 60),
                 ],

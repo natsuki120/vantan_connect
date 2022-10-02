@@ -11,7 +11,7 @@ class PrimaryColorButton extends StatelessWidget {
   });
 
   final String text;
-  final VoidCallback callback;
+  final GestureTapCallback callback;
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +20,13 @@ class PrimaryColorButton extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          foregroundColor: colorScheme!.onPrimary,
-          backgroundColor: colorScheme!.primary,
+          foregroundColor: colorScheme.onPrimary,
+          backgroundColor: colorScheme.primary,
         ),
         onPressed: callback,
         child: MainText(
           text: text,
-          textStyle: labelLarge(FontWeight.w600, colorScheme!.onPrimary),
+          textStyle: labelLarge(FontWeight.w600, colorScheme.onPrimary),
         ),
       ),
     );

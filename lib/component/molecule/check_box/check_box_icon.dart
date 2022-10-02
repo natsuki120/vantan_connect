@@ -7,6 +7,9 @@ class CheckBoxIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Icon(iconData);
+    return Icon(
+      iconData,
+      size: 20,
+    );
   }
 }

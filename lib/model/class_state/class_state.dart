@@ -8,11 +8,11 @@ class ClassState with _$ClassState {
     @Default('') String className,
     @Default('') String endTime,
     @Default(0) int frameCount,
-    @Default([]) List selectedBaseClass,
+    @Default([]) List selectableBaseClass,
     @Default('') String startTime,
+    @Default('') String announceTime,
     @Default([]) List teacher,
     @Default(0) int timeTable,
-    @Default('') String weekDay,
   }) = _ClassState;
 
   factory ClassState.fromJson(Map<String, dynamic> json) =>

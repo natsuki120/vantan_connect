@@ -12,8 +12,8 @@ class GetSmsCodeButton extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: colorScheme!.primary,
-          onPrimary: colorScheme!.onPrimary,
+          primary: colorScheme.primary,
+          onPrimary: colorScheme.onPrimary,
         ),
         onPressed: () => SignInService().verifyPhoneNumber(context),
         child: const Text(

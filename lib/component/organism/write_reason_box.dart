@@ -14,13 +14,13 @@ class WriteReasonBox extends StatelessWidget {
       children: [
         GuidanceMessage(
           mainText: 'ここに理由を書かせる',
-          mainTextStyle: titleLarge(FontWeight.w600, colorScheme!.onBackground),
+          mainTextStyle: titleLarge(FontWeight.w600, colorScheme.onBackground),
         ),
         CommonContainer(
           width: double.infinity,
           height: 120,
-          color: colorScheme!.background,
-          borderColor: colorScheme!.onSurfaceVariant.withOpacity(0.8),
+          color: colorScheme.background,
+          borderColor: colorScheme.onSurfaceVariant.withOpacity(0.8),
           child: TextFormField(
             decoration: const InputDecoration(border: InputBorder.none),
           ),

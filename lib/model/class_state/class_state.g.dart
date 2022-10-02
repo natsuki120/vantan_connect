@@ -11,12 +11,12 @@ _$_ClassState _$$_ClassStateFromJson(Map<String, dynamic> json) =>
       className: json['className'] as String? ?? '',
       endTime: json['endTime'] as String? ?? '',
       frameCount: json['frameCount'] as int? ?? 0,
-      selectedBaseClass:
-          json['selectedBaseClass'] as List<dynamic>? ?? const [],
+      selectableBaseClass:
+          json['selectableBaseClass'] as List<dynamic>? ?? const [],
       startTime: json['startTime'] as String? ?? '',
+      announceTime: json['announceTime'] as String? ?? '',
       teacher: json['teacher'] as List<dynamic>? ?? const [],
       timeTable: json['timeTable'] as int? ?? 0,
-      weekDay: json['weekDay'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_ClassStateToJson(_$_ClassState instance) =>
@@ -24,9 +24,9 @@ Map<String, dynamic> _$$_ClassStateToJson(_$_ClassState instance) =>
       'className': instance.className,
       'endTime': instance.endTime,
       'frameCount': instance.frameCount,
-      'selectedBaseClass': instance.selectedBaseClass,
+      'selectableBaseClass': instance.selectableBaseClass,
       'startTime': instance.startTime,
+      'announceTime': instance.announceTime,
       'teacher': instance.teacher,
       'timeTable': instance.timeTable,
-      'weekDay': instance.weekDay,
     };
