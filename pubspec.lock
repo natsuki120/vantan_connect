@@ -559,7 +559,7 @@ packages:
     source: hosted
     version: "2.6.1"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       url: "https://pub.dartlang.org"
@@ -727,7 +727,7 @@ packages:
     source: hosted
     version: "1.11.1"
   pedantic_mono:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: pedantic_mono
       url: "https://pub.dartlang.org"

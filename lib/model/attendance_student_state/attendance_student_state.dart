@@ -5,7 +5,7 @@ part 'attendance_student_state.g.dart';
 @freezed
 class AttendanceStudentState with _$AttendanceStudentState {
   const factory AttendanceStudentState({
-    @Default([]) List<Map<String, dynamic>> students,
+    @Default([]) List students,
   }) = _AttendanceStudentState;
 
   factory AttendanceStudentState.fromJson(Map<String, dynamic> json) =>

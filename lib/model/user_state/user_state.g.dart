@@ -14,6 +14,7 @@ _$_UserState _$$_UserStateFromJson(Map<String, dynamic> json) => _$_UserState(
       attendedDay: json['attendedDay'] as int? ?? 0,
       accountNumber: json['accountNumber'] as String? ?? '',
       userImagePath: json['userImagePath'] as String? ?? '',
+      rootCollection: json['rootCollection'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_UserStateToJson(_$_UserState instance) =>
@@ -25,4 +26,5 @@ Map<String, dynamic> _$$_UserStateToJson(_$_UserState instance) =>
       'attendedDay': instance.attendedDay,
       'accountNumber': instance.accountNumber,
       'userImagePath': instance.userImagePath,
+      'rootCollection': instance.rootCollection,
     };

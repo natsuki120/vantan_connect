@@ -37,7 +37,7 @@ class _ClassDocumentsAndConfirmAttendancePageState
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(widget.classByDayState.day),
+          title: Text(widget.classByDayState.day.toString()),
           bottom: TabBar(
             tabs: [
               GuidanceMessage(

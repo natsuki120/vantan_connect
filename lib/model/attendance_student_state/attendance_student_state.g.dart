@@ -9,10 +9,7 @@ part of 'attendance_student_state.dart';
 _$_AttendanceStudentState _$$_AttendanceStudentStateFromJson(
         Map<String, dynamic> json) =>
     _$_AttendanceStudentState(
-      students: (json['students'] as List<dynamic>?)
-              ?.map((e) => e as Map<String, dynamic>)
-              .toList() ??
-          const [],
+      students: json['students'] as List<dynamic>? ?? const [],
     );
 
 Map<String, dynamic> _$$_AttendanceStudentStateToJson(

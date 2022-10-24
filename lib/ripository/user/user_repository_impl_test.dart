@@ -3,7 +3,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:vantan_connect/model/user_state/user_state.dart';
 import 'package:vantan_connect/ripository/user/user_repository.dart';
 
-Map<String, dynamic> testAttendanceStatus = {};
+Map<String, dynamic> testAttendanceStatus = <String, dynamic>{};
 
 class UserRepositoryImplTest implements UserRepository {
   @override

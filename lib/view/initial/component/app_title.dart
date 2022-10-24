@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/atom/color_schemes.g.dart';
-import 'package:vantan_connect/component/molecule/style_by_platform.dart';
 
 class AppTitle extends StatelessWidget {
   const AppTitle({

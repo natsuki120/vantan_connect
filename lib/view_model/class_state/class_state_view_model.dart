@@ -11,6 +11,7 @@ class ClassStateViewModel extends StateNotifier<List<ClassState>> {
   void fetchClassInfoWhichStudentRegistered() {
     final classState = classRepository.fetchClassInfoWhichStudentRegistered();
     classState.listen((event) => state = [...event]);
+    state.sort((a, b) => a.timeTable.compareTo(b.timeTable));
   }
 
   void fetchClassInfoToConfirmDetail() {

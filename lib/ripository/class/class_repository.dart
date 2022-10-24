@@ -6,6 +6,10 @@ abstract class ClassRepository {
 
   Stream<List<ClassState>> fetchClassInfoToConfirmDetail();
 
+  Stream<List<ClassState>> fetchBaseClassInfo();
+
+  Stream<List<ClassState>> fetchSelectionClassInfo();
+
   Future<void> applyClassToStuff(
     UserState userState,
     List<ClassState> classStateList,

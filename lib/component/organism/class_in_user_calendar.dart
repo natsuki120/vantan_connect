@@ -4,16 +4,17 @@ import 'package:vantan_connect/component/atom/description_text.dart';
 import 'package:vantan_connect/component/molecule/style_by_platform.dart';
 import 'package:vantan_connect/component/molecule/text/horizontal_of_text_and_icon.dart';
 import 'package:vantan_connect/component/molecule/text/main_text.dart';
-import 'package:vantan_connect/component/template/class_detail_design_template.dart';
+import 'package:vantan_connect/component/page/class_detail/class_detail_design_page.dart';
+import 'package:vantan_connect/component/template/class_info/class_detail_design_template.dart';
 import 'package:vantan_connect/component/atom/space_box.dart';
+import 'package:vantan_connect/model/class_state/class_state.dart';
 
 class ClassInUserCalendar extends StatelessWidget {
   const ClassInUserCalendar(
-      {Key? key, required this.timetable, required this.className})
-      : super(key: key);
+      {super.key, required this.timetable, required this.classState});
 
   final String timetable;
-  final String className;
+  final ClassState classState;
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +22,18 @@ class ClassInUserCalendar extends StatelessWidget {
       padding: const EdgeInsets.only(right: 40, left: 40, top: 30),
       child: GestureDetector(
         onTap: () {
-          Navigator.of(context).push(
+          Navigator.of(context).push<ClassDetailDesignTemplate>(
             MaterialPageRoute(
-              builder: (context) => ClassDetailDesignTemplate(
-                className: 'ここに授業の名前が載ります',
-              ),
+              builder: (context) =>
+                  ClassDetailDesignPage(classState: classState),
             ),
           );
         },
         child: Table(
-          columnWidths: {0: IntrinsicColumnWidth(), 1: IntrinsicColumnWidth()},
+          columnWidths: const {
+            0: IntrinsicColumnWidth(),
+            1: IntrinsicColumnWidth(),
+          },
           children: [
             TableRow(
               children: [
@@ -38,17 +41,17 @@ class ClassInUserCalendar extends StatelessWidget {
                   text: timetable,
                   textStyle: titleSmall(FontWeight.w300, colorScheme.onSurface),
                 ),
-                SpaceBox(
+                const SpaceBox(
                   width: 20,
                 ),
                 MainText(
-                  text: className,
+                  text: classState.className,
                   textStyle:
                       titleSmall(FontWeight.w600, colorScheme.onBackground),
                 ),
               ],
             ),
-            TableRow(
+            const TableRow(
               children: [
                 SpaceBox(height: 0),
                 SpaceBox(height: 50),

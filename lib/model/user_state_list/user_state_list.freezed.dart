@@ -20,8 +20,7 @@ UserStateList _$UserStateListFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserStateList {
-  List<Map<String, dynamic>> get userStateList =>
-      throw _privateConstructorUsedError;
+  List<dynamic> get userStateList => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +33,7 @@ abstract class $UserStateListCopyWith<$Res> {
   factory $UserStateListCopyWith(
           UserStateList value, $Res Function(UserStateList) then) =
       _$UserStateListCopyWithImpl<$Res>;
-  $Res call({List<Map<String, dynamic>> userStateList});
+  $Res call({List<dynamic> userStateList});
 }
 
 /// @nodoc
@@ -54,7 +53,7 @@ class _$UserStateListCopyWithImpl<$Res>
       userStateList: userStateList == freezed
           ? _value.userStateList
           : userStateList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<dynamic>,
     ));
   }
 }
@@ -66,7 +65,7 @@ abstract class _$$_UserStateListCopyWith<$Res>
           _$_UserStateList value, $Res Function(_$_UserStateList) then) =
       __$$_UserStateListCopyWithImpl<$Res>;
   @override
-  $Res call({List<Map<String, dynamic>> userStateList});
+  $Res call({List<dynamic> userStateList});
 }
 
 /// @nodoc
@@ -88,7 +87,7 @@ class __$$_UserStateListCopyWithImpl<$Res>
       userStateList: userStateList == freezed
           ? _value._userStateList
           : userStateList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<dynamic>,
     ));
   }
 }
@@ -96,17 +95,16 @@ class __$$_UserStateListCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_UserStateList implements _UserStateList {
-  const _$_UserStateList(
-      {final List<Map<String, dynamic>> userStateList = const []})
+  const _$_UserStateList({final List<dynamic> userStateList = const []})
       : _userStateList = userStateList;
 
   factory _$_UserStateList.fromJson(Map<String, dynamic> json) =>
       _$$_UserStateListFromJson(json);
 
-  final List<Map<String, dynamic>> _userStateList;
+  final List<dynamic> _userStateList;
   @override
   @JsonKey()
-  List<Map<String, dynamic>> get userStateList {
+  List<dynamic> get userStateList {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_userStateList);
   }
@@ -144,14 +142,14 @@ class _$_UserStateList implements _UserStateList {
 }
 
 abstract class _UserStateList implements UserStateList {
-  const factory _UserStateList(
-      {final List<Map<String, dynamic>> userStateList}) = _$_UserStateList;
+  const factory _UserStateList({final List<dynamic> userStateList}) =
+      _$_UserStateList;
 
   factory _UserStateList.fromJson(Map<String, dynamic> json) =
       _$_UserStateList.fromJson;
 
   @override
-  List<Map<String, dynamic>> get userStateList;
+  List<dynamic> get userStateList;
   @override
   @JsonKey(ignore: true)
   _$$_UserStateListCopyWith<_$_UserStateList> get copyWith =>

@@ -23,10 +23,10 @@ mixin _$ClassState {
   String get className => throw _privateConstructorUsedError;
   String get endTime => throw _privateConstructorUsedError;
   int get frameCount => throw _privateConstructorUsedError;
-  List<dynamic> get selectableBaseClass => throw _privateConstructorUsedError;
+  List<String> get selectableBaseClass => throw _privateConstructorUsedError;
   String get startTime => throw _privateConstructorUsedError;
   String get announceTime => throw _privateConstructorUsedError;
-  List<dynamic> get teacher => throw _privateConstructorUsedError;
+  List<String> get teacher => throw _privateConstructorUsedError;
   int get timeTable => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,10 +44,10 @@ abstract class $ClassStateCopyWith<$Res> {
       {String className,
       String endTime,
       int frameCount,
-      List<dynamic> selectableBaseClass,
+      List<String> selectableBaseClass,
       String startTime,
       String announceTime,
-      List<dynamic> teacher,
+      List<String> teacher,
       int timeTable});
 }
 
@@ -86,7 +86,7 @@ class _$ClassStateCopyWithImpl<$Res> implements $ClassStateCopyWith<$Res> {
       selectableBaseClass: selectableBaseClass == freezed
           ? _value.selectableBaseClass
           : selectableBaseClass // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
@@ -98,7 +98,7 @@ class _$ClassStateCopyWithImpl<$Res> implements $ClassStateCopyWith<$Res> {
       teacher: teacher == freezed
           ? _value.teacher
           : teacher // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       timeTable: timeTable == freezed
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
@@ -118,10 +118,10 @@ abstract class _$$_ClassStateCopyWith<$Res>
       {String className,
       String endTime,
       int frameCount,
-      List<dynamic> selectableBaseClass,
+      List<String> selectableBaseClass,
       String startTime,
       String announceTime,
-      List<dynamic> teacher,
+      List<String> teacher,
       int timeTable});
 }
 
@@ -162,7 +162,7 @@ class __$$_ClassStateCopyWithImpl<$Res> extends _$ClassStateCopyWithImpl<$Res>
       selectableBaseClass: selectableBaseClass == freezed
           ? _value._selectableBaseClass
           : selectableBaseClass // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
@@ -174,7 +174,7 @@ class __$$_ClassStateCopyWithImpl<$Res> extends _$ClassStateCopyWithImpl<$Res>
       teacher: teacher == freezed
           ? _value._teacher
           : teacher // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       timeTable: timeTable == freezed
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
@@ -190,10 +190,10 @@ class _$_ClassState implements _ClassState {
       {this.className = '',
       this.endTime = '',
       this.frameCount = 0,
-      final List<dynamic> selectableBaseClass = const [],
+      final List<String> selectableBaseClass = const <String>[],
       this.startTime = '',
       this.announceTime = '',
-      final List<dynamic> teacher = const [],
+      final List<String> teacher = const <String>[],
       this.timeTable = 0})
       : _selectableBaseClass = selectableBaseClass,
         _teacher = teacher;
@@ -210,10 +210,10 @@ class _$_ClassState implements _ClassState {
   @override
   @JsonKey()
   final int frameCount;
-  final List<dynamic> _selectableBaseClass;
+  final List<String> _selectableBaseClass;
   @override
   @JsonKey()
-  List<dynamic> get selectableBaseClass {
+  List<String> get selectableBaseClass {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_selectableBaseClass);
   }
@@ -224,10 +224,10 @@ class _$_ClassState implements _ClassState {
   @override
   @JsonKey()
   final String announceTime;
-  final List<dynamic> _teacher;
+  final List<String> _teacher;
   @override
   @JsonKey()
-  List<dynamic> get teacher {
+  List<String> get teacher {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_teacher);
   }
@@ -290,10 +290,10 @@ abstract class _ClassState implements ClassState {
       {final String className,
       final String endTime,
       final int frameCount,
-      final List<dynamic> selectableBaseClass,
+      final List<String> selectableBaseClass,
       final String startTime,
       final String announceTime,
-      final List<dynamic> teacher,
+      final List<String> teacher,
       final int timeTable}) = _$_ClassState;
 
   factory _ClassState.fromJson(Map<String, dynamic> json) =
@@ -306,13 +306,13 @@ abstract class _ClassState implements ClassState {
   @override
   int get frameCount;
   @override
-  List<dynamic> get selectableBaseClass;
+  List<String> get selectableBaseClass;
   @override
   String get startTime;
   @override
   String get announceTime;
   @override
-  List<dynamic> get teacher;
+  List<String> get teacher;
   @override
   int get timeTable;
   @override

@@ -21,7 +21,7 @@ AttendanceStudentState _$AttendanceStudentStateFromJson(
 
 /// @nodoc
 mixin _$AttendanceStudentState {
-  List<Map<String, dynamic>> get students => throw _privateConstructorUsedError;
+  List<dynamic> get students => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +34,7 @@ abstract class $AttendanceStudentStateCopyWith<$Res> {
   factory $AttendanceStudentStateCopyWith(AttendanceStudentState value,
           $Res Function(AttendanceStudentState) then) =
       _$AttendanceStudentStateCopyWithImpl<$Res>;
-  $Res call({List<Map<String, dynamic>> students});
+  $Res call({List<dynamic> students});
 }
 
 /// @nodoc
@@ -54,7 +54,7 @@ class _$AttendanceStudentStateCopyWithImpl<$Res>
       students: students == freezed
           ? _value.students
           : students // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<dynamic>,
     ));
   }
 }
@@ -66,7 +66,7 @@ abstract class _$$_AttendanceStudentStateCopyWith<$Res>
           $Res Function(_$_AttendanceStudentState) then) =
       __$$_AttendanceStudentStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<Map<String, dynamic>> students});
+  $Res call({List<dynamic> students});
 }
 
 /// @nodoc
@@ -89,7 +89,7 @@ class __$$_AttendanceStudentStateCopyWithImpl<$Res>
       students: students == freezed
           ? _value._students
           : students // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<dynamic>,
     ));
   }
 }
@@ -97,17 +97,16 @@ class __$$_AttendanceStudentStateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AttendanceStudentState implements _AttendanceStudentState {
-  const _$_AttendanceStudentState(
-      {final List<Map<String, dynamic>> students = const []})
+  const _$_AttendanceStudentState({final List<dynamic> students = const []})
       : _students = students;
 
   factory _$_AttendanceStudentState.fromJson(Map<String, dynamic> json) =>
       _$$_AttendanceStudentStateFromJson(json);
 
-  final List<Map<String, dynamic>> _students;
+  final List<dynamic> _students;
   @override
   @JsonKey()
-  List<Map<String, dynamic>> get students {
+  List<dynamic> get students {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_students);
   }
@@ -145,14 +144,14 @@ class _$_AttendanceStudentState implements _AttendanceStudentState {
 }
 
 abstract class _AttendanceStudentState implements AttendanceStudentState {
-  const factory _AttendanceStudentState(
-      {final List<Map<String, dynamic>> students}) = _$_AttendanceStudentState;
+  const factory _AttendanceStudentState({final List<dynamic> students}) =
+      _$_AttendanceStudentState;
 
   factory _AttendanceStudentState.fromJson(Map<String, dynamic> json) =
       _$_AttendanceStudentState.fromJson;
 
   @override
-  List<Map<String, dynamic>> get students;
+  List<dynamic> get students;
   @override
   @JsonKey(ignore: true)
   _$$_AttendanceStudentStateCopyWith<_$_AttendanceStudentState> get copyWith =>
