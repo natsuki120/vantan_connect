@@ -6,8 +6,7 @@ import '../molecule/style_by_platform.dart';
 
 class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
   const CustomTabBar(
-      {Key? key, required this.firstText, required this.secondText})
-      : super(key: key);
+      {super.key, required this.firstText, required this.secondText});
 
   final String firstText;
   final String secondText;
@@ -16,28 +15,25 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      title: DefaultTabController(
-        initialIndex: 0,
-        length: 2,
-        child: TabBar(
-          indicatorColor: colorScheme.primary,
-          tabs: [
-            GuidanceMessage(
-              mainText: firstText,
-              mainTextStyle:
-                  titleSmall(FontWeight.w300, colorScheme.onBackground),
-            ),
-            GuidanceMessage(
-              mainText: secondText,
-              mainTextStyle:
-                  titleSmall(FontWeight.w300, colorScheme.onBackground),
-            )
-          ],
-        ),
+      backgroundColor: Colors.transparent,
+      title: TabBar(
+        indicatorColor: colorScheme.primary,
+        tabs: [
+          GuidanceMessage(
+            mainText: firstText,
+            mainTextStyle:
+                titleSmall(FontWeight.w300, colorScheme.onBackground),
+          ),
+          GuidanceMessage(
+            mainText: secondText,
+            mainTextStyle:
+                titleSmall(FontWeight.w300, colorScheme.onBackground),
+          )
+        ],
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

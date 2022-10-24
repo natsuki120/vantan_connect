@@ -34,23 +34,23 @@ class CircleTextFieldElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: color),
+        borderRadius: BorderRadius.circular(radius),
+      ),
       width: width,
       height: height,
-      child: TextFormField(
-        controller: controller,
-        inputFormatters: [LengthLimitingTextInputFormatter(maxLength)],
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(radius),
-            borderSide: BorderSide(
-              color: color,
-            ),
-          ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: TextFormField(
+          controller: controller,
+          decoration: InputDecoration(border: InputBorder.none),
+          inputFormatters: [LengthLimitingTextInputFormatter(maxLength)],
+          onChanged: (text) {
+            changeFocus(text, context);
+          },
         ),
-        onChanged: (text) {
-          changeFocus(text, context);
-        },
       ),
     );
   }

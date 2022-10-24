@@ -7,11 +7,16 @@ _$_ClassState _$$_ClassStateFromJson(Map<String, dynamic> json) =>
       className: json['className'] as String? ?? '',
       endTime: json['endTime'] as String? ?? '',
       frameCount: json['frameCount'] as int? ?? 0,
-      selectableBaseClass:
-          json['selectableBaseClass'] as List<dynamic>? ?? const [],
+      selectableBaseClass: (json['selectableBaseClass'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const <String>[],
       startTime: json['startTime'] as String? ?? '',
       announceTime: json['announceTime'] as String? ?? '',
-      teacher: json['teacher'] as List<dynamic>? ?? const [],
+      teacher: (json['teacher'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const <String>[],
       timeTable: json['timeTable'] as int? ?? 0,
     );
 

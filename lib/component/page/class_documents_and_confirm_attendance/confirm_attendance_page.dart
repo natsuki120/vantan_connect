@@ -26,7 +26,7 @@ class _ConfirmAttendancePageState extends ConsumerState<ConfirmAttendancePage> {
     super.didChangeDependencies();
     ref
         .read(attendanceStatusViewModel.notifier)
-        .fetchStudentAttendanceStatus(widget.classByDayState, isSelectedItem!);
+        .fetchStudentAttendanceStatus(widget.classByDayState);
   }
 
   @override
@@ -69,13 +69,16 @@ class _ConfirmAttendancePageState extends ConsumerState<ConfirmAttendancePage> {
                     ),
                   ],
                   onChanged: (String? value) {
-                    setState(() {
-                      isSelectedItem = value;
-                      ref
-                          .read(attendanceStatusViewModel.notifier)
-                          .fetchStudentAttendanceStatus(
-                              widget.classByDayState, isSelectedItem!);
-                    });
+                    setState(
+                      () {
+                        isSelectedItem = value;
+                        ref
+                            .read(attendanceStatusViewModel.notifier)
+                            .fetchStudentAttendanceStatus(
+                              widget.classByDayState,
+                            );
+                      },
+                    );
                   },
                   value: isSelectedItem,
                 ),

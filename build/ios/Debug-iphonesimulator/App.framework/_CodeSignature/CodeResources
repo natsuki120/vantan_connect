@@ -10,15 +10,15 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		kKWmu5wF1H2LNJOVDcbuJ/5mrys=
+		iMT6T60fqeJtvA95fDyONUMoyZM=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		+D1xbIOooc3ypce1+jh+mmLy1J0=
+		vKJkVIcw+LGHFnKJGwrQwCREv68=
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		vgrmYGBUSD5cquMRCLORp4iLNYY=
+		qjBoICgQ6TNBO+qtOYCSQ43nKXk=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -42,11 +42,15 @@
 		</data>
 		<key>flutter_assets/isolate_snapshot_data</key>
 		<data>
-		+udtKIRyAcIS6rTHnYkqPRthPjk=
+		9eNtWCqZBPKn/jN2myJwzQYoFMk=
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		YnMFIMADd1ecV651lFqW4HLOaIo=
+		BZAEDIE1EpaH20i23AWZQGr8ikI=
+		</data>
+		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
+		<data>
+		P7bb/oR3EhwqCIH1M6LyTuBIWYU=
 		</data>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -63,21 +67,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XvLobbikKlZvmF/jkMlY2vEPRRuysa49t5uF/LJ5z+g=
+			LPNNhTkiCwti0z6y385KL2BPrIJT+isC1bUgSngutPU=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KLHrKz0uGtYLjIsPkQCxzL9JL3+pf1vrtR6pfnOSbn0=
+			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES.Z</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jV3FhBEdSeVeN5LXaK/dAVKV2voN3MAXtmu9KwYcj08=
+			oq9R6656TchnzUOuFJK5EItW8mO9iQ9N5rIBO5fMVPY=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -119,14 +123,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eSIT6ez3qoVubFYyO1nZwI2rBt+8+ysx4WZAsR28p80=
+			DZWrzXugCmT3lP9BiZeEAyWKTGQC9NVtCJQakLOdYDc=
 			</data>
 		</dict>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/R7s+LYqTR9EOpeMXbjqpKyguc3Wi48DNYb1IY2BpWg=
+			EyacPVVJeJ7XpYu2KAASqO+ubh2yncDcn06m5tbzgEs=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			x6NX+tjyECiQtyzbbjyY8U2zoZ7GDbJtE+T+k/dzgI0=
 			</data>
 		</dict>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>

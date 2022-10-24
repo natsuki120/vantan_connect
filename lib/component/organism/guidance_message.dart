@@ -22,7 +22,7 @@ class GuidanceMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (mainText != null && mainTextStyle != null)
           MainText(

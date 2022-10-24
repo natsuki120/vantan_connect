@@ -1,12 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:vantan_connect/model/class_by_day_state/class_by_day_state.dart';
+import 'package:vantan_connect/model/class_state/class_state.dart';
 import 'class_by_day_repository.dart';
 
 class ClassByDayRepositoryImpl implements ClassByDayRepository {
   final db = FirebaseFirestore.instance;
   @override
-  Stream<List<ClassByDayState>> fetchClassByDayInfo() {
-    final collection = db.collectionGroup('start_date').snapshots();
+  Stream<List<ClassByDayState>> fetchClassByDayInfo(ClassState classState) {
+    final collection = db
+        .collection(
+            '/all_class/VTA_class/2022/first_semester/all_class/${classState.className}/start_date/')
+        .snapshots();
     return collection.map<List<ClassByDayState>>(
       (QuerySnapshot snapshot) => snapshot.docs
           .map(

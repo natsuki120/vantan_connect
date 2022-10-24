@@ -62,13 +62,12 @@ class Login extends StatelessWidget {
                         await ref
                             .read(userViewModel.notifier)
                             .fetchUser(result.user!.uid);
-                        await Navigator.of(context).pushReplacement(
-                          MaterialPageRoute<HomePage>(
-                            builder: (context) {
-                              return VantanLife();
-                            },
-                          ),
-                        );
+                        await Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute<HomePage>(
+                          builder: (context) {
+                            return VantanLife();
+                          },
+                        ), (_) => false);
                       } catch (e) {
                         /* --- 省略 --- */
                       }

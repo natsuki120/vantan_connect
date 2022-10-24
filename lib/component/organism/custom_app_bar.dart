@@ -4,7 +4,7 @@ import '../atom/color_schemes.g.dart';
 import '../molecule/text/main_text.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
-  CustomAppBar({Key? key, required this.text, this.bottom}) : super(key: key);
+  CustomAppBar({super.key, required this.text, this.bottom});
 
   final String text;
   PreferredSizeWidget? bottom;
@@ -21,5 +21,5 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

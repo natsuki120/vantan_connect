@@ -8,10 +8,7 @@ part of 'user_state_list.dart';
 
 _$_UserStateList _$$_UserStateListFromJson(Map<String, dynamic> json) =>
     _$_UserStateList(
-      userStateList: (json['userStateList'] as List<dynamic>?)
-              ?.map((e) => e as Map<String, dynamic>)
-              .toList() ??
-          const [],
+      userStateList: json['userStateList'] as List<dynamic>? ?? const [],
     );
 
 Map<String, dynamic> _$$_UserStateListToJson(_$_UserStateList instance) =>

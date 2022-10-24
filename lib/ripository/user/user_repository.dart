@@ -11,10 +11,6 @@ abstract class UserRepository {
 
   Future fetchAttendanceUser();
 
-  Future fetchAbsenceUser();
-
-  Future fetchLatenessUser();
-
   Future<void> sendAttendanceState(String uid);
   Future<String> sendUserImageToStorage(File imageFile);
 

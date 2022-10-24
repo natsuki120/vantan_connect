@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/model/attendance_status_state/attendance_status_state.dart';
+import 'package:vantan_connect/model/class_state/class_state.dart';
 import 'package:vantan_connect/model/user_state/user_state.dart';
 import 'package:vantan_connect/ripository/attendane_status/attendance_status_repository.dart';
 import '../../model/class_by_day_state/class_by_day_state.dart';
@@ -9,17 +10,18 @@ class AttendanceStatusViewModel
     extends StateNotifier<List<AttendanceStatusState>> {
   AttendanceStatusViewModel(this.attendanceStatusRepository) : super([]);
 
+  // TODO 履修者一覧と出席確認画面のstateは別々にする
+
   final AttendanceStatusRepository attendanceStatusRepository;
 
-  final List<AttendanceStatusState> testList = [
+  List<AttendanceStatusState> testList = [
     AttendanceStatusState(name: 'あつや', attendance: '出席'),
-    AttendanceStatusState(name: 'なお', attendance: '欠席'),
+    AttendanceStatusState(name: 'なお', attendance: '欠席', reason: '体調不良のため'),
     AttendanceStatusState(name: 'いっせい', attendance: '遅刻'),
-    AttendanceStatusState(name: 'なつき', attendance: '出席'),
-    AttendanceStatusState(name: 'いけちゃん', attendance: '欠席'),
-    AttendanceStatusState(name: 'うじ', attendance: '遅刻'),
+    AttendanceStatusState(name: 'いけちゃん', attendance: '', reason: ''),
+    AttendanceStatusState(name: 'うじ', attendance: '', reason: ''),
     AttendanceStatusState(name: 'りょーま', attendance: '出席'),
-    AttendanceStatusState(name: 'しまの', attendance: '欠席'),
+    AttendanceStatusState(name: 'しまの', attendance: '欠席', reason: '体調不良のため'),
     AttendanceStatusState(name: 'ともや', attendance: '遅刻'),
     AttendanceStatusState(name: 'けいご', attendance: '出席'),
   ];
@@ -38,30 +40,19 @@ class AttendanceStatusViewModel
     );
   }
 
-  void fetchStudentAttendanceStatus(
-      ClassByDayState classByDayState, String attendance) {
-    // final statusList = attendanceStatusRepository.fetchStudentAttendanceStatus(
-    //   classByDayState: classByDayState,
-    //   attendance: attendance,
-    // );
-    // statusList.listen((status) => state = status);
-    // if (attendance == '出席確認済み') {
-    //   final statusList = attendanceStatusRepository
-    //       .fetchAllStudentAttendanceStatus(classByDayState);
-    //   statusList.listen((status) => state = status);
-    // } else {
-    //   final statusList =
-    //       attendanceStatusRepository.fetchStudentAttendanceStatus(
-    //           classByDayState: classByDayState, attendance: attendance);
-    //   statusList.listen((status) => state = status);
-    // }
-    if (attendance == '出席確認済み') {
-      state = testList;
-    } else {
-      state = testList
-          .where((element) => element.attendance == attendance)
-          .toList();
-    }
+  void get fetchAttendanceStudent => state = testList;
+
+  void fetchStudentAttendanceStatus(ClassByDayState classByDayState) {
+    final statusList = attendanceStatusRepository.fetchStudentAttendanceStatus(
+      classByDayState: classByDayState,
+    );
+    statusList.listen((statusList) => state = [...statusList, ...testList]);
+  }
+
+  void fetchAllStudentAttendanceStatus(ClassState classState) {
+    final statusList =
+        attendanceStatusRepository.fetchAllStudentAttendanceStatus(classState);
+    statusList.listen((statusList) => state = [...statusList, ...testList]);
   }
 }
 

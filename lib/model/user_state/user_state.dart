@@ -12,6 +12,7 @@ class UserState with _$UserState {
     @Default(0) int attendedDay,
     @Default('') String accountNumber,
     @Default('') String userImagePath,
+    @Default('') String rootCollection,
   }) = _UserState;
 
   factory UserState.fromJson(Map<String, dynamic> json) =>

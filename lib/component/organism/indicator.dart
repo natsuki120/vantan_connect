@@ -54,17 +54,17 @@ class ThreeIndicator extends StatelessWidget {
       children: <Widget>[
         IndicatorElement(
           percent: firstPercent,
-          width: 113,
+          width: 125,
         ),
         const SpaceBox(width: 2),
         IndicatorElement(
           percent: secondPercent,
-          width: 113,
+          width: 125,
         ),
         const SpaceBox(width: 2),
         IndicatorElement(
           percent: thirdPercent,
-          width: 113,
+          width: 125,
         ),
       ],
     );

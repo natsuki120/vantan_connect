@@ -7,14 +7,14 @@ class AttendanceStudentViewModel extends StateNotifier<AttendanceStudentState> {
   AttendanceStudentViewModel() : super(AttendanceStudentState());
 
   Future<void> fetchAttendanceUser() async {
-    try {
-      final userData = await UserRepositoryImpl().fetchAttendanceUser();
-      userData.listen((students) {
-        state = state.copyWith(students: students.students);
-      });
-    } catch (e) {
-      return;
-    }
+    // try {
+    //   final userData = await UserRepositoryImpl().fetchAttendanceUser();
+    //   userData.listen((students) {
+    //     state = state.copyWith(students: students.students);
+    //   });
+    // } catch (e) {
+    //   return;
+    // }
   }
 }
 

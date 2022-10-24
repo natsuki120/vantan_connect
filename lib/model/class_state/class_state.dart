@@ -8,10 +8,10 @@ class ClassState with _$ClassState {
     @Default('') String className,
     @Default('') String endTime,
     @Default(0) int frameCount,
-    @Default([]) List selectableBaseClass,
+    @Default(<String>[]) List<String> selectableBaseClass,
     @Default('') String startTime,
     @Default('') String announceTime,
-    @Default([]) List teacher,
+    @Default(<String>[]) List<String> teacher,
     @Default(0) int timeTable,
   }) = _ClassState;
 

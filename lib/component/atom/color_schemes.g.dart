@@ -81,4 +81,4 @@
 
 import 'package:flutter/material.dart';
 
-ColorScheme colorScheme = ColorScheme.fromSeed(seedColor: Color(0xFFDE0011));
+ColorScheme colorScheme = ColorScheme.fromSeed(seedColor: Color(0xffB43C35));

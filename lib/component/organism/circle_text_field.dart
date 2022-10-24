@@ -7,7 +7,6 @@ class CircleTextField extends StatelessWidget {
     super.key,
     required this.width,
     required this.height,
-    required this.controller,
     required this.maxLength,
     required this.radius,
     required this.color,
@@ -24,7 +23,6 @@ class CircleTextField extends StatelessWidget {
   final double firstBoxWidth;
   final double width;
   final double height;
-  final TextEditingController controller;
   final int fistMaxLength;
   final int maxLength;
   final double radius;

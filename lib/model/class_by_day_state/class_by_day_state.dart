@@ -8,7 +8,7 @@ class ClassByDayState with _$ClassByDayState {
   factory ClassByDayState({
     @Default('') String id,
     @Default('') String className,
-    @Default('') String day,
+    @DateTimeConverter() DateTime? day,
     @DateTimeConverter() DateTime? announce,
     @Default(0) int timeTable,
   }) = _ClassByDayState;

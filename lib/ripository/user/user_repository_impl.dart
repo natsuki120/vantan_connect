@@ -2,9 +2,7 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:vantan_connect/model/absence_student_state/absence_student_state.dart';
 import 'package:vantan_connect/model/attendance_student_state/attendance_student_state.dart';
-import 'package:vantan_connect/model/late_student_state/late_student_state.dart';
 import 'package:vantan_connect/ripository/user/user_repository.dart';
 import '../../model/user_state/user_state.dart';
 
@@ -48,40 +46,10 @@ class UserRepositoryImpl implements UserRepository {
     );
     return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
       if (!documentSnapshot.exists) {
-        doc.set({});
+        doc.set(<String, dynamic>{});
       }
       final data = documentSnapshot.data() as Map<String, dynamic>;
       return AttendanceStudentState.fromJson(data);
-    });
-  }
-
-  @override
-  Future fetchAbsenceUser() async {
-    final doc = db.doc(
-      '/all_class/VTA_class/2022/1G_students/1_term/5XkYnp3qFC8go7NAcxnz/918/absence',
-    );
-    await doc.set({});
-    return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
-      if (!documentSnapshot.exists) {
-        doc.set({});
-      }
-      final data = documentSnapshot.data() as Map<String, dynamic>;
-      return AbsenceStudentState.fromJson(data);
-    });
-  }
-
-  @override
-  Future fetchLatenessUser() async {
-    final doc = await db.doc(
-      '/all_class/VTA_class/2022/1G_students/1_term/5XkYnp3qFC8go7NAcxnz/918/lateness',
-    );
-    await doc.set({});
-    return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
-      if (!documentSnapshot.exists) {
-        doc.set({});
-      }
-      final data = documentSnapshot.data() as Map<String, dynamic>;
-      return LateStudentState.fromJson(data);
     });
   }
 
@@ -113,7 +81,7 @@ class UserRepositoryImpl implements UserRepository {
           '/public/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class/HGoTDndpSTSgpwHcW32q/TuesDay/',
         )
         .doc();
-    await doc.set({
+    await doc.set(<String, dynamic>{
       'attendanceStatus': '出席',
       'recordTime': '${DateTime.now().hour}:${DateTime.now().minute}',
     });
@@ -127,7 +95,7 @@ class UserRepositoryImpl implements UserRepository {
           '/public/v1/users/${userState.id}/readOnly/userInfo/class/Flutter/Hl20bsu6KzH88G8t0ANb/',
         )
         .doc();
-    await doc.set({
+    await doc.set(<String, dynamic>{
       'attendanceStatus': status,
       'recodeTime': '${DateTime.now().hour}:${DateTime.now().minute}',
       'reason': reason,
@@ -141,14 +109,14 @@ class UserRepositoryImpl implements UserRepository {
     );
     try {
       await doc.update(<String, dynamic>{
-        'students': FieldValue.arrayUnion([
-          {'name': userState.name}
+        'students': FieldValue.arrayUnion(<Map<String, dynamic>>[
+          <String, dynamic>{'name': userState.name}
         ])
       });
     } on FirebaseException catch (e) {
       await doc.set(<String, dynamic>{
-        'students': FieldValue.arrayUnion([
-          {'name': userState.name}
+        'students': FieldValue.arrayUnion(<Map<String, dynamic>>[
+          <String, dynamic>{'name': userState.name}
         ])
       });
     }
@@ -161,14 +129,14 @@ class UserRepositoryImpl implements UserRepository {
     );
     try {
       await doc.update(<String, dynamic>{
-        'students': FieldValue.arrayUnion([
-          {'name': userState.name}
+        'students': FieldValue.arrayUnion(<Map<String, dynamic>>[
+          <String, dynamic>{'name': userState.name}
         ])
       });
     } on FirebaseException catch (e) {
       await doc.set(<String, dynamic>{
-        'students': FieldValue.arrayUnion([
-          {'name': userState.name}
+        'students': FieldValue.arrayUnion(<Map<String, dynamic>>[
+          <String, dynamic>{'name': userState.name}
         ])
       });
     }

@@ -27,6 +27,7 @@ mixin _$UserState {
   int get attendedDay => throw _privateConstructorUsedError;
   String get accountNumber => throw _privateConstructorUsedError;
   String get userImagePath => throw _privateConstructorUsedError;
+  String get rootCollection => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,7 +46,8 @@ abstract class $UserStateCopyWith<$Res> {
       String attendance,
       int attendedDay,
       String accountNumber,
-      String userImagePath});
+      String userImagePath,
+      String rootCollection});
 }
 
 /// @nodoc
@@ -65,6 +67,7 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
     Object? attendedDay = freezed,
     Object? accountNumber = freezed,
     Object? userImagePath = freezed,
+    Object? rootCollection = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -95,6 +98,10 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
           ? _value.userImagePath
           : userImagePath // ignore: cast_nullable_to_non_nullable
               as String,
+      rootCollection: rootCollection == freezed
+          ? _value.rootCollection
+          : rootCollection // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -112,7 +119,8 @@ abstract class _$$_UserStateCopyWith<$Res> implements $UserStateCopyWith<$Res> {
       String attendance,
       int attendedDay,
       String accountNumber,
-      String userImagePath});
+      String userImagePath,
+      String rootCollection});
 }
 
 /// @nodoc
@@ -134,6 +142,7 @@ class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     Object? attendedDay = freezed,
     Object? accountNumber = freezed,
     Object? userImagePath = freezed,
+    Object? rootCollection = freezed,
   }) {
     return _then(_$_UserState(
       id: id == freezed
@@ -164,6 +173,10 @@ class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
           ? _value.userImagePath
           : userImagePath // ignore: cast_nullable_to_non_nullable
               as String,
+      rootCollection: rootCollection == freezed
+          ? _value.rootCollection
+          : rootCollection // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -178,7 +191,8 @@ class _$_UserState implements _UserState {
       this.attendance = '',
       this.attendedDay = 0,
       this.accountNumber = '',
-      this.userImagePath = ''});
+      this.userImagePath = '',
+      this.rootCollection = ''});
 
   factory _$_UserState.fromJson(Map<String, dynamic> json) =>
       _$$_UserStateFromJson(json);
@@ -204,10 +218,13 @@ class _$_UserState implements _UserState {
   @override
   @JsonKey()
   final String userImagePath;
+  @override
+  @JsonKey()
+  final String rootCollection;
 
   @override
   String toString() {
-    return 'UserState(id: $id, name: $name, profileText: $profileText, attendance: $attendance, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath)';
+    return 'UserState(id: $id, name: $name, profileText: $profileText, attendance: $attendance, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
   }
 
   @override
@@ -226,7 +243,9 @@ class _$_UserState implements _UserState {
             const DeepCollectionEquality()
                 .equals(other.accountNumber, accountNumber) &&
             const DeepCollectionEquality()
-                .equals(other.userImagePath, userImagePath));
+                .equals(other.userImagePath, userImagePath) &&
+            const DeepCollectionEquality()
+                .equals(other.rootCollection, rootCollection));
   }
 
   @JsonKey(ignore: true)
@@ -239,7 +258,8 @@ class _$_UserState implements _UserState {
       const DeepCollectionEquality().hash(attendance),
       const DeepCollectionEquality().hash(attendedDay),
       const DeepCollectionEquality().hash(accountNumber),
-      const DeepCollectionEquality().hash(userImagePath));
+      const DeepCollectionEquality().hash(userImagePath),
+      const DeepCollectionEquality().hash(rootCollection));
 
   @JsonKey(ignore: true)
   @override
@@ -262,7 +282,8 @@ abstract class _UserState implements UserState {
       final String attendance,
       final int attendedDay,
       final String accountNumber,
-      final String userImagePath}) = _$_UserState;
+      final String userImagePath,
+      final String rootCollection}) = _$_UserState;
 
   factory _UserState.fromJson(Map<String, dynamic> json) =
       _$_UserState.fromJson;
@@ -281,6 +302,8 @@ abstract class _UserState implements UserState {
   String get accountNumber;
   @override
   String get userImagePath;
+  @override
+  String get rootCollection;
   @override
   @JsonKey(ignore: true)
   _$$_UserStateCopyWith<_$_UserState> get copyWith =>

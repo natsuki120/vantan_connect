@@ -1,7 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/component/atom/color_schemes.g.dart';
-import 'package:vantan_connect/view/profile_page.dart';
+import 'package:vantan_connect/component/page/timetable_page.dart';
+import 'component/page/profile_page.dart';
 import 'home_page.dart';
 
 class VantanLife extends StatefulWidget {
@@ -15,7 +15,7 @@ class _VantanLifeState extends State<VantanLife> {
   static List<Widget> pageList = [
     HomePage(),
     Container(),
-    Container(),
+    TimetablePage(),
     Container(),
     const ProfilePage(),
   ];
@@ -35,30 +35,33 @@ class _VantanLifeState extends State<VantanLife> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: colorScheme.onSurfaceVariant,
         unselectedItemColor: colorScheme.onSurfaceVariant,
-        backgroundColor: colorScheme.surface,
         items: const [
           BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+              size: 30,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add, size: 30),
+            label: '',
+          ),
+          BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                Icons.chat_outlined,
                 size: 30,
               ),
               label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.add, size: 30), label: ''),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.chat,
+                Icons.notifications_outlined,
                 size: 30,
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.notifications,
-                size: 30,
-              ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.account_balance,
+                Icons.account_balance_outlined,
                 size: 30,
               ),
               label: ''),

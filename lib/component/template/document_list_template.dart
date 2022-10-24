@@ -51,7 +51,7 @@ class DocumentList extends StatelessWidget {
                       child: Center(child: Text('9/29')),
                     ),
                     onTap: () {
-                      Navigator.of(context).push(
+                      Navigator.of(context).push<DocumentByTime>(
                         MaterialPageRoute(
                           builder: (_) => DocumentByTime(),
                         ),

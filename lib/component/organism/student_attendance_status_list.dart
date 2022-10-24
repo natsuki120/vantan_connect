@@ -13,13 +13,15 @@ class StudentAttendanceStatusListElement extends StatelessWidget {
       required this.statusIcon,
       this.locationIcon,
       required this.circleColor,
-      required this.statusIconColor})
+      required this.statusIconColor,
+      required this.reason})
       : super(key: key);
   final String studentName;
   final IconData statusIcon;
   IconData? locationIcon;
   final Color circleColor;
   final Color statusIconColor;
+  final String reason;
 
   @override
   Widget build(BuildContext context) {
@@ -34,29 +36,36 @@ class StudentAttendanceStatusListElement extends StatelessWidget {
           ),
         ),
       ),
-      child: Row(
+      child: Table(
+        columnWidths: const <int, TableColumnWidth>{
+          0: FlexColumnWidth(0.5),
+          1: FlexColumnWidth(1.0),
+          2: FlexColumnWidth(1.0),
+          3: FlexColumnWidth(2.0),
+        },
         children: [
-          ColoredCircleContainer(
-            color: circleColor,
-            child: CustomIcon(
-              color: statusIconColor,
-              iconData: statusIcon,
-            ),
-            width: 28,
-            height: 28,
-          ),
-          SpaceBox(width: 20),
-          MainText(
-            text: studentName,
-            textStyle: bodyLarge(FontWeight.w300, colorScheme.onBackground),
-          ),
-          SpaceBox(width: 50),
-          locationIcon != null
-              ? CustomIcon(
-                  color: colorScheme.onBackground, iconData: locationIcon!)
-              : SpaceBox(width: 24),
-          SpaceBox(width: 30),
-          Text('ここに理由を記載するう'),
+          TableRow(
+            children: [
+              ColoredCircleContainer(
+                color: circleColor,
+                child: CustomIcon(
+                  color: statusIconColor,
+                  iconData: statusIcon,
+                ),
+                width: 28,
+                height: 28,
+              ),
+              MainText(
+                text: studentName,
+                textStyle: bodyLarge(FontWeight.w300, colorScheme.onBackground),
+              ),
+              locationIcon != null
+                  ? CustomIcon(
+                      color: colorScheme.onBackground, iconData: locationIcon!)
+                  : SpaceBox(width: 24),
+              reason != '' ? Text(reason) : Container(),
+            ],
+          )
         ],
       ),
     );

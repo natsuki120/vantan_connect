@@ -22,7 +22,8 @@ ClassByDayState _$ClassByDayStateFromJson(Map<String, dynamic> json) {
 mixin _$ClassByDayState {
   String get id => throw _privateConstructorUsedError;
   String get className => throw _privateConstructorUsedError;
-  String get day => throw _privateConstructorUsedError;
+  @DateTimeConverter()
+  DateTime? get day => throw _privateConstructorUsedError;
   @DateTimeConverter()
   DateTime? get announce => throw _privateConstructorUsedError;
   int get timeTable => throw _privateConstructorUsedError;
@@ -41,7 +42,7 @@ abstract class $ClassByDayStateCopyWith<$Res> {
   $Res call(
       {String id,
       String className,
-      String day,
+      @DateTimeConverter() DateTime? day,
       @DateTimeConverter() DateTime? announce,
       int timeTable});
 }
@@ -75,7 +76,7 @@ class _$ClassByDayStateCopyWithImpl<$Res>
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime?,
       announce: announce == freezed
           ? _value.announce
           : announce // ignore: cast_nullable_to_non_nullable
@@ -98,7 +99,7 @@ abstract class _$$_ClassByDayStateCopyWith<$Res>
   $Res call(
       {String id,
       String className,
-      String day,
+      @DateTimeConverter() DateTime? day,
       @DateTimeConverter() DateTime? announce,
       int timeTable});
 }
@@ -134,7 +135,7 @@ class __$$_ClassByDayStateCopyWithImpl<$Res>
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime?,
       announce: announce == freezed
           ? _value.announce
           : announce // ignore: cast_nullable_to_non_nullable
@@ -153,7 +154,7 @@ class _$_ClassByDayState implements _ClassByDayState {
   _$_ClassByDayState(
       {this.id = '',
       this.className = '',
-      this.day = '',
+      @DateTimeConverter() this.day,
       @DateTimeConverter() this.announce,
       this.timeTable = 0});
 
@@ -167,8 +168,8 @@ class _$_ClassByDayState implements _ClassByDayState {
   @JsonKey()
   final String className;
   @override
-  @JsonKey()
-  final String day;
+  @DateTimeConverter()
+  final DateTime? day;
   @override
   @DateTimeConverter()
   final DateTime? announce;
@@ -220,7 +221,7 @@ abstract class _ClassByDayState implements ClassByDayState {
   factory _ClassByDayState(
       {final String id,
       final String className,
-      final String day,
+      @DateTimeConverter() final DateTime? day,
       @DateTimeConverter() final DateTime? announce,
       final int timeTable}) = _$_ClassByDayState;
 
@@ -232,7 +233,8 @@ abstract class _ClassByDayState implements ClassByDayState {
   @override
   String get className;
   @override
-  String get day;
+  @DateTimeConverter()
+  DateTime? get day;
   @override
   @DateTimeConverter()
   DateTime? get announce;

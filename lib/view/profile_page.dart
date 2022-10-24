@@ -1,11 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/component/atom/color_schemes.g.dart';
 import 'package:vantan_connect/component/atom/space_box.dart';
 import 'package:vantan_connect/view/edit_profile_page.dart';
 import 'package:vantan_connect/view_model/class_state/class_state_view_model.dart';
-
 import '../view_model/user_state/user_view_model.dart';
 
 class ProfilePage extends ConsumerStatefulWidget {
@@ -21,7 +19,6 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
     ref
       ..watch(userViewModel)
       ..watch(classStateViewModel);
-    final classState = ref.watch(classStateViewModel.notifier);
     final user = ref.watch(userViewModel.notifier);
     return Scaffold(
       appBar: AppBar(

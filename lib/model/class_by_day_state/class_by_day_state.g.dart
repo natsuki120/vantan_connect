@@ -10,7 +10,7 @@ _$_ClassByDayState _$$_ClassByDayStateFromJson(Map<String, dynamic> json) =>
     _$_ClassByDayState(
       id: json['id'] as String? ?? '',
       className: json['className'] as String? ?? '',
-      day: json['day'] as String? ?? '',
+      day: const DateTimeConverter().fromJson(json['day']),
       announce: const DateTimeConverter().fromJson(json['announce']),
       timeTable: json['timeTable'] as int? ?? 0,
     );
@@ -19,7 +19,7 @@ Map<String, dynamic> _$$_ClassByDayStateToJson(_$_ClassByDayState instance) =>
     <String, dynamic>{
       'id': instance.id,
       'className': instance.className,
-      'day': instance.day,
+      'day': const DateTimeConverter().toJson(instance.day),
       'announce': const DateTimeConverter().toJson(instance.announce),
       'timeTable': instance.timeTable,
     };

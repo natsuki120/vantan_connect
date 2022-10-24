@@ -72,4 +72,40 @@ class ClassRepositoryImpl implements ClassRepository {
               .toList(),
         );
   }
+
+  @override
+  Stream<List<ClassState>> fetchBaseClassInfo() {
+    final collection = db
+        .collection(
+          '/all_class/VTA_class/2022/first_semester/all_class',
+        )
+        .where('selectableBaseClass', arrayContains: 'false')
+        .snapshots();
+    return collection.map<List<ClassState>>(
+      (QuerySnapshot snapshot) => snapshot.docs
+          .map(
+            (DocumentSnapshot doc) =>
+                ClassState.fromJson(doc.data() as Map<String, dynamic>),
+          )
+          .toList(),
+    );
+  }
+
+  @override
+  Stream<List<ClassState>> fetchSelectionClassInfo() {
+    final collection = db
+        .collection(
+          '/all_class/VTA_class/2022/first_semester/all_class',
+        )
+        .where('selectableBaseClass', arrayContains: 'true')
+        .snapshots();
+    return collection.map<List<ClassState>>(
+      (QuerySnapshot snapshot) => snapshot.docs
+          .map(
+            (DocumentSnapshot doc) =>
+                ClassState.fromJson(doc.data() as Map<String, dynamic>),
+          )
+          .toList(),
+    );
+  }
 }
