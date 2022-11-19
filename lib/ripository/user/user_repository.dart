@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../../model/user_state/user_state.dart';
+import '../../entity/user/user_state.dart';
 
 abstract class UserRepository {
   Future<bool> signIn(String email, String password);
@@ -8,8 +8,6 @@ abstract class UserRepository {
   Future<void> registerUserInfo(String userName);
 
   Future<Stream<UserState>> fetchUserInfo(String uid);
-
-  Future fetchAttendanceUser();
 
   Future<void> sendAttendanceState(String uid);
   Future<String> sendUserImageToStorage(File imageFile);

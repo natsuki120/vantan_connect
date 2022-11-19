@@ -1,17 +1,17 @@
-import 'package:vantan_connect/model/user_state/user_state.dart';
-import '../../model/class_state/class_state.dart';
+import 'package:vantan_connect/entity/class/class.dart';
+import '../../entity/user/user_state.dart';
 
 abstract class ClassRepository {
-  Stream<List<ClassState>> fetchClassInfoWhichStudentRegistered();
+  Stream<List<Class>> fetchClassInfoWhichStudentRegistered();
 
-  Stream<List<ClassState>> fetchClassInfoToConfirmDetail();
+  Stream<List<Class>> fetchClassInfoToConfirmDetail();
 
-  Stream<List<ClassState>> fetchBaseClassInfo();
+  Stream<List<Class>> fetchBaseClassInfo();
 
-  Stream<List<ClassState>> fetchSelectionClassInfo();
+  Stream<List<Class>> fetchSelectionClassInfo();
 
   Future<void> applyClassToStuff(
     UserState userState,
-    List<ClassState> classStateList,
+    List<Class> classStateList,
   );
 }

@@ -2,9 +2,9 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:vantan_connect/model/attendance_student_state/attendance_student_state.dart';
 import 'package:vantan_connect/ripository/user/user_repository.dart';
-import '../../model/user_state/user_state.dart';
+
+import '../../entity/user/user_state.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final db = FirebaseFirestore.instance;
@@ -37,20 +37,6 @@ class UserRepositoryImpl implements UserRepository {
       return UserState.fromJson(data);
     });
     return doc;
-  }
-
-  @override
-  Future fetchAttendanceUser() async {
-    final doc = await db.doc(
-      '/all_class/VTA_class/2022/1G_students/1_term/5XkYnp3qFC8go7NAcxnz/918/attendance',
-    );
-    return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
-      if (!documentSnapshot.exists) {
-        doc.set(<String, dynamic>{});
-      }
-      final data = documentSnapshot.data() as Map<String, dynamic>;
-      return AttendanceStudentState.fromJson(data);
-    });
   }
 
   @override

@@ -1,10 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/model/class_state/class_state.dart';
-import 'package:vantan_connect/model/user_state/user_state.dart';
 import 'package:vantan_connect/ripository/class/class_repository.dart';
+import '../../entity/class/class.dart';
+import '../../entity/user/user_state.dart';
 import '../../ripository/class/class_repository_impl.dart';
 
-class ClassStateViewModel extends StateNotifier<List<ClassState>> {
+class ClassStateViewModel extends StateNotifier<List<Class>> {
   ClassStateViewModel(this.classRepository) : super([]);
   final ClassRepository classRepository;
 
@@ -20,10 +20,10 @@ class ClassStateViewModel extends StateNotifier<List<ClassState>> {
   }
 
   Future<void> applyClassToStuff(
-      UserState userState, List<ClassState> classState) async {
+      UserState userState, List<Class> classState) async {
     await classRepository.applyClassToStuff(userState, classState);
   }
 }
 
-final classStateViewModel =
+final classViewModel =
     StateNotifierProvider((ref) => ClassStateViewModel(ClassRepositoryImpl()));

@@ -52,6 +52,8 @@ dependencies:
   cupertino_icons: ^1.0.5
   pedantic_mono: ^1.20.0
   intl:
+  flutter_hooks: ^0.18.5+1
+  flutter_screenutil: ^5.6.0
 
 
 

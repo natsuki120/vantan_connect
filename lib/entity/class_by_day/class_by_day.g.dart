@@ -1,0 +1,25 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'class_by_day.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ClassByDay _$$_ClassByDayFromJson(Map<String, dynamic> json) =>
+    _$_ClassByDay(
+      id: json['id'] as String? ?? '',
+      className: json['className'] as String? ?? '',
+      day: const DateTimeConverter().fromJson(json['day']),
+      announce: const DateTimeConverter().fromJson(json['announce']),
+      timeTable: json['timeTable'] as int? ?? 0,
+    );
+
+Map<String, dynamic> _$$_ClassByDayToJson(_$_ClassByDay instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'className': instance.className,
+      'day': const DateTimeConverter().toJson(instance.day),
+      'announce': const DateTimeConverter().toJson(instance.announce),
+      'timeTable': instance.timeTable,
+    };

@@ -1,7 +1,6 @@
-import 'package:vantan_connect/model/class_state/class_state.dart';
-
-import '../../model/class_by_day_state/class_by_day_state.dart';
+import '../../entity/class/class.dart';
+import '../../entity/class_by_day/class_by_day.dart';
 
 abstract class ClassByDayRepository {
-  Stream<List<ClassByDayState>> fetchClassByDayInfo(ClassState classState);
+  Stream<List<ClassByDay>> fetchClassByDayInfo(Class classState);
 }

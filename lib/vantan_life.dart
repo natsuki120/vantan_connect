@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/atom/color_schemes.g.dart';
-import 'package:vantan_connect/component/page/timetable_page.dart';
-import 'component/page/profile_page.dart';
-import 'home_page.dart';
+import 'package:vantan_connect/view/atom/color_schemes.g.dart';
+import 'package:vantan_connect/view/template/home_template.dart';
+import 'package:vantan_connect/view/template/schedule_template.dart';
 
 class VantanLife extends StatefulWidget {
   const VantanLife({super.key});
@@ -13,11 +12,11 @@ class VantanLife extends StatefulWidget {
 
 class _VantanLifeState extends State<VantanLife> {
   static List<Widget> pageList = [
-    HomePage(),
+    HomeTemplate(),
     Container(),
-    TimetablePage(),
+    ScheduleTemplate(),
     Container(),
-    const ProfilePage(),
+    Container(),
   ];
   int selectedIndex = 0;
 
@@ -33,12 +32,12 @@ class _VantanLifeState extends State<VantanLife> {
       body: pageList[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: colorScheme.onSurfaceVariant,
+        selectedItemColor: colorScheme.primary,
         unselectedItemColor: colorScheme.onSurfaceVariant,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home_outlined,
+              Icons.home,
               size: 30,
             ),
             label: '',
@@ -49,19 +48,19 @@ class _VantanLifeState extends State<VantanLife> {
           ),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.chat_outlined,
+                Icons.calendar_month,
                 size: 30,
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.notifications_outlined,
+                Icons.notifications,
                 size: 30,
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.account_balance_outlined,
+                Icons.account_balance,
                 size: 30,
               ),
               label: ''),
