@@ -1,13 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/component/atom/color_schemes.g.dart';
-import 'package:vantan_connect/view/profile_page.dart';
-import 'home_page.dart';
+import 'package:vantan_connect/view/atom/color_schemes.g.dart';
+import 'package:vantan_connect/view/template/home_template.dart';
+import 'package:vantan_connect/view/template/schedule_template.dart';
 
 class VantanLife extends StatefulWidget {
-  const VantanLife({super.key, required this.user});
-
-  final User user;
+  const VantanLife({super.key});
 
   @override
   State<VantanLife> createState() => _VantanLifeState();
@@ -15,11 +12,11 @@ class VantanLife extends StatefulWidget {
 
 class _VantanLifeState extends State<VantanLife> {
   static List<Widget> pageList = [
-    const HomePage(),
+    HomeTemplate(),
+    Container(),
+    ScheduleTemplate(),
     Container(),
     Container(),
-    Container(),
-    const ProfilePage(),
   ];
   int selectedIndex = 0;
 
@@ -35,19 +32,23 @@ class _VantanLifeState extends State<VantanLife> {
       body: pageList[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: colorScheme!.onPrimaryContainer,
-        backgroundColor: colorScheme!.primaryContainer,
+        selectedItemColor: colorScheme.primary,
+        unselectedItemColor: colorScheme.onSurfaceVariant,
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                size: 30,
-              ),
-              label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.add, size: 30), label: ''),
+            icon: Icon(
+              Icons.home,
+              size: 30,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add, size: 30),
+            label: '',
+          ),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.chat,
+                Icons.calendar_month,
                 size: 30,
               ),
               label: ''),
