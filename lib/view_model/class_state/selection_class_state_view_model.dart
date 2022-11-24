@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/ripository/class/class_repository.dart';
-import '../../entity/class/class.dart';
+import '../../data_model//class/class.dart';
 import '../../ripository/class/class_repository_impl.dart';
 
 class SelectionClassStateViewModel extends StateNotifier<List<Class>> {

@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/ripository/class_by_day/class_by_day_repository.dart';
 import 'package:vantan_connect/ripository/class_by_day/class_by_day_repository_impl.dart';
-import '../../entity/class/class.dart';
-import '../../entity/class_by_day/class_by_day.dart';
+import '../../data_model//class/class.dart';
+import '../../data_model//class_by_day/class_by_day.dart';
 
 class ClassByDayViewModel extends StateNotifier<List<ClassByDay>> {
   ClassByDayViewModel(this.classByDayRepository) : super([]);

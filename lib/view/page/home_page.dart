@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/view_model/class_by_day_state/class_by_day_view_model.dart';
-import 'package:vantan_connect/view_model/class_state/class_state_view_model.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/buisiness_logic/provider/notification_to_class_time.dart';
 
-class HomePage extends ConsumerWidget {
+class HomePage extends HookConsumerWidget {
   HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(classViewModel);
-    ref.watch(classByDayStateViewModel);
+    ref.watch(notificationToClassTime(DateTime.now()));
     return Scaffold(
-      appBar: AppBar(
-          // automaticallyImplyLeading: false,
-          ),
+      appBar: AppBar(),
       drawer: Drawer(
         child: ListView(
           children: <Widget>[

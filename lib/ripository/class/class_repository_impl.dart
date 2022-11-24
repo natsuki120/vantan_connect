@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:vantan_connect/entity/user/user_state.dart';
+
 import 'package:vantan_connect/ripository/class/class_repository.dart';
-import '../../entity/class/class.dart';
+import '../../data_model//class/class.dart';
+import '../../data_model/user/user_state.dart';
 
 class ClassRepositoryImpl implements ClassRepository {
   final db = FirebaseFirestore.instance;

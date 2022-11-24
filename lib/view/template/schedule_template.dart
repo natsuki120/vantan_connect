@@ -51,7 +51,8 @@ class ScheduleTemplate extends StatelessWidget {
                       color: colorScheme.onBackground.withOpacity(0.5),
                       text: '50分 ×2',
                       textStyle: bodyRegular(colorScheme.onBackground),
-                      spaceSize: 10.w,
+                      spaceSize: 10.sp,
+                      mainAxisAlignment: MainAxisAlignment.end,
                     ),
                     Spacer(),
                     IconAndText(
@@ -60,6 +61,7 @@ class ScheduleTemplate extends StatelessWidget {
                       text: '50分 ×2',
                       textStyle: bodyRegular(colorScheme.onBackground),
                       spaceSize: 10.sp,
+                      mainAxisAlignment: MainAxisAlignment.end,
                     ),
                     Spacer(),
                     IconAndText(
@@ -68,6 +70,7 @@ class ScheduleTemplate extends StatelessWidget {
                       text: '50分 ×2',
                       textStyle: bodyRegular(colorScheme.onBackground),
                       spaceSize: 10.sp,
+                      mainAxisAlignment: MainAxisAlignment.end,
                     ),
                   ],
                 ),
@@ -84,6 +87,7 @@ class ScheduleTemplate extends StatelessWidget {
                       text: '50分 ×2',
                       textStyle: bodyRegular(colorScheme.onBackground),
                       spaceSize: 10.w,
+                      mainAxisAlignment: MainAxisAlignment.end,
                     ),
                     Spacer(),
                     IconAndText(
@@ -92,6 +96,7 @@ class ScheduleTemplate extends StatelessWidget {
                       text: '50分 ×2',
                       textStyle: bodyRegular(colorScheme.onBackground),
                       spaceSize: 10.w,
+                      mainAxisAlignment: MainAxisAlignment.end,
                     ),
                     Spacer(),
                     IconAndText(
@@ -100,6 +105,7 @@ class ScheduleTemplate extends StatelessWidget {
                       text: '50分 ×2',
                       textStyle: bodyRegular(colorScheme.onBackground),
                       spaceSize: 10.w,
+                      mainAxisAlignment: MainAxisAlignment.end,
                     ),
                   ],
                 ),
