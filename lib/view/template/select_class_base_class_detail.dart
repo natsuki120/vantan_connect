@@ -108,7 +108,7 @@ class SelectClassBaseClassDetailTemplate extends StatelessWidget {
                             role: 'Flutterエンジニア',
                           ),
                         ),
-                        SpaceBox(height: 8),
+                        SpaceBox(height: 8.h),
                         BorderBox(
                           radius: 12,
                           padding: EdgeInsets.symmetric(

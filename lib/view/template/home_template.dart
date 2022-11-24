@@ -9,7 +9,7 @@ import 'package:vantan_connect/view/atom/style_by_platform.dart';
 import 'package:vantan_connect/view/template/select_class_template.dart';
 
 class HomeTemplate extends StatelessWidget {
-  const HomeTemplate({Key? key}) : super(key: key);
+  const HomeTemplate({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +44,9 @@ class HomeTemplate extends StatelessWidget {
                 iconData: Icons.add,
                 text: '作成する',
                 textStyle: bodySemiBold(colorScheme.background),
-                spaceSize: 11.w,
+                spaceSize: 9.w,
                 color: colorScheme.background,
+                mainAxisAlignment: MainAxisAlignment.center,
               ),
             ),
           ],

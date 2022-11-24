@@ -54,15 +54,15 @@ dependencies:
   intl:
   flutter_hooks: ^0.18.5+1
   flutter_screenutil: ^5.6.0
+  flutter_ringtone_player: ^3.2.0
+  hooks_riverpod: ^1.0.4
+  vm_service: ^9.4.0
 
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_driver:
-    sdk: flutter
-  test: any
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -70,9 +70,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  build_runner:
+  build_runner: ^2.1.11
   freezed:
   json_serializable:
+  monarch: ^3.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

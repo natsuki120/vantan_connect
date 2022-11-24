@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../entity/class/class.dart';
-import '../../entity/class_by_day/class_by_day.dart';
+import '../../data_model/class/class.dart';
+import '../../data_model/class_by_day/class_by_day.dart';
 import 'class_by_day_repository.dart';
 
 class ClassByDayRepositoryImpl implements ClassByDayRepository {

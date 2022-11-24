@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/ripository/class/class_repository.dart';
-import '../../entity/class/class.dart';
-import '../../entity/user/user_state.dart';
+import '../../data_model//class/class.dart';
+import '../../data_model//user/user_state.dart';
 import '../../ripository/class/class_repository_impl.dart';
 
 class ClassStateViewModel extends StateNotifier<List<Class>> {

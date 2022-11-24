@@ -10,7 +10,8 @@ class IconAndText extends StatelessWidget {
       required this.text,
       required this.textStyle,
       required this.spaceSize,
-      required this.color})
+      required this.color,
+      required this.mainAxisAlignment})
       : super(key: key);
 
   final IconData iconData;
@@ -18,10 +19,12 @@ class IconAndText extends StatelessWidget {
   final TextStyle textStyle;
   final double spaceSize;
   final Color color;
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: mainAxisAlignment,
       children: [
         Icon(
           iconData,

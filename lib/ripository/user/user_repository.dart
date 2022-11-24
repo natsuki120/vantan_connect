@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../../entity/user/user_state.dart';
+import '../../data_model//user/user_state.dart';
 
 abstract class UserRepository {
   Future<bool> signIn(String email, String password);

@@ -4,10 +4,12 @@ import 'package:build_runner_core/build_runner_core.dart' as _i1;
 import 'package:freezed/builder.dart' as _i2;
 import 'package:json_serializable/builder.dart' as _i3;
 import 'package:mockito/src/builder.dart' as _i4;
-import 'package:source_gen/builder.dart' as _i5;
-import 'dart:isolate' as _i6;
-import 'package:build_runner/build_runner.dart' as _i7;
-import 'dart:io' as _i8;
+import 'package:monarch/src/builders/builders.dart' as _i5;
+import 'package:build_config/build_config.dart' as _i6;
+import 'package:source_gen/builder.dart' as _i7;
+import 'dart:isolate' as _i8;
+import 'package:build_runner/build_runner.dart' as _i9;
+import 'dart:io' as _i10;
 
 final _builders = <_i1.BuilderApplication>[
   _i1.apply(
@@ -30,25 +32,52 @@ final _builders = <_i1.BuilderApplication>[
     hideOutput: false,
   ),
   _i1.apply(
+    r'monarch:meta_localizations_builder',
+    [_i5.metaLocalizationsBuilder],
+    _i1.toRoot(),
+    hideOutput: true,
+  ),
+  _i1.apply(
+    r'monarch:meta_themes_builder',
+    [_i5.metaThemesBuilder],
+    _i1.toRoot(),
+    hideOutput: true,
+    defaultGenerateFor:
+        const _i6.InputSet(exclude: [r'**.meta_localizations.g.dart']),
+  ),
+  _i1.apply(
+    r'monarch:meta_stories_builder',
+    [_i5.metaStoriesBuilder],
+    _i1.toRoot(),
+    hideOutput: true,
+    defaultGenerateFor: const _i6.InputSet(include: [r'**_stories.dart']),
+  ),
+  _i1.apply(
+    r'monarch:main_builder',
+    [_i5.mainBuilder],
+    _i1.toRoot(),
+    hideOutput: true,
+  ),
+  _i1.apply(
     r'source_gen:combining_builder',
-    [_i5.combiningBuilder],
+    [_i7.combiningBuilder],
     _i1.toNoneByDefault(),
     hideOutput: false,
     appliesBuilders: const [r'source_gen:part_cleanup'],
   ),
   _i1.applyPostProcess(
     r'source_gen:part_cleanup',
-    _i5.partCleanup,
+    _i7.partCleanup,
   ),
 ];
 void main(
   List<String> args, [
-  _i6.SendPort? sendPort,
+  _i8.SendPort? sendPort,
 ]) async {
-  var result = await _i7.run(
+  var result = await _i9.run(
     args,
     _builders,
   );
   sendPort?.send(result);
-  _i8.exitCode = result;
+  _i10.exitCode = result;
 }

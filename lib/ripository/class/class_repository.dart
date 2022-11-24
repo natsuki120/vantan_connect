@@ -1,5 +1,5 @@
-import 'package:vantan_connect/entity/class/class.dart';
-import '../../entity/user/user_state.dart';
+import 'package:vantan_connect/data_model/class/class.dart';
+import '../../data_model/user/user_state.dart';
 
 abstract class ClassRepository {
   Stream<List<Class>> fetchClassInfoWhichStudentRegistered();
