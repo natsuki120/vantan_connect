@@ -7,7 +7,6 @@ import 'package:vantan_connect/view/atom/space_box.dart';
 import 'package:vantan_connect/view/atom/style_by_platform.dart';
 import 'package:vantan_connect/view/organism/class_card.dart';
 import 'package:vantan_connect/view/molecule/primary_color_button.dart';
-import 'package:vantan_connect/view/atom/tappable_text.dart';
 import 'package:vantan_connect/view/organism/attendance_confirmation_write_reason_modal.dart';
 
 import '../molecule/Icon_and_text.dart';

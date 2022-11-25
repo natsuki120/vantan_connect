@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/vantan_life.dart';
+import 'package:vantan_connect/view/template/confirm_all_my_%20class_template.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light),
-          home: const VantanLife(),
+          home: const ConfirmAllMyClassTemplate(),
         );
       },
     );
