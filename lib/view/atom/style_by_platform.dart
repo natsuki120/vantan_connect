@@ -125,8 +125,13 @@ TextStyle titleSmall(FontWeight weight, Color color) => TextStyle(
       fontSize: 14.sp,
     );
 
-TextStyle Caption1(Color color) => TextStyle(
+TextStyle caption1Bold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
+      fontSize: 11.sp,
+    );
+TextStyle caption1Regular(Color color) => TextStyle(
+      color: color,
+      fontWeight: FontWeight.w300,
       fontSize: 11.sp,
     );

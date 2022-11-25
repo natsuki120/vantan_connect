@@ -82,7 +82,7 @@ class EnableClassCard extends StatelessWidget {
                 iconData: Icons.error,
                 color: colorScheme.primary,
                 text: '進行中の予定です',
-                textStyle: Caption1(colorScheme.onBackground),
+                textStyle: caption1Bold(colorScheme.onBackground),
                 spaceSize: 14,
                 mainAxisAlignment: MainAxisAlignment.end,
               ),

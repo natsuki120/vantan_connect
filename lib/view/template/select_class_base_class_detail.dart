@@ -35,14 +35,14 @@ class SelectClassBaseClassDetailTemplate extends StatelessWidget {
                     textStyle: title1Bold(colorScheme.onBackground),
                   ),
                   SpaceBox(height: 24.h),
-                  HorizontalClassInfoElement(
-                    text: '講師',
-                    iconData: Icons.person,
-                    info: ImageAndUserInfo(
-                      name: '高橋　夏輝',
-                      role: 'Flutterエンジニア',
-                    ),
-                  ),
+                  // HorizontalClassInfoElement(
+                  //   text: '講師',
+                  //   iconData: Icons.person,
+                  //   info: ImageAndUserInfo(
+                  //     name: '高橋　夏輝',
+                  //     role: 'Flutterエンジニア',
+                  //   ),
+                  // ),
                   SpaceBox(height: 34.h),
                   HorizontalClassInfoElement(
                     text: '単位時間',
@@ -97,29 +97,29 @@ class SelectClassBaseClassDetailTemplate extends StatelessWidget {
                     title: '担当',
                     content: Column(
                       children: [
-                        BorderBox(
-                          radius: 12,
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16.sp,
-                            vertical: 20.sp,
-                          ),
-                          child: ImageAndUserInfo(
-                            name: '高橋夏輝',
-                            role: 'Flutterエンジニア',
-                          ),
-                        ),
+                        // BorderBox(
+                        //   radius: 12,
+                        //   padding: EdgeInsets.symmetric(
+                        //     horizontal: 16.sp,
+                        //     vertical: 20.sp,
+                        //   ),
+                        //   child: ImageAndUserInfo(
+                        //     name: '高橋夏輝',
+                        //     role: 'Flutterエンジニア',
+                        //   ),
+                        // ),
                         SpaceBox(height: 8.h),
-                        BorderBox(
-                          radius: 12,
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16.sp,
-                            vertical: 20.sp,
-                          ),
-                          child: ImageAndUserInfo(
-                            name: '高橋夏輝',
-                            role: 'Flutterエンジニア',
-                          ),
-                        ),
+                        // BorderBox(
+                        //   radius: 12,
+                        //   padding: EdgeInsets.symmetric(
+                        //     horizontal: 16.sp,
+                        //     vertical: 20.sp,
+                        //   ),
+                        //   child: ImageAndUserInfo(
+                        //     name: '高橋夏輝',
+                        //     role: 'Flutterエンジニア',
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),

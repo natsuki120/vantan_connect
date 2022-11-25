@@ -4,15 +4,15 @@ import 'package:vantan_connect/view/atom/main_text.dart';
 import 'package:vantan_connect/view/atom/space_box.dart';
 
 class IconAndText extends StatelessWidget {
-  const IconAndText(
-      {Key? key,
-      required this.iconData,
-      required this.text,
-      required this.textStyle,
-      required this.spaceSize,
-      required this.color,
-      required this.mainAxisAlignment})
-      : super(key: key);
+  const IconAndText({
+    Key? key,
+    required this.iconData,
+    required this.text,
+    required this.textStyle,
+    required this.spaceSize,
+    required this.color,
+    required this.mainAxisAlignment,
+  }) : super(key: key);
 
   final IconData iconData;
   final String text;

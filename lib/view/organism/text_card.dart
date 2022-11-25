@@ -16,7 +16,7 @@ class TextCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8.0),
       child: MainText(
         text: text,
-        textStyle: Caption1(colorScheme.onBackground),
+        textStyle: caption1Bold(colorScheme.onBackground),
       ),
     );
   }
