@@ -28,7 +28,7 @@ mixin _$Class {
   String get goalPoint => throw _privateConstructorUsedError;
   String get endTime => throw _privateConstructorUsedError;
   int get frameCount => throw _privateConstructorUsedError;
-  List<UserState> get student => throw _privateConstructorUsedError;
+  List<ClassStudent> get student => throw _privateConstructorUsedError;
   String get startTime => throw _privateConstructorUsedError;
   String get announceTime => throw _privateConstructorUsedError;
   int get timeTable => throw _privateConstructorUsedError;
@@ -53,7 +53,7 @@ abstract class $ClassCopyWith<$Res> {
       String goalPoint,
       String endTime,
       int frameCount,
-      List<UserState> student,
+      List<ClassStudent> student,
       String startTime,
       String announceTime,
       int timeTable,
@@ -122,7 +122,7 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
       student: student == freezed
           ? _value.student
           : student // ignore: cast_nullable_to_non_nullable
-              as List<UserState>,
+              as List<ClassStudent>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
@@ -161,7 +161,7 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       String goalPoint,
       String endTime,
       int frameCount,
-      List<UserState> student,
+      List<ClassStudent> student,
       String startTime,
       String announceTime,
       int timeTable,
@@ -231,7 +231,7 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
       student: student == freezed
           ? _value._student
           : student // ignore: cast_nullable_to_non_nullable
-              as List<UserState>,
+              as List<ClassStudent>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
@@ -268,7 +268,7 @@ class _$_Class implements _Class {
       this.goalPoint = '',
       this.endTime = '',
       this.frameCount = 0,
-      final List<UserState> student = const <UserState>[],
+      final List<ClassStudent> student = const <ClassStudent>[],
       this.startTime = '',
       this.announceTime = '',
       this.timeTable = 0,
@@ -311,10 +311,10 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final int frameCount;
-  final List<UserState> _student;
+  final List<ClassStudent> _student;
   @override
   @JsonKey()
-  List<UserState> get student {
+  List<ClassStudent> get student {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_student);
   }
@@ -417,7 +417,7 @@ abstract class _Class implements Class {
       final String goalPoint,
       final String endTime,
       final int frameCount,
-      final List<UserState> student,
+      final List<ClassStudent> student,
       final String startTime,
       final String announceTime,
       final int timeTable,
@@ -443,7 +443,7 @@ abstract class _Class implements Class {
   @override
   int get frameCount;
   @override
-  List<UserState> get student;
+  List<ClassStudent> get student;
   @override
   String get startTime;
   @override
