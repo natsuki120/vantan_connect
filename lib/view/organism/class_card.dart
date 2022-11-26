@@ -6,10 +6,8 @@ import 'package:vantan_connect/view/atom/main_text.dart';
 import 'package:vantan_connect/view/atom/space_box.dart';
 import 'package:vantan_connect/view/atom/style_by_platform.dart';
 import 'package:vantan_connect/view/molecule/border_box.dart';
-import 'package:vantan_connect/view/molecule/guidance_message.dart';
 import 'package:vantan_connect/view/molecule/image_and_user_info.dart';
 import 'package:vantan_connect/view/organism/text_card.dart';
-
 import '../molecule/Icon_and_text.dart';
 
 class ClassCard extends StatelessWidget {
