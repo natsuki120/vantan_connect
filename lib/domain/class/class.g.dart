@@ -1,3 +1,7 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'class.dart';
+
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
@@ -15,9 +19,9 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       endTime: json['endTime'] as String? ?? '',
       frameCount: json['frameCount'] as int? ?? 0,
       student: (json['student'] as List<dynamic>?)
-              ?.map((e) => UserState.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => ClassStudent.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <UserState>[],
+          const <ClassStudent>[],
       startTime: json['startTime'] as String? ?? '',
       announceTime: json['announceTime'] as String? ?? '',
       timeTable: json['timeTable'] as int? ?? 0,

@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vantan_connect/domain/class_student/class_student.dart';
 import '../class_document/class_document.dart';
 import '../user/user_state.dart';
 part 'class.freezed.dart';
@@ -15,7 +16,7 @@ class Class with _$Class {
     @Default('') String goalPoint,
     @Default('') String endTime,
     @Default(0) int frameCount,
-    @Default(<UserState>[]) List<UserState> student,
+    @Default(<ClassStudent>[]) List<ClassStudent> student,
     @Default('') String startTime,
     @Default('') String announceTime,
     @Default(0) int timeTable,
@@ -24,4 +25,8 @@ class Class with _$Class {
   }) = _Class;
 
   factory Class.fromJson(Map<String, dynamic> json) => _$ClassFromJson(json);
+}
+
+abstract class IClassRepository {
+  Stream<List<Class>> fetchClassInfoToConfirmDetail();
 }
