@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/view/atom/space_box.dart';
-import 'package:vantan_connect/view/atom/style_by_platform.dart';
-import 'package:vantan_connect/view/molecule/horizontal_class_info_element.dart';
-import 'package:vantan_connect/view/molecule/title_and_content.dart';
-import '../atom/color_schemes.g.dart';
+import 'package:vantan_connect/view/token/space_box.dart';
+import 'package:vantan_connect/view/token/style_by_platform.dart';
+import 'package:vantan_connect/view/organism/horizontal_class_info_element.dart';
+import 'package:vantan_connect/view/organism/title_and_content.dart';
+import '../token/color_schemes.g.dart';
 import '../atom/description_text.dart';
 import '../atom/main_text.dart';
-import '../molecule/border_box.dart';
+import '../atom/border_box.dart';
 import '../molecule/image_and_user_info.dart';
 
 class SelectClassDetailPage extends StatelessWidget {

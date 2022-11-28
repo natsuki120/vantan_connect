@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/vantan_life.dart';
-import 'package:vantan_connect/view/template/confirm_all_my_%20class_template.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
