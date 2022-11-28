@@ -22,18 +22,19 @@ Class _$ClassFromJson(Map<String, dynamic> json) {
 mixin _$Class {
   String get name => throw _privateConstructorUsedError;
   String get overView => throw _privateConstructorUsedError;
-  List<UserState> get teacher => throw _privateConstructorUsedError;
+  List<Map<String, dynamic>> get teacher => throw _privateConstructorUsedError;
   String get targetSchool => throw _privateConstructorUsedError;
   String get targetStudent => throw _privateConstructorUsedError;
   String get goalPoint => throw _privateConstructorUsedError;
+  List<String> get goalRequirements => throw _privateConstructorUsedError;
   String get endTime => throw _privateConstructorUsedError;
   int get frameCount => throw _privateConstructorUsedError;
-  List<ClassStudent> get student => throw _privateConstructorUsedError;
   String get startTime => throw _privateConstructorUsedError;
   String get announceTime => throw _privateConstructorUsedError;
   int get timeTable => throw _privateConstructorUsedError;
   List<ClassDocument> get document => throw _privateConstructorUsedError;
   List<String> get studentVoice => throw _privateConstructorUsedError;
+  bool get online => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,18 +48,19 @@ abstract class $ClassCopyWith<$Res> {
   $Res call(
       {String name,
       String overView,
-      List<UserState> teacher,
+      List<Map<String, dynamic>> teacher,
       String targetSchool,
       String targetStudent,
       String goalPoint,
+      List<String> goalRequirements,
       String endTime,
       int frameCount,
-      List<ClassStudent> student,
       String startTime,
       String announceTime,
       int timeTable,
       List<ClassDocument> document,
-      List<String> studentVoice});
+      List<String> studentVoice,
+      bool online});
 }
 
 /// @nodoc
@@ -77,14 +79,15 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
     Object? targetSchool = freezed,
     Object? targetStudent = freezed,
     Object? goalPoint = freezed,
+    Object? goalRequirements = freezed,
     Object? endTime = freezed,
     Object? frameCount = freezed,
-    Object? student = freezed,
     Object? startTime = freezed,
     Object? announceTime = freezed,
     Object? timeTable = freezed,
     Object? document = freezed,
     Object? studentVoice = freezed,
+    Object? online = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -98,7 +101,7 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
       teacher: teacher == freezed
           ? _value.teacher
           : teacher // ignore: cast_nullable_to_non_nullable
-              as List<UserState>,
+              as List<Map<String, dynamic>>,
       targetSchool: targetSchool == freezed
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
@@ -111,6 +114,10 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
           ? _value.goalPoint
           : goalPoint // ignore: cast_nullable_to_non_nullable
               as String,
+      goalRequirements: goalRequirements == freezed
+          ? _value.goalRequirements
+          : goalRequirements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       endTime: endTime == freezed
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
@@ -119,10 +126,6 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
           ? _value.frameCount
           : frameCount // ignore: cast_nullable_to_non_nullable
               as int,
-      student: student == freezed
-          ? _value.student
-          : student // ignore: cast_nullable_to_non_nullable
-              as List<ClassStudent>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
@@ -143,6 +146,10 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
           ? _value.studentVoice
           : studentVoice // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      online: online == freezed
+          ? _value.online
+          : online // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -155,18 +162,19 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
   $Res call(
       {String name,
       String overView,
-      List<UserState> teacher,
+      List<Map<String, dynamic>> teacher,
       String targetSchool,
       String targetStudent,
       String goalPoint,
+      List<String> goalRequirements,
       String endTime,
       int frameCount,
-      List<ClassStudent> student,
       String startTime,
       String announceTime,
       int timeTable,
       List<ClassDocument> document,
-      List<String> studentVoice});
+      List<String> studentVoice,
+      bool online});
 }
 
 /// @nodoc
@@ -186,14 +194,15 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
     Object? targetSchool = freezed,
     Object? targetStudent = freezed,
     Object? goalPoint = freezed,
+    Object? goalRequirements = freezed,
     Object? endTime = freezed,
     Object? frameCount = freezed,
-    Object? student = freezed,
     Object? startTime = freezed,
     Object? announceTime = freezed,
     Object? timeTable = freezed,
     Object? document = freezed,
     Object? studentVoice = freezed,
+    Object? online = freezed,
   }) {
     return _then(_$_Class(
       name: name == freezed
@@ -207,7 +216,7 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
       teacher: teacher == freezed
           ? _value._teacher
           : teacher // ignore: cast_nullable_to_non_nullable
-              as List<UserState>,
+              as List<Map<String, dynamic>>,
       targetSchool: targetSchool == freezed
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
@@ -220,6 +229,10 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
           ? _value.goalPoint
           : goalPoint // ignore: cast_nullable_to_non_nullable
               as String,
+      goalRequirements: goalRequirements == freezed
+          ? _value._goalRequirements
+          : goalRequirements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       endTime: endTime == freezed
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
@@ -228,10 +241,6 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
           ? _value.frameCount
           : frameCount // ignore: cast_nullable_to_non_nullable
               as int,
-      student: student == freezed
-          ? _value._student
-          : student // ignore: cast_nullable_to_non_nullable
-              as List<ClassStudent>,
       startTime: startTime == freezed
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
@@ -252,6 +261,10 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
           ? _value._studentVoice
           : studentVoice // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      online: online == freezed
+          ? _value.online
+          : online // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -262,20 +275,21 @@ class _$_Class implements _Class {
   const _$_Class(
       {this.name = '',
       this.overView = '',
-      final List<UserState> teacher = const <UserState>[],
+      final List<Map<String, dynamic>> teacher = const [],
       this.targetSchool = '',
       this.targetStudent = '',
       this.goalPoint = '',
+      final List<String> goalRequirements = const [],
       this.endTime = '',
       this.frameCount = 0,
-      final List<ClassStudent> student = const <ClassStudent>[],
       this.startTime = '',
       this.announceTime = '',
       this.timeTable = 0,
       final List<ClassDocument> document = const <ClassDocument>[],
-      final List<String> studentVoice = const <String>[]})
+      final List<String> studentVoice = const <String>[],
+      this.online = false})
       : _teacher = teacher,
-        _student = student,
+        _goalRequirements = goalRequirements,
         _document = document,
         _studentVoice = studentVoice;
 
@@ -288,10 +302,10 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String overView;
-  final List<UserState> _teacher;
+  final List<Map<String, dynamic>> _teacher;
   @override
   @JsonKey()
-  List<UserState> get teacher {
+  List<Map<String, dynamic>> get teacher {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_teacher);
   }
@@ -305,20 +319,20 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String goalPoint;
+  final List<String> _goalRequirements;
+  @override
+  @JsonKey()
+  List<String> get goalRequirements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_goalRequirements);
+  }
+
   @override
   @JsonKey()
   final String endTime;
   @override
   @JsonKey()
   final int frameCount;
-  final List<ClassStudent> _student;
-  @override
-  @JsonKey()
-  List<ClassStudent> get student {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_student);
-  }
-
   @override
   @JsonKey()
   final String startTime;
@@ -345,8 +359,12 @@ class _$_Class implements _Class {
   }
 
   @override
+  @JsonKey()
+  final bool online;
+
+  @override
   String toString() {
-    return 'Class(name: $name, overView: $overView, teacher: $teacher, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, endTime: $endTime, frameCount: $frameCount, student: $student, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, document: $document, studentVoice: $studentVoice)';
+    return 'Class(name: $name, overView: $overView, teacher: $teacher, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, document: $document, studentVoice: $studentVoice, online: $online)';
   }
 
   @override
@@ -362,17 +380,19 @@ class _$_Class implements _Class {
             const DeepCollectionEquality()
                 .equals(other.targetStudent, targetStudent) &&
             const DeepCollectionEquality().equals(other.goalPoint, goalPoint) &&
+            const DeepCollectionEquality()
+                .equals(other._goalRequirements, _goalRequirements) &&
             const DeepCollectionEquality().equals(other.endTime, endTime) &&
             const DeepCollectionEquality()
                 .equals(other.frameCount, frameCount) &&
-            const DeepCollectionEquality().equals(other._student, _student) &&
             const DeepCollectionEquality().equals(other.startTime, startTime) &&
             const DeepCollectionEquality()
                 .equals(other.announceTime, announceTime) &&
             const DeepCollectionEquality().equals(other.timeTable, timeTable) &&
             const DeepCollectionEquality().equals(other._document, _document) &&
             const DeepCollectionEquality()
-                .equals(other._studentVoice, _studentVoice));
+                .equals(other._studentVoice, _studentVoice) &&
+            const DeepCollectionEquality().equals(other.online, online));
   }
 
   @JsonKey(ignore: true)
@@ -385,14 +405,15 @@ class _$_Class implements _Class {
       const DeepCollectionEquality().hash(targetSchool),
       const DeepCollectionEquality().hash(targetStudent),
       const DeepCollectionEquality().hash(goalPoint),
+      const DeepCollectionEquality().hash(_goalRequirements),
       const DeepCollectionEquality().hash(endTime),
       const DeepCollectionEquality().hash(frameCount),
-      const DeepCollectionEquality().hash(_student),
       const DeepCollectionEquality().hash(startTime),
       const DeepCollectionEquality().hash(announceTime),
       const DeepCollectionEquality().hash(timeTable),
       const DeepCollectionEquality().hash(_document),
-      const DeepCollectionEquality().hash(_studentVoice));
+      const DeepCollectionEquality().hash(_studentVoice),
+      const DeepCollectionEquality().hash(online));
 
   @JsonKey(ignore: true)
   @override
@@ -411,18 +432,19 @@ abstract class _Class implements Class {
   const factory _Class(
       {final String name,
       final String overView,
-      final List<UserState> teacher,
+      final List<Map<String, dynamic>> teacher,
       final String targetSchool,
       final String targetStudent,
       final String goalPoint,
+      final List<String> goalRequirements,
       final String endTime,
       final int frameCount,
-      final List<ClassStudent> student,
       final String startTime,
       final String announceTime,
       final int timeTable,
       final List<ClassDocument> document,
-      final List<String> studentVoice}) = _$_Class;
+      final List<String> studentVoice,
+      final bool online}) = _$_Class;
 
   factory _Class.fromJson(Map<String, dynamic> json) = _$_Class.fromJson;
 
@@ -431,7 +453,7 @@ abstract class _Class implements Class {
   @override
   String get overView;
   @override
-  List<UserState> get teacher;
+  List<Map<String, dynamic>> get teacher;
   @override
   String get targetSchool;
   @override
@@ -439,11 +461,11 @@ abstract class _Class implements Class {
   @override
   String get goalPoint;
   @override
+  List<String> get goalRequirements;
+  @override
   String get endTime;
   @override
   int get frameCount;
-  @override
-  List<ClassStudent> get student;
   @override
   String get startTime;
   @override
@@ -454,6 +476,8 @@ abstract class _Class implements Class {
   List<ClassDocument> get document;
   @override
   List<String> get studentVoice;
+  @override
+  bool get online;
   @override
   @JsonKey(ignore: true)
   _$$_ClassCopyWith<_$_Class> get copyWith =>

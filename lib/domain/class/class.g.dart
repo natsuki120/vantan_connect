@@ -10,18 +10,18 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       name: json['name'] as String? ?? '',
       overView: json['overView'] as String? ?? '',
       teacher: (json['teacher'] as List<dynamic>?)
-              ?.map((e) => UserState.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <UserState>[],
+          const [],
       targetSchool: json['targetSchool'] as String? ?? '',
       targetStudent: json['targetStudent'] as String? ?? '',
       goalPoint: json['goalPoint'] as String? ?? '',
+      goalRequirements: (json['goalRequirements'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
       endTime: json['endTime'] as String? ?? '',
       frameCount: json['frameCount'] as int? ?? 0,
-      student: (json['student'] as List<dynamic>?)
-              ?.map((e) => ClassStudent.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const <ClassStudent>[],
       startTime: json['startTime'] as String? ?? '',
       announceTime: json['announceTime'] as String? ?? '',
       timeTable: json['timeTable'] as int? ?? 0,
@@ -33,6 +33,7 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
               ?.map((e) => e as String)
               .toList() ??
           const <String>[],
+      online: json['online'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
@@ -42,12 +43,13 @@ Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'targetSchool': instance.targetSchool,
       'targetStudent': instance.targetStudent,
       'goalPoint': instance.goalPoint,
+      'goalRequirements': instance.goalRequirements,
       'endTime': instance.endTime,
       'frameCount': instance.frameCount,
-      'student': instance.student,
       'startTime': instance.startTime,
       'announceTime': instance.announceTime,
       'timeTable': instance.timeTable,
-      'document': instance.document,
+      'document': instance.document.map((e) => e.toJson()).toList(),
       'studentVoice': instance.studentVoice,
+      'online': instance.online,
     };

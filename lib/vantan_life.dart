@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/view/atom/color_schemes.g.dart';
+import 'package:vantan_connect/view/page/home_page.dart';
 import 'package:vantan_connect/view/template/home_template.dart';
 import 'package:vantan_connect/view/template/schedule_template.dart';
 
@@ -12,7 +13,7 @@ class VantanLife extends StatefulWidget {
 
 class _VantanLifeState extends State<VantanLife> {
   static List<Widget> pageList = [
-    HomeTemplate(),
+    HomePage(),
     Container(),
     ScheduleTemplate(),
     Container(),

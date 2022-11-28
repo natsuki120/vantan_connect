@@ -15,8 +15,10 @@ class ClassCard extends StatelessWidget {
     Key? key,
     required this.timelineList,
     required this.underWidget,
+    required this.className,
   }) : super(key: key);
 
+  final String className;
   final List timelineList;
   final Widget underWidget;
 
@@ -56,7 +58,7 @@ class ClassCard extends StatelessWidget {
                 ),
                 SpaceBox(height: 12.h),
                 MainText(
-                  text: 'UI/UXデザイン',
+                  text: className,
                   textStyle: headLineBold(colorScheme.onBackground),
                 ),
                 SpaceBox(height: 7.h),

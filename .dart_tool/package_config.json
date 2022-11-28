@@ -344,6 +344,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_use",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_use-0.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "flutter_web_plugins",
       "rootUri": "file:///Users/natsuki/development/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
@@ -519,7 +525,7 @@
     },
     {
       "name": "json_serializable",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.4.0",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.5.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -884,7 +890,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-11-23T05:35:55.361639Z",
+  "generated": "2022-11-28T02:26:08.746426Z",
   "generator": "pub",
-  "generatorVersion": "2.18.4"
+  "generatorVersion": "2.18.5"
 }

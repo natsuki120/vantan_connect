@@ -1,39 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/view/atom/color_schemes.g.dart';
+import 'package:vantan_connect/view/atom/main_text.dart';
+import 'package:vantan_connect/view/atom/space_box.dart';
+import 'package:vantan_connect/view/molecule/Icon_and_text.dart';
+import 'package:vantan_connect/view/molecule/primary_color_button.dart';
+import 'package:vantan_connect/view/atom/style_by_platform.dart';
+import 'package:vantan_connect/view/page/select_class_page.dart';
+import 'package:vantan_connect/view/template/select_class_template.dart';
 
-class HomePage extends HookConsumerWidget {
-  HomePage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  // TODO 指定の日時になったら新規作成ボタンを配置する
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('more'),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).canvasColor,
+        elevation: 0,
+        centerTitle: false,
+        title: MainText(
+          text: 'スケジュール',
+          textStyle: header(colorScheme.onBackground),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            MainText(
+              text: '後期の時間割を選択してください',
+              textStyle: headLineBold(colorScheme.onBackground),
             ),
-            GestureDetector(
-              child: ListTile(
-                title: Text("授業一覧"),
-                trailing: Icon(Icons.arrow_forward),
-              ),
-              onTap: () => Navigator.of(context).push(
+            SpaceBox(height: 36.h),
+            PrimaryColorButton(
+              callback: () => Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => Container(),
+                  builder: (_) => SelectClassPage(),
                 ),
               ),
-            ),
-            GestureDetector(
-              child: ListTile(
-                title: Text("生徒一覧"),
-                trailing: Icon(Icons.arrow_forward),
-              ),
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => Container(),
-                ),
+              width: 126.w,
+              height: 40.h,
+              child: IconAndText(
+                iconData: Icons.add,
+                text: '作成する',
+                textStyle: bodySemiBold(colorScheme.background),
+                spaceSize: 9.w,
+                color: colorScheme.background,
+                mainAxisAlignment: MainAxisAlignment.center,
               ),
             ),
           ],

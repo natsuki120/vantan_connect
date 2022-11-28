@@ -42,6 +42,7 @@ class ScheduleTemplate extends StatelessWidget {
               EnableClassCard(),
               SpaceBox(height: 16.h),
               ClassCard(
+                className: '',
                 timelineList: [],
                 underWidget: Row(
                   children: [
@@ -77,6 +78,7 @@ class ScheduleTemplate extends StatelessWidget {
               ),
               SpaceBox(height: 16.h),
               ClassCard(
+                className: '',
                 timelineList: [],
                 underWidget: Row(
                   children: [

@@ -1,27 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../atom/color_schemes.g.dart';
 
 class OnPrimaryColorButton extends StatelessWidget {
   const OnPrimaryColorButton({
     super.key,
-    required this.text,
     required this.callback,
     required this.child,
+    required this.width,
+    required this.height,
   });
 
-  final String text;
   final GestureTapCallback callback;
   final Widget child;
+  final double width;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 50,
+      width: width,
+      height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          side: BorderSide(color: colorScheme.primary),
+          elevation: 0,
           foregroundColor: colorScheme.primary,
-          backgroundColor: colorScheme.onPrimary,
+          backgroundColor: colorScheme.background,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.sp),
+          ),
         ),
         onPressed: callback,
         child: child,

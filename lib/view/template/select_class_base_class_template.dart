@@ -34,6 +34,7 @@ class SelectClassBaseClassTemplate extends StatelessWidget {
             ),
             SpaceBox(height: 40.h),
             ClassCard(
+              className: 'UI/UX',
               timelineList: [],
               underWidget: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -66,6 +67,7 @@ class SelectClassBaseClassTemplate extends StatelessWidget {
             ),
             SpaceBox(height: 16.h),
             ClassCard(
+              className: 'UI/UX',
               timelineList: [],
               underWidget: Row(
                 mainAxisAlignment: MainAxisAlignment.end,

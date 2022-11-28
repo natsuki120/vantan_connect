@@ -83,6 +83,7 @@ class ConfirmAllMyClassTemplate extends StatelessWidget {
                   ],
                 ),
                 ClassCard(
+                  className: '',
                   timelineList: [],
                   underWidget: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -115,6 +116,7 @@ class ConfirmAllMyClassTemplate extends StatelessWidget {
                   ),
                 ),
                 ClassCard(
+                  className: '',
                   timelineList: [],
                   underWidget: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -147,6 +149,7 @@ class ConfirmAllMyClassTemplate extends StatelessWidget {
                   ),
                 ),
                 ClassCard(
+                  className: '',
                   timelineList: [],
                   underWidget: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -179,6 +182,7 @@ class ConfirmAllMyClassTemplate extends StatelessWidget {
                   ),
                 ),
                 ClassCard(
+                  className: '',
                   timelineList: [],
                   underWidget: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
