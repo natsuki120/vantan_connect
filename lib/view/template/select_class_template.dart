@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/organism/border_box_which_move_to_select_base_class.dart';
-import 'package:vantan_connect/view/organism/title_and_valueless_box.dart';
+import 'package:vantan_connect/view/organism/title_with_valueless_box_or_class_card.dart';
 import 'package:vantan_connect/view/organism/title_with_select_class_screen.dart';
 import 'package:vantan_connect/view/template/select_class_base_class_template.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
-import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 
@@ -32,9 +31,11 @@ class SelectClassTemplate extends StatelessWidget {
           titleTextStyle: bodyBold(colorScheme.onBackground),
         ),
         SpaceBox(height: 40.h),
-        TitleAndValuelessBox(
+        TitleWithValuelessBoxOrClassCard(
           title: '選択クラス',
           textStyle: bodyBold(colorScheme.onBackground),
+          isBaseClassSelected: false,
+          classCard: Container(),
         )
       ],
     );

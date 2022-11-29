@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../atom/class_tag.dart';
-import '../atom/color_schemes.g.dart';
 import '../atom/colored_border_box.dart';
 import '../atom/main_text.dart';
-import '../atom/space_box.dart';
-import '../atom/style_by_platform.dart';
 import '../molecule/Icon_and_text.dart';
 import '../molecule/teacher_card.dart';
+import '../token/color_schemes.g.dart';
+import '../token/space_box.dart';
+import '../token/style_by_platform.dart';
 
 class ClassDetailCard extends StatelessWidget {
   @override

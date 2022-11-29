@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/view/atom/color_schemes.g.dart';
+import 'package:vantan_connect/view/token//color_schemes.g.dart';
 
 class RoundIconButton extends StatelessWidget {
   const RoundIconButton({

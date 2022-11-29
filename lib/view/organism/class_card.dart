@@ -19,6 +19,7 @@ class ClassCard extends StatelessWidget {
     required this.description,
     required this.primaryCallback,
     required this.onPrimaryCallback,
+    required this.onPrimaryWhichIsSelectedCallback,
   }) : super(key: key);
 
   final String iconText;
@@ -28,6 +29,7 @@ class ClassCard extends StatelessWidget {
   final VoidCallback primaryCallback;
   final VoidCallback onPrimaryCallback;
   final bool isSelected;
+  final VoidCallback onPrimaryWhichIsSelectedCallback;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +65,7 @@ class ClassCard extends StatelessWidget {
                     width: 120.w,
                     height: 40.h,
                     text: '変更する',
-                    callback: onPrimaryCallback,
+                    callback: onPrimaryWhichIsSelectedCallback,
                   ),
                 )
               : Row(

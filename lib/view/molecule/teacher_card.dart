@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../atom/colored_border_box.dart';
-import '../atom/style_by_platform.dart';
-import '../atom/color_schemes.g.dart';
+import '../token/style_by_platform.dart';
+import '../token/color_schemes.g.dart';
 import '../molecule/image_and_user_info.dart';
 
 class TeacherCard extends StatelessWidget {

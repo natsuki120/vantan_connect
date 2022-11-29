@@ -34,6 +34,7 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
               .toList() ??
           const <String>[],
       online: json['online'] as bool? ?? false,
+      baseClass: json['baseClass'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
@@ -52,4 +53,5 @@ Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'document': instance.document.map((e) => e.toJson()).toList(),
       'studentVoice': instance.studentVoice,
       'online': instance.online,
+      'baseClass': instance.baseClass,
     };
