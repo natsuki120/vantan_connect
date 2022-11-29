@@ -4,16 +4,15 @@ import 'package:vantan_connect/view/molecule/class_card_border.dart';
 import 'package:vantan_connect/view/molecule/guidance_message.dart';
 import 'package:vantan_connect/view/molecule/on_primary_color_button_with_text.dart';
 import 'package:vantan_connect/view/molecule/primary_color_button_with_text.dart';
-import 'package:vantan_connect/view/template/select_class_base_class_detail.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
-import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 import '../molecule/Icon_and_text.dart';
 
 class ClassCard extends StatelessWidget {
-  const ClassCard({
+  ClassCard({
     Key? key,
+    required this.isSelected,
     required this.iconText,
     required this.iconData,
     required this.className,
@@ -28,6 +27,7 @@ class ClassCard extends StatelessWidget {
   final String description;
   final VoidCallback primaryCallback;
   final VoidCallback onPrimaryCallback;
+  final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -56,24 +56,34 @@ class ClassCard extends StatelessWidget {
             spaceSize: 8.h,
           ),
           SpaceBox(height: 24.h),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              OnPrimaryColorButtonWithText(
-                width: 120.w,
-                height: 40.h,
-                text: '詳細を見る',
-                callback: onPrimaryCallback,
-              ),
-              SpaceBox(width: 10.w),
-              PrimaryColorButtonWithText(
-                width: 108.w,
-                height: 40.h,
-                text: '選択する',
-                callback: primaryCallback,
-              ),
-            ],
-          )
+          isSelected
+              ? Align(
+                  alignment: Alignment.bottomRight,
+                  child: OnPrimaryColorButtonWithText(
+                    width: 120.w,
+                    height: 40.h,
+                    text: '変更する',
+                    callback: onPrimaryCallback,
+                  ),
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    OnPrimaryColorButtonWithText(
+                      width: 120.w,
+                      height: 40.h,
+                      text: '詳細を見る',
+                      callback: onPrimaryCallback,
+                    ),
+                    SpaceBox(width: 10.w),
+                    PrimaryColorButtonWithText(
+                      width: 108.w,
+                      height: 40.h,
+                      text: '選択する',
+                      callback: primaryCallback,
+                    ),
+                  ],
+                ),
         ],
       ),
     );

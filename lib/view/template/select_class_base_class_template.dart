@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/organism/title_with_select_class_screen.dart';
-import 'package:vantan_connect/view/template/select_class_base_class_detail.dart';
+import 'package:vantan_connect/view/template/select_class_base_class_detail_template.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/organism/class_card.dart';
@@ -16,6 +16,7 @@ class SelectClassBaseClassTemplate extends StatelessWidget {
       children: [
         SpaceBox(height: 40.h),
         ClassCard(
+          isSelected: false,
           iconText: '9コマ',
           iconData: Icons.calendar_today,
           className: 'UI/UXデザイン実践クラス',
@@ -29,6 +30,7 @@ class SelectClassBaseClassTemplate extends StatelessWidget {
         ),
         SpaceBox(height: 16.h),
         ClassCard(
+          isSelected: false,
           iconText: '9コマ',
           iconData: Icons.calendar_today,
           className: 'データサイエンスクラス',

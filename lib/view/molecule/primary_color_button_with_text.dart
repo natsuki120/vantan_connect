@@ -23,7 +23,7 @@ class PrimaryColorButtonWithText extends StatelessWidget {
     return PrimaryColorButton(
       width: width,
       height: height,
-      callback: () => callback,
+      callback: callback,
       child: MainText(
         text: text,
         textStyle: bodyBold(colorScheme.background),

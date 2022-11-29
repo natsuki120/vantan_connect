@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/title_message.dart';
-import 'package:vantan_connect/view/organism/canvas_color_app_bar_with_title_message.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/const_width_and_height.dart';
 import 'package:vantan_connect/view/token/space_box.dart';

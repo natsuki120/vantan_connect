@@ -11,14 +11,7 @@ class HomeTemplate extends StatelessWidget {
     return Scaffold(
       appBar: CanvasColorAppBarWithTitleMessage(),
       body: Center(
-        child: GuideToSelectNewClass(
-          pageRoute: SelectClassTemplate(),
-          callback: () => Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (_) => SelectClassTemplate(),
-            ),
-          ),
-        ),
+        child: GuideToSelectNewClass(pageRoute: SelectClassTemplate()),
       ),
     );
   }

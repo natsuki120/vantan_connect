@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/border_box_with_primary_color_button_and_text.dart';
 import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 
 class TitleAndBorderBoxWhichMoveToSelectBaseClass extends StatelessWidget {
@@ -15,7 +17,7 @@ class TitleAndBorderBoxWhichMoveToSelectBaseClass extends StatelessWidget {
     required this.padding,
     required this.radius,
     required this.buttonPadding,
-    required this.callback,
+    required this.pageRoute,
     required this.titleTextStyle,
   }) : super(key: key);
 
@@ -29,7 +31,7 @@ class TitleAndBorderBoxWhichMoveToSelectBaseClass extends StatelessWidget {
   final EdgeInsets padding;
   final double radius;
   final EdgeInsets buttonPadding;
-  final VoidCallback callback;
+  final Widget pageRoute;
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +39,11 @@ class TitleAndBorderBoxWhichMoveToSelectBaseClass extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TitleMessage(text: title, textStyle: titleTextStyle),
-        SpaceBox(),
+        SpaceBox(height: 20.h),
         BorderBoxWithPrimaryColorButtonAndText(
           width: width,
           height: height,
-          callback: callback,
+          callback: () => NavigatorPush(context, page: pageRoute),
           iconData: iconData,
           text: text,
           textStyle: textStyle,

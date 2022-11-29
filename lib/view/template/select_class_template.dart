@@ -21,10 +21,7 @@ class SelectClassTemplate extends StatelessWidget {
         TitleAndBorderBoxWhichMoveToSelectBaseClass(
           title: 'ベースクラス',
           textStyle: bodyRegular(colorScheme.onBackground),
-          callback: () => NavigatorPush(
-            context,
-            page: SelectClassBaseClassTemplate(),
-          ),
+          pageRoute: SelectClassBaseClassTemplate(),
           iconData: Icons.add,
           width: 40.w,
           height: 40.h,

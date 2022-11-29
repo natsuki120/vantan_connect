@@ -8,7 +8,6 @@ import '../atom/primary_color_button.dart';
 class PrimaryColorButtonWithIconAndText extends StatelessWidget {
   const PrimaryColorButtonWithIconAndText({
     Key? key,
-    required this.pageRoute,
     required this.iconData,
     required this.text,
     required this.spaceSize,
@@ -21,7 +20,6 @@ class PrimaryColorButtonWithIconAndText extends StatelessWidget {
     required this.callback,
   }) : super(key: key);
 
-  final Widget pageRoute;
   final IconData iconData;
   final String text;
   final TextStyle textStyle;
