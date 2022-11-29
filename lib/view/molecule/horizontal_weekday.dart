@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:vantan_connect/view/atom/main_text.dart';
-import 'package:vantan_connect/view/atom/style_by_platform.dart';
-import '../atom/color_schemes.g.dart';
+import 'package:vantan_connect/view/token/style_by_platform.dart';
+import '../token/color_schemes.g.dart';
 
 class HorizontalWeekday extends HookWidget {
   const HorizontalWeekday({Key? key}) : super(key: key);
