@@ -27,6 +27,7 @@ class SelectClassBaseClassTemplate extends StatelessWidget {
             context,
             page: SelectClassBaseClassDetailTemplate(),
           ),
+          onPrimaryWhichIsSelectedCallback: () {},
         ),
         SpaceBox(height: 16.h),
         ClassCard(
@@ -41,6 +42,7 @@ class SelectClassBaseClassTemplate extends StatelessWidget {
             context,
             page: SelectClassBaseClassDetailTemplate(),
           ),
+          onPrimaryWhichIsSelectedCallback: () {},
         ),
       ],
     );

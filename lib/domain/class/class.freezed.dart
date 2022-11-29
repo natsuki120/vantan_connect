@@ -35,6 +35,7 @@ mixin _$Class {
   List<ClassDocument> get document => throw _privateConstructorUsedError;
   List<String> get studentVoice => throw _privateConstructorUsedError;
   bool get online => throw _privateConstructorUsedError;
+  String get baseClass => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -60,7 +61,8 @@ abstract class $ClassCopyWith<$Res> {
       int timeTable,
       List<ClassDocument> document,
       List<String> studentVoice,
-      bool online});
+      bool online,
+      String baseClass});
 }
 
 /// @nodoc
@@ -88,6 +90,7 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
     Object? document = freezed,
     Object? studentVoice = freezed,
     Object? online = freezed,
+    Object? baseClass = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -150,6 +153,10 @@ class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as bool,
+      baseClass: baseClass == freezed
+          ? _value.baseClass
+          : baseClass // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -174,7 +181,8 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       int timeTable,
       List<ClassDocument> document,
       List<String> studentVoice,
-      bool online});
+      bool online,
+      String baseClass});
 }
 
 /// @nodoc
@@ -203,6 +211,7 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
     Object? document = freezed,
     Object? studentVoice = freezed,
     Object? online = freezed,
+    Object? baseClass = freezed,
   }) {
     return _then(_$_Class(
       name: name == freezed
@@ -265,6 +274,10 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as bool,
+      baseClass: baseClass == freezed
+          ? _value.baseClass
+          : baseClass // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -287,7 +300,8 @@ class _$_Class implements _Class {
       this.timeTable = 0,
       final List<ClassDocument> document = const <ClassDocument>[],
       final List<String> studentVoice = const <String>[],
-      this.online = false})
+      this.online = false,
+      this.baseClass = ''})
       : _teacher = teacher,
         _goalRequirements = goalRequirements,
         _document = document,
@@ -361,10 +375,13 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final bool online;
+  @override
+  @JsonKey()
+  final String baseClass;
 
   @override
   String toString() {
-    return 'Class(name: $name, overView: $overView, teacher: $teacher, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, document: $document, studentVoice: $studentVoice, online: $online)';
+    return 'Class(name: $name, overView: $overView, teacher: $teacher, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, document: $document, studentVoice: $studentVoice, online: $online, baseClass: $baseClass)';
   }
 
   @override
@@ -392,7 +409,8 @@ class _$_Class implements _Class {
             const DeepCollectionEquality().equals(other._document, _document) &&
             const DeepCollectionEquality()
                 .equals(other._studentVoice, _studentVoice) &&
-            const DeepCollectionEquality().equals(other.online, online));
+            const DeepCollectionEquality().equals(other.online, online) &&
+            const DeepCollectionEquality().equals(other.baseClass, baseClass));
   }
 
   @JsonKey(ignore: true)
@@ -413,7 +431,8 @@ class _$_Class implements _Class {
       const DeepCollectionEquality().hash(timeTable),
       const DeepCollectionEquality().hash(_document),
       const DeepCollectionEquality().hash(_studentVoice),
-      const DeepCollectionEquality().hash(online));
+      const DeepCollectionEquality().hash(online),
+      const DeepCollectionEquality().hash(baseClass));
 
   @JsonKey(ignore: true)
   @override
@@ -444,7 +463,8 @@ abstract class _Class implements Class {
       final int timeTable,
       final List<ClassDocument> document,
       final List<String> studentVoice,
-      final bool online}) = _$_Class;
+      final bool online,
+      final String baseClass}) = _$_Class;
 
   factory _Class.fromJson(Map<String, dynamic> json) = _$_Class.fromJson;
 
@@ -478,6 +498,8 @@ abstract class _Class implements Class {
   List<String> get studentVoice;
   @override
   bool get online;
+  @override
+  String get baseClass;
   @override
   @JsonKey(ignore: true)
   _$$_ClassCopyWith<_$_Class> get copyWith =>

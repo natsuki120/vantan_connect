@@ -23,6 +23,7 @@ class FakeClassRepository extends IClassRepository {
       'teacher': classInfo.teacher,
       'frameCount': classInfo.frameCount,
       'goalRequirements': classInfo.goalRequirements,
+      'baseClass': classInfo.baseClass
     });
   }
 
@@ -30,7 +31,7 @@ class FakeClassRepository extends IClassRepository {
   Stream<List<Class>> fetchBaseClass() {
     final collection = firestore
         .collection('all_class/VTA_class/2022/first_semester/all_class')
-        .where('selectableBaseClass', isEqualTo: 'false')
+        .where('baseClass', isEqualTo: '')
         .snapshots();
     return collection.map<List<Class>>(
       (QuerySnapshot snapshot) => snapshot.docs
@@ -46,6 +47,22 @@ class FakeClassRepository extends IClassRepository {
   Stream<List<Class>> fetchClassInfoToConfirmDetail() {
     final collection = firestore
         .collection('all_class/VTA_class/2022/first_semester/all_class')
+        .snapshots();
+    return collection.map<List<Class>>(
+      (QuerySnapshot snapshot) => snapshot.docs
+          .map(
+            (DocumentSnapshot doc) =>
+                Class.fromJson(doc.data() as Map<String, dynamic>),
+          )
+          .toList(),
+    );
+  }
+
+  @override
+  Stream<List<Class>> fetchSelectableClass(Class baseClass) {
+    final collection = firestore
+        .collection('all_class/VTA_class/2022/first_semester/all_class')
+        .where('baseClass', isEqualTo: baseClass.name)
         .snapshots();
     return collection.map<List<Class>>(
       (QuerySnapshot snapshot) => snapshot.docs

@@ -21,6 +21,7 @@ class Class with _$Class {
     @Default(<ClassDocument>[]) List<ClassDocument> document,
     @Default(<String>[]) List<String> studentVoice,
     @Default(false) bool online,
+    @Default('') String baseClass,
   }) = _Class;
 
   factory Class.fromJson(Map<String, dynamic> json) => _$ClassFromJson(json);
@@ -29,4 +30,5 @@ class Class with _$Class {
 abstract class IClassRepository {
   Stream<List<Class>> fetchClassInfoToConfirmDetail();
   Stream<List<Class>> fetchBaseClass();
+  Stream<List<Class>> fetchSelectableClass(Class baseClass);
 }

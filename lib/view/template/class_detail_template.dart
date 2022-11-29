@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../atom/color_schemes.g.dart';
+import '../token/color_schemes.g.dart';
 import '../atom/round_icon_button.dart';
-import '../atom/style_by_platform.dart';
-import '../atom/space_box.dart';
+import '../token/style_by_platform.dart';
+import '../token/space_box.dart';
 import '../molecule/classmate_profile.dart';
 import '../molecule/other_class.dart';
 import '../organism/class_detail_card.dart';

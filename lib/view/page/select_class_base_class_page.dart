@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_use/flutter_use.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:vantan_connect/use_case/class_use_case.dart';
+import 'package:vantan_connect/use_case/base_class_notifier.dart';
+import 'package:vantan_connect/use_case/selectable_class_notifier.dart';
 import 'package:vantan_connect/view/page/select_class_detail_page.dart';
 import 'package:vantan_connect/view/page/select_class_page.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
@@ -15,10 +16,10 @@ class SelectClassBaseClassPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(classUseCase);
-    final classList = ref.watch(classUseCase.notifier).state;
+    ref.watch(baseClass);
+    final classList = ref.watch(baseClass.notifier).state;
     useEffectOnce(() {
-      ref.watch(classUseCase.notifier).fetchBaseClass();
+      ref.watch(baseClass.notifier).fetchBaseClass();
       return;
     });
     return TitleAndSelectClassScreen(
@@ -40,12 +41,18 @@ class SelectClassBaseClassPage extends HookConsumerWidget {
                     description: classInfo.overView,
                     primaryCallback: () {
                       ref.watch(selectedClass.notifier).state = classInfo;
+                      ref
+                          .read(selectableClass.notifier)
+                          .fetchSelectableClass(classInfo);
+                      ref.watch(isBaseClassSelected.notifier).state = true;
                       NavigatorPop(context);
                     },
                     onPrimaryCallback: () => NavigatorPush(
                       context,
                       page: SelectClassDetailPage(classInfo: classInfo),
                     ),
+                    onPrimaryWhichIsSelectedCallback: () =>
+                        ref.watch(isBaseClassSelected.notifier).state = false,
                   ),
                   SpaceBox(height: 16.h),
                 ],

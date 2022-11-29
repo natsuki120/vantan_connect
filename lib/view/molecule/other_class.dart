@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../atom/space_box.dart';
+import '../token/space_box.dart';
 import '../atom/done_class.dart';
 
 class DoneClassHistory extends StatelessWidget {
