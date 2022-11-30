@@ -37,12 +37,22 @@ TextStyle bodyBold(Color color) => TextStyle(
 TextStyle callOutRegular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 14.sp,
+      fontSize: 15.sp,
     );
 TextStyle callOutBold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
       fontSize: 15.sp,
+    );
+TextStyle subHeadLineBold(Color color) => TextStyle(
+      color: color,
+      fontWeight: FontWeight.w600,
+      fontSize: 13.sp,
+    );
+TextStyle subHeadLineRegular(Color color) => TextStyle(
+      color: color,
+      fontWeight: FontWeight.w300,
+      fontSize: 13.sp,
     );
 
 TextStyle bodySmall(FontWeight weight, Color color) => TextStyle(
@@ -70,7 +80,7 @@ TextStyle displaySmall(FontWeight weight, Color color) => TextStyle(
 TextStyle headLineBold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 15.sp,
+      fontSize: 16.sp,
     );
 TextStyle headLineRegular(Color color) => TextStyle(
       color: color,
@@ -131,6 +141,16 @@ TextStyle caption1Bold(Color color) => TextStyle(
       fontSize: 11.sp,
     );
 TextStyle caption1Regular(Color color) => TextStyle(
+      color: color,
+      fontWeight: FontWeight.w300,
+      fontSize: 11.sp,
+    );
+TextStyle caption2Bold(Color color) => TextStyle(
+      color: color,
+      fontWeight: FontWeight.w600,
+      fontSize: 11.sp,
+    );
+TextStyle caption2Regular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
       fontSize: 11.sp,

@@ -35,11 +35,26 @@ class TitleWithValuelessBoxOrClassCard extends StatelessWidget {
             children: [
               TitleMessage(text: title, textStyle: textStyle),
               SpaceBox(height: 20.h),
-              GreyBox(),
+              GreyBox(
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 165.sp, vertical: 60.sp),
+                ),
+              ),
               SpaceBox(height: 10.h),
-              GreyBox(),
+              GreyBox(
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 165.sp, vertical: 60.sp),
+                ),
+              ),
               SpaceBox(height: 10.h),
-              GreyBox(),
+              GreyBox(
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 165.sp, vertical: 60.sp),
+                ),
+              ),
             ],
           );
   }

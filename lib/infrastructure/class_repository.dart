@@ -6,9 +6,11 @@ class ClassRepository extends IClassRepository {
   final db;
 
   @override
-  Stream<List<Class>> fetchClassInfoToConfirmDetail() {
+  Stream<List<Class>> fetchClassInfo() {
     final collection = db
-        .collection('/all_class/VTA_class/2022/first_semester/all_class')
+        .collection(
+          '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class',
+        )
         .snapshots();
     return collection.map<List<Class>>(
       (QuerySnapshot snapshot) => snapshot.docs

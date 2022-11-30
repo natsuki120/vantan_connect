@@ -33,9 +33,10 @@ class SelectClassDetailPage extends StatelessWidget {
               text: '講師',
               iconData: Icons.person,
               info: ImageAndUserInfo(
+                url: classInfo.teacher[0].userImagePath,
                 widget: GuidanceMessage(
-                  mainText: classInfo.teacher[0]['name'],
-                  subText: classInfo.teacher[0]['name'],
+                  mainText: classInfo.teacher[0].name,
+                  subText: classInfo.teacher[0].job,
                   mainTextStyle: headLineBold(colorScheme.onBackground),
                   subTextStyle: bodyRegular(
                     colorScheme.onBackground.withOpacity(0.7),
@@ -116,8 +117,9 @@ class SelectClassDetailPage extends StatelessWidget {
                         children: [
                           SpaceBox(height: 8.h),
                           UserCard(
-                            mainText: teacher['name'],
-                            subText: teacher['name'],
+                            teacherImg: teacher.userImagePath,
+                            mainText: teacher.name,
+                            subText: teacher.name,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             spaceSize: 4.h,
                           )

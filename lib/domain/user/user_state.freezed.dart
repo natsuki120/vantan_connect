@@ -22,6 +22,7 @@ UserState _$UserStateFromJson(Map<String, dynamic> json) {
 mixin _$UserState {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get job => throw _privateConstructorUsedError;
   String get profileText => throw _privateConstructorUsedError;
   String get attendance => throw _privateConstructorUsedError;
   int get attendedDay => throw _privateConstructorUsedError;
@@ -42,6 +43,7 @@ abstract class $UserStateCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
+      String job,
       String profileText,
       String attendance,
       int attendedDay,
@@ -62,6 +64,7 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
+    Object? job = freezed,
     Object? profileText = freezed,
     Object? attendance = freezed,
     Object? attendedDay = freezed,
@@ -77,6 +80,10 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      job: job == freezed
+          ? _value.job
+          : job // ignore: cast_nullable_to_non_nullable
               as String,
       profileText: profileText == freezed
           ? _value.profileText
@@ -115,6 +122,7 @@ abstract class _$$_UserStateCopyWith<$Res> implements $UserStateCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
+      String job,
       String profileText,
       String attendance,
       int attendedDay,
@@ -137,6 +145,7 @@ class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
+    Object? job = freezed,
     Object? profileText = freezed,
     Object? attendance = freezed,
     Object? attendedDay = freezed,
@@ -152,6 +161,10 @@ class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      job: job == freezed
+          ? _value.job
+          : job // ignore: cast_nullable_to_non_nullable
               as String,
       profileText: profileText == freezed
           ? _value.profileText
@@ -187,6 +200,7 @@ class _$_UserState implements _UserState {
   const _$_UserState(
       {this.id = '',
       this.name = '',
+      this.job = '',
       this.profileText = '',
       this.attendance = '',
       this.attendedDay = 0,
@@ -203,6 +217,9 @@ class _$_UserState implements _UserState {
   @override
   @JsonKey()
   final String name;
+  @override
+  @JsonKey()
+  final String job;
   @override
   @JsonKey()
   final String profileText;
@@ -224,7 +241,7 @@ class _$_UserState implements _UserState {
 
   @override
   String toString() {
-    return 'UserState(id: $id, name: $name, profileText: $profileText, attendance: $attendance, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
+    return 'UserState(id: $id, name: $name, job: $job, profileText: $profileText, attendance: $attendance, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
   }
 
   @override
@@ -234,6 +251,7 @@ class _$_UserState implements _UserState {
             other is _$_UserState &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.job, job) &&
             const DeepCollectionEquality()
                 .equals(other.profileText, profileText) &&
             const DeepCollectionEquality()
@@ -254,6 +272,7 @@ class _$_UserState implements _UserState {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(job),
       const DeepCollectionEquality().hash(profileText),
       const DeepCollectionEquality().hash(attendance),
       const DeepCollectionEquality().hash(attendedDay),
@@ -278,6 +297,7 @@ abstract class _UserState implements UserState {
   const factory _UserState(
       {final String id,
       final String name,
+      final String job,
       final String profileText,
       final String attendance,
       final int attendedDay,
@@ -292,6 +312,8 @@ abstract class _UserState implements UserState {
   String get id;
   @override
   String get name;
+  @override
+  String get job;
   @override
   String get profileText;
   @override

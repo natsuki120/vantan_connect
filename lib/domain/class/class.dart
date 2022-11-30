@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vantan_connect/domain/user/user_state.dart';
 import '../class_document/class_document.dart';
 part 'class.freezed.dart';
 part 'class.g.dart';
@@ -7,8 +8,10 @@ part 'class.g.dart';
 class Class with _$Class {
   const factory Class({
     @Default('') String name,
+    @Default('') String classImgUrl,
     @Default('') String overView,
-    @Default([]) List<Map<String, dynamic>> teacher,
+    @Default([]) List<UserState> teacher,
+    @Default([]) List<UserState> student,
     @Default('') String targetSchool,
     @Default('') String targetStudent,
     @Default('') String goalPoint,
@@ -20,7 +23,7 @@ class Class with _$Class {
     @Default(0) int timeTable,
     @Default(<ClassDocument>[]) List<ClassDocument> document,
     @Default(<String>[]) List<String> studentVoice,
-    @Default(false) bool online,
+    @Default(false) bool isOnline,
     @Default('') String baseClass,
   }) = _Class;
 
@@ -28,7 +31,7 @@ class Class with _$Class {
 }
 
 abstract class IClassRepository {
-  Stream<List<Class>> fetchClassInfoToConfirmDetail();
+  Stream<List<Class>> fetchClassInfo();
   Stream<List<Class>> fetchBaseClass();
   Stream<List<Class>> fetchSelectableClass(Class baseClass);
 }

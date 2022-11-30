@@ -23,6 +23,21 @@ class FakeClassRepository extends IClassRepository {
       'teacher': classInfo.teacher,
       'frameCount': classInfo.frameCount,
       'goalRequirements': classInfo.goalRequirements,
+      'baseClass': classInfo.baseClass,
+      'classImgUrl': classInfo.classImgUrl,
+    });
+  }
+
+  void registerMyClass(Class classInfo) {
+    final collection = firestore.collection('my_class');
+    collection.add({
+      'name': classInfo.name,
+      'overView': classInfo.overView,
+      'goalPoint': classInfo.goalPoint,
+      'selectableBaseClass': 'false',
+      'teacher': classInfo.teacher,
+      'frameCount': classInfo.frameCount,
+      'goalRequirements': classInfo.goalRequirements,
       'baseClass': classInfo.baseClass
     });
   }
@@ -44,10 +59,8 @@ class FakeClassRepository extends IClassRepository {
   }
 
   @override
-  Stream<List<Class>> fetchClassInfoToConfirmDetail() {
-    final collection = firestore
-        .collection('all_class/VTA_class/2022/first_semester/all_class')
-        .snapshots();
+  Stream<List<Class>> fetchClassInfo() {
+    final collection = firestore.collection('my_class').snapshots();
     return collection.map<List<Class>>(
       (QuerySnapshot snapshot) => snapshot.docs
           .map(
