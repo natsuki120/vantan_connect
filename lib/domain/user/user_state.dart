@@ -7,6 +7,7 @@ class UserState with _$UserState {
   const factory UserState({
     @Default('') String id,
     @Default('') String name,
+    @Default('') String job,
     @Default('') String profileText,
     @Default('') String attendance,
     @Default(0) int attendedDay,

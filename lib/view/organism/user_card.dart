@@ -12,12 +12,14 @@ class UserCard extends StatelessWidget {
       required this.mainText,
       required this.subText,
       required this.crossAxisAlignment,
-      required this.spaceSize})
+      required this.spaceSize,
+      required this.teacherImg})
       : super(key: key);
   final String mainText;
   final String subText;
   final CrossAxisAlignment crossAxisAlignment;
   final double spaceSize;
+  final String teacherImg;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,7 @@ class UserCard extends StatelessWidget {
         vertical: 20.sp,
       ),
       child: ImageAndUserInfo(
+        url: teacherImg,
         widget: GuidanceMessage(
           mainText: mainText,
           subText: subText,

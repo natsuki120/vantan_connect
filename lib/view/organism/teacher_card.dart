@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:vantan_connect/view/atom/original_image.dart';
+import '../../domain/class/class.dart';
 import '../atom/colored_border_box.dart';
 import '../token/style_by_platform.dart';
 import '../token/color_schemes.g.dart';
@@ -9,12 +10,10 @@ import '../molecule/image_and_user_info.dart';
 class TeacherCard extends StatelessWidget {
   const TeacherCard({
     Key? key,
-    required this.teacherName,
-    required this.teacherRole,
+    required this.classInfo,
   }) : super(key: key);
 
-  final String teacherName;
-  final String teacherRole;
+  final Class classInfo;
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +26,16 @@ class TeacherCard extends StatelessWidget {
       child: Row(
         children: [
           ImageAndUserInfo(
+            url: classInfo.teacher[0].userImagePath,
             widget: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  teacherName,
+                  classInfo.teacher[0].name,
                   style: headLineBold(colorScheme.onBackground),
                 ),
                 Text(
-                  teacherRole,
+                  classInfo.teacher[0].job,
                   style: headLineRegular(colorScheme.onBackground),
                 ),
               ],

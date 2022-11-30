@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../token//color_schemes.g.dart';
-import '../atom/main_text.dart';
+import 'package:vantan_connect/view/molecule/title_message.dart';
+import '../token/color_schemes.g.dart';
 import '../token/space_box.dart';
 import '../token/style_by_platform.dart';
 
-//Finishとの違いは Finishがもうできなくなった授業　Doneが行った授業と分けたため
 class DoneClassCard extends StatelessWidget {
+  const DoneClassCard({
+    super.key,
+    required this.title,
+    required this.description,
+  });
+
+  final String title;
+  final String description;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,20 +29,21 @@ class DoneClassCard extends StatelessWidget {
           Container(
             width: 72.w,
             decoration: BoxDecoration(
-                border: Border(
-              right: BorderSide(
-                color: colorScheme.onBackground.withOpacity(0.25),
-                width: 1.w,
+              border: Border(
+                right: BorderSide(
+                  color: colorScheme.onBackground.withOpacity(0.25),
+                  width: 1.w,
+                ),
               ),
-            )),
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MainText(
+                TitleMessage(
                   text: '第1回',
                   textStyle: caption1Regular(colorScheme.onBackground),
                 ),
-                MainText(
+                TitleMessage(
                   text: '5/10',
                   textStyle: headLineBold(colorScheme.onBackground),
                 ),
@@ -50,13 +58,13 @@ class DoneClassCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MainText(
-                  text: 'UI/UXとは?',
+                TitleMessage(
+                  text: title,
                   textStyle: headLineBold(colorScheme.onBackground),
                 ),
                 SpaceBox(height: 8.h),
-                MainText(
-                  text: '山路やまみちを登りながら、こう考えた。智ちに働けば角かどが立つ...',
+                TitleMessage(
+                  text: description,
                   textStyle: bodyRegular(colorScheme.onBackground),
                 ),
               ],
