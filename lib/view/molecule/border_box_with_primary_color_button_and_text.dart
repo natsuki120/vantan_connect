@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/atom/border_box.dart';
 import 'package:vantan_connect/view/atom/main_text.dart';
-import 'package:vantan_connect/view/atom/primary_color_button.dart';
+import 'package:vantan_connect/view/atom/original_icon.dart';
+import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
+import '../atom/colored_circle.dart';
 
 class BorderBoxWithPrimaryColorButtonAndText extends StatelessWidget {
   const BorderBoxWithPrimaryColorButtonAndText({
@@ -32,17 +35,23 @@ class BorderBoxWithPrimaryColorButtonAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return BorderBox(
       padding: padding,
-      child: Column(
-        children: [
-          PrimaryColorButton(
-            width: width,
-            height: height,
-            callback: callback,
-            child: Icon(iconData),
-          ),
-          SpaceBox(),
-          MainText(text: text, textStyle: textStyle),
-        ],
+      child: GestureDetector(
+        child: Column(
+          children: [
+            ColoredCircle(
+              size: 40.sp,
+              backgroundColor: colorScheme.primary,
+              child: OriginalIcon(
+                iconData: Icons.add,
+                iconSize: 30.sp,
+                iconColor: colorScheme.background,
+              ),
+            ),
+            SpaceBox(),
+            MainText(text: text, textStyle: textStyle),
+          ],
+        ),
+        onTap: callback,
       ),
       radius: radius,
     );

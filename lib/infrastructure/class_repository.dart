@@ -53,4 +53,43 @@ class ClassRepository extends IClassRepository {
           .toList(),
     );
   }
+
+  void registerMyClass(Class classInfo) {
+    final collection = db.doc(
+      '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class/${classInfo.id}',
+    );
+    collection.set({
+      'id': classInfo.id,
+      'name': classInfo.name,
+      'overView': classInfo.overView,
+      'goalPoint': classInfo.goalPoint,
+      'selectableBaseClass': 'false',
+      'teacher': classInfo.teacher,
+      'frameCount': classInfo.frameCount,
+      'goalRequirements': classInfo.goalRequirements,
+      'baseClass': classInfo.baseClass,
+      'classImgUrl': classInfo.classImgUrl,
+      'student': classInfo.student,
+    });
+  }
+
+  @override
+  void deleteClass(Class classInfo) {
+    db
+        .doc(
+          '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class/${classInfo.id}',
+        )
+        .delete();
+  }
+
+  @override
+  void deleteAllClass(List<Class> classList) {
+    for (var classInfo in classList) {
+      db
+          .doc(
+            '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class/${classInfo.id}',
+          )
+          .delete();
+    }
+  }
 }

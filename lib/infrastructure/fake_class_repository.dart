@@ -16,6 +16,7 @@ class FakeClassRepository extends IClassRepository {
     final collection = firestore
         .collection('all_class/VTA_class/2022/first_semester/all_class');
     collection.add({
+      'id': collection.doc().id,
       'name': classInfo.name,
       'overView': classInfo.overView,
       'goalPoint': classInfo.goalPoint,
@@ -25,12 +26,14 @@ class FakeClassRepository extends IClassRepository {
       'goalRequirements': classInfo.goalRequirements,
       'baseClass': classInfo.baseClass,
       'classImgUrl': classInfo.classImgUrl,
+      'student': classInfo.student,
     });
   }
 
   void registerMyClass(Class classInfo) {
-    final collection = firestore.collection('my_class');
-    collection.add({
+    final collection = firestore.doc('my_class/${classInfo.id}');
+    collection.set({
+      'id': classInfo.id,
       'name': classInfo.name,
       'overView': classInfo.overView,
       'goalPoint': classInfo.goalPoint,
@@ -38,7 +41,9 @@ class FakeClassRepository extends IClassRepository {
       'teacher': classInfo.teacher,
       'frameCount': classInfo.frameCount,
       'goalRequirements': classInfo.goalRequirements,
-      'baseClass': classInfo.baseClass
+      'baseClass': classInfo.baseClass,
+      'classImgUrl': classInfo.classImgUrl,
+      'student': classInfo.student,
     });
   }
 
@@ -85,5 +90,17 @@ class FakeClassRepository extends IClassRepository {
           )
           .toList(),
     );
+  }
+
+  @override
+  void deleteClass(Class classInfo) {
+    firestore.doc('my_class/${classInfo.id}').delete();
+  }
+
+  @override
+  void deleteAllClass(List<Class> classList) {
+    for (var classInfo in classList) {
+      firestore.doc('my_class/${classInfo.id}').delete();
+    }
   }
 }

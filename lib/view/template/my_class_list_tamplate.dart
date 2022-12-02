@@ -19,11 +19,7 @@ class MyClassListTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CanvasColorAppBarWithTitleMessage(
-        title: '選択した授業',
-        textStyle: headerMedium(colorScheme.onBackground),
-        centerTitle: true,
-      ),
+      appBar: CanvasColorAppBarWithTitleMessage(title: '選択した授業'),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 22.0.h, horizontal: 16.w),
         child: SingleChildScrollView(

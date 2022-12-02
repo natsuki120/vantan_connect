@@ -6,21 +6,22 @@ import '../organism/classmate_profile_detail.dart';
 
 class AllClassmateProfilePage extends StatelessWidget {
   const AllClassmateProfilePage({super.key, required this.classmateList});
-  final List<UserState> classmateList;
+  final List classmateList;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
       itemCount: classmateList.length,
       itemBuilder: (context, index) {
-        UserState classmate = classmateList[index];
+        Map<String, dynamic> classmate = classmateList[index];
         return Column(
           children: [
             ClassmateProfileDetailCard(
-              classImg: classmate.userImagePath,
-              classmateName: classmate.name,
-              classmateId: classmate.id,
-              classmateInfo: classmate.profileText,
+              classImg: classmate['userImagePath'],
+              classmateName: classmate['name'],
+              classmateId: classmate['id'],
+              classmateInfo: classmate['profileText'],
             ),
             SpaceBox(height: 16.h),
           ],

@@ -58,6 +58,7 @@ dependencies:
   vm_service: ^9.4.0
   flutter_use: ^0.0.3
   json_serializable: ^6.5.4
+  file_picker: ^5.2.3
 
 
 

@@ -11,11 +11,7 @@ class HomeTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CanvasColorAppBarWithTitleMessage(
-        centerTitle: false,
-        title: 'スケジュール',
-        textStyle: header(colorScheme.onBackground),
-      ),
+      appBar: CanvasColorAppBarWithTitleMessage(title: 'スケジュール'),
       body: Center(
         child: GuideToSelectNewClass(pageRoute: SelectClassTemplate()),
       ),
