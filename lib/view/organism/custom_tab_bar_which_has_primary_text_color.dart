@@ -4,8 +4,8 @@ import '../token/color_schemes.g.dart';
 import '../token/space_box.dart';
 import '../token/style_by_platform.dart';
 
-class CustomTabBar extends StatelessWidget {
-  const CustomTabBar({
+class CustomTabBarWhichHasPrimaryTextColor extends StatelessWidget {
+  const CustomTabBarWhichHasPrimaryTextColor({
     Key? key,
     required this.tabChildren,
     required this.tabBarChildren,

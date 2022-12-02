@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/grey_box.dart';
 import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/token/const_width_and_height.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 
 class TitleWithValuelessBoxOrClassCard extends StatelessWidget {
@@ -38,21 +39,21 @@ class TitleWithValuelessBoxOrClassCard extends StatelessWidget {
               GreyBox(
                 child: Padding(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 165.sp, vertical: 60.sp),
+                      EdgeInsets.symmetric(horizontal: 358.sp, vertical: 60.sp),
                 ),
               ),
               SpaceBox(height: 10.h),
               GreyBox(
                 child: Padding(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 165.sp, vertical: 60.sp),
+                      EdgeInsets.symmetric(horizontal: 358.sp, vertical: 60.sp),
                 ),
               ),
               SpaceBox(height: 10.h),
               GreyBox(
                 child: Padding(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 165.sp, vertical: 60.sp),
+                      EdgeInsets.symmetric(horizontal: 358.sp, vertical: 60.sp),
                 ),
               ),
             ],

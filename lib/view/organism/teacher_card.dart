@@ -26,16 +26,16 @@ class TeacherCard extends StatelessWidget {
       child: Row(
         children: [
           ImageAndUserInfo(
-            url: classInfo.teacher[0].userImagePath,
+            url: classInfo.teacher[0]['userImagePath'],
             widget: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  classInfo.teacher[0].name,
+                  classInfo.teacher[0]['name'],
                   style: headLineBold(colorScheme.onBackground),
                 ),
                 Text(
-                  classInfo.teacher[0].job,
+                  classInfo.teacher[0]['job'],
                   style: headLineRegular(colorScheme.onBackground),
                 ),
               ],

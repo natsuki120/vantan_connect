@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/view/atom/main_text.dart';
+import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/atom/original_icon.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
@@ -39,7 +40,11 @@ class PrimaryColorButtonWithIconAndText extends StatelessWidget {
       callback: callback,
       child: Row(
         children: [
-          OriginalIcon(iconData: iconData, iconSize: iconSize),
+          OriginalIcon(
+            iconData: iconData,
+            iconSize: iconSize,
+            iconColor: colorScheme.background,
+          ),
           SpaceBox(width: spaceSize),
           MainText(text: text, textStyle: textStyle)
         ],

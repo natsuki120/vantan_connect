@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/view/organism/circle_icon_button.dart';
 import 'package:vantan_connect/view/organism/class_img_with_white_band.dart';
-import 'package:vantan_connect/view/organism/custom_tab_bar.dart';
+import 'package:vantan_connect/view/organism/custom_tab_bar_which_has_primary_text_color.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import 'all_classmate_profile_template.dart';
 import 'done_class_history_template.dart';
@@ -45,6 +45,7 @@ class ClassDetailTemplate extends StatelessWidget {
                       child: Row(
                         children: [
                           CircleIconButton(
+                            iconColor: colorScheme.onBackground,
                             backgroundColor: colorScheme.primaryContainer,
                             iconData: Icons.chevron_left,
                             iconSize: 20.sp,
@@ -52,6 +53,7 @@ class ClassDetailTemplate extends StatelessWidget {
                           ),
                           Spacer(),
                           CircleIconButton(
+                            iconColor: colorScheme.onBackground,
                             backgroundColor: colorScheme.primaryContainer,
                             iconData: Icons.today,
                             iconSize: 20.sp,
@@ -59,6 +61,7 @@ class ClassDetailTemplate extends StatelessWidget {
                           ),
                           SpaceBox(width: 12.w),
                           CircleIconButton(
+                            iconColor: colorScheme.onBackground,
                             backgroundColor: colorScheme.primaryContainer,
                             iconData: Icons.more_vert,
                             iconSize: 20.sp,
@@ -84,7 +87,7 @@ class ClassDetailTemplate extends StatelessWidget {
                                 'デザインを行うためのツールの使い方を学びと同時にUI/UXの概念を学ぶ。使いやすい、人を怠惰にさせる、人を惹きつけるデザインを作成する。',
                           ),
                         ),
-                        CustomTabBar(
+                        CustomTabBarWhichHasPrimaryTextColor(
                           tabChildren: [
                             Tab(text: '投稿'),
                             Tab(text: 'スケジュール'),

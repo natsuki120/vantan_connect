@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/view/page/home_page.dart';
+import 'package:vantan_connect/view/page/my_class_list_page.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 
 class VantanLife extends StatefulWidget {
@@ -13,7 +14,7 @@ class _VantanLifeState extends State<VantanLife> {
   static List<Widget> pageList = [
     HomePage(),
     Container(),
-    Container(),
+    MyClassListPage(),
     Container(),
     Container(),
   ];

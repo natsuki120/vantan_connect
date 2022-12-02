@@ -114,8 +114,8 @@ class ClassCardWithImage extends StatelessWidget {
                           ),
                           SpaceBox(width: 12.w),
                           ImageWithText(
-                            imgUrl: classInfo.teacher[0].userImagePath,
-                            text: classInfo.teacher[0].name,
+                            imgUrl: classInfo.teacher[0]['userImagePath'],
+                            text: classInfo.teacher[0]['name'],
                             textStyle: bodyRegular(
                               colorScheme.onBackground.withOpacity(0.7),
                             ),

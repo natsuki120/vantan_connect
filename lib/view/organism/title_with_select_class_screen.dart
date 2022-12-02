@@ -7,7 +7,7 @@ import 'package:vantan_connect/view/token/space_box.dart';
 import '../token/style_by_platform.dart';
 
 class TitleAndSelectClassScreen extends StatelessWidget {
-  const TitleAndSelectClassScreen({
+  TitleAndSelectClassScreen({
     Key? key,
     required this.children,
     required this.title,
@@ -28,19 +28,19 @@ class TitleAndSelectClassScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: horizontalSpace),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SpaceBox(height: 24.h),
-              TitleMessage(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SpaceBox(height: 24.h),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: horizontalSpace),
+              child: TitleMessage(
                 text: title,
                 textStyle: title1Bold(colorScheme.onBackground),
               ),
-              Column(children: children)
-            ],
-          ),
+            ),
+            Column(children: children)
+          ],
         ),
       ),
     );

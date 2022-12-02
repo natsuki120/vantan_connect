@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/view/atom/original_icon.dart';
 import 'package:vantan_connect/view/atom/primary_color_button.dart';
+import 'package:vantan_connect/view/token/color_schemes.g.dart';
 
 class PrimaryColorButtonWithOriginalIcon extends StatelessWidget {
   const PrimaryColorButtonWithOriginalIcon({
@@ -26,7 +27,11 @@ class PrimaryColorButtonWithOriginalIcon extends StatelessWidget {
       width: width,
       height: height,
       callback: callback,
-      child: OriginalIcon(iconData: iconData, iconSize: iconSize),
+      child: OriginalIcon(
+        iconData: iconData,
+        iconSize: iconSize,
+        iconColor: colorScheme.primary,
+      ),
     );
   }
 }
