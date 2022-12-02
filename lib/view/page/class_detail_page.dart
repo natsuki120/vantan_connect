@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/organism/circle_icon_button.dart';
 import 'package:vantan_connect/view/organism/class_img_with_white_band.dart';
-import 'package:vantan_connect/view/organism/custom_tab_bar.dart';
+import 'package:vantan_connect/view/organism/custom_tab_bar_which_has_primary_text_color.dart';
 import 'package:vantan_connect/view/page/all_classmate_profie_page.dart';
 import 'package:vantan_connect/view/page/done_class_history_page.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
@@ -48,6 +48,7 @@ class ClassDetailPage extends StatelessWidget {
                       child: Row(
                         children: [
                           CircleIconButton(
+                            iconColor: colorScheme.onBackground,
                             backgroundColor: colorScheme.primaryContainer,
                             iconData: Icons.chevron_left,
                             iconSize: 20.sp,
@@ -55,6 +56,7 @@ class ClassDetailPage extends StatelessWidget {
                           ),
                           Spacer(),
                           CircleIconButton(
+                            iconColor: colorScheme.onBackground,
                             backgroundColor: colorScheme.primaryContainer,
                             iconData: Icons.today,
                             iconSize: 20.sp,
@@ -62,6 +64,7 @@ class ClassDetailPage extends StatelessWidget {
                           ),
                           SpaceBox(width: 12.w),
                           CircleIconButton(
+                            iconColor: colorScheme.onBackground,
                             backgroundColor: colorScheme.primaryContainer,
                             iconData: Icons.more_vert,
                             iconSize: 20.sp,
@@ -81,7 +84,7 @@ class ClassDetailPage extends StatelessWidget {
                     child: Column(
                       children: [
                         ClassDetailHeader(classInfo: classInfo),
-                        CustomTabBar(
+                        CustomTabBarWhichHasPrimaryTextColor(
                           tabChildren: [
                             Tab(text: '投稿'),
                             Tab(text: 'スケジュール'),
@@ -93,12 +96,10 @@ class ClassDetailPage extends StatelessWidget {
                             Container(),
                             Container(),
                             AllClassmateProfilePage(
-                              classmateList: classInfo.student,
-                            ),
+                                classmateList: classInfo.student),
                             Container(),
                             DoneClassHistoryPage(
-                              documentList: classInfo.document,
-                            ),
+                                documentList: classInfo.document),
                           ],
                           tabLength: 5,
                           title: Container(),

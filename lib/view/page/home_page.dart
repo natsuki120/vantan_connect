@@ -13,11 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CanvasColorAppBarWithTitleMessage(
-        title: 'スケジュール',
-        textStyle: header(colorScheme.onBackground),
-        centerTitle: false,
-      ),
+      appBar: CanvasColorAppBarWithTitleMessage(title: 'スケジュール'),
       body: Center(
         child: GuideToSelectNewClass(
           pageRoute: SelectClassPage(),

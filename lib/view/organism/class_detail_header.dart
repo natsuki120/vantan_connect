@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/view/molecule/guidance_message.dart';
 import 'package:vantan_connect/view/molecule/on_primary_color_button_with_text.dart';
+import 'package:vantan_connect/view/page/select_class_detail_page.dart';
+import 'package:vantan_connect/view/token/navigator.dart';
 import '../molecule/class_tag.dart';
 import '../molecule/Icon_and_text.dart';
 import 'teacher_card.dart';
@@ -35,7 +37,10 @@ class ClassDetailHeader extends StatelessWidget {
             ClassTag(),
             Spacer(),
             OnPrimaryColorButtonWithText(
-              callback: () {},
+              callback: () => NavigatorPush(
+                context,
+                page: SelectClassDetailPage(classInfo: classInfo),
+              ),
               text: '詳細',
               width: 78.w,
               height: 40.w,

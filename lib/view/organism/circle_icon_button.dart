@@ -8,12 +8,14 @@ class CircleIconButton extends StatelessWidget {
     required this.iconData,
     required this.iconSize,
     required this.callback,
+    required this.iconColor,
   }) : super(key: key);
 
   final Color backgroundColor;
   final IconData iconData;
   final double iconSize;
   final VoidCallback callback;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class CircleIconButton extends StatelessWidget {
         color: backgroundColor,
       ),
       child: OriginalIconButton(
+        iconColor: iconColor,
         iconData: iconData,
         iconSize: iconSize,
         callback: callback,

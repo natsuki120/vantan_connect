@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_use/flutter_use.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:vantan_connect/use_case/class_use_case.dart';
+
 import 'package:vantan_connect/view/organism/button_when_press_color_changing.dart';
 import 'package:vantan_connect/view/organism/canvas_color_app_bar_with_title_message.dart';
 import 'package:vantan_connect/view/organism/class_card_with_image.dart';
@@ -11,6 +11,7 @@ import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 import '../../domain/class/class.dart';
+import '../../use_case/state/class_use_case.dart';
 import '../token/space_box.dart';
 
 class MyClassListPage extends HookConsumerWidget {
@@ -25,11 +26,7 @@ class MyClassListPage extends HookConsumerWidget {
       return;
     });
     return Scaffold(
-      appBar: CanvasColorAppBarWithTitleMessage(
-        title: '選択した授業',
-        textStyle: headerMedium(colorScheme.onBackground),
-        centerTitle: true,
-      ),
+      appBar: CanvasColorAppBarWithTitleMessage(title: '選択した授業'),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 22.0.h, horizontal: 16.w),
         child: Column(
@@ -46,7 +43,7 @@ class MyClassListPage extends HookConsumerWidget {
                 ButtonWhenPressColorChanging(
                   onChanged: false,
                   borderRadius: BorderRadius.circular(8.sp),
-                  text: '前期',
+                  text: '後期',
                   textStyle: bodyBold(colorScheme.onBackground),
                 ),
                 Spacer(),
