@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/atom/main_text.dart';
-import 'package:vantan_connect/view/atom/space_box.dart';
+import 'package:vantan_connect/view/token/space_box.dart';
 
 class IconAndText extends StatelessWidget {
   const IconAndText({

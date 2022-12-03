@@ -38,7 +38,6 @@ dependencies:
   cloud_firestore: ^3.4.5
   firebase_auth: ^3.6.4
   freezed_annotation:
-  json_annotation:
   gsheets: ^0.4.2
   image_picker: ^0.8.5+3
   firebase_storage: ^10.3.7
@@ -57,6 +56,9 @@ dependencies:
   flutter_ringtone_player: ^3.2.0
   hooks_riverpod: ^1.0.4
   vm_service: ^9.4.0
+  flutter_use: ^0.0.3
+  json_serializable: ^6.5.4
+  file_picker: ^5.2.3
 
 
 
@@ -72,7 +74,6 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.1.11
   freezed:
-  json_serializable:
   monarch: ^3.0.0
 
 # For information on the generic Dart part of this file, see the

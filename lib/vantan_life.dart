@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/view/atom/color_schemes.g.dart';
-import 'package:vantan_connect/view/template/home_template.dart';
-import 'package:vantan_connect/view/template/schedule_template.dart';
+import 'package:vantan_connect/view/page/home_page.dart';
+import 'package:vantan_connect/view/page/my_class_list_page.dart';
+import 'package:vantan_connect/view/token/color_schemes.g.dart';
 
 class VantanLife extends StatefulWidget {
   const VantanLife({super.key});
@@ -12,9 +12,9 @@ class VantanLife extends StatefulWidget {
 
 class _VantanLifeState extends State<VantanLife> {
   static List<Widget> pageList = [
-    HomeTemplate(),
+    HomePage(),
     Container(),
-    ScheduleTemplate(),
+    MyClassListPage(),
     Container(),
     Container(),
   ];

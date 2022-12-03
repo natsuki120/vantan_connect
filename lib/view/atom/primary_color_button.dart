@@ -1,37 +1,36 @@
 import 'package:flutter/material.dart';
-import '../atom/color_schemes.g.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../token/color_schemes.g.dart';
 
 class PrimaryColorButton extends StatelessWidget {
   const PrimaryColorButton({
     super.key,
-    required this.text,
-    required this.nextPage,
+    required this.callback,
+    required this.child,
+    required this.width,
+    required this.height,
   });
 
-  final String text;
-  final Widget nextPage;
+  final GestureTapCallback callback;
+  final Widget child;
+  final double width;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 50,
+      width: width,
+      height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           foregroundColor: colorScheme.onPrimary,
           backgroundColor: colorScheme.primary,
-        ),
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute<Widget>(builder: (_) => nextPage),
-          );
-        },
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.sp),
           ),
         ),
+        onPressed: callback,
+        child: child,
       ),
     );
   }

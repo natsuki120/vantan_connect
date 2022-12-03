@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../atom/description_text.dart';
 import '../atom/main_text.dart';
-import '../atom/space_box.dart';
+import '../token/space_box.dart';
 
 class GuidanceMessage extends StatelessWidget {
   const GuidanceMessage({

@@ -138,6 +138,10 @@ file
 2.12
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2/
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2/lib/
+file_picker
+2.17
+file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-5.2.3/
+file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-5.2.3/lib/
 firebase_auth
 2.16
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-3.9.0/
@@ -218,6 +222,10 @@ flutter_spinkit
 2.12
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_spinkit-5.1.0/
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_spinkit-5.1.0/lib/
+flutter_use
+2.14
+file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_use-0.0.3/
+file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_use-0.0.3/lib/
 freezed
 2.17
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/freezed-2.1.1/
@@ -332,8 +340,8 @@ file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/jso
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.7.0/lib/
 json_serializable
 2.17
-file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.4.0/
-file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.4.0/lib/
+file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.5.4/
+file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.5.4/lib/
 lints
 2.17
 file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/lints-2.0.0/
