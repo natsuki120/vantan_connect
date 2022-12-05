@@ -59,6 +59,7 @@ dependencies:
   flutter_use: ^0.0.3
   json_serializable: ^6.5.4
   file_picker: ^5.2.3
+  syncfusion_flutter_calendar: ^20.3.59
 
 
 

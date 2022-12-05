@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '..//molecule/closed_dairy_class.dart';
 import '../molecule/open_dairy_class.dart';
 import '../molecule/text_in_box.dart';
 import '../molecule/time_tag.dart';
@@ -12,14 +13,12 @@ class ScheduleClassCard extends StatelessWidget {
   const ScheduleClassCard({
     Key? key,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       TimeTag(time: '9:30', text: '1時限目'),
       SizedBox(height: 8.h),
       Container(
-        height: 293.h,
         width: 334.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
@@ -33,9 +32,8 @@ class ScheduleClassCard extends StatelessWidget {
                 teacherName: '高橋　夏樹',
                 schoolPlace: 'バンタンデザイン研究所',
                 classRoom: '601教室(6F)'),
-            SizedBox(height: 16.h),
             Container(
-              padding: EdgeInsets.only(right: 16),
+              padding: EdgeInsets.all(16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -59,10 +57,25 @@ class ScheduleClassCard extends StatelessWidget {
                   SizedBox(width: 16.w),
                 ],
               ),
-            )
+            ),
           ],
         ),
-      )
+      ),
+      //TODO おそらくIf文で制御？　今回は擬似的に表示させている
+      SizedBox(height: 44.h),
+      TimeTag(time: '10:30', text: '2時限目'),
+      SizedBox(height: 12.h),
+      CloseDairyClass(className: 'UI&UX'),
+      //
+      SizedBox(height: 44.h),
+      TimeTag(time: '11:30', text: '3時限目'),
+      SizedBox(height: 12.h),
+      CloseDairyClass(className: 'UI&UX'),
+      //
+      SizedBox(height: 44.h),
+      TimeTag(time: '13:30', text: '4時限目'),
+      SizedBox(height: 12.h),
+      CloseDairyClass(className: 'UI&UX'),
     ]);
   }
 }

@@ -30,7 +30,8 @@ class OpenDairyClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-          width: 276,
+          width: 276.w,
+          height: 221.h,
           decoration: BoxDecoration(
             border: Border(
               bottom: BorderSide(
@@ -42,9 +43,9 @@ class OpenDairyClass extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 18.h),
+              SizedBox(height: 16.h),
               ClassTag(),
-              SizedBox(height: 8.h),
+              SizedBox(height: 11.h),
               MainText(
                 text: className,
                 textStyle: headLineBold(colorScheme.onBackground),
@@ -58,7 +59,7 @@ class OpenDairyClass extends StatelessWidget {
                 color: colorScheme.onBackground.withOpacity(0.5),
                 mainAxisAlignment: MainAxisAlignment.start,
               ),
-              SizedBox(height: 24.h),
+              SizedBox(height: 18.h),
               IconAndText(
                 iconData: Icons.person,
                 text: teacherName,
@@ -67,7 +68,7 @@ class OpenDairyClass extends StatelessWidget {
                 color: colorScheme.onBackground.withOpacity(0.5),
                 mainAxisAlignment: MainAxisAlignment.start,
               ),
-              SizedBox(height: 24.h),
+              SizedBox(height: 16.h),
               IconTextAndDetail(
                 iconData: Icons.location_on,
                 text: schoolPlace,

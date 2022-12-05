@@ -7,11 +7,12 @@ import '../token/space_box.dart';
 import '../token/style_by_platform.dart';
 
 class CloseDairyClass extends StatelessWidget {
-  const CloseDairyClass({Key? key, required this.text, required this.iconData})
-      : super(key: key);
+  const CloseDairyClass({
+    Key? key,
+    required this.className,
+  }) : super(key: key);
 
-  final String text;
-  final IconData iconData;
+  final String className;
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +26,11 @@ class CloseDairyClass extends StatelessWidget {
         children: [
           SpaceBox(width: 16.w),
           MainText(
-            text: text,
+            text: className,
             textStyle: headLineBold(colorScheme.onBackground.withOpacity(0.7)),
           ),
           Spacer(),
-          Icon(iconData),
+          Icon(Icons.arrow_drop_down),
           SpaceBox(width: 23.w),
         ],
       ),
