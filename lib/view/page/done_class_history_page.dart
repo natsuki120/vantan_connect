@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/page/class_document_view_page.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
+import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 import '../../domain/class_document/class_document.dart';
 import '../token/space_box.dart';
@@ -32,9 +34,15 @@ class DoneClassHistoryPage extends StatelessWidget {
               ClassDocument document = documentList[index];
               return Column(
                 children: [
-                  DoneClassCard(
-                    title: document.title,
-                    description: document.description,
+                  GestureDetector(
+                    child: DoneClassCard(
+                      title: document.title,
+                      description: document.description,
+                    ),
+                    onTap: () => NavigatorPush(
+                      context,
+                      page: ClassDocumentViewPage(classDocument: document),
+                    ),
                   ),
                   SpaceBox(height: 16.h),
                 ],

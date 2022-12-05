@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
 import 'package:vantan_connect/view/molecule/guidance_message.dart';
 import 'package:vantan_connect/view/molecule/on_primary_color_button_with_text.dart';
 import 'package:vantan_connect/view/page/select_class_detail_page.dart';
@@ -16,9 +17,9 @@ import '../token/style_by_platform.dart';
 class ClassDetailHeader extends StatelessWidget {
   const ClassDetailHeader({
     super.key,
-    required this.classInfo,
+    required this.classDto,
   });
-  final Class classInfo;
+  final ClassDto classDto;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,7 +40,7 @@ class ClassDetailHeader extends StatelessWidget {
             OnPrimaryColorButtonWithText(
               callback: () => NavigatorPush(
                 context,
-                page: SelectClassDetailPage(classInfo: classInfo),
+                page: SelectClassDetailPage(classDto: classDto),
               ),
               text: '詳細',
               width: 78.w,
@@ -48,8 +49,8 @@ class ClassDetailHeader extends StatelessWidget {
           ],
         ),
         GuidanceMessage(
-          mainText: classInfo.name,
-          subText: classInfo.overView,
+          mainText: classDto.classInfo!.name,
+          subText: classDto.classInfo!.overView,
           mainTextStyle: title1Bold(colorScheme.onBackground),
           subTextStyle: bodyRegular(colorScheme.onBackground.withOpacity(0.7)),
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +61,7 @@ class ClassDetailHeader extends StatelessWidget {
           children: [
             IconAndText(
               iconData: Icons.calendar_today_outlined,
-              text: '${classInfo.frameCount}コマ',
+              text: '${classDto.classInfo!.frameCount}コマ',
               textStyle: callOutRegular(
                 colorScheme.onBackground.withOpacity(0.5),
               ),
@@ -71,7 +72,7 @@ class ClassDetailHeader extends StatelessWidget {
             SpaceBox(width: 12.w),
             IconAndText(
               iconData: Icons.videocam_off_outlined,
-              text: classInfo.isOnline ? 'オンライン可' : 'オンライン不可',
+              text: classDto.classInfo!.isOnline ? 'オンライン可' : 'オンライン不可',
               textStyle: callOutRegular(
                 colorScheme.onBackground.withOpacity(0.5),
               ),
@@ -82,7 +83,7 @@ class ClassDetailHeader extends StatelessWidget {
           ],
         ),
         SpaceBox(height: 16.h),
-        TeacherCard(classInfo: classInfo),
+        TeacherCard(classDto: classDto),
       ],
     );
   }

@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/domain/attendance_book/attendance_book.dart';
+import 'package:vantan_connect/domain/class/class.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
+import 'package:vantan_connect/domain/studnet/student.dart';
+import 'package:vantan_connect/domain/teacher/teacher.dart';
+import 'package:vantan_connect/use_case/state/class_dto_notifier.dart';
 import 'package:vantan_connect/view/organism/border_box_which_move_to_select_base_class.dart';
 import 'package:vantan_connect/view/organism/class_card.dart';
 import 'package:vantan_connect/view/organism/title_in_organism.dart';
@@ -13,11 +22,17 @@ import 'package:vantan_connect/view/token/const_width_and_height.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
-import '../../domain/class/class.dart';
-import '../../use_case/state/class_use_case.dart';
 import '../../use_case/state/selectable_class_notifier.dart';
 
-final selectedClass = StateProvider((ref) => Class());
+final selectedClass = StateProvider(
+  (ref) => ClassDto(
+    document: [ClassDocument()],
+    classInfo: Class(),
+    attendanceBook: AttendanceBook(),
+    teacher: [Teacher()],
+    student: [Student()],
+  ),
+);
 final isBaseClassSelected = StateProvider((ref) => false);
 final isSelectedClassSelected = StateProvider((ref) => false);
 
@@ -26,13 +41,21 @@ class SelectClassPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    Class baseClassInfo = ref.watch(selectedClass);
-    List<Class> selectableClassList = ref.watch(selectableClass.notifier).state;
+    ClassDto baseClassInfo = ref.watch(selectedClass);
+    List<ClassDto> selectableClassList =
+        ref.watch(selectableClass.notifier).state;
     return TitleAndSelectClassScreen(
       title: '時間割を選択',
       children: [
         SpaceBox(height: 40.h),
-        baseClassInfo == Class()
+        baseClassInfo ==
+                ClassDto(
+                  document: [ClassDocument()],
+                  classInfo: Class(),
+                  attendanceBook: AttendanceBook(),
+                  teacher: [Teacher()],
+                  student: [Student()],
+                )
             ? TitleAndBorderBoxWhichMoveToSelectBaseClass(
                 title: 'ベースクラス',
                 textStyle: bodyRegular(colorScheme.onBackground),
@@ -59,24 +82,30 @@ class SelectClassPage extends ConsumerWidget {
                     SpaceBox(height: 20.h),
                     ClassCard(
                       isSelected: true,
-                      iconText: '${baseClassInfo.frameCount}コマ',
+                      iconText: '${baseClassInfo.classInfo!.frameCount}コマ',
                       iconData: Icons.calendar_today,
-                      className: baseClassInfo.name,
-                      description: baseClassInfo.overView,
+                      className: baseClassInfo.classInfo!.name,
+                      description: baseClassInfo.classInfo!.overView,
                       primaryCallback: () {},
                       onPrimaryCallback: () => NavigatorPush(
                         context,
                         page: SelectClassBaseClassPage(),
                       ),
                       onPrimaryWhichIsSelectedCallback: () {
+                        ref.read(selectedClass.notifier).state = ClassDto(
+                          document: [ClassDocument()],
+                          classInfo: Class(),
+                          attendanceBook: AttendanceBook(),
+                          teacher: [Teacher()],
+                          student: [Student()],
+                        );
+                        ref.read(classDto.notifier).deleteClass(baseClassInfo);
                         ref
-                            .read(classUseCase.notifier)
-                            .deleteClass(baseClassInfo);
-                        ref.read(selectedClass.notifier).state = Class();
-                        ref
-                            .read(classUseCase.notifier)
+                            .read(classDto.notifier)
                             .deleteAllClass(selectableClassList);
                         ref.read(isBaseClassSelected.notifier).state = false;
+                        ref.read(isSelectedClassSelected.notifier).state =
+                            false;
                         NavigatorPush(
                           context,
                           page: SelectClassBaseClassPage(),
@@ -105,24 +134,25 @@ class SelectClassPage extends ConsumerWidget {
                     ClassCard(
                       isSelected:
                           ref.watch(isSelectedClassSelected.notifier).state,
-                      iconText: '${selectableClassInfo.frameCount}コマ',
+                      iconText:
+                          '${selectableClassInfo.classInfo!.frameCount}コマ',
                       iconData: Icons.calendar_today,
-                      className: selectableClassInfo.name,
-                      description: selectableClassInfo.overView,
+                      className: selectableClassInfo.classInfo!.name,
+                      description: selectableClassInfo.classInfo!.overView,
                       primaryCallback: () {
                         ref.read(isSelectedClassSelected.notifier).state = true;
                         ref
-                            .read(classUseCase.notifier)
+                            .read(classDto.notifier)
                             .registerMyClass(selectableClassInfo);
                       },
                       onPrimaryCallback: () => NavigatorPush(
                         context,
                         page: SelectClassDetailPage(
-                            classInfo: selectableClassInfo),
+                            classDto: selectableClassInfo),
                       ),
                       onPrimaryWhichIsSelectedCallback: () {
                         ref
-                            .read(classUseCase.notifier)
+                            .read(classDto.notifier)
                             .deleteClass(selectableClassInfo);
                         ref.read(isSelectedClassSelected.notifier).state =
                             false;

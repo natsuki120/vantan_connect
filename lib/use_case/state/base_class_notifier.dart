@@ -1,20 +1,19 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/infrastructure/fake_class_repository.dart';
-import '../../domain/class/class.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
+import 'package:vantan_connect/infrastructure/class_query_service/class_query_service.dart';
+import 'package:vantan_connect/use_case/i_query_service/i_class_query_service.dart';
 import 'class_use_case.dart';
 
-class BaseClassNotifier extends StateNotifier<List<Class>> {
-  BaseClassNotifier(this.classRepository) : super([]);
-  final IClassRepository classRepository;
+class BaseClassNotifier extends StateNotifier<List<ClassDto>> {
+  BaseClassNotifier(this.classQueryService) : super([]);
+  final IClassQueryService classQueryService;
 
   void fetchBaseClass() {
-    final classState = classRepository.fetchBaseClass();
+    final classState = classQueryService.fetchBaseClassInfo();
     classState.listen((event) => state = event);
   }
 }
 
-final baseClass = StateNotifierProvider(
-  (ref) => BaseClassNotifier(
-    FakeClassRepository(testClassList),
-  ),
+final baseClass = StateNotifierProvider.autoDispose(
+  (ref) => BaseClassNotifier(ClassQueryService(testClassDtoList)),
 );

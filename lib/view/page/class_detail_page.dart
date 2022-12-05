@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
 import 'package:vantan_connect/view/organism/circle_icon_button.dart';
 import 'package:vantan_connect/view/organism/class_img_with_white_band.dart';
 import 'package:vantan_connect/view/organism/custom_tab_bar_which_has_primary_text_color.dart';
 import 'package:vantan_connect/view/page/all_classmate_profie_page.dart';
-import 'package:vantan_connect/view/page/done_class_history_page.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
-import '../../domain/class/class.dart';
 import '../token/color_schemes.g.dart';
 import '../token/space_box.dart';
 import '../organism/class_detail_header.dart';
+import 'done_class_history_page.dart';
 
 class ClassDetailPage extends StatelessWidget {
-  const ClassDetailPage({Key? key, required this.classInfo}) : super(key: key);
+  const ClassDetailPage({Key? key, required this.classDto}) : super(key: key);
 
-  final Class classInfo;
+  final ClassDto classDto;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class ClassDetailPage extends StatelessWidget {
                     ClassImgWithWhiteBand(
                       width: double.infinity,
                       height: 240.h,
-                      classImgUrl: classInfo.classImgUrl,
+                      classImgUrl: classDto.classInfo!.classImgUrl,
                       borderRadius: BorderRadius.zero,
                     ),
                     Padding(
@@ -83,7 +83,7 @@ class ClassDetailPage extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        ClassDetailHeader(classInfo: classInfo),
+                        ClassDetailHeader(classDto: classDto),
                         CustomTabBarWhichHasPrimaryTextColor(
                           tabChildren: [
                             Tab(text: '投稿'),
@@ -96,10 +96,11 @@ class ClassDetailPage extends StatelessWidget {
                             Container(),
                             Container(),
                             AllClassmateProfilePage(
-                                classmateList: classInfo.student),
+                                classmateList: classDto.classInfo!.student),
                             Container(),
                             DoneClassHistoryPage(
-                                documentList: classInfo.document),
+                              documentList: classDto.document!,
+                            ),
                           ],
                           tabLength: 5,
                           title: Container(),

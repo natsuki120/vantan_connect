@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		laDHANtpFIoDOrGxkZnRj1YDmgQ=
+		GA3Q5PnPmI8H4R3g8yQ8FScCNNI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -29,10 +29,6 @@
 	<dict>
 		<key>Headers/FIRAppCheckInterop.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			g7AaHmUid8R6vXHLNkNMbwz0sb8=
-			</data>
 			<key>hash2</key>
 			<data>
 			tTsxi+fQ0MNeqU6ddyXux+BPLWTIgDMVJvmwsP1FHG8=
@@ -40,10 +36,6 @@
 		</dict>
 		<key>Headers/FIRAppCheckTokenResultInterop.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			xVWF6LnYC4mr+6+X7odpOGjF7w4=
-			</data>
 			<key>hash2</key>
 			<data>
 			VeCsPwt5xPDpzdYUz3Fltl3iaUZ+Dh4wJwW7xsbbx3A=
@@ -51,10 +43,6 @@
 		</dict>
 		<key>Headers/FirebaseAppCheckInterop-umbrella.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			bT4xtOGQirYawIL0t7yP3xnehnA=
-			</data>
 			<key>hash2</key>
 			<data>
 			zOqBsdyNEucZTp9uIEIAdLxaknNrjPXr7zl2FPgzdJk=
@@ -62,10 +50,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			w9L0BFybTP1Xhk/EOcOicZUdfkY=
-			</data>
 			<key>hash2</key>
 			<data>
 			/Zv+D2gmO7hwGLJmy0xozuyd0uR3cgegoBkDGsGrMww=

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
 import 'package:vantan_connect/view/molecule/image_and_user_info.dart';
 import 'package:vantan_connect/view/organism/user_card.dart';
 import 'package:vantan_connect/view/token/custom_tab_bar_which_has_black_text_color.dart';
@@ -18,15 +19,15 @@ import '../token/const_width_and_height.dart';
 class SelectClassDetailPage extends StatelessWidget {
   const SelectClassDetailPage({
     Key? key,
-    required this.classInfo,
+    required this.classDto,
   }) : super(key: key);
 
-  final Class classInfo;
+  final ClassDto classDto;
 
   @override
   Widget build(BuildContext context) {
     return TitleAndSelectClassScreen(
-      title: classInfo.name,
+      title: classDto.classInfo!.name,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,10 +39,10 @@ class SelectClassDetailPage extends StatelessWidget {
                 text: '講師',
                 iconData: Icons.person,
                 info: ImageAndUserInfo(
-                  url: classInfo.teacher[0]['userImagePath'],
+                  url: classDto.teacher![0].userImagePath,
                   widget: GuidanceMessage(
-                    mainText: classInfo.teacher[0]['name'],
-                    subText: classInfo.teacher[0]['job'],
+                    mainText: classDto.teacher![0].name,
+                    subText: classDto.teacher![0].job,
                     mainTextStyle: headLineBold(colorScheme.onBackground),
                     subTextStyle: bodyRegular(
                       colorScheme.onBackground.withOpacity(0.7),
@@ -59,7 +60,7 @@ class SelectClassDetailPage extends StatelessWidget {
                 text: '単位時間',
                 iconData: Icons.calendar_today_outlined,
                 info: DetailTextInOrganism(
-                  text: '${classInfo.frameCount}コマ',
+                  text: '${classDto.classInfo!.frameCount}コマ',
                   textStyle: headLineBold(colorScheme.onBackground),
                 ),
               ),
@@ -72,10 +73,10 @@ class SelectClassDetailPage extends StatelessWidget {
                 iconData: Icons.calendar_today_outlined,
                 info: ListView.builder(
                     shrinkWrap: true,
-                    itemCount: classInfo.goalRequirements.length,
+                    itemCount: classDto.classInfo!.goalRequirements.length,
                     itemBuilder: (context, index) {
                       final goalRequirements =
-                          classInfo.goalRequirements[index];
+                          classDto.classInfo!.goalRequirements[index];
                       return DetailTextInOrganism(
                         text: '$goalRequirements\n',
                         textStyle: headLineBold(colorScheme.onBackground),
@@ -102,7 +103,7 @@ class SelectClassDetailPage extends StatelessWidget {
                         TitleAndContent(
                           title: '概要',
                           content: DetailTextInOrganism(
-                            text: classInfo.overView,
+                            text: classDto.classInfo!.overView,
                             textStyle: bodyRegular(colorScheme.onBackground),
                           ),
                         ),
@@ -110,7 +111,7 @@ class SelectClassDetailPage extends StatelessWidget {
                         TitleAndContent(
                           title: 'ゴール',
                           content: DetailTextInOrganism(
-                            text: classInfo.goalPoint,
+                            text: classDto.classInfo!.goalPoint,
                             textStyle: bodyRegular(colorScheme.onBackground),
                           ),
                         ),
@@ -120,16 +121,16 @@ class SelectClassDetailPage extends StatelessWidget {
                           content: ListView.builder(
                             physics: NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
-                            itemCount: classInfo.teacher.length,
+                            itemCount: classDto.teacher!.length,
                             itemBuilder: (context, index) {
-                              final teacher = classInfo.teacher[index];
+                              final teacher = classDto.teacher![index];
                               return Column(
                                 children: [
                                   SpaceBox(height: 8.h),
                                   UserCard(
-                                    teacherImg: teacher['userImagePath'],
-                                    mainText: teacher['name'],
-                                    subText: teacher['job'],
+                                    teacherImg: teacher.userImagePath,
+                                    mainText: teacher.name,
+                                    subText: teacher.job,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     spaceSize: 4.h,

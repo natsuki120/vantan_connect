@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_use/flutter_use.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
+import 'package:vantan_connect/use_case/state/class_dto_notifier.dart';
 
 import 'package:vantan_connect/view/organism/button_when_press_color_changing.dart';
 import 'package:vantan_connect/view/organism/canvas_color_app_bar_with_title_message.dart';
@@ -19,10 +21,10 @@ class MyClassListPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(classUseCase);
-    List<Class> myClassList = ref.watch(classUseCase.notifier).state;
+    ref.watch(classDto);
+    List<ClassDto> myClassList = ref.watch(classDto.notifier).state;
     useEffectOnce(() {
-      ref.watch(classUseCase.notifier).fetchClassInfo();
+      ref.watch(classDto.notifier).fetchMyClassInfo();
       return;
     });
     return Scaffold(
@@ -64,10 +66,10 @@ class MyClassListPage extends HookConsumerWidget {
                         return Column(
                           children: [
                             GestureDetector(
-                              child: ClassCardWithImage(classInfo: myClass),
+                              child: ClassCardWithImage(classDto: myClass),
                               onTap: () => NavigatorPush(
                                 context,
-                                page: ClassDetailPage(classInfo: myClass),
+                                page: ClassDetailPage(classDto: myClass),
                               ),
                             ),
                             SpaceBox(height: 16.h),

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'class.dart';
 
@@ -24,8 +24,10 @@ mixin _$Class {
   String get name => throw _privateConstructorUsedError;
   String get classImgUrl => throw _privateConstructorUsedError;
   String get overView => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>> get teacher => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>> get student => throw _privateConstructorUsedError;
+  @ClassTeacherConverter()
+  List<ClassTeacher> get teacher => throw _privateConstructorUsedError;
+  @ClassStudentConverter()
+  List<ClassStudent> get student => throw _privateConstructorUsedError;
   String get targetSchool => throw _privateConstructorUsedError;
   String get targetStudent => throw _privateConstructorUsedError;
   String get goalPoint => throw _privateConstructorUsedError;
@@ -35,7 +37,9 @@ mixin _$Class {
   String get startTime => throw _privateConstructorUsedError;
   String get announceTime => throw _privateConstructorUsedError;
   int get timeTable => throw _privateConstructorUsedError;
-  List<ClassDocument> get document => throw _privateConstructorUsedError;
+  @AttendanceBookIdConverter()
+  List<AttendanceBookId> get attendanceBook =>
+      throw _privateConstructorUsedError;
   List<String> get studentVoice => throw _privateConstructorUsedError;
   bool get isOnline => throw _privateConstructorUsedError;
   String get baseClass => throw _privateConstructorUsedError;
@@ -48,14 +52,15 @@ mixin _$Class {
 /// @nodoc
 abstract class $ClassCopyWith<$Res> {
   factory $ClassCopyWith(Class value, $Res Function(Class) then) =
-      _$ClassCopyWithImpl<$Res>;
+      _$ClassCopyWithImpl<$Res, Class>;
+  @useResult
   $Res call(
       {String id,
       String name,
       String classImgUrl,
       String overView,
-      List<Map<String, dynamic>> teacher,
-      List<Map<String, dynamic>> student,
+      @ClassTeacherConverter() List<ClassTeacher> teacher,
+      @ClassStudentConverter() List<ClassStudent> student,
       String targetSchool,
       String targetStudent,
       String goalPoint,
@@ -65,120 +70,123 @@ abstract class $ClassCopyWith<$Res> {
       String startTime,
       String announceTime,
       int timeTable,
-      List<ClassDocument> document,
+      @AttendanceBookIdConverter() List<AttendanceBookId> attendanceBook,
       List<String> studentVoice,
       bool isOnline,
       String baseClass});
 }
 
 /// @nodoc
-class _$ClassCopyWithImpl<$Res> implements $ClassCopyWith<$Res> {
+class _$ClassCopyWithImpl<$Res, $Val extends Class>
+    implements $ClassCopyWith<$Res> {
   _$ClassCopyWithImpl(this._value, this._then);
 
-  final Class _value;
   // ignore: unused_field
-  final $Res Function(Class) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? classImgUrl = freezed,
-    Object? overView = freezed,
-    Object? teacher = freezed,
-    Object? student = freezed,
-    Object? targetSchool = freezed,
-    Object? targetStudent = freezed,
-    Object? goalPoint = freezed,
-    Object? goalRequirements = freezed,
-    Object? endTime = freezed,
-    Object? frameCount = freezed,
-    Object? startTime = freezed,
-    Object? announceTime = freezed,
-    Object? timeTable = freezed,
-    Object? document = freezed,
-    Object? studentVoice = freezed,
-    Object? isOnline = freezed,
-    Object? baseClass = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? classImgUrl = null,
+    Object? overView = null,
+    Object? teacher = null,
+    Object? student = null,
+    Object? targetSchool = null,
+    Object? targetStudent = null,
+    Object? goalPoint = null,
+    Object? goalRequirements = null,
+    Object? endTime = null,
+    Object? frameCount = null,
+    Object? startTime = null,
+    Object? announceTime = null,
+    Object? timeTable = null,
+    Object? attendanceBook = null,
+    Object? studentVoice = null,
+    Object? isOnline = null,
+    Object? baseClass = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      classImgUrl: classImgUrl == freezed
+      classImgUrl: null == classImgUrl
           ? _value.classImgUrl
           : classImgUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      overView: overView == freezed
+      overView: null == overView
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
-      teacher: teacher == freezed
+      teacher: null == teacher
           ? _value.teacher
           : teacher // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
-      student: student == freezed
+              as List<ClassTeacher>,
+      student: null == student
           ? _value.student
           : student // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
-      targetSchool: targetSchool == freezed
+              as List<ClassStudent>,
+      targetSchool: null == targetSchool
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
               as String,
-      targetStudent: targetStudent == freezed
+      targetStudent: null == targetStudent
           ? _value.targetStudent
           : targetStudent // ignore: cast_nullable_to_non_nullable
               as String,
-      goalPoint: goalPoint == freezed
+      goalPoint: null == goalPoint
           ? _value.goalPoint
           : goalPoint // ignore: cast_nullable_to_non_nullable
               as String,
-      goalRequirements: goalRequirements == freezed
+      goalRequirements: null == goalRequirements
           ? _value.goalRequirements
           : goalRequirements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      endTime: endTime == freezed
+      endTime: null == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
               as String,
-      frameCount: frameCount == freezed
+      frameCount: null == frameCount
           ? _value.frameCount
           : frameCount // ignore: cast_nullable_to_non_nullable
               as int,
-      startTime: startTime == freezed
+      startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
               as String,
-      announceTime: announceTime == freezed
+      announceTime: null == announceTime
           ? _value.announceTime
           : announceTime // ignore: cast_nullable_to_non_nullable
               as String,
-      timeTable: timeTable == freezed
+      timeTable: null == timeTable
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
               as int,
-      document: document == freezed
-          ? _value.document
-          : document // ignore: cast_nullable_to_non_nullable
-              as List<ClassDocument>,
-      studentVoice: studentVoice == freezed
+      attendanceBook: null == attendanceBook
+          ? _value.attendanceBook
+          : attendanceBook // ignore: cast_nullable_to_non_nullable
+              as List<AttendanceBookId>,
+      studentVoice: null == studentVoice
           ? _value.studentVoice
           : studentVoice // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isOnline: isOnline == freezed
+      isOnline: null == isOnline
           ? _value.isOnline
           : isOnline // ignore: cast_nullable_to_non_nullable
               as bool,
-      baseClass: baseClass == freezed
+      baseClass: null == baseClass
           ? _value.baseClass
           : baseClass // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -187,13 +195,14 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
   factory _$$_ClassCopyWith(_$_Class value, $Res Function(_$_Class) then) =
       __$$_ClassCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String name,
       String classImgUrl,
       String overView,
-      List<Map<String, dynamic>> teacher,
-      List<Map<String, dynamic>> student,
+      @ClassTeacherConverter() List<ClassTeacher> teacher,
+      @ClassStudentConverter() List<ClassStudent> student,
       String targetSchool,
       String targetStudent,
       String goalPoint,
@@ -203,117 +212,115 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       String startTime,
       String announceTime,
       int timeTable,
-      List<ClassDocument> document,
+      @AttendanceBookIdConverter() List<AttendanceBookId> attendanceBook,
       List<String> studentVoice,
       bool isOnline,
       String baseClass});
 }
 
 /// @nodoc
-class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res>
+class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
     implements _$$_ClassCopyWith<$Res> {
   __$$_ClassCopyWithImpl(_$_Class _value, $Res Function(_$_Class) _then)
-      : super(_value, (v) => _then(v as _$_Class));
+      : super(_value, _then);
 
-  @override
-  _$_Class get _value => super._value as _$_Class;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? classImgUrl = freezed,
-    Object? overView = freezed,
-    Object? teacher = freezed,
-    Object? student = freezed,
-    Object? targetSchool = freezed,
-    Object? targetStudent = freezed,
-    Object? goalPoint = freezed,
-    Object? goalRequirements = freezed,
-    Object? endTime = freezed,
-    Object? frameCount = freezed,
-    Object? startTime = freezed,
-    Object? announceTime = freezed,
-    Object? timeTable = freezed,
-    Object? document = freezed,
-    Object? studentVoice = freezed,
-    Object? isOnline = freezed,
-    Object? baseClass = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? classImgUrl = null,
+    Object? overView = null,
+    Object? teacher = null,
+    Object? student = null,
+    Object? targetSchool = null,
+    Object? targetStudent = null,
+    Object? goalPoint = null,
+    Object? goalRequirements = null,
+    Object? endTime = null,
+    Object? frameCount = null,
+    Object? startTime = null,
+    Object? announceTime = null,
+    Object? timeTable = null,
+    Object? attendanceBook = null,
+    Object? studentVoice = null,
+    Object? isOnline = null,
+    Object? baseClass = null,
   }) {
     return _then(_$_Class(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      classImgUrl: classImgUrl == freezed
+      classImgUrl: null == classImgUrl
           ? _value.classImgUrl
           : classImgUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      overView: overView == freezed
+      overView: null == overView
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
-      teacher: teacher == freezed
+      teacher: null == teacher
           ? _value._teacher
           : teacher // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
-      student: student == freezed
+              as List<ClassTeacher>,
+      student: null == student
           ? _value._student
           : student // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
-      targetSchool: targetSchool == freezed
+              as List<ClassStudent>,
+      targetSchool: null == targetSchool
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
               as String,
-      targetStudent: targetStudent == freezed
+      targetStudent: null == targetStudent
           ? _value.targetStudent
           : targetStudent // ignore: cast_nullable_to_non_nullable
               as String,
-      goalPoint: goalPoint == freezed
+      goalPoint: null == goalPoint
           ? _value.goalPoint
           : goalPoint // ignore: cast_nullable_to_non_nullable
               as String,
-      goalRequirements: goalRequirements == freezed
+      goalRequirements: null == goalRequirements
           ? _value._goalRequirements
           : goalRequirements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      endTime: endTime == freezed
+      endTime: null == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
               as String,
-      frameCount: frameCount == freezed
+      frameCount: null == frameCount
           ? _value.frameCount
           : frameCount // ignore: cast_nullable_to_non_nullable
               as int,
-      startTime: startTime == freezed
+      startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
               as String,
-      announceTime: announceTime == freezed
+      announceTime: null == announceTime
           ? _value.announceTime
           : announceTime // ignore: cast_nullable_to_non_nullable
               as String,
-      timeTable: timeTable == freezed
+      timeTable: null == timeTable
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
               as int,
-      document: document == freezed
-          ? _value._document
-          : document // ignore: cast_nullable_to_non_nullable
-              as List<ClassDocument>,
-      studentVoice: studentVoice == freezed
+      attendanceBook: null == attendanceBook
+          ? _value._attendanceBook
+          : attendanceBook // ignore: cast_nullable_to_non_nullable
+              as List<AttendanceBookId>,
+      studentVoice: null == studentVoice
           ? _value._studentVoice
           : studentVoice // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isOnline: isOnline == freezed
+      isOnline: null == isOnline
           ? _value.isOnline
           : isOnline // ignore: cast_nullable_to_non_nullable
               as bool,
-      baseClass: baseClass == freezed
+      baseClass: null == baseClass
           ? _value.baseClass
           : baseClass // ignore: cast_nullable_to_non_nullable
               as String,
@@ -329,8 +336,10 @@ class _$_Class implements _Class {
       this.name = '',
       this.classImgUrl = '',
       this.overView = '',
-      final List<Map<String, dynamic>> teacher = const [],
-      final List<Map<String, dynamic>> student = const [],
+      @ClassTeacherConverter()
+          final List<ClassTeacher> teacher = const [],
+      @ClassStudentConverter()
+          final List<ClassStudent> student = const [],
       this.targetSchool = '',
       this.targetStudent = '',
       this.goalPoint = '',
@@ -340,14 +349,15 @@ class _$_Class implements _Class {
       this.startTime = '',
       this.announceTime = '',
       this.timeTable = 0,
-      final List<ClassDocument> document = const [],
+      @AttendanceBookIdConverter()
+          final List<AttendanceBookId> attendanceBook = const [],
       final List<String> studentVoice = const <String>[],
       this.isOnline = false,
       this.baseClass = ''})
       : _teacher = teacher,
         _student = student,
         _goalRequirements = goalRequirements,
-        _document = document,
+        _attendanceBook = attendanceBook,
         _studentVoice = studentVoice;
 
   factory _$_Class.fromJson(Map<String, dynamic> json) =>
@@ -365,18 +375,22 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String overView;
-  final List<Map<String, dynamic>> _teacher;
+  final List<ClassTeacher> _teacher;
   @override
   @JsonKey()
-  List<Map<String, dynamic>> get teacher {
+  @ClassTeacherConverter()
+  List<ClassTeacher> get teacher {
+    if (_teacher is EqualUnmodifiableListView) return _teacher;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_teacher);
   }
 
-  final List<Map<String, dynamic>> _student;
+  final List<ClassStudent> _student;
   @override
   @JsonKey()
-  List<Map<String, dynamic>> get student {
+  @ClassStudentConverter()
+  List<ClassStudent> get student {
+    if (_student is EqualUnmodifiableListView) return _student;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_student);
   }
@@ -394,6 +408,8 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   List<String> get goalRequirements {
+    if (_goalRequirements is EqualUnmodifiableListView)
+      return _goalRequirements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_goalRequirements);
   }
@@ -413,18 +429,21 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final int timeTable;
-  final List<ClassDocument> _document;
+  final List<AttendanceBookId> _attendanceBook;
   @override
   @JsonKey()
-  List<ClassDocument> get document {
+  @AttendanceBookIdConverter()
+  List<AttendanceBookId> get attendanceBook {
+    if (_attendanceBook is EqualUnmodifiableListView) return _attendanceBook;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_document);
+    return EqualUnmodifiableListView(_attendanceBook);
   }
 
   final List<String> _studentVoice;
   @override
   @JsonKey()
   List<String> get studentVoice {
+    if (_studentVoice is EqualUnmodifiableListView) return _studentVoice;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_studentVoice);
   }
@@ -438,7 +457,7 @@ class _$_Class implements _Class {
 
   @override
   String toString() {
-    return 'Class(id: $id, name: $name, classImgUrl: $classImgUrl, overView: $overView, teacher: $teacher, student: $student, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, document: $document, studentVoice: $studentVoice, isOnline: $isOnline, baseClass: $baseClass)';
+    return 'Class(id: $id, name: $name, classImgUrl: $classImgUrl, overView: $overView, teacher: $teacher, student: $student, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, attendanceBook: $attendanceBook, studentVoice: $studentVoice, isOnline: $isOnline, baseClass: $baseClass)';
   }
 
   @override
@@ -446,61 +465,69 @@ class _$_Class implements _Class {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Class &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.classImgUrl, classImgUrl) &&
-            const DeepCollectionEquality().equals(other.overView, overView) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.classImgUrl, classImgUrl) ||
+                other.classImgUrl == classImgUrl) &&
+            (identical(other.overView, overView) ||
+                other.overView == overView) &&
             const DeepCollectionEquality().equals(other._teacher, _teacher) &&
             const DeepCollectionEquality().equals(other._student, _student) &&
-            const DeepCollectionEquality()
-                .equals(other.targetSchool, targetSchool) &&
-            const DeepCollectionEquality()
-                .equals(other.targetStudent, targetStudent) &&
-            const DeepCollectionEquality().equals(other.goalPoint, goalPoint) &&
+            (identical(other.targetSchool, targetSchool) ||
+                other.targetSchool == targetSchool) &&
+            (identical(other.targetStudent, targetStudent) ||
+                other.targetStudent == targetStudent) &&
+            (identical(other.goalPoint, goalPoint) ||
+                other.goalPoint == goalPoint) &&
             const DeepCollectionEquality()
                 .equals(other._goalRequirements, _goalRequirements) &&
-            const DeepCollectionEquality().equals(other.endTime, endTime) &&
+            (identical(other.endTime, endTime) || other.endTime == endTime) &&
+            (identical(other.frameCount, frameCount) ||
+                other.frameCount == frameCount) &&
+            (identical(other.startTime, startTime) ||
+                other.startTime == startTime) &&
+            (identical(other.announceTime, announceTime) ||
+                other.announceTime == announceTime) &&
+            (identical(other.timeTable, timeTable) ||
+                other.timeTable == timeTable) &&
             const DeepCollectionEquality()
-                .equals(other.frameCount, frameCount) &&
-            const DeepCollectionEquality().equals(other.startTime, startTime) &&
-            const DeepCollectionEquality()
-                .equals(other.announceTime, announceTime) &&
-            const DeepCollectionEquality().equals(other.timeTable, timeTable) &&
-            const DeepCollectionEquality().equals(other._document, _document) &&
+                .equals(other._attendanceBook, _attendanceBook) &&
             const DeepCollectionEquality()
                 .equals(other._studentVoice, _studentVoice) &&
-            const DeepCollectionEquality().equals(other.isOnline, isOnline) &&
-            const DeepCollectionEquality().equals(other.baseClass, baseClass));
+            (identical(other.isOnline, isOnline) ||
+                other.isOnline == isOnline) &&
+            (identical(other.baseClass, baseClass) ||
+                other.baseClass == baseClass));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(classImgUrl),
-        const DeepCollectionEquality().hash(overView),
+        id,
+        name,
+        classImgUrl,
+        overView,
         const DeepCollectionEquality().hash(_teacher),
         const DeepCollectionEquality().hash(_student),
-        const DeepCollectionEquality().hash(targetSchool),
-        const DeepCollectionEquality().hash(targetStudent),
-        const DeepCollectionEquality().hash(goalPoint),
+        targetSchool,
+        targetStudent,
+        goalPoint,
         const DeepCollectionEquality().hash(_goalRequirements),
-        const DeepCollectionEquality().hash(endTime),
-        const DeepCollectionEquality().hash(frameCount),
-        const DeepCollectionEquality().hash(startTime),
-        const DeepCollectionEquality().hash(announceTime),
-        const DeepCollectionEquality().hash(timeTable),
-        const DeepCollectionEquality().hash(_document),
+        endTime,
+        frameCount,
+        startTime,
+        announceTime,
+        timeTable,
+        const DeepCollectionEquality().hash(_attendanceBook),
         const DeepCollectionEquality().hash(_studentVoice),
-        const DeepCollectionEquality().hash(isOnline),
-        const DeepCollectionEquality().hash(baseClass)
+        isOnline,
+        baseClass
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ClassCopyWith<_$_Class> get copyWith =>
       __$$_ClassCopyWithImpl<_$_Class>(this, _$identity);
 
@@ -518,8 +545,8 @@ abstract class _Class implements Class {
       final String name,
       final String classImgUrl,
       final String overView,
-      final List<Map<String, dynamic>> teacher,
-      final List<Map<String, dynamic>> student,
+      @ClassTeacherConverter() final List<ClassTeacher> teacher,
+      @ClassStudentConverter() final List<ClassStudent> student,
       final String targetSchool,
       final String targetStudent,
       final String goalPoint,
@@ -529,7 +556,7 @@ abstract class _Class implements Class {
       final String startTime,
       final String announceTime,
       final int timeTable,
-      final List<ClassDocument> document,
+      @AttendanceBookIdConverter() final List<AttendanceBookId> attendanceBook,
       final List<String> studentVoice,
       final bool isOnline,
       final String baseClass}) = _$_Class;
@@ -545,9 +572,11 @@ abstract class _Class implements Class {
   @override
   String get overView;
   @override
-  List<Map<String, dynamic>> get teacher;
+  @ClassTeacherConverter()
+  List<ClassTeacher> get teacher;
   @override
-  List<Map<String, dynamic>> get student;
+  @ClassStudentConverter()
+  List<ClassStudent> get student;
   @override
   String get targetSchool;
   @override
@@ -567,7 +596,8 @@ abstract class _Class implements Class {
   @override
   int get timeTable;
   @override
-  List<ClassDocument> get document;
+  @AttendanceBookIdConverter()
+  List<AttendanceBookId> get attendanceBook;
   @override
   List<String> get studentVoice;
   @override

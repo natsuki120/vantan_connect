@@ -28,10 +28,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -58,6 +55,16 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCzoHm7BCmudW-dlPdXUZGur2Xwle4jQkE',
+    appId: '1:155305456263:ios:8e18ad3d8139081ea1be22',
+    messagingSenderId: '155305456263',
+    projectId: 'vantan-connect',
+    storageBucket: 'vantan-connect.appspot.com',
+    iosClientId: '155305456263-b6m37ao0pgurtrtg338g7kr6juj2me7h.apps.googleusercontent.com',
+    iosBundleId: 'com.example.vantanConnect',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCzoHm7BCmudW-dlPdXUZGur2Xwle4jQkE',
     appId: '1:155305456263:ios:8e18ad3d8139081ea1be22',
     messagingSenderId: '155305456263',

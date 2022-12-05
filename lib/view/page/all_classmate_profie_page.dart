@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/domain/user/user_state.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import '../organism/classmate_profile_detail.dart';
 

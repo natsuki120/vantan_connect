@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
 import 'package:vantan_connect/view/organism/circle_icon_button.dart';
 import 'package:vantan_connect/view/organism/class_img_with_white_band.dart';
 import 'package:vantan_connect/view/organism/custom_tab_bar_which_has_primary_text_color.dart';
@@ -81,10 +82,12 @@ class ClassDetailTemplate extends StatelessWidget {
                     child: Column(
                       children: [
                         ClassDetailHeader(
-                          classInfo: Class(
-                            name: 'UI/UXデザイン実践',
-                            overView:
-                                'デザインを行うためのツールの使い方を学びと同時にUI/UXの概念を学ぶ。使いやすい、人を怠惰にさせる、人を惹きつけるデザインを作成する。',
+                          classDto: ClassDto(
+                            classInfo: Class(
+                              name: 'UI/UXデザイン実践',
+                              overView:
+                                  'デザインを行うためのツールの使い方を学びと同時にUI/UXの概念を学ぶ。使いやすい、人を怠惰にさせる、人を惹きつけるデザインを作成する。',
+                            ),
                           ),
                         ),
                         CustomTabBarWhichHasPrimaryTextColor(

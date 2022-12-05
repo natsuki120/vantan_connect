@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
 import 'package:vantan_connect/view/molecule/Icon_and_text.dart';
 import 'package:vantan_connect/view/molecule/class_card_border.dart';
 import 'package:vantan_connect/view/molecule/class_img.dart';
 import 'package:vantan_connect/view/molecule/class_tag.dart';
 import 'package:vantan_connect/view/molecule/grey_box.dart';
-import 'package:vantan_connect/view/molecule/image_with_text.dart';
 import 'package:vantan_connect/view/molecule/text_in_box.dart';
 import 'package:vantan_connect/view/molecule/title_message.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
-import '../../domain/class/class.dart';
+
+import '../molecule/image_with_text.dart';
 
 class ClassCardWithImage extends StatelessWidget {
   const ClassCardWithImage({
     Key? key,
-    required this.classInfo,
+    required this.classDto,
   }) : super(key: key);
 
-  final Class classInfo;
+  final ClassDto classDto;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class ClassCardWithImage extends StatelessWidget {
       child: Row(
         children: [
           ClassImg(
-            classImgUrl: classInfo.classImgUrl,
+            classImgUrl: classDto.classInfo!.classImgUrl,
             width: 100.w,
             height: 245.h,
             borderRadius: BorderRadius.only(
@@ -67,7 +68,7 @@ class ClassCardWithImage extends StatelessWidget {
                   ),
                   SpaceBox(height: 8.h),
                   TitleMessage(
-                    text: classInfo.name,
+                    text: classDto.classInfo!.name,
                     textStyle: headLineBold(colorScheme.onBackground),
                   ),
                   SpaceBox(height: 7.h),
@@ -75,7 +76,7 @@ class ClassCardWithImage extends StatelessWidget {
                     children: [
                       IconAndText(
                         iconData: Icons.calendar_today_outlined,
-                        text: '${classInfo.frameCount}コマ',
+                        text: '${classDto.classInfo!.frameCount}コマ',
                         textStyle: callOutBold(
                           colorScheme.onBackground.withOpacity(0.5),
                         ),
@@ -86,7 +87,8 @@ class ClassCardWithImage extends StatelessWidget {
                       SpaceBox(width: 12.w),
                       IconAndText(
                         iconData: Icons.videocam_off_outlined,
-                        text: classInfo.isOnline ? 'オンライン可' : 'オンライン不可',
+                        text:
+                            classDto.classInfo!.isOnline ? 'オンライン可' : 'オンライン不可',
                         textStyle: callOutBold(
                           colorScheme.onBackground.withOpacity(0.5),
                         ),
@@ -114,8 +116,8 @@ class ClassCardWithImage extends StatelessWidget {
                           ),
                           SpaceBox(width: 12.w),
                           ImageWithText(
-                            imgUrl: classInfo.teacher[0]['userImagePath'],
-                            text: classInfo.teacher[0]['name'],
+                            imgUrl: classDto.teacher![0].userImagePath,
+                            text: classDto.teacher![0].name,
                             textStyle: bodyRegular(
                               colorScheme.onBackground.withOpacity(0.7),
                             ),

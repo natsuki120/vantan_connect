@@ -1,8 +1,8 @@
-// ignore_for_file: invalid_annotation_target
-
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vantan_connect/domain/user/user_state.dart';
-import '../class_document/class_document.dart';
+import 'package:vantan_connect/domain/attendance_book/attendance_book.dart';
+import 'package:vantan_connect/domain/class/value/attendance_book_id.dart';
+import 'package:vantan_connect/domain/class/value/class_student.dart';
+import 'package:vantan_connect/domain/class/value/class_teacher.dart';
 part 'class.freezed.dart';
 part 'class.g.dart';
 
@@ -13,8 +13,8 @@ class Class with _$Class {
     @Default('') String name,
     @Default('') String classImgUrl,
     @Default('') String overView,
-    @Default([]) List<Map<String, dynamic>> teacher,
-    @Default([]) List<Map<String, dynamic>> student,
+    @ClassTeacherConverter() @Default([]) List<ClassTeacher> teacher,
+    @ClassStudentConverter() @Default([]) List<ClassStudent> student,
     @Default('') String targetSchool,
     @Default('') String targetStudent,
     @Default('') String goalPoint,
@@ -24,7 +24,9 @@ class Class with _$Class {
     @Default('') String startTime,
     @Default('') String announceTime,
     @Default(0) int timeTable,
-    @Default([]) List<ClassDocument> document,
+    @AttendanceBookIdConverter()
+    @Default([])
+        List<AttendanceBookId> attendanceBook,
     @Default(<String>[]) List<String> studentVoice,
     @Default(false) bool isOnline,
     @Default('') String baseClass,
@@ -40,4 +42,6 @@ abstract class IClassRepository {
   void registerMyClass(Class classInfo);
   void deleteAllClass(List<Class> classList);
   void deleteClass(Class classInfo);
+  Future fetchTeacherInfo(ClassTeacher classTeacher);
+  Future<List<AttendanceBook>> fetchAttendanceBook(Class classInfo);
 }

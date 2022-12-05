@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_use/flutter_use.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:vantan_connect/use_case/state/base_class_notifier.dart';
+import 'package:vantan_connect/use_case/state/class_dto_notifier.dart';
 import 'package:vantan_connect/view/page/select_class_detail_page.dart';
 import 'package:vantan_connect/view/page/select_class_page.dart';
 import 'package:vantan_connect/view/token/const_width_and_height.dart';
@@ -40,14 +41,12 @@ class SelectClassBaseClassPage extends HookConsumerWidget {
                 children: [
                   ClassCard(
                     isSelected: false,
-                    iconText: '${classInfo.frameCount}コマ',
+                    iconText: '${classInfo.classInfo!.frameCount}コマ',
                     iconData: Icons.calendar_today,
-                    className: classInfo.name,
-                    description: classInfo.overView,
+                    className: classInfo.classInfo!.name,
+                    description: classInfo.classInfo!.overView,
                     primaryCallback: () {
-                      ref
-                          .read(classUseCase.notifier)
-                          .registerMyClass(classInfo);
+                      ref.read(classDto.notifier).registerMyClass(classInfo);
                       ref.watch(selectedClass.notifier).state = classInfo;
                       ref
                           .read(selectableClass.notifier)
@@ -57,7 +56,7 @@ class SelectClassBaseClassPage extends HookConsumerWidget {
                     },
                     onPrimaryCallback: () => NavigatorPush(
                       context,
-                      page: SelectClassDetailPage(classInfo: classInfo),
+                      page: SelectClassDetailPage(classDto: classInfo),
                     ),
                     onPrimaryWhichIsSelectedCallback: () =>
                         ref.watch(isBaseClassSelected.notifier).state = false,

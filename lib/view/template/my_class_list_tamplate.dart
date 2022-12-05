@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/domain/user/user_state.dart';
-import 'package:vantan_connect/domain/user/user_state.dart';
-import 'package:vantan_connect/domain/user/user_state.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
+import 'package:vantan_connect/domain/class_dto/class_dto.dart';
 import 'package:vantan_connect/view/organism/button_when_press_color_changing.dart';
 import 'package:vantan_connect/view/organism/canvas_color_app_bar_with_title_message.dart';
 import 'package:vantan_connect/view/organism/class_card_with_image.dart';
@@ -46,15 +44,15 @@ class MyClassListTemplate extends StatelessWidget {
               ),
               SpaceBox(height: 16.h),
               ClassCardWithImage(
-                classInfo: Class(),
+                classDto: ClassDto(),
               ),
               SpaceBox(height: 16.h),
               ClassCardWithImage(
-                classInfo: Class(),
+                classDto: ClassDto(),
               ),
               SpaceBox(height: 16.h),
               ClassCardWithImage(
-                classInfo: Class(),
+                classDto: ClassDto(),
               ),
               SpaceBox(height: 16.h),
             ],

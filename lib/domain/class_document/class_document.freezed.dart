@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'class_document.dart';
 
@@ -23,8 +23,6 @@ mixin _$ClassDocument {
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
-  @DateTimeConverter()
-  DateTime? get day => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,48 +34,42 @@ mixin _$ClassDocument {
 abstract class $ClassDocumentCopyWith<$Res> {
   factory $ClassDocumentCopyWith(
           ClassDocument value, $Res Function(ClassDocument) then) =
-      _$ClassDocumentCopyWithImpl<$Res>;
-  $Res call(
-      {String title,
-      String description,
-      int count,
-      @DateTimeConverter() DateTime? day});
+      _$ClassDocumentCopyWithImpl<$Res, ClassDocument>;
+  @useResult
+  $Res call({String title, String description, int count});
 }
 
 /// @nodoc
-class _$ClassDocumentCopyWithImpl<$Res>
+class _$ClassDocumentCopyWithImpl<$Res, $Val extends ClassDocument>
     implements $ClassDocumentCopyWith<$Res> {
   _$ClassDocumentCopyWithImpl(this._value, this._then);
 
-  final ClassDocument _value;
   // ignore: unused_field
-  final $Res Function(ClassDocument) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? count = freezed,
-    Object? day = freezed,
+    Object? title = null,
+    Object? description = null,
+    Object? count = null,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      count: count == freezed
+      count: null == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int,
-      day: day == freezed
-          ? _value.day
-          : day // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -88,60 +80,48 @@ abstract class _$$_ClassDocumentCopyWith<$Res>
           _$_ClassDocument value, $Res Function(_$_ClassDocument) then) =
       __$$_ClassDocumentCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String title,
-      String description,
-      int count,
-      @DateTimeConverter() DateTime? day});
+  @useResult
+  $Res call({String title, String description, int count});
 }
 
 /// @nodoc
 class __$$_ClassDocumentCopyWithImpl<$Res>
-    extends _$ClassDocumentCopyWithImpl<$Res>
+    extends _$ClassDocumentCopyWithImpl<$Res, _$_ClassDocument>
     implements _$$_ClassDocumentCopyWith<$Res> {
   __$$_ClassDocumentCopyWithImpl(
       _$_ClassDocument _value, $Res Function(_$_ClassDocument) _then)
-      : super(_value, (v) => _then(v as _$_ClassDocument));
+      : super(_value, _then);
 
-  @override
-  _$_ClassDocument get _value => super._value as _$_ClassDocument;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? count = freezed,
-    Object? day = freezed,
+    Object? title = null,
+    Object? description = null,
+    Object? count = null,
   }) {
     return _then(_$_ClassDocument(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      count: count == freezed
+      count: null == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int,
-      day: day == freezed
-          ? _value.day
-          : day // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_ClassDocument implements _ClassDocument {
   const _$_ClassDocument(
-      {this.title = '',
-      this.description = '',
-      this.count = 0,
-      @DateTimeConverter() this.day});
+      {this.title = '', this.description = '', this.count = 0});
 
   factory _$_ClassDocument.fromJson(Map<String, dynamic> json) =>
       _$$_ClassDocumentFromJson(json);
@@ -155,13 +135,10 @@ class _$_ClassDocument implements _ClassDocument {
   @override
   @JsonKey()
   final int count;
-  @override
-  @DateTimeConverter()
-  final DateTime? day;
 
   @override
   String toString() {
-    return 'ClassDocument(title: $title, description: $description, count: $count, day: $day)';
+    return 'ClassDocument(title: $title, description: $description, count: $count)';
   }
 
   @override
@@ -169,24 +146,19 @@ class _$_ClassDocument implements _ClassDocument {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ClassDocument &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.count, count) &&
-            const DeepCollectionEquality().equals(other.day, day));
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.count, count) || other.count == count));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(count),
-      const DeepCollectionEquality().hash(day));
+  int get hashCode => Object.hash(runtimeType, title, description, count);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ClassDocumentCopyWith<_$_ClassDocument> get copyWith =>
       __$$_ClassDocumentCopyWithImpl<_$_ClassDocument>(this, _$identity);
 
@@ -202,8 +174,7 @@ abstract class _ClassDocument implements ClassDocument {
   const factory _ClassDocument(
       {final String title,
       final String description,
-      final int count,
-      @DateTimeConverter() final DateTime? day}) = _$_ClassDocument;
+      final int count}) = _$_ClassDocument;
 
   factory _ClassDocument.fromJson(Map<String, dynamic> json) =
       _$_ClassDocument.fromJson;
@@ -214,9 +185,6 @@ abstract class _ClassDocument implements ClassDocument {
   String get description;
   @override
   int get count;
-  @override
-  @DateTimeConverter()
-  DateTime? get day;
   @override
   @JsonKey(ignore: true)
   _$$_ClassDocumentCopyWith<_$_ClassDocument> get copyWith =>
