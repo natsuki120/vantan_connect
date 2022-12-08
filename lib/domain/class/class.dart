@@ -1,7 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vantan_connect/domain/user/user_state.dart';
 import '../class_document/class_document.dart';
 part 'class.freezed.dart';
 part 'class.g.dart';
@@ -24,10 +21,11 @@ class Class with _$Class {
     @Default('') String startTime,
     @Default('') String announceTime,
     @Default(0) int timeTable,
-    @Default([]) List<ClassDocument> document,
+    @Default([]) List<String> documentId,
     @Default(<String>[]) List<String> studentVoice,
     @Default(false) bool isOnline,
     @Default('') String baseClass,
+    @Default([]) List<Map<String, dynamic>> document,
   }) = _Class;
 
   factory Class.fromJson(Map<String, dynamic> json) => _$ClassFromJson(json);
@@ -37,6 +35,7 @@ abstract class IClassRepository {
   Stream<List<Class>> fetchClassInfo();
   Stream<List<Class>> fetchBaseClass();
   Stream<List<Class>> fetchSelectableClass(Class baseClass);
+  Stream<List<ClassDocument>> fetchClassDocument(Class baseClass);
   void registerMyClass(Class classInfo);
   void deleteAllClass(List<Class> classList);
   void deleteClass(Class classInfo);

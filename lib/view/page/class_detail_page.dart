@@ -98,8 +98,7 @@ class ClassDetailPage extends StatelessWidget {
                             AllClassmateProfilePage(
                                 classmateList: classInfo.student),
                             Container(),
-                            DoneClassHistoryPage(
-                                documentList: classInfo.document),
+                            DoneClassHistoryPage(classInfo: classInfo),
                           ],
                           tabLength: 5,
                           title: Container(),

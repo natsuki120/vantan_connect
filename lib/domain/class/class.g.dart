@@ -31,8 +31,8 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       startTime: json['startTime'] as String? ?? '',
       announceTime: json['announceTime'] as String? ?? '',
       timeTable: json['timeTable'] as int? ?? 0,
-      document: (json['document'] as List<dynamic>?)
-              ?.map((e) => ClassDocument.fromJson(e as Map<String, dynamic>))
+      documentId: (json['documentId'] as List<dynamic>?)
+              ?.map((e) => e as String)
               .toList() ??
           const [],
       studentVoice: (json['studentVoice'] as List<dynamic>?)
@@ -41,6 +41,10 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
           const <String>[],
       isOnline: json['isOnline'] as bool? ?? false,
       baseClass: json['baseClass'] as String? ?? '',
+      document: (json['document'] as List<dynamic>?)
+              ?.map((e) => e as Map<String, dynamic>)
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
@@ -59,8 +63,9 @@ Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'startTime': instance.startTime,
       'announceTime': instance.announceTime,
       'timeTable': instance.timeTable,
-      'document': instance.document.map((e) => e.toJson()).toList(),
+      'documentId': instance.documentId,
       'studentVoice': instance.studentVoice,
       'isOnline': instance.isOnline,
       'baseClass': instance.baseClass,
+      'document': instance.document,
     };

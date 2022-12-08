@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vantan_connect/view/template/attendance_confirmation_modal.dart';
 import 'package:vantan_connect/view/page/select_class_page.dart';
-import 'package:vantan_connect/view/token/color_schemes.g.dart';
-import 'package:vantan_connect/view/token/style_by_platform.dart';
 import '../organism/canvas_color_app_bar_with_title_message.dart';
 import '../organism/guide_to_select_new_class.dart';
 
@@ -18,6 +17,9 @@ class HomePage extends StatelessWidget {
         child: GuideToSelectNewClass(
           pageRoute: SelectClassPage(),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => attendanceConfirmationModal(context),
       ),
     );
   }

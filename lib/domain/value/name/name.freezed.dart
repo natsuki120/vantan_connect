@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'name.dart';
 
@@ -25,28 +25,32 @@ mixin _$Name {
 /// @nodoc
 abstract class $NameCopyWith<$Res> {
   factory $NameCopyWith(Name value, $Res Function(Name) then) =
-      _$NameCopyWithImpl<$Res>;
+      _$NameCopyWithImpl<$Res, Name>;
+  @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class _$NameCopyWithImpl<$Res> implements $NameCopyWith<$Res> {
+class _$NameCopyWithImpl<$Res, $Val extends Name>
+    implements $NameCopyWith<$Res> {
   _$NameCopyWithImpl(this._value, this._then);
 
-  final Name _value;
   // ignore: unused_field
-  final $Res Function(Name) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -55,24 +59,23 @@ abstract class _$$_NameCopyWith<$Res> implements $NameCopyWith<$Res> {
   factory _$$_NameCopyWith(_$_Name value, $Res Function(_$_Name) then) =
       __$$_NameCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_NameCopyWithImpl<$Res> extends _$NameCopyWithImpl<$Res>
+class __$$_NameCopyWithImpl<$Res> extends _$NameCopyWithImpl<$Res, _$_Name>
     implements _$$_NameCopyWith<$Res> {
   __$$_NameCopyWithImpl(_$_Name _value, $Res Function(_$_Name) _then)
-      : super(_value, (v) => _then(v as _$_Name));
+      : super(_value, _then);
 
-  @override
-  _$_Name get _value => super._value as _$_Name;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
     return _then(_$_Name(
-      value == freezed
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
@@ -98,15 +101,15 @@ class _$_Name implements _Name {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Name &&
-            const DeepCollectionEquality().equals(other.value, value));
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_NameCopyWith<_$_Name> get copyWith =>
       __$$_NameCopyWithImpl<_$_Name>(this, _$identity);
 }

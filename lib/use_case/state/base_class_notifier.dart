@@ -15,6 +15,6 @@ class BaseClassNotifier extends StateNotifier<List<Class>> {
 
 final baseClass = StateNotifierProvider(
   (ref) => BaseClassNotifier(
-    FakeClassRepository(testClassList),
+    FakeClassRepository(testClassList, testClassDocument),
   ),
 );

@@ -1,56 +1,23 @@
-import 'dart:io';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
+import 'package:vantan_connect/infrastructure/fake_class_repository.dart';
+import 'package:vantan_connect/use_case/state/class_use_case.dart';
+import '../../domain/class/class.dart';
 
-final filePickerProvider = ChangeNotifierProvider.autoDispose<ClassDocument>(
-  (ref) => ClassDocument(),
-);
+class ClassDocumentNotifier extends StateNotifier<List<ClassDocument>> {
+  ClassDocumentNotifier(this.classRepository) : super([]);
 
-class ClassDocument extends ChangeNotifier {
-  ClassDocument() {
-    pickSuccess = false;
-    fileName = '選択したファイル名がここに表示されます';
-    fileContents = 'ファイルの中身がここに表示されます';
-    file = null;
-  }
+  final IClassRepository classRepository;
 
-  /// このプロバイダーが廃棄されるよきに呼ばれる
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
-  bool pickSuccess = false; // 読み込みが成功したら true
-
-  File? file;
-  String? fileName;
-  String? fileContents;
-
-  Future<bool> get pickFileIsSuccess async {
-    final filePickerResult = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: ['pptx'], // ピックする拡張子を限定できる。
-    );
-    if (filePickerResult != null) {
-      pickSuccess = true;
-      file = File(filePickerResult.files.single.path!);
-      fileName = filePickerResult.files.single.name;
-    } else {
-      pickSuccess = false;
-      file = File('');
-      fileName = '何も選択されませんでした';
-      fileContents = 'ファイルの中身がここに表示されます';
-    }
-    notifyListeners();
-    return pickSuccess;
-  }
-
-  /// ファイルを読み込む
-  Future<void> readFileContents() async {
-    if (file != null) {
-      fileContents = await file!.readAsString();
-      notifyListeners();
-    }
+  void fetchClassDocument(Class baseClass) {
+    final classState = classRepository.fetchClassDocument(baseClass);
+    classState.listen((event) => state = [...event]);
+    print(state);
   }
 }
+
+final classDocumentNotifier = StateNotifierProvider(
+  (ref) => ClassDocumentNotifier(
+    FakeClassRepository(testClassList, testClassDocument),
+  ),
+);

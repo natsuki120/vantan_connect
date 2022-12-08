@@ -1,17 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:vantan_connect/domain/class/class.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
 
 class ClassRepository extends IClassRepository {
-  ClassRepository({required this.db}) : super();
-  final db;
+  ClassRepository() : super();
+  final db = FirebaseFirestore.instance;
 
   @override
   Stream<List<Class>> fetchClassInfo() {
-    final collection = db
-        .collection(
-          '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class',
-        )
-        .snapshots();
+    final collection = db.collection('my_class').snapshots();
     return collection.map<List<Class>>(
       (QuerySnapshot snapshot) => snapshot.docs
           .map(
@@ -26,7 +23,7 @@ class ClassRepository extends IClassRepository {
   Stream<List<Class>> fetchBaseClass() {
     final collection = db
         .collection('/all_class/VTA_class/2022/first_semester/all_class')
-        .where('selectableBaseClass', arrayContains: 'false')
+        .where('baseClass', arrayContains: '')
         .snapshots();
     return collection.map<List<Class>>(
       (QuerySnapshot snapshot) => snapshot.docs
@@ -42,7 +39,7 @@ class ClassRepository extends IClassRepository {
   Stream<List<Class>> fetchSelectableClass(Class baseClass) {
     final collection = db
         .collection('all_class/VTA_class/2022/first_semester/all_class')
-        .where('baseClass', isEqualTo: baseClass)
+        .where('baseClass', isEqualTo: baseClass.name)
         .snapshots();
     return collection.map<List<Class>>(
       (QuerySnapshot snapshot) => snapshot.docs
@@ -55,9 +52,7 @@ class ClassRepository extends IClassRepository {
   }
 
   void registerMyClass(Class classInfo) {
-    final collection = db.doc(
-      '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class/${classInfo.id}',
-    );
+    final collection = db.doc('my_class/${classInfo.id}');
     collection.set({
       'id': classInfo.id,
       'name': classInfo.name,
@@ -75,21 +70,27 @@ class ClassRepository extends IClassRepository {
 
   @override
   void deleteClass(Class classInfo) {
-    db
-        .doc(
-          '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class/${classInfo.id}',
-        )
-        .delete();
+    db.doc('my_class/${classInfo.id}').delete();
   }
 
   @override
   void deleteAllClass(List<Class> classList) {
     for (var classInfo in classList) {
-      db
-          .doc(
-            '/private/v1/users/CS4PkGDqObM8cNT2k1dQwjvERxE2/readOnly/userInfo/class/${classInfo.id}',
-          )
-          .delete();
+      db.doc('my_class/${classInfo.id}').delete();
     }
+  }
+
+  @override
+  Stream<List<ClassDocument>> fetchClassDocument(Class classInfo) {
+    final collection = db
+        .collection(
+          'all_class/VTA_class/2022/first_semester/all_class/${classInfo.name}/document',
+        )
+        .snapshots();
+    return collection.map<List<ClassDocument>>(
+      (QuerySnapshot snapshot) => snapshot.docs.map((DocumentSnapshot doc) {
+        return ClassDocument.fromJson(doc.data() as Map<String, dynamic>);
+      }).toList(),
+    );
   }
 }

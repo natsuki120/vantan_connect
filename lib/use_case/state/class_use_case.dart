@@ -1,13 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
-import 'package:vantan_connect/domain/user/user_state.dart';
 import 'package:vantan_connect/infrastructure/fake_class_repository.dart';
-
 import '../../domain/class/class.dart';
 
 final testClassList = [
   Class(
-    name: 'UI/UXデザイン実践',
+    name: 'UIUXデザイン実践',
     overView:
         'UI/UXデザインとはユーザー目線で製品やデザインを開発するためのスキル。ただしUIとUXは実は別物。UXは人間の怠惰を追求するための知識と言っても過言ではない。',
     goalPoint:
@@ -32,6 +30,7 @@ final testClassList = [
         'https://www.techfirm.co.jp/blog/wp-content/uploads/2021/09/uiux-scaled.jpg',
     student: [
       {
+        'attendance': '出席',
         'name': '高橋夏輝',
         'id': '@natuki',
         'profileText': '【太陽光発電所の保安・管理業務】※成長し続けるリテールビジネス分野総合商社の関連会社／スタートアップ',
@@ -39,6 +38,7 @@ final testClassList = [
             'https://www.sozai-library.com/wp-content/uploads/2017/01/teacher_9517.jpg'
       },
       {
+        'attendance': '欠席',
         'name': '川島愛海',
         'id': '@ami',
         'profileText': '【中国語・英語を活かせる法人営業　※世界トップクラスシェア製品／在宅勤務可',
@@ -46,6 +46,7 @@ final testClassList = [
             'https://thumb.ac-illust.com/37/3703cf0e1ab732a3038212b0f7aaa893_t.jpeg',
       },
       {
+        'attendance': 'その他',
         'name': '宇多田ひかる',
         'id': '@hikaru',
         'profileText': '【東京】法人研修オペレーション担当 ～リモートワーク可／自分の裁量で休みが取りやすい環境～',
@@ -185,6 +186,8 @@ final testClassList = [
   ),
 ];
 
+var testClassDocument = [ClassDocument(title: 'UIUXとは', description: 'aaa')];
+
 class ClassUseCase extends StateNotifier<List<Class>> {
   ClassUseCase(this.classRepository) : super([]);
   final IClassRepository classRepository;
@@ -209,6 +212,6 @@ class ClassUseCase extends StateNotifier<List<Class>> {
 
 final classUseCase = StateNotifierProvider(
   (ref) => ClassUseCase(
-    FakeClassRepository(testClassList),
+    FakeClassRepository(testClassList, testClassDocument),
   ),
 );
