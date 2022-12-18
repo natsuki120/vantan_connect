@@ -18,5 +18,5 @@ class ClassDocumentNotifier extends StateNotifier<List<ClassDocument>> {
 }
 
 final classDocumentNotifier = StateNotifierProvider(
-  (ref) => ClassDocumentNotifier(ClassRepository(testClassList)),
+  (ref) => ClassDocumentNotifier(ClassRepository()),
 );

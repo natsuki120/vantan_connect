@@ -9,12 +9,6 @@ import 'package:vantan_connect/domain/value/teacher_id.dart';
 class ClassRepository extends IClassRepository {
   final firestore = FirebaseFirestore.instance;
 
-  ClassRepository(List<Class> classList) {
-    for (Class classInfo in classList) {
-      registerClass(classInfo);
-    }
-  }
-
   void registerClass(Class classInfo) {
     final collection = firestore.doc(
         'all_class/VTA_class/2022/first_semester/all_class/${classInfo.name}');

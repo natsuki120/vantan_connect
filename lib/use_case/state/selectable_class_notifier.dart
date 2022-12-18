@@ -19,6 +19,6 @@ class SelectableClassNotifier extends StateNotifier<List<Class>> {
 
 final selectableClass = StateNotifierProvider(
   (ref) => SelectableClassNotifier(
-    ClassRepository(testClassList),
+    ClassRepository(),
   ),
 );

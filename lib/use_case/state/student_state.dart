@@ -16,5 +16,5 @@ class StudentState extends StateNotifier<List<Student>> {
   }
 }
 
-final studentState = StateNotifierProvider.autoDispose(
-    (ref) => StudentState(ClassRepository(testClassList)));
+final studentState =
+    StateNotifierProvider.autoDispose((ref) => StudentState(ClassRepository()));

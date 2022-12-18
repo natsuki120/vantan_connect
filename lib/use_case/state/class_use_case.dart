@@ -181,5 +181,5 @@ class ClassUseCase extends StateNotifier<List<Class>> {
 }
 
 final classUseCase = StateNotifierProvider(
-  (ref) => ClassUseCase(ClassRepository(testClassList)),
+  (ref) => ClassUseCase(ClassRepository()),
 );
