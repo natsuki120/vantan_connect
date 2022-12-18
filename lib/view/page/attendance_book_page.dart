@@ -82,27 +82,27 @@ class AttendanceBookPage extends HookConsumerWidget {
             ],
           ),
           SpaceBox(height: 26.h),
-          ListView.builder(
-            shrinkWrap: true,
-            itemCount: classInfo.student.length,
-            itemBuilder: (context, index) {
-              final student = classInfo.student[index];
-              return Column(
-                children: [
-                  if (student['attendance'] == ref.watch(genre.notifier).state)
-                    UserAttendanceStatus(
-                      userName: student['name'],
-                      userImgPath: student['userImagePath'],
-                      iconData: IconWhichDependsOnAttendance(
-                          ref.watch(genre.notifier).state)!,
-                      iconSize: 24.sp,
-                      iconColor: colorScheme.onBackground,
-                    ),
-                  SpaceBox(height: 8.h),
-                ],
-              );
-            },
-          ),
+          // ListView.builder(
+          //   shrinkWrap: true,
+          //   itemCount: classInfo.student.length,
+          //   itemBuilder: (context, index) {
+          //     final student = classInfo.student[index];
+          //     return Column(
+          //       children: [
+          //         if (student['attendance'] == ref.watch(genre.notifier).state)
+          //           UserAttendanceStatus(
+          //             userName: student['name'],
+          //             userImgPath: student['userImagePath'],
+          //             iconData: IconWhichDependsOnAttendance(
+          //                 ref.watch(genre.notifier).state)!,
+          //             iconSize: 24.sp,
+          //             iconColor: colorScheme.onBackground,
+          //           ),
+          //         SpaceBox(height: 8.h),
+          //       ],
+          //     );
+          //   },
+          // ),
         ],
       ),
     );

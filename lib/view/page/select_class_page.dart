@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_use/flutter_use.dart';
 import 'package:vantan_connect/view/organism/border_box_which_move_to_select_base_class.dart';
 import 'package:vantan_connect/view/organism/class_card.dart';
 import 'package:vantan_connect/view/organism/title_in_organism.dart';

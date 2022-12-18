@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_use/flutter_use.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/use_case/state/student_state.dart';
 import 'package:vantan_connect/view/organism/circle_icon_button.dart';
 import 'package:vantan_connect/view/organism/class_img_with_white_band.dart';
 import 'package:vantan_connect/view/organism/custom_tab_bar_which_has_primary_text_color.dart';
-import 'package:vantan_connect/view/page/all_classmate_profie_page.dart';
 import 'package:vantan_connect/view/page/done_class_history_page.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import '../../domain/class/class.dart';
+import '../../domain/student/student.dart';
 import '../token/color_schemes.g.dart';
 import '../token/space_box.dart';
 import '../organism/class_detail_header.dart';
+import 'all_classmate_profie_page.dart';
 
-class ClassDetailPage extends StatelessWidget {
+class ClassDetailPage extends HookConsumerWidget {
   const ClassDetailPage({Key? key, required this.classInfo}) : super(key: key);
 
   final Class classInfo;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.watch(studentState);
+    useEffectOnce(() {
+      ref
+          .watch(studentState.notifier)
+          .fetchStudentListById(classInfo.studentIdList);
+      return;
+    });
+    final List<Student> studentList = ref.watch(studentState.notifier).state;
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -95,8 +107,8 @@ class ClassDetailPage extends StatelessWidget {
                           tabBarChildren: [
                             Container(),
                             Container(),
-                            AllClassmateProfilePage(
-                                classmateList: classInfo.student),
+                            AllClassmateProfilePage(classmateList: studentList),
+                            Container(),
                             Container(),
                             DoneClassHistoryPage(classInfo: classInfo),
                           ],

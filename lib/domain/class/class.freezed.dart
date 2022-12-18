@@ -24,8 +24,8 @@ mixin _$Class {
   String get name => throw _privateConstructorUsedError;
   String get classImgUrl => throw _privateConstructorUsedError;
   String get overView => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>> get teacher => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>> get student => throw _privateConstructorUsedError;
+  List<StudentId> get studentIdList => throw _privateConstructorUsedError;
+  List<TeacherId> get teacherIdList => throw _privateConstructorUsedError;
   String get targetSchool => throw _privateConstructorUsedError;
   String get targetStudent => throw _privateConstructorUsedError;
   String get goalPoint => throw _privateConstructorUsedError;
@@ -36,7 +36,6 @@ mixin _$Class {
   String get announceTime => throw _privateConstructorUsedError;
   int get timeTable => throw _privateConstructorUsedError;
   List<String> get documentId => throw _privateConstructorUsedError;
-  List<String> get studentVoice => throw _privateConstructorUsedError;
   bool get isOnline => throw _privateConstructorUsedError;
   String get baseClass => throw _privateConstructorUsedError;
   List<Map<String, dynamic>> get document => throw _privateConstructorUsedError;
@@ -56,8 +55,8 @@ abstract class $ClassCopyWith<$Res> {
       String name,
       String classImgUrl,
       String overView,
-      List<Map<String, dynamic>> teacher,
-      List<Map<String, dynamic>> student,
+      List<StudentId> studentIdList,
+      List<TeacherId> teacherIdList,
       String targetSchool,
       String targetStudent,
       String goalPoint,
@@ -68,7 +67,6 @@ abstract class $ClassCopyWith<$Res> {
       String announceTime,
       int timeTable,
       List<String> documentId,
-      List<String> studentVoice,
       bool isOnline,
       String baseClass,
       List<Map<String, dynamic>> document});
@@ -91,8 +89,8 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
     Object? name = null,
     Object? classImgUrl = null,
     Object? overView = null,
-    Object? teacher = null,
-    Object? student = null,
+    Object? studentIdList = null,
+    Object? teacherIdList = null,
     Object? targetSchool = null,
     Object? targetStudent = null,
     Object? goalPoint = null,
@@ -103,7 +101,6 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
     Object? announceTime = null,
     Object? timeTable = null,
     Object? documentId = null,
-    Object? studentVoice = null,
     Object? isOnline = null,
     Object? baseClass = null,
     Object? document = null,
@@ -125,14 +122,14 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
-      teacher: null == teacher
-          ? _value.teacher
-          : teacher // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
-      student: null == student
-          ? _value.student
-          : student // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+      studentIdList: null == studentIdList
+          ? _value.studentIdList
+          : studentIdList // ignore: cast_nullable_to_non_nullable
+              as List<StudentId>,
+      teacherIdList: null == teacherIdList
+          ? _value.teacherIdList
+          : teacherIdList // ignore: cast_nullable_to_non_nullable
+              as List<TeacherId>,
       targetSchool: null == targetSchool
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
@@ -173,10 +170,6 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
           ? _value.documentId
           : documentId // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      studentVoice: null == studentVoice
-          ? _value.studentVoice
-          : studentVoice // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       isOnline: null == isOnline
           ? _value.isOnline
           : isOnline // ignore: cast_nullable_to_non_nullable
@@ -204,8 +197,8 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       String name,
       String classImgUrl,
       String overView,
-      List<Map<String, dynamic>> teacher,
-      List<Map<String, dynamic>> student,
+      List<StudentId> studentIdList,
+      List<TeacherId> teacherIdList,
       String targetSchool,
       String targetStudent,
       String goalPoint,
@@ -216,7 +209,6 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       String announceTime,
       int timeTable,
       List<String> documentId,
-      List<String> studentVoice,
       bool isOnline,
       String baseClass,
       List<Map<String, dynamic>> document});
@@ -235,8 +227,8 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
     Object? name = null,
     Object? classImgUrl = null,
     Object? overView = null,
-    Object? teacher = null,
-    Object? student = null,
+    Object? studentIdList = null,
+    Object? teacherIdList = null,
     Object? targetSchool = null,
     Object? targetStudent = null,
     Object? goalPoint = null,
@@ -247,7 +239,6 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
     Object? announceTime = null,
     Object? timeTable = null,
     Object? documentId = null,
-    Object? studentVoice = null,
     Object? isOnline = null,
     Object? baseClass = null,
     Object? document = null,
@@ -269,14 +260,14 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
-      teacher: null == teacher
-          ? _value._teacher
-          : teacher // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
-      student: null == student
-          ? _value._student
-          : student // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+      studentIdList: null == studentIdList
+          ? _value._studentIdList
+          : studentIdList // ignore: cast_nullable_to_non_nullable
+              as List<StudentId>,
+      teacherIdList: null == teacherIdList
+          ? _value._teacherIdList
+          : teacherIdList // ignore: cast_nullable_to_non_nullable
+              as List<TeacherId>,
       targetSchool: null == targetSchool
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
@@ -317,10 +308,6 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           ? _value._documentId
           : documentId // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      studentVoice: null == studentVoice
-          ? _value._studentVoice
-          : studentVoice // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       isOnline: null == isOnline
           ? _value.isOnline
           : isOnline // ignore: cast_nullable_to_non_nullable
@@ -345,8 +332,8 @@ class _$_Class implements _Class {
       this.name = '',
       this.classImgUrl = '',
       this.overView = '',
-      final List<Map<String, dynamic>> teacher = const [],
-      final List<Map<String, dynamic>> student = const [],
+      final List<StudentId> studentIdList = const [],
+      final List<TeacherId> teacherIdList = const [],
       this.targetSchool = '',
       this.targetStudent = '',
       this.goalPoint = '',
@@ -357,15 +344,13 @@ class _$_Class implements _Class {
       this.announceTime = '',
       this.timeTable = 0,
       final List<String> documentId = const [],
-      final List<String> studentVoice = const <String>[],
       this.isOnline = false,
       this.baseClass = '',
       final List<Map<String, dynamic>> document = const []})
-      : _teacher = teacher,
-        _student = student,
+      : _studentIdList = studentIdList,
+        _teacherIdList = teacherIdList,
         _goalRequirements = goalRequirements,
         _documentId = documentId,
-        _studentVoice = studentVoice,
         _document = document;
 
   factory _$_Class.fromJson(Map<String, dynamic> json) =>
@@ -383,22 +368,22 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String overView;
-  final List<Map<String, dynamic>> _teacher;
+  final List<StudentId> _studentIdList;
   @override
   @JsonKey()
-  List<Map<String, dynamic>> get teacher {
-    if (_teacher is EqualUnmodifiableListView) return _teacher;
+  List<StudentId> get studentIdList {
+    if (_studentIdList is EqualUnmodifiableListView) return _studentIdList;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_teacher);
+    return EqualUnmodifiableListView(_studentIdList);
   }
 
-  final List<Map<String, dynamic>> _student;
+  final List<TeacherId> _teacherIdList;
   @override
   @JsonKey()
-  List<Map<String, dynamic>> get student {
-    if (_student is EqualUnmodifiableListView) return _student;
+  List<TeacherId> get teacherIdList {
+    if (_teacherIdList is EqualUnmodifiableListView) return _teacherIdList;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_student);
+    return EqualUnmodifiableListView(_teacherIdList);
   }
 
   @override
@@ -444,15 +429,6 @@ class _$_Class implements _Class {
     return EqualUnmodifiableListView(_documentId);
   }
 
-  final List<String> _studentVoice;
-  @override
-  @JsonKey()
-  List<String> get studentVoice {
-    if (_studentVoice is EqualUnmodifiableListView) return _studentVoice;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_studentVoice);
-  }
-
   @override
   @JsonKey()
   final bool isOnline;
@@ -470,7 +446,7 @@ class _$_Class implements _Class {
 
   @override
   String toString() {
-    return 'Class(id: $id, name: $name, classImgUrl: $classImgUrl, overView: $overView, teacher: $teacher, student: $student, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, studentVoice: $studentVoice, isOnline: $isOnline, baseClass: $baseClass, document: $document)';
+    return 'Class(id: $id, name: $name, classImgUrl: $classImgUrl, overView: $overView, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document)';
   }
 
   @override
@@ -484,8 +460,10 @@ class _$_Class implements _Class {
                 other.classImgUrl == classImgUrl) &&
             (identical(other.overView, overView) ||
                 other.overView == overView) &&
-            const DeepCollectionEquality().equals(other._teacher, _teacher) &&
-            const DeepCollectionEquality().equals(other._student, _student) &&
+            const DeepCollectionEquality()
+                .equals(other._studentIdList, _studentIdList) &&
+            const DeepCollectionEquality()
+                .equals(other._teacherIdList, _teacherIdList) &&
             (identical(other.targetSchool, targetSchool) ||
                 other.targetSchool == targetSchool) &&
             (identical(other.targetStudent, targetStudent) ||
@@ -505,8 +483,6 @@ class _$_Class implements _Class {
                 other.timeTable == timeTable) &&
             const DeepCollectionEquality()
                 .equals(other._documentId, _documentId) &&
-            const DeepCollectionEquality()
-                .equals(other._studentVoice, _studentVoice) &&
             (identical(other.isOnline, isOnline) ||
                 other.isOnline == isOnline) &&
             (identical(other.baseClass, baseClass) ||
@@ -522,8 +498,8 @@ class _$_Class implements _Class {
         name,
         classImgUrl,
         overView,
-        const DeepCollectionEquality().hash(_teacher),
-        const DeepCollectionEquality().hash(_student),
+        const DeepCollectionEquality().hash(_studentIdList),
+        const DeepCollectionEquality().hash(_teacherIdList),
         targetSchool,
         targetStudent,
         goalPoint,
@@ -534,7 +510,6 @@ class _$_Class implements _Class {
         announceTime,
         timeTable,
         const DeepCollectionEquality().hash(_documentId),
-        const DeepCollectionEquality().hash(_studentVoice),
         isOnline,
         baseClass,
         const DeepCollectionEquality().hash(_document)
@@ -560,8 +535,8 @@ abstract class _Class implements Class {
       final String name,
       final String classImgUrl,
       final String overView,
-      final List<Map<String, dynamic>> teacher,
-      final List<Map<String, dynamic>> student,
+      final List<StudentId> studentIdList,
+      final List<TeacherId> teacherIdList,
       final String targetSchool,
       final String targetStudent,
       final String goalPoint,
@@ -572,7 +547,6 @@ abstract class _Class implements Class {
       final String announceTime,
       final int timeTable,
       final List<String> documentId,
-      final List<String> studentVoice,
       final bool isOnline,
       final String baseClass,
       final List<Map<String, dynamic>> document}) = _$_Class;
@@ -588,9 +562,9 @@ abstract class _Class implements Class {
   @override
   String get overView;
   @override
-  List<Map<String, dynamic>> get teacher;
+  List<StudentId> get studentIdList;
   @override
-  List<Map<String, dynamic>> get student;
+  List<TeacherId> get teacherIdList;
   @override
   String get targetSchool;
   @override
@@ -611,8 +585,6 @@ abstract class _Class implements Class {
   int get timeTable;
   @override
   List<String> get documentId;
-  @override
-  List<String> get studentVoice;
   @override
   bool get isOnline;
   @override

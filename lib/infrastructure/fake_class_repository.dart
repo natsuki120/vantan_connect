@@ -1,22 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:vantan_connect/domain/class/class.dart';
-
+import 'package:vantan_connect/domain/value/student_id.dart';
+import 'package:vantan_connect/domain/value/teacher_id.dart';
 import '../domain/class_document/class_document.dart';
+import '../domain/student/student.dart';
+import '../domain/teacher/teacher.dart';
 
 class FakeClassRepository extends IClassRepository {
-  FakeFirebaseFirestore firestore = FakeFirebaseFirestore();
-
-  FakeClassRepository(
-      List<Class> classList, List<ClassDocument> classDocumentList) {
-    for (int i = 0; i < classList.length; i++) {
-      Class classInfo = classList[i];
-      this.registerClass(classInfo);
-    }
-    for (var document in classDocumentList) {
-      this.registerDocument(document);
-    }
-  }
+  final firestore = FakeFirebaseFirestore();
 
   void registerClass(Class classInfo) {
     final collection = firestore.doc(
@@ -27,19 +19,38 @@ class FakeClassRepository extends IClassRepository {
       'overView': classInfo.overView,
       'goalPoint': classInfo.goalPoint,
       'selectableBaseClass': 'false',
-      'teacher': classInfo.teacher,
       'frameCount': classInfo.frameCount,
       'goalRequirements': classInfo.goalRequirements,
       'baseClass': classInfo.baseClass,
       'classImgUrl': classInfo.classImgUrl,
-      'student': classInfo.student,
       'document': classInfo.document,
+      'studentIdList': classInfo.studentIdList,
     });
   }
 
   void registerMyClass(Class classInfo) {
     final collection = firestore.doc('my_class/${classInfo.id}');
     collection.set(classInfo.toJson());
+  }
+
+  void registerStudent(Student student) {
+    final document = firestore.doc('student/${student.id}');
+    document.set({
+      'id': student.id,
+      'name': student.name,
+      'job': student.job,
+      'userImagePath': student.userImagePath,
+    });
+  }
+
+  void registerTeacher(Teacher teacher) {
+    final collection = firestore.collection('teacher');
+    collection.add({
+      'id': collection.doc().id,
+      'name': teacher.name,
+      'job': teacher.job,
+      'userImagaPath': teacher.userImagePath,
+    });
   }
 
   void registerDocument(ClassDocument classDocument) {
@@ -118,5 +129,31 @@ class FakeClassRepository extends IClassRepository {
         return ClassDocument.fromJson(doc.data() as Map<String, dynamic>);
       }).toList(),
     );
+  }
+
+  @override
+  Stream<List<Student>> fetchStudentListById(List<StudentId> studentId) {
+    final documentList = firestore
+        .collection('student')
+        .where('id', isEqualTo: studentId)
+        .snapshots();
+    return documentList.map((QuerySnapshot snapshot) =>
+        snapshot.docs.map((DocumentSnapshot document) {
+          final json = document.data() as Map<String, dynamic>;
+          return Student.fromJson(json);
+        }).toList());
+  }
+
+  @override
+  Stream<List<Teacher>> fetchTeacherListById(TeacherId teacherId) {
+    final documentList = firestore
+        .collection('student')
+        .where('id', isEqualTo: teacherId)
+        .snapshots();
+    return documentList.map((QuerySnapshot snapshot) =>
+        snapshot.docs.map((DocumentSnapshot document) {
+          final json = document.data() as Map<String, dynamic>;
+          return Teacher.fromJson(json);
+        }).toList());
   }
 }

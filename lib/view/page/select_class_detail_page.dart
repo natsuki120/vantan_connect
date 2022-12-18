@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/view/molecule/image_and_user_info.dart';
-import 'package:vantan_connect/view/organism/user_card.dart';
 import 'package:vantan_connect/view/token/custom_tab_bar_which_has_black_text_color.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 import 'package:vantan_connect/view/organism/horizontal_class_info_element.dart';
 import 'package:vantan_connect/view/organism/title_and_content.dart';
-import '../molecule/guidance_message.dart';
 import '../token/color_schemes.g.dart';
 import 'package:vantan_connect/view/organism/detail_text_in_organism.dart';
 import 'package:vantan_connect/view/organism/title_with_select_class_screen.dart';
-
 import '../token/const_width_and_height.dart';
 
 class SelectClassDetailPage extends StatelessWidget {
-  const SelectClassDetailPage({
-    Key? key,
-    required this.classInfo,
-  }) : super(key: key);
+  const SelectClassDetailPage({Key? key, required this.classInfo})
+      : super(key: key);
 
   final Class classInfo;
 
@@ -32,26 +26,26 @@ class SelectClassDetailPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SpaceBox(height: 24.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: horizontalSpace),
-              child: HorizontalClassInfoElement(
-                text: '講師',
-                iconData: Icons.person,
-                info: ImageAndUserInfo(
-                  url: classInfo.teacher[0]['userImagePath'],
-                  widget: GuidanceMessage(
-                    mainText: classInfo.teacher[0]['name'],
-                    subText: classInfo.teacher[0]['job'],
-                    mainTextStyle: headLineBold(colorScheme.onBackground),
-                    subTextStyle: bodyRegular(
-                      colorScheme.onBackground.withOpacity(0.7),
-                    ),
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    spaceSize: 4.h,
-                  ),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: EdgeInsets.symmetric(horizontal: horizontalSpace),
+            //   child: HorizontalClassInfoElement(
+            //     text: '講師',
+            //     iconData: Icons.person,
+            //     info: ImageAndUserInfo(
+            //       url: classInfo.teacher[0]['userImagePath'],
+            //       widget: GuidanceMessage(
+            //         mainText: classInfo.teacher[0]['name'],
+            //         subText: classInfo.teacher[0]['job'],
+            //         mainTextStyle: headLineBold(colorScheme.onBackground),
+            //         subTextStyle: bodyRegular(
+            //           colorScheme.onBackground.withOpacity(0.7),
+            //         ),
+            //         crossAxisAlignment: CrossAxisAlignment.start,
+            //         spaceSize: 4.h,
+            //       ),
+            //     ),
+            //   ),
+            // ),
             SpaceBox(height: 34.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalSpace),
@@ -115,30 +109,30 @@ class SelectClassDetailPage extends StatelessWidget {
                           ),
                         ),
                         SpaceBox(height: 40.h),
-                        TitleAndContent(
-                          title: '担当',
-                          content: ListView.builder(
-                            physics: NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,
-                            itemCount: classInfo.teacher.length,
-                            itemBuilder: (context, index) {
-                              final teacher = classInfo.teacher[index];
-                              return Column(
-                                children: [
-                                  SpaceBox(height: 8.h),
-                                  UserCard(
-                                    teacherImg: teacher['userImagePath'],
-                                    mainText: teacher['name'],
-                                    subText: teacher['job'],
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    spaceSize: 4.h,
-                                  )
-                                ],
-                              );
-                            },
-                          ),
-                        ),
+                        // TitleAndContent(
+                        //   title: '担当',
+                        //   content: ListView.builder(
+                        //     physics: NeverScrollableScrollPhysics(),
+                        //     shrinkWrap: true,
+                        //     itemCount: classInfo.teacher.length,
+                        //     itemBuilder: (context, index) {
+                        //       final teacher = classInfo.teacher[index];
+                        //       return Column(
+                        //         children: [
+                        //           SpaceBox(height: 8.h),
+                        //           UserCard(
+                        //             teacherImg: teacher['userImagePath'],
+                        //             mainText: teacher['name'],
+                        //             subText: teacher['job'],
+                        //             crossAxisAlignment:
+                        //                 CrossAxisAlignment.start,
+                        //             spaceSize: 4.h,
+                        //           )
+                        //         ],
+                        //       );
+                        //     },
+                        //   ),
+                        // ),
                         SpaceBox(height: 40.h),
                         TitleAndContent(
                           title: '授業で扱う内容',

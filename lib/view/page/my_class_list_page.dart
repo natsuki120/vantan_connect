@@ -19,6 +19,10 @@ class MyClassListPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.watch(classUseCase);
+    useEffectOnce(() {
+      ref.watch(classUseCase.notifier).fetchClassInfo();
+      return;
+    });
     List<Class> myClassList = ref.watch(classUseCase.notifier).state;
     return Scaffold(
       appBar: CanvasColorAppBarWithTitleMessage(title: '選択した授業'),
