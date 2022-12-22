@@ -23,7 +23,6 @@ mixin _$SchoolTerm {
   String get departmentName => throw _privateConstructorUsedError;
   String get yearPlan => throw _privateConstructorUsedError;
   String get term => throw _privateConstructorUsedError;
-  String get attendance => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,8 +36,7 @@ abstract class $SchoolTermCopyWith<$Res> {
           SchoolTerm value, $Res Function(SchoolTerm) then) =
       _$SchoolTermCopyWithImpl<$Res, SchoolTerm>;
   @useResult
-  $Res call(
-      {String departmentName, String yearPlan, String term, String attendance});
+  $Res call({String departmentName, String yearPlan, String term});
 }
 
 /// @nodoc
@@ -57,7 +55,6 @@ class _$SchoolTermCopyWithImpl<$Res, $Val extends SchoolTerm>
     Object? departmentName = null,
     Object? yearPlan = null,
     Object? term = null,
-    Object? attendance = null,
   }) {
     return _then(_value.copyWith(
       departmentName: null == departmentName
@@ -72,10 +69,6 @@ class _$SchoolTermCopyWithImpl<$Res, $Val extends SchoolTerm>
           ? _value.term
           : term // ignore: cast_nullable_to_non_nullable
               as String,
-      attendance: null == attendance
-          ? _value.attendance
-          : attendance // ignore: cast_nullable_to_non_nullable
-              as String,
     ) as $Val);
   }
 }
@@ -88,8 +81,7 @@ abstract class _$$_SchoolTermCopyWith<$Res>
       __$$_SchoolTermCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String departmentName, String yearPlan, String term, String attendance});
+  $Res call({String departmentName, String yearPlan, String term});
 }
 
 /// @nodoc
@@ -106,7 +98,6 @@ class __$$_SchoolTermCopyWithImpl<$Res>
     Object? departmentName = null,
     Object? yearPlan = null,
     Object? term = null,
-    Object? attendance = null,
   }) {
     return _then(_$_SchoolTerm(
       departmentName: null == departmentName
@@ -121,10 +112,6 @@ class __$$_SchoolTermCopyWithImpl<$Res>
           ? _value.term
           : term // ignore: cast_nullable_to_non_nullable
               as String,
-      attendance: null == attendance
-          ? _value.attendance
-          : attendance // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -135,8 +122,7 @@ class _$_SchoolTerm implements _SchoolTerm {
   const _$_SchoolTerm(
       {required this.departmentName,
       required this.yearPlan,
-      required this.term,
-      required this.attendance});
+      required this.term});
 
   factory _$_SchoolTerm.fromJson(Map<String, dynamic> json) =>
       _$$_SchoolTermFromJson(json);
@@ -147,12 +133,10 @@ class _$_SchoolTerm implements _SchoolTerm {
   final String yearPlan;
   @override
   final String term;
-  @override
-  final String attendance;
 
   @override
   String toString() {
-    return 'SchoolTerm(departmentName: $departmentName, yearPlan: $yearPlan, term: $term, attendance: $attendance)';
+    return 'SchoolTerm(departmentName: $departmentName, yearPlan: $yearPlan, term: $term)';
   }
 
   @override
@@ -164,15 +148,12 @@ class _$_SchoolTerm implements _SchoolTerm {
                 other.departmentName == departmentName) &&
             (identical(other.yearPlan, yearPlan) ||
                 other.yearPlan == yearPlan) &&
-            (identical(other.term, term) || other.term == term) &&
-            (identical(other.attendance, attendance) ||
-                other.attendance == attendance));
+            (identical(other.term, term) || other.term == term));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, departmentName, yearPlan, term, attendance);
+  int get hashCode => Object.hash(runtimeType, departmentName, yearPlan, term);
 
   @JsonKey(ignore: true)
   @override
@@ -192,8 +173,7 @@ abstract class _SchoolTerm implements SchoolTerm {
   const factory _SchoolTerm(
       {required final String departmentName,
       required final String yearPlan,
-      required final String term,
-      required final String attendance}) = _$_SchoolTerm;
+      required final String term}) = _$_SchoolTerm;
 
   factory _SchoolTerm.fromJson(Map<String, dynamic> json) =
       _$_SchoolTerm.fromJson;
@@ -204,8 +184,6 @@ abstract class _SchoolTerm implements SchoolTerm {
   String get yearPlan;
   @override
   String get term;
-  @override
-  String get attendance;
   @override
   @JsonKey(ignore: true)
   _$$_SchoolTermCopyWith<_$_SchoolTerm> get copyWith =>
