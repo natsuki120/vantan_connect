@@ -7,12 +7,12 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       name: json['name'] as String? ?? '',
       classImgUrl: json['classImgUrl'] as String? ?? '',
       overView: json['overView'] as String? ?? '',
-      teacher: (json['teacher'] as List<dynamic>?)
-              ?.map((e) => e as Map<String, dynamic>)
+      studentIdList: (json['studentIdList'] as List<dynamic>?)
+              ?.map((e) => StudentId.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
-      student: (json['student'] as List<dynamic>?)
-              ?.map((e) => e as Map<String, dynamic>)
+      teacherIdList: (json['teacherIdList'] as List<dynamic>?)
+              ?.map((e) => TeacherId.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       targetSchool: json['targetSchool'] as String? ?? '',
@@ -27,16 +27,16 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       startTime: json['startTime'] as String? ?? '',
       announceTime: json['announceTime'] as String? ?? '',
       timeTable: json['timeTable'] as int? ?? 0,
-      document: (json['document'] as List<dynamic>?)
-              ?.map((e) => ClassDocument.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      studentVoice: (json['studentVoice'] as List<dynamic>?)
+      documentId: (json['documentId'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
-          const <String>[],
+          const [],
       isOnline: json['isOnline'] as bool? ?? false,
       baseClass: json['baseClass'] as String? ?? '',
+      document: (json['document'] as List<dynamic>?)
+              ?.map((e) => e as Map<String, dynamic>)
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
@@ -44,8 +44,8 @@ Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'name': instance.name,
       'classImgUrl': instance.classImgUrl,
       'overView': instance.overView,
-      'teacher': instance.teacher,
-      'student': instance.student,
+      'studentIdList': instance.studentIdList.map((e) => e.toJson()).toList(),
+      'teacherIdList': instance.teacherIdList.map((e) => e.toJson()).toList(),
       'targetSchool': instance.targetSchool,
       'targetStudent': instance.targetStudent,
       'goalPoint': instance.goalPoint,
@@ -55,8 +55,8 @@ Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'startTime': instance.startTime,
       'announceTime': instance.announceTime,
       'timeTable': instance.timeTable,
-      'document': instance.document.map((e) => e.toJson()).toList(),
-      'studentVoice': instance.studentVoice,
+      'documentId': instance.documentId,
       'isOnline': instance.isOnline,
       'baseClass': instance.baseClass,
+      'document': instance.document,
     };

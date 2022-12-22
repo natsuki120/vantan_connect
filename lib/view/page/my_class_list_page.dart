@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_use/flutter_use.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
 import 'package:vantan_connect/view/organism/button_when_press_color_changing.dart';
 import 'package:vantan_connect/view/organism/canvas_color_app_bar_with_title_message.dart';
 import 'package:vantan_connect/view/organism/class_card_with_image.dart';
@@ -20,11 +19,11 @@ class MyClassListPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.watch(classUseCase);
-    List<Class> myClassList = ref.watch(classUseCase.notifier).state;
     useEffectOnce(() {
       ref.watch(classUseCase.notifier).fetchClassInfo();
       return;
     });
+    List<Class> myClassList = ref.watch(classUseCase.notifier).state;
     return Scaffold(
       appBar: CanvasColorAppBarWithTitleMessage(title: '選択した授業'),
       body: Padding(

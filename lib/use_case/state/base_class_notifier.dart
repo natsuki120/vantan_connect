@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/infrastructure/fake_class_repository.dart';
+import 'package:vantan_connect/use_case/state/class_use_case.dart';
 import '../../domain/class/class.dart';
-import 'class_use_case.dart';
+import '../../infrastructure/class_repository.dart';
 
 class BaseClassNotifier extends StateNotifier<List<Class>> {
   BaseClassNotifier(this.classRepository) : super([]);
@@ -14,7 +14,5 @@ class BaseClassNotifier extends StateNotifier<List<Class>> {
 }
 
 final baseClass = StateNotifierProvider(
-  (ref) => BaseClassNotifier(
-    FakeClassRepository(testClassList),
-  ),
+  (ref) => BaseClassNotifier(ClassRepository()),
 );

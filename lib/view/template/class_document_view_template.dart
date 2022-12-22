@@ -7,7 +7,6 @@ import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/custom_tab_bar_which_has_black_text_color.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 import '../token/space_box.dart';
-import 'document_template.dart';
 
 class ClassDocumentViewTemplate extends StatelessWidget {
   const ClassDocumentViewTemplate({Key? key}) : super(key: key);
@@ -57,7 +56,7 @@ class ClassDocumentViewTemplate extends StatelessWidget {
                 Tab(text: 'コメント'),
               ],
               tabBarChildren: [
-                DocumentTemplate(),
+                Container(),
                 Container(),
                 Container(),
               ],

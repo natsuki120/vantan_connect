@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_state.dart';
 
@@ -39,7 +39,8 @@ mixin _$UserState {
 /// @nodoc
 abstract class $UserStateCopyWith<$Res> {
   factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
-      _$UserStateCopyWithImpl<$Res>;
+      _$UserStateCopyWithImpl<$Res, UserState>;
+  @useResult
   $Res call(
       {String id,
       String name,
@@ -53,63 +54,66 @@ abstract class $UserStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
+class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
+    implements $UserStateCopyWith<$Res> {
   _$UserStateCopyWithImpl(this._value, this._then);
 
-  final UserState _value;
   // ignore: unused_field
-  final $Res Function(UserState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? job = freezed,
-    Object? profileText = freezed,
-    Object? attendance = freezed,
-    Object? attendedDay = freezed,
-    Object? accountNumber = freezed,
-    Object? userImagePath = freezed,
-    Object? rootCollection = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? job = null,
+    Object? profileText = null,
+    Object? attendance = null,
+    Object? attendedDay = null,
+    Object? accountNumber = null,
+    Object? userImagePath = null,
+    Object? rootCollection = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      job: job == freezed
+      job: null == job
           ? _value.job
           : job // ignore: cast_nullable_to_non_nullable
               as String,
-      profileText: profileText == freezed
+      profileText: null == profileText
           ? _value.profileText
           : profileText // ignore: cast_nullable_to_non_nullable
               as String,
-      attendance: attendance == freezed
+      attendance: null == attendance
           ? _value.attendance
           : attendance // ignore: cast_nullable_to_non_nullable
               as String,
-      attendedDay: attendedDay == freezed
+      attendedDay: null == attendedDay
           ? _value.attendedDay
           : attendedDay // ignore: cast_nullable_to_non_nullable
               as int,
-      accountNumber: accountNumber == freezed
+      accountNumber: null == accountNumber
           ? _value.accountNumber
           : accountNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      userImagePath: userImagePath == freezed
+      userImagePath: null == userImagePath
           ? _value.userImagePath
           : userImagePath // ignore: cast_nullable_to_non_nullable
               as String,
-      rootCollection: rootCollection == freezed
+      rootCollection: null == rootCollection
           ? _value.rootCollection
           : rootCollection // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -119,6 +123,7 @@ abstract class _$$_UserStateCopyWith<$Res> implements $UserStateCopyWith<$Res> {
           _$_UserState value, $Res Function(_$_UserState) then) =
       __$$_UserStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String name,
@@ -132,61 +137,60 @@ abstract class _$$_UserStateCopyWith<$Res> implements $UserStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
+class __$$_UserStateCopyWithImpl<$Res>
+    extends _$UserStateCopyWithImpl<$Res, _$_UserState>
     implements _$$_UserStateCopyWith<$Res> {
   __$$_UserStateCopyWithImpl(
       _$_UserState _value, $Res Function(_$_UserState) _then)
-      : super(_value, (v) => _then(v as _$_UserState));
+      : super(_value, _then);
 
-  @override
-  _$_UserState get _value => super._value as _$_UserState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? job = freezed,
-    Object? profileText = freezed,
-    Object? attendance = freezed,
-    Object? attendedDay = freezed,
-    Object? accountNumber = freezed,
-    Object? userImagePath = freezed,
-    Object? rootCollection = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? job = null,
+    Object? profileText = null,
+    Object? attendance = null,
+    Object? attendedDay = null,
+    Object? accountNumber = null,
+    Object? userImagePath = null,
+    Object? rootCollection = null,
   }) {
     return _then(_$_UserState(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      job: job == freezed
+      job: null == job
           ? _value.job
           : job // ignore: cast_nullable_to_non_nullable
               as String,
-      profileText: profileText == freezed
+      profileText: null == profileText
           ? _value.profileText
           : profileText // ignore: cast_nullable_to_non_nullable
               as String,
-      attendance: attendance == freezed
+      attendance: null == attendance
           ? _value.attendance
           : attendance // ignore: cast_nullable_to_non_nullable
               as String,
-      attendedDay: attendedDay == freezed
+      attendedDay: null == attendedDay
           ? _value.attendedDay
           : attendedDay // ignore: cast_nullable_to_non_nullable
               as int,
-      accountNumber: accountNumber == freezed
+      accountNumber: null == accountNumber
           ? _value.accountNumber
           : accountNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      userImagePath: userImagePath == freezed
+      userImagePath: null == userImagePath
           ? _value.userImagePath
           : userImagePath // ignore: cast_nullable_to_non_nullable
               as String,
-      rootCollection: rootCollection == freezed
+      rootCollection: null == rootCollection
           ? _value.rootCollection
           : rootCollection // ignore: cast_nullable_to_non_nullable
               as String,
@@ -249,39 +253,31 @@ class _$_UserState implements _UserState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserState &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.job, job) &&
-            const DeepCollectionEquality()
-                .equals(other.profileText, profileText) &&
-            const DeepCollectionEquality()
-                .equals(other.attendance, attendance) &&
-            const DeepCollectionEquality()
-                .equals(other.attendedDay, attendedDay) &&
-            const DeepCollectionEquality()
-                .equals(other.accountNumber, accountNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.userImagePath, userImagePath) &&
-            const DeepCollectionEquality()
-                .equals(other.rootCollection, rootCollection));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.job, job) || other.job == job) &&
+            (identical(other.profileText, profileText) ||
+                other.profileText == profileText) &&
+            (identical(other.attendance, attendance) ||
+                other.attendance == attendance) &&
+            (identical(other.attendedDay, attendedDay) ||
+                other.attendedDay == attendedDay) &&
+            (identical(other.accountNumber, accountNumber) ||
+                other.accountNumber == accountNumber) &&
+            (identical(other.userImagePath, userImagePath) ||
+                other.userImagePath == userImagePath) &&
+            (identical(other.rootCollection, rootCollection) ||
+                other.rootCollection == rootCollection));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(job),
-      const DeepCollectionEquality().hash(profileText),
-      const DeepCollectionEquality().hash(attendance),
-      const DeepCollectionEquality().hash(attendedDay),
-      const DeepCollectionEquality().hash(accountNumber),
-      const DeepCollectionEquality().hash(userImagePath),
-      const DeepCollectionEquality().hash(rootCollection));
+  int get hashCode => Object.hash(runtimeType, id, name, job, profileText,
+      attendance, attendedDay, accountNumber, userImagePath, rootCollection);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserStateCopyWith<_$_UserState> get copyWith =>
       __$$_UserStateCopyWithImpl<_$_UserState>(this, _$identity);
 

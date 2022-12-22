@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/vantan_connect.iml" filepath="$PROJECT_DIR$/vantan_connect.iml" />
       <module fileurl="file://$PROJECT_DIR$/android/vantan_connect_android.iml" filepath="$PROJECT_DIR$/android/vantan_connect_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vantan_connect_for_mac.iml" filepath="$PROJECT_DIR$/vantan_connect_for_mac.iml" />
     </modules>
   </component>
 </project>

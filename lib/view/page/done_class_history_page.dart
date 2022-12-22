@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_use/flutter_use.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/use_case/state/class_document.dart';
 import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/page/class_document_view_page.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
+import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
-import '../../domain/class_document/class_document.dart';
+import '../../domain/class/class.dart';
 import '../token/space_box.dart';
 import '../organism/done_class_card.dart';
 
-class DoneClassHistoryPage extends StatelessWidget {
-  const DoneClassHistoryPage({super.key, required this.documentList});
-  final List<ClassDocument> documentList;
+class DoneClassHistoryPage extends HookConsumerWidget {
+  const DoneClassHistoryPage({super.key, required this.classInfo});
+  final Class classInfo;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.watch(classDocumentNotifier);
+    useEffectOnce(() {
+      ref.watch(classDocumentNotifier.notifier).fetchClassDocument(classInfo);
+      return;
+    });
+    final documentList = ref.watch(classDocumentNotifier.notifier).state;
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -29,12 +40,21 @@ class DoneClassHistoryPage extends StatelessWidget {
             itemCount: documentList.length,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              ClassDocument document = documentList[index];
+              final document = documentList[index];
               return Column(
                 children: [
-                  DoneClassCard(
-                    title: document.title,
-                    description: document.description,
+                  GestureDetector(
+                    child: DoneClassCard(
+                      title: document.title,
+                      description: document.description,
+                    ),
+                    onTap: () => NavigatorPush(
+                      context,
+                      page: ClassDocumentViewPage(
+                        classDocument: document,
+                        classInfo: classInfo,
+                      ),
+                    ),
                   ),
                   SpaceBox(height: 16.h),
                 ],

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'class_by_day.dart';
 
@@ -38,7 +38,8 @@ mixin _$ClassByDay {
 abstract class $ClassByDayCopyWith<$Res> {
   factory $ClassByDayCopyWith(
           ClassByDay value, $Res Function(ClassByDay) then) =
-      _$ClassByDayCopyWithImpl<$Res>;
+      _$ClassByDayCopyWithImpl<$Res, ClassByDay>;
+  @useResult
   $Res call(
       {String id,
       String className,
@@ -48,43 +49,46 @@ abstract class $ClassByDayCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ClassByDayCopyWithImpl<$Res> implements $ClassByDayCopyWith<$Res> {
+class _$ClassByDayCopyWithImpl<$Res, $Val extends ClassByDay>
+    implements $ClassByDayCopyWith<$Res> {
   _$ClassByDayCopyWithImpl(this._value, this._then);
 
-  final ClassByDay _value;
   // ignore: unused_field
-  final $Res Function(ClassByDay) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? className = freezed,
+    Object? id = null,
+    Object? className = null,
     Object? day = freezed,
     Object? announce = freezed,
-    Object? timeTable = freezed,
+    Object? timeTable = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      className: className == freezed
+      className: null == className
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
               as String,
-      day: day == freezed
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      announce: announce == freezed
+      announce: freezed == announce
           ? _value.announce
           : announce // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      timeTable: timeTable == freezed
+      timeTable: null == timeTable
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -95,6 +99,7 @@ abstract class _$$_ClassByDayCopyWith<$Res>
           _$_ClassByDay value, $Res Function(_$_ClassByDay) then) =
       __$$_ClassByDayCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String className,
@@ -104,41 +109,40 @@ abstract class _$$_ClassByDayCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ClassByDayCopyWithImpl<$Res> extends _$ClassByDayCopyWithImpl<$Res>
+class __$$_ClassByDayCopyWithImpl<$Res>
+    extends _$ClassByDayCopyWithImpl<$Res, _$_ClassByDay>
     implements _$$_ClassByDayCopyWith<$Res> {
   __$$_ClassByDayCopyWithImpl(
       _$_ClassByDay _value, $Res Function(_$_ClassByDay) _then)
-      : super(_value, (v) => _then(v as _$_ClassByDay));
+      : super(_value, _then);
 
-  @override
-  _$_ClassByDay get _value => super._value as _$_ClassByDay;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? className = freezed,
+    Object? id = null,
+    Object? className = null,
     Object? day = freezed,
     Object? announce = freezed,
-    Object? timeTable = freezed,
+    Object? timeTable = null,
   }) {
     return _then(_$_ClassByDay(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      className: className == freezed
+      className: null == className
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
               as String,
-      day: day == freezed
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      announce: announce == freezed
+      announce: freezed == announce
           ? _value.announce
           : announce // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      timeTable: timeTable == freezed
+      timeTable: null == timeTable
           ? _value.timeTable
           : timeTable // ignore: cast_nullable_to_non_nullable
               as int,
@@ -185,25 +189,24 @@ class _$_ClassByDay implements _ClassByDay {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ClassByDay &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.className, className) &&
-            const DeepCollectionEquality().equals(other.day, day) &&
-            const DeepCollectionEquality().equals(other.announce, announce) &&
-            const DeepCollectionEquality().equals(other.timeTable, timeTable));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.className, className) ||
+                other.className == className) &&
+            (identical(other.day, day) || other.day == day) &&
+            (identical(other.announce, announce) ||
+                other.announce == announce) &&
+            (identical(other.timeTable, timeTable) ||
+                other.timeTable == timeTable));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(className),
-      const DeepCollectionEquality().hash(day),
-      const DeepCollectionEquality().hash(announce),
-      const DeepCollectionEquality().hash(timeTable));
+  int get hashCode =>
+      Object.hash(runtimeType, id, className, day, announce, timeTable);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ClassByDayCopyWith<_$_ClassByDay> get copyWith =>
       __$$_ClassByDayCopyWithImpl<_$_ClassByDay>(this, _$identity);
 
