@@ -11,7 +11,8 @@ class ClassRepository extends IClassRepository {
 
   void registerClass(Class classInfo) {
     final collection = firestore.doc(
-        'all_class/VTA_class/2022/first_semester/all_class/${classInfo.name}');
+      'all_class/VTA_class/2022/first_semester/all_class/${classInfo.name}',
+    );
     collection.set({
       'id': collection.id,
       'name': classInfo.name,
