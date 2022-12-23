@@ -8,9 +8,12 @@ class SchoolTerm with _$SchoolTerm {
     required String departmentName,
     required String yearPlan,
     required String term,
-    required String attendance,
   }) = _SchoolTerm;
 
   factory SchoolTerm.fromJson(Map<String, dynamic> json) =>
       _$SchoolTermFromJson(json);
+}
+
+abstract class ISchoolTermRepository {
+  void registerNewSchoolTerm(SchoolTerm schoolTerm) {}
 }
