@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:vantan_connect/domain/school_term/school_term.dart';
-import 'package:vantan_connect/use_case/executive_stuff.dart';
+import 'package:vantan_connect/use_case/executive_stuff_use_case.dart';
 import 'infrastrcuture/test_school_term_repository.dart';
 
 void main() {
