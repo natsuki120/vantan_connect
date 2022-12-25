@@ -15,5 +15,8 @@ class SchoolTermRepository extends ISchoolTermRepository {
   }
 }
 
-final executiveStaffUseCase =
-    Provider((ref) => ExecutiveStaffUseCase(SchoolTermRepository()));
+final executiveStaffUseCase = Provider(
+  (ref) => ExecutiveStaffUseCase(
+    SchoolTermRepository(),
+  ),
+);

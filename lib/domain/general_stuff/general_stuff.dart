@@ -1,4 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vantan_connect/domain/school_term/school_term.dart';
+import '../lesson/lesson.dart';
 part 'general_stuff.freezed.dart';
 part 'general_stuff.g.dart';
 
@@ -18,4 +20,8 @@ class GeneralStuff with _$GeneralStuff {
 
   factory GeneralStuff.fromJson(Map<String, dynamic> json) =>
       _$GeneralStuffFromJson(json);
+}
+
+abstract class IGeneralStuffRepository {
+  void createLesson(Lesson lesson, SchoolTerm schoolTerm) {}
 }
