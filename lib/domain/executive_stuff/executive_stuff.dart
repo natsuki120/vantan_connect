@@ -20,3 +20,7 @@ class ExecutiveStuff with _$ExecutiveStuff {
   factory ExecutiveStuff.fromJson(Map<String, dynamic> json) =>
       _$ExecutiveStuffFromJson(json);
 }
+
+abstract class IExecutiveStuffRepository {
+  void decideNewSchoolTerm(SchoolTerm schoolTerm) {}
+}

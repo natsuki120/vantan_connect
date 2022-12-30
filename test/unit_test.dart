@@ -6,15 +6,15 @@ import 'infrastrcuture/test_school_term_repository.dart';
 
 void main() {
   test('役員スタッフのuseCase実行テスト', () {
-    TestSchoolTermRepository testSchoolTermRepository =
-        TestSchoolTermRepository();
+    TestExecutiveStuffRepository testExecutiveStuffRepository =
+        TestExecutiveStuffRepository();
     SchoolTerm testSchoolTerm = SchoolTerm(
       departmentName: 'VTA',
       yearPlan: '2021',
       term: '前期',
     );
     final testExecutiveStaffUseCase =
-        Provider((ref) => ExecutiveStaffUseCase(testSchoolTermRepository));
+        Provider((ref) => ExecutiveStaffUseCase(testExecutiveStuffRepository));
     final container = ProviderContainer(
       overrides: [testExecutiveStaffUseCase],
     );
@@ -22,7 +22,7 @@ void main() {
         .read(testExecutiveStaffUseCase)
         .decideNewSchoolTerm(testSchoolTerm);
     Future<SchoolTerm> testContents =
-        testSchoolTermRepository.fetchSchoolTerm(testSchoolTerm);
+        testExecutiveStuffRepository.fetchSchoolTerm(testSchoolTerm);
     testContents.then((value) => expect(value, testSchoolTerm));
   });
 }
