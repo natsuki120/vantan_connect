@@ -2,10 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/vantan_life.dart';
-import 'package:vantan_connect/view/page/my_class_list_page.dart';
-import 'package:vantan_connect/view/template/class_detail_template.dart';
-import 'package:vantan_connect/view/template/my_class_list_tamplate.dart';
+import 'package:vantan_connect/view/template/management_screen_template.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -20,13 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(428, 926),
+      designSize: const Size(1920, 1080),
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light),
-          home: VantanLife(),
+          home: ManagementScreenTemplate(),
         );
       },
     );
