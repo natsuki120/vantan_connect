@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 
 class TitleInOrganism extends StatelessWidget {
   const TitleInOrganism({Key? key, required this.text, required this.textStyle})
@@ -10,6 +10,6 @@ class TitleInOrganism extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TitleMessage(text: text, textStyle: textStyle);
+    return TitleInMolecule(text: text, textStyle: textStyle);
   }
 }

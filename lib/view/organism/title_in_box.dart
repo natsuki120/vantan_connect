@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 
 class TitleInBox extends StatelessWidget {
   const TitleInBox({
@@ -25,7 +25,7 @@ class TitleInBox extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(color: color, borderRadius: borderRadius),
-      child: Center(child: TitleMessage(text: text, textStyle: textStyle)),
+      child: Center(child: TitleInMolecule(text: text, textStyle: textStyle)),
     );
   }
 }

@@ -17,3 +17,23 @@ class SchoolTerm with _$SchoolTerm {
 abstract class ISchoolTermRepository {
   void registerNewSchoolTerm(SchoolTerm schoolTerm) {}
 }
+
+@freezed
+class DepartmentName with _$DepartmentName {
+  const factory DepartmentName({required String value}) = _DepartmentName;
+
+  factory DepartmentName.fromJson(Map<String, dynamic> json) =>
+      _$DepartmentNameFromJson(json);
+}
+
+@freezed
+class Major with _$Major {
+  const factory Major({required String value}) = _Major;
+
+  factory Major.fromJson(Map<String, dynamic> json) => _$MajorFromJson(json);
+}
+
+class Class {
+  Class({required this.value});
+  final String value;
+}

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/grey_box.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
-import 'package:vantan_connect/view/token/const_width_and_height.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 
 class TitleWithValuelessBoxOrClassCard extends StatelessWidget {
@@ -25,7 +24,7 @@ class TitleWithValuelessBoxOrClassCard extends StatelessWidget {
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleMessage(text: title, textStyle: textStyle),
+              TitleInMolecule(text: title, textStyle: textStyle),
               SpaceBox(height: 20.h),
               classCard,
               SpaceBox(height: 10.h),
@@ -34,7 +33,7 @@ class TitleWithValuelessBoxOrClassCard extends StatelessWidget {
         : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleMessage(text: title, textStyle: textStyle),
+              TitleInMolecule(text: title, textStyle: textStyle),
               SpaceBox(height: 20.h),
               GreyBox(
                 child: Padding(

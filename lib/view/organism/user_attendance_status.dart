@@ -1,13 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/atom/original_icon.dart';
-import 'package:vantan_connect/view/molecule/image_and_user_info.dart';
-import 'package:vantan_connect/view/token/border_line.dart';
+import 'package:vantan_connect/view/token/row_border_line.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
-import 'package:vantan_connect/view/token/const_width_and_height.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
-
 import '../molecule/image_with_text.dart';
 import '../token/style_by_platform.dart';
 
@@ -46,7 +42,7 @@ class UserAttendanceStatus extends StatelessWidget {
             ),
           ],
         ),
-        BorderLine(),
+        RowBorderLine(),
       ],
     );
   }

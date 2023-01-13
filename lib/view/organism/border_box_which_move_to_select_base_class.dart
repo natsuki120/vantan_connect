@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/border_box_with_primary_color_button_and_text.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 
@@ -38,7 +38,7 @@ class TitleAndBorderBoxWhichMoveToSelectBaseClass extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TitleMessage(text: title, textStyle: titleTextStyle),
+        TitleInMolecule(text: title, textStyle: titleTextStyle),
         SpaceBox(height: 20.h),
         BorderBoxWithPrimaryColorButtonAndText(
           width: width,

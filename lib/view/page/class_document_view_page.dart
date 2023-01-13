@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import 'package:vantan_connect/view/molecule/Icon_and_text.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/organism/canvas_color_app_bar_with_title_message.dart';
 import 'package:vantan_connect/view/page/attendance_book_page.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
@@ -28,7 +28,7 @@ class ClassDocumentViewPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TitleMessage(
+            TitleInMolecule(
               text: classDocument.title,
               textStyle: title1Bold(colorScheme.onBackground),
             ),
