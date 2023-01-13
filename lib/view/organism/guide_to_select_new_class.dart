@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/primary_color_button_with_icon_and_text.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
 import '../token/color_schemes.g.dart';
 import '../token/space_box.dart';
@@ -18,7 +18,7 @@ class GuideToSelectNewClass extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TitleMessage(
+        TitleInMolecule(
           text: '後期の時間割を選択してください',
           textStyle: headLineBold(colorScheme.onBackground),
         ),

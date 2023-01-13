@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
-import 'package:vantan_connect/view/token/border_line.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
+import 'package:vantan_connect/view/token/row_border_line.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import '../token/style_by_platform.dart';
@@ -17,12 +17,12 @@ class TitleAndContent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TitleMessage(
+        TitleInMolecule(
           text: title,
           textStyle: title2Bold(colorScheme.onBackground),
         ),
         SpaceBox(height: 8),
-        BorderLine(),
+        RowBorderLine(),
         SpaceBox(height: 16),
         content,
       ],

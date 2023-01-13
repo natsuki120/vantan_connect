@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_use/flutter_use.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:vantan_connect/use_case/state/class_document.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/page/class_document_view_page.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/navigator.dart';
@@ -29,7 +29,7 @@ class DoneClassHistoryPage extends HookConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              TitleMessage(
+              TitleInMolecule(
                 text: '並び替え',
                 textStyle: bodyRegular(colorScheme.onBackground),
               ),

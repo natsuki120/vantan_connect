@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 import '../token/space_box.dart';
@@ -22,7 +22,7 @@ class DoneClassHistoryTemplate extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              TitleMessage(
+              TitleInMolecule(
                 text: '並び替え',
                 textStyle: bodyRegular(colorScheme.onBackground),
               ),

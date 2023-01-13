@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/guidance_message.dart';
 import 'package:vantan_connect/view/molecule/image_and_user_info.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import '../token/color_schemes.g.dart';
 import '../token/space_box.dart';
 import '../token/style_by_platform.dart';
@@ -50,7 +50,7 @@ class ClassmateProfileDetailCard extends StatelessWidget {
                 SpaceBox(width: 100.w),
                 Padding(
                   padding: EdgeInsets.only(left: 15.0.sp),
-                  child: TitleMessage(
+                  child: TitleInMolecule(
                     text: classmateInfo,
                     textStyle: bodyRegular(colorScheme.onBackground),
                   ),

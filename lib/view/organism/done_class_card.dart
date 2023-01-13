@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import '../token/color_schemes.g.dart';
 import '../token/space_box.dart';
 import '../token/style_by_platform.dart';
@@ -39,11 +39,11 @@ class DoneClassCard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TitleMessage(
+                TitleInMolecule(
                   text: '第1回',
                   textStyle: caption1Regular(colorScheme.onBackground),
                 ),
-                TitleMessage(
+                TitleInMolecule(
                   text: '5/10',
                   textStyle: headLineBold(colorScheme.onBackground),
                 ),
@@ -58,12 +58,12 @@ class DoneClassCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TitleMessage(
+                TitleInMolecule(
                   text: title,
                   textStyle: headLineBold(colorScheme.onBackground),
                 ),
                 SpaceBox(height: 8.h),
-                TitleMessage(
+                TitleInMolecule(
                   text: description,
                   textStyle: bodyRegular(colorScheme.onBackground),
                 ),

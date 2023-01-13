@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:vantan_connect/view/atom/border_line.dart';
+// import 'package:vantan_connect/view/atom/row_border_line.dart';
 // import 'package:vantan_connect/view/token/color_schemes.g.dart';
 // import 'package:vantan_connect/view/atom/main_text.dart';
 // import 'package:vantan_connect/view/token/space_box.dart';

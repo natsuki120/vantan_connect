@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/Icon_and_text.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/organism/canvas_color_app_bar_with_title_message.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/custom_tab_bar_which_has_black_text_color.dart';
@@ -20,7 +20,7 @@ class ClassDocumentViewTemplate extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TitleMessage(
+            TitleInMolecule(
               text: 'UI/UXとは？',
               textStyle: title1Bold(colorScheme.onBackground),
             ),

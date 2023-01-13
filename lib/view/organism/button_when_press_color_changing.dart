@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/view/molecule/Icon_and_text.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 
 class ButtonWhenPressColorChanging extends StatelessWidget {
@@ -46,7 +46,7 @@ class ButtonWhenPressColorChanging extends StatelessWidget {
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 16.w),
-              child: TitleMessage(
+              child: TitleInMolecule(
                 text: text,
                 textStyle: textStyle,
               ),

@@ -5,9 +5,8 @@ import 'package:vantan_connect/view/molecule/class_card_border.dart';
 import 'package:vantan_connect/view/molecule/class_img.dart';
 import 'package:vantan_connect/view/molecule/class_tag.dart';
 import 'package:vantan_connect/view/molecule/grey_box.dart';
-import 'package:vantan_connect/view/molecule/image_with_text.dart';
 import 'package:vantan_connect/view/molecule/text_in_box.dart';
-import 'package:vantan_connect/view/molecule/title_message.dart';
+import 'package:vantan_connect/view/molecule/title_in_molecule.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
@@ -66,7 +65,7 @@ class ClassCardWithImage extends StatelessWidget {
                     ],
                   ),
                   SpaceBox(height: 8.h),
-                  TitleMessage(
+                  TitleInMolecule(
                     text: classInfo.name,
                     textStyle: headLineBold(colorScheme.onBackground),
                   ),
@@ -106,7 +105,7 @@ class ClassCardWithImage extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          TitleMessage(
+                          TitleInMolecule(
                             text: '担当',
                             textStyle: caption1Regular(
                               colorScheme.onBackground.withOpacity(0.5),

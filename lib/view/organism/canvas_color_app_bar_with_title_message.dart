@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../molecule/title_message.dart';
+import '../molecule/title_in_molecule.dart';
 import '../token/color_schemes.g.dart';
 import '../token/style_by_platform.dart';
 
@@ -18,7 +18,7 @@ class CanvasColorAppBarWithTitleMessage extends StatelessWidget
       backgroundColor: Theme.of(context).canvasColor,
       elevation: 0,
       centerTitle: true,
-      title: TitleMessage(
+      title: TitleInMolecule(
         text: title,
         textStyle: headerMedium(colorScheme.onBackground),
       ),
