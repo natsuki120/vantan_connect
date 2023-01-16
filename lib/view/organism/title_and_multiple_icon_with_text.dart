@@ -22,7 +22,6 @@ class TitleAndMultipleIconWithText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SpaceBox(height: 40),
         TitleInMolecule(
           text: title,
           textStyle: caption1Regular(

@@ -4,7 +4,7 @@ import 'package:vantan_connect/view/organism/detail_text_in_organism.dart';
 import 'package:vantan_connect/view/organism/title_with_select_class_screen.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
-import '../organism/title_and_content.dart';
+import '../organism/title_and_content_above_border_line.dart';
 import '../organism/horizontal_class_info_element.dart';
 import '../token/color_schemes.g.dart';
 
@@ -62,7 +62,7 @@ class SelectClassBaseClassDetailTemplate extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 24.sp),
           child: Column(
             children: [
-              TitleAndContent(
+              TitleAndContentAboveBorderLine(
                 title: '概要',
                 content: DetailTextInOrganism(
                   text:
@@ -71,7 +71,7 @@ class SelectClassBaseClassDetailTemplate extends StatelessWidget {
                 ),
               ),
               SpaceBox(height: 40.h),
-              TitleAndContent(
+              TitleAndContentAboveBorderLine(
                 title: 'ゴール',
                 content: DetailTextInOrganism(
                   text:
@@ -80,7 +80,7 @@ class SelectClassBaseClassDetailTemplate extends StatelessWidget {
                 ),
               ),
               SpaceBox(height: 40.h),
-              TitleAndContent(
+              TitleAndContentAboveBorderLine(
                 title: '担当',
                 content: Column(
                   children: [
@@ -111,7 +111,7 @@ class SelectClassBaseClassDetailTemplate extends StatelessWidget {
                 ),
               ),
               SpaceBox(height: 40.h),
-              TitleAndContent(
+              TitleAndContentAboveBorderLine(
                 title: '授業で扱う内容',
                 content: DetailTextInOrganism(
                   text:
