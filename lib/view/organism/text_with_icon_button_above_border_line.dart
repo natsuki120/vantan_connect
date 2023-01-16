@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/view/molecule/text_with_icon_button.dart';
-import 'package:vantan_connect/view/token/column_border_line.dart';
+import 'package:vantan_connect/view/token/row_border_line.dart';
 import '../token/space_box.dart';
 
 class TextWithIconButtonAboveBorderLine extends StatelessWidget {
@@ -34,7 +34,7 @@ class TextWithIconButtonAboveBorderLine extends StatelessWidget {
             callback: callback,
             mainAxisAlignment: mainAxisAlignment),
         SpaceBox(height: spaceSize),
-        ColumnBorderLine(),
+        RowBorderLine(),
       ],
     );
   }

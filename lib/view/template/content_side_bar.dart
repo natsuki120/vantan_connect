@@ -17,19 +17,22 @@ class ContentSideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SpaceBox(height: 12.sp),
-          SchoolLogoWithSchoolName(
-            schoolName: schoolName,
-            whereSchool: whereSchool,
-          ),
-          SpaceBox(height: 26.sp),
-          content
-        ],
+    return SizedBox(
+      width: 330.sp,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SpaceBox(height: 12.sp),
+            SchoolLogoWithSchoolName(
+              schoolName: schoolName,
+              whereSchool: whereSchool,
+            ),
+            SpaceBox(height: 26.sp),
+            content
+          ],
+        ),
       ),
     );
   }

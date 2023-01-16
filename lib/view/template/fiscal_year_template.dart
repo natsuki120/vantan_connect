@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/view/organism/icon_and_text_above_border_line.dart';
+import 'package:vantan_connect/view/organism/tappable_icon_with_text_above_border_line.dart';
 import 'package:vantan_connect/view/organism/text_with_icon_button_above_content.dart';
 import 'package:vantan_connect/view/template/content_side_bar.dart';
+import 'package:vantan_connect/view/token/column_border_line.dart';
 import 'package:vantan_connect/view/token/icon_side_bar.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
+import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/selectable_text.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
-import 'package:vantan_connect/view/token/column_border_line.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 
 class FiscalYearTemplate extends StatelessWidget {
@@ -26,23 +27,19 @@ class FiscalYearTemplate extends StatelessWidget {
             content: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    IconAndTextAboveBorderLine(
-                      iconData: Icons.arrow_back,
-                      text: '年度予定表',
-                      textStyle: bodyBold(colorScheme.onBackground),
-                      spaceSize: 12.sp,
-                      color: colorScheme.onBackground.withOpacity(0.2),
-                      mainAxisAlignmentBetweenBorderLine:
-                          MainAxisAlignment.start,
-                      borderWidth: 310.sp,
-                      borderHeight: 1.sp,
-                      borderColor: colorScheme.onBackground.withOpacity(0.2),
-                      spaceHeight: 12.sp,
-                      bottomBorderCrossAxisAlignment: CrossAxisAlignment.start,
-                    ),
-                  ],
+                TappableIconWithTextAboveBorderLine(
+                  iconData: Icons.arrow_back,
+                  text: '年度予定表',
+                  textStyle: bodyBold(colorScheme.onBackground),
+                  spaceSize: 12.sp,
+                  color: colorScheme.onBackground.withOpacity(0.2),
+                  callback: () => NavigatorPop(context),
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  borderWidth: 310.sp,
+                  borderHeight: 1.sp,
+                  borderColor: colorScheme.onBackground.withOpacity(0.2),
+                  spaceHeight: 12.sp,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                 ),
                 SpaceBox(height: 20.sp),
                 TextWithIconButtonAboveContent(
@@ -192,7 +189,7 @@ class FiscalYearTemplate extends StatelessWidget {
               ],
             ),
           ),
-          ColumnBorderLine(),
+          ColumnBorderLine()
         ],
       ),
     );

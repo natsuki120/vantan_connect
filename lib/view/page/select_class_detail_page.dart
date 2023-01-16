@@ -5,7 +5,7 @@ import 'package:vantan_connect/view/token/custom_tab_bar_which_has_black_text_co
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 import 'package:vantan_connect/view/organism/horizontal_class_info_element.dart';
-import 'package:vantan_connect/view/organism/title_and_content.dart';
+import 'package:vantan_connect/view/organism/title_and_content_above_border_line.dart';
 import '../token/color_schemes.g.dart';
 import 'package:vantan_connect/view/organism/detail_text_in_organism.dart';
 import 'package:vantan_connect/view/organism/title_with_select_class_screen.dart';
@@ -93,7 +93,7 @@ class SelectClassDetailPage extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        TitleAndContent(
+                        TitleAndContentAboveBorderLine(
                           title: '概要',
                           content: DetailTextInOrganism(
                             text: classInfo.overView,
@@ -101,7 +101,7 @@ class SelectClassDetailPage extends StatelessWidget {
                           ),
                         ),
                         SpaceBox(height: 40.h),
-                        TitleAndContent(
+                        TitleAndContentAboveBorderLine(
                           title: 'ゴール',
                           content: DetailTextInOrganism(
                             text: classInfo.goalPoint,
@@ -134,7 +134,7 @@ class SelectClassDetailPage extends StatelessWidget {
                         //   ),
                         // ),
                         SpaceBox(height: 40.h),
-                        TitleAndContent(
+                        TitleAndContentAboveBorderLine(
                           title: '授業で扱う内容',
                           content: DetailTextInOrganism(
                             text:
