@@ -9,149 +9,159 @@ const bold = 'bold';
 TextStyle header(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 26.sp,
+      fontSize: 26 * 1.069.sp,
     );
 TextStyle headerMedium(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 15.sp,
+      fontSize: 15 * 1.069.sp,
     );
 
 TextStyle bodyRegular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 16.sp,
+      fontSize: 16 * 1.069.sp,
     );
 TextStyle bodySemiBold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 15.sp,
+      fontSize: 15 * 1.069.sp,
     );
 
 TextStyle bodyBold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 16.sp,
+      fontSize: 16 * 1.069.sp,
     );
 
 TextStyle callOutRegular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 15.sp,
+      fontSize: 15 * 1.069.sp,
     );
 TextStyle callOutBold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 15.sp,
+      fontSize: 15 * 1.069.sp,
     );
 TextStyle subHeadLineBold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 13.sp,
+      fontSize: 13 * 1.069.sp,
     );
 TextStyle subHeadLineRegular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 13.sp,
+      fontSize: 13 * 1.069.sp,
     );
 
 TextStyle bodySmall(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 12.sp,
+      fontSize: 12 * 1.069.sp,
     );
 
 TextStyle displayLarge(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 58.sp,
+      fontSize: 58 * 1.069.sp,
     );
 TextStyle displayMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 46.sp,
+      fontSize: 46 * 1.069.sp,
     );
 TextStyle displaySmall(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 36.sp,
+      fontSize: 36 * 1.069.sp,
     );
 
 TextStyle headLineBold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 16.sp,
+      fontSize: 16 * 1.069.sp,
     );
 TextStyle headLineRegular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 15.sp,
+      fontSize: 15 * 1.069.sp,
     );
 
 TextStyle labelLarge(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 14.sp,
+      fontSize: 14 * 1.069.sp,
     );
 TextStyle labelMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 12.sp,
+      fontSize: 12 * 1.069.sp,
     );
 TextStyle labelSmall(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 10.sp,
+      fontSize: 10 * 1.069.sp,
     );
 
 TextStyle title1Bold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 26.sp,
+      fontSize: 26 * 1.069.sp,
     );
 TextStyle title1Regular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 26.sp,
+      fontSize: 26 * 1.069.sp,
     );
 TextStyle title2Bold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 20.sp,
+      fontSize: 20 * 1.069.sp,
     );
 TextStyle title2Regular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 20.sp,
+      fontSize: 20 * 1.069.sp,
+    );
+TextStyle title3Bold(Color color) => TextStyle(
+      color: color,
+      fontWeight: FontWeight.w600,
+      fontSize: 18 * 1.069.sp,
+    );
+TextStyle title3Regular(Color color) => TextStyle(
+      color: color,
+      fontWeight: FontWeight.w300,
+      fontSize: 18 * 1.069.sp,
     );
 TextStyle titleMedium(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 16.sp,
+      fontSize: 16 * 1.069.sp,
     );
 TextStyle titleSmall(FontWeight weight, Color color) => TextStyle(
       color: color,
       fontWeight: weight,
-      fontSize: 14.sp,
+      fontSize: 14 * 1.069.sp,
     );
 
 TextStyle caption1Bold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 11.sp,
+      fontSize: 11 * 1.069.sp,
     );
 TextStyle caption1Regular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 11.sp,
+      fontSize: 11 * 1.069.sp,
     );
 TextStyle caption2Bold(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w600,
-      fontSize: 11.sp,
+      fontSize: 11 * 1.069.sp,
     );
 TextStyle caption2Regular(Color color) => TextStyle(
       color: color,
       fontWeight: FontWeight.w300,
-      fontSize: 11.sp,
+      fontSize: 11 * 1.069.sp,
     );

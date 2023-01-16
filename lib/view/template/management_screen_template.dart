@@ -5,10 +5,10 @@ import 'package:vantan_connect/domain/school_term/school_term.dart';
 import 'package:vantan_connect/domain/value/IconAndText.dart';
 import 'package:vantan_connect/view/organism/title_above_color_circle_with_text.dart';
 import 'package:vantan_connect/view/organism/title_and_multiple_icon_with_text.dart';
+import 'package:vantan_connect/view/template/content_side_bar.dart';
 import 'package:vantan_connect/view/token/column_border_line.dart';
-import 'package:vantan_connect/view/token/row_border_line.dart';
+import 'package:vantan_connect/view/token/icon_side_bar.dart';
 import 'package:vantan_connect/view/token/color_schemes.g.dart';
-import 'package:vantan_connect/view/token/selectable_icon.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
 
@@ -57,107 +57,34 @@ class ManagementScreenTemplate extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 23.w),
-            child: Column(
-              children: [
-                SpaceBox(height: 58.h),
-                SelectableIcon(
-                  iconData: Icons.today_outlined,
-                  iconSize: 30.sp,
-                  iconColor: colorScheme.onBackground.withOpacity(0.7),
-                ),
-                SpaceBox(height: 20.h),
-                SelectableIcon(
-                  iconData: Icons.search,
-                  iconSize: 30.sp,
-                  iconColor: colorScheme.onBackground.withOpacity(0.7),
-                ),
-                SpaceBox(height: 20.h),
-                SelectableIcon(
-                  iconData: Icons.mic_none,
-                  iconSize: 30.sp,
-                  iconColor: colorScheme.onBackground.withOpacity(0.7),
-                ),
-                SpaceBox(height: 20.h),
-                SelectableIcon(
-                  iconData: Icons.chat_outlined,
-                  iconSize: 30.sp,
-                  iconColor: colorScheme.onBackground.withOpacity(0.7),
-                ),
-                SpaceBox(height: 20.h),
-                SelectableIcon(
-                  iconData: Icons.share_outlined,
-                  iconSize: 30.sp,
-                  iconColor: colorScheme.onBackground.withOpacity(0.7),
-                ),
-                SpaceBox(height: 20.h),
-                SelectableIcon(
-                  iconData: Icons.drafts_outlined,
-                  iconSize: 30.sp,
-                  iconColor: colorScheme.onBackground.withOpacity(0.7),
-                ),
-                SpaceBox(height: 20.h),
-                SelectableIcon(
-                  iconData: Icons.bookmark_border,
-                  iconSize: 30.sp,
-                  iconColor: colorScheme.onBackground.withOpacity(0.7),
-                ),
-                SpaceBox(height: 23.h),
-                RowBorderLine(),
-                SpaceBox(height: 20),
-                Image.asset('images/Course icon.png'),
-                SpaceBox(height: 20.h),
-                Image.asset('images/Course icon.png'),
-                SpaceBox(height: 20.h),
-                Image.asset('images/Course icon.png'),
-                SpaceBox(height: 20.h),
-                Image.asset('images/Course icon.png'),
-                SpaceBox(height: 20.h),
-                Image.asset('images/Course icon.png'),
-                SpaceBox(height: 20.h),
-                Image.asset('images/Course icon.png'),
-              ],
-            ),
-          ),
+          IconSideBar(),
           ColumnBorderLine(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SpaceBox(height: 12),
-                Row(
-                  children: [
-                    Container(
-                      width: 48.sp,
-                      height: 48.sp,
-                      child: Image.asset(
-                        'images/Course icon.png',
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                    Column(
-                      children: [Text('テックフォードアカデミー')],
-                    ),
-                  ],
-                ),
-                TitleAndMultipleIconWithText(
-                  title: '作成・管理',
-                  iconAndTextList: IconAndTextList,
-                ),
-                SpaceBox(height: 44.sp),
-                TitleAboveColorCircleWithText(
-                  title: '学部・コース',
-                  circleWidth: 10.sp,
-                  circleHeight: 10.sp,
-                  color: Color(0xffE7A15F),
-                  textStyle:
-                      bodyRegular(colorScheme.onBackground.withOpacity(0.5)),
-                  departmentList: departmentList,
-                ),
-                SpaceBox(height: 26.sp),
-              ],
+          ContentSideBar(
+            schoolName: 'テックフォードアカデミー',
+            whereSchool: '東京校',
+            content: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SpaceBox(height: 12),
+                  TitleAndMultipleIconWithText(
+                    title: '作成・管理',
+                    iconAndTextList: IconAndTextList,
+                  ),
+                  SpaceBox(height: 44.sp),
+                  TitleAboveColorCircleWithText(
+                    title: '学部・コース',
+                    circleWidth: 10.sp,
+                    circleHeight: 10.sp,
+                    color: Color(0xffE7A15F),
+                    textStyle:
+                        bodyRegular(colorScheme.onBackground.withOpacity(0.5)),
+                    departmentList: departmentList,
+                  ),
+                  SpaceBox(height: 26.sp),
+                ],
+              ),
             ),
           ),
           ColumnBorderLine(),
