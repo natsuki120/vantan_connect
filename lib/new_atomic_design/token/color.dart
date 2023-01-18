@@ -32,9 +32,9 @@ const Color surfaceDisabled = Color(0xff12181A33);
 
 const Color highEmphasis = Color(0xff111414);
 
-const Color midEmphasis = Color(0xff12181AB2);
+Color midEmphasis = Color(0xff12181A).withOpacity(0.7);
 
-const Color lowEmphasis = Color(0xff12181A80);
+Color lowEmphasis = Color(0xff12181A).withOpacity(0.5);
 
 const Color disabledOnlyText = Color(0xff12181A4D);
 
