@@ -9,8 +9,8 @@ import 'package:vantan_connect/view/token/row_border_line.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import '../../view/token/style_by_platform.dart';
 
-class ListYear extends StatelessWidget {
-  const ListYear({Key? key}) : super(key: key);
+class ListYearSidebar extends StatelessWidget {
+  const ListYearSidebar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
