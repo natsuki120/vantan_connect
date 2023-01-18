@@ -116,6 +116,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "calendar_date_picker2",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/calendar_date_picker2-0.3.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "cel",
       "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/cel-0.5.1+1",
       "packageUri": "lib/",
@@ -866,6 +872,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "syncfusion_flutter_core",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-20.4.43",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "syncfusion_flutter_datepicker",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_datepicker-20.4.43",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "synchronized",
       "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-3.0.1",
       "packageUri": "lib/",
@@ -956,7 +974,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-01-16T18:26:33.787673Z",
+  "generated": "2023-01-18T05:41:53.747514Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }
