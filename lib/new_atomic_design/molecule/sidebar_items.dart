@@ -40,3 +40,40 @@ class SidebarItems extends StatelessWidget {
     );
   }
 }
+
+class SidebarItemsText extends StatelessWidget {
+  const SidebarItemsText({
+    Key? key,
+    required this.text,
+    required this.textStyle,
+    required this.backgroundColor,
+    required this.backgroundWidth,
+    required this.backgroundHeight,
+    required this.spaceSize,
+  }) : super(key: key);
+
+  final String text;
+  final TextStyle textStyle;
+  final double backgroundWidth;
+  final double backgroundHeight;
+  final Color backgroundColor;
+  final double spaceSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: backgroundWidth,
+      height: backgroundHeight,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4.sp),
+        color: backgroundColor,
+      ),
+      child: Row(
+        children: [
+          SpaceBox(width: spaceSize),
+          OriginalText(text: text, textStyle: textStyle),
+        ],
+      ),
+    );
+  }
+}
