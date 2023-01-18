@@ -4,8 +4,10 @@ import 'package:vantan_connect/new_atomic_design/atom/original_icon.dart';
 import 'package:vantan_connect/new_atomic_design/atom/original_text.dart';
 import 'package:vantan_connect/new_atomic_design/molecule/original_toggle_buttons.dart';
 import 'package:vantan_connect/new_atomic_design/molecule/sidebar_items.dart';
+import 'package:vantan_connect/new_atomic_design/template/year_calender_template.dart';
 import 'package:vantan_connect/new_atomic_design/token/color.dart';
 import 'package:vantan_connect/view/token/column_border_line.dart';
+import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/row_border_line.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import '../../view/token/style_by_platform.dart';
@@ -142,13 +144,19 @@ class SideBar extends StatelessWidget {
                 textStyle: caption1Bold(lowEmphasis),
               ),
               SpaceBox(height: commonSpace),
-              SidebarItems(
-                text: '年度予定表',
-                textStyle: bodyRegular(midEmphasis),
-                iconData: Icons.calendar_month,
-                iconSize: iconSize,
-                iconColor: iconColor,
-                backgroundColor: Colors.transparent,
+              GestureDetector(
+                onTap: () => NavigatorPush(
+                  context,
+                  page: YearCalenderTemplate(),
+                ),
+                child: SidebarItems(
+                  text: '年度予定表',
+                  textStyle: bodyRegular(midEmphasis),
+                  iconData: Icons.calendar_month,
+                  iconSize: iconSize,
+                  iconColor: iconColor,
+                  backgroundColor: Colors.transparent,
+                ),
               ),
               SpaceBox(height: 10.sp),
               SidebarItems(

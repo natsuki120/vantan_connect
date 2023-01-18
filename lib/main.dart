@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/new_atomic_design/organism/sidebar.dart';
+import 'package:vantan_connect/new_atomic_design/template/management_screen_template.dart';
 import 'package:vantan_connect/vantan_life.dart';
 import 'firebase_options.dart';
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light),
-          home: Platform.isMacOS ? SideBar() : VantanLife(),
+          home: Platform.isMacOS ? ManagementScreenTemplate() : VantanLife(),
         );
       },
     );

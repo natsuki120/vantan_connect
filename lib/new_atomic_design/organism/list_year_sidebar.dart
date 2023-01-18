@@ -5,6 +5,7 @@ import 'package:vantan_connect/new_atomic_design/molecule/original_toggle_button
 import 'package:vantan_connect/new_atomic_design/molecule/sidebar_items.dart';
 import 'package:vantan_connect/new_atomic_design/token/color.dart';
 import 'package:vantan_connect/view/token/column_border_line.dart';
+import 'package:vantan_connect/view/token/navigator.dart';
 import 'package:vantan_connect/view/token/row_border_line.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import '../../view/token/style_by_platform.dart';
@@ -140,19 +141,27 @@ class ListYearSidebar extends StatelessWidget {
                     ],
                   ),
                   SpaceBox(height: 44.sp),
-                  SidebarItems(
-                    text: 'テキスト',
-                    textStyle: bodyRegular(midEmphasis),
-                    iconData: Icons.navigate_before,
-                    iconSize: 25.sp,
-                    iconColor: midEmphasis,
-                    backgroundColor: Colors.transparent,
-                  ),
-                  SpaceBox(width: 12.sp),
-                  Container(
-                    width: 220.sp,
-                    height: 1.sp,
-                    color: midEmphasis.withOpacity(0.2),
+                  GestureDetector(
+                    onTap: () => NavigatorPop(context),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SidebarItems(
+                          text: 'テキスト',
+                          textStyle: bodyRegular(midEmphasis),
+                          iconData: Icons.navigate_before,
+                          iconSize: 25.sp,
+                          iconColor: midEmphasis,
+                          backgroundColor: Colors.transparent,
+                        ),
+                        SpaceBox(width: 12.sp),
+                        Container(
+                          width: 220.sp,
+                          height: 1.sp,
+                          color: midEmphasis.withOpacity(0.2),
+                        ),
+                      ],
+                    ),
                   ),
                   SpaceBox(height: 20.sp),
                   Row(
