@@ -10,14 +10,12 @@ class SelectedChips extends StatelessWidget {
     required this.textStyle,
     required this.padding,
     required this.backgroundColor,
-    required this.borderColor,
   }) : super(key: key);
 
   final String text;
   final TextStyle textStyle;
   final EdgeInsets padding;
   final Color backgroundColor;
-  final Color borderColor;
 
   @override
   Widget build(BuildContext context) {
