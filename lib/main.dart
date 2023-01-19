@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/vantan_life.dart';
-import 'package:vantan_connect/view/template/management_screen_template.dart';
 import 'firebase_options.dart';
+import 'new_atomic_design/molecule/select_date.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          theme: ThemeData(brightness: Brightness.light),
-          home: Platform.isMacOS ? ManagementScreenTemplate() : VantanLife(),
+          theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
+          home: Platform.isMacOS ? SelectDate() : VantanLife(),
         );
       },
     );

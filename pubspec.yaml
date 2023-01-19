@@ -60,6 +60,8 @@ dependencies:
   json_serializable: ^6.5.4
   file_picker: ^5.2.3
   firebase_core_platform_interface:
+  syncfusion_flutter_datepicker: ^20.4.43
+  calendar_date_picker2: ^0.3.6
 
 
 
