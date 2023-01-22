@@ -3,9 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/vantan_life.dart';
+import 'package:vantan_connect/new_atomic_design/template/management_screen_template.dart';
+import 'package:vantan_connect/new_atomic_design/template/schedule/schedule_template.dart';
 import 'firebase_options.dart';
-import 'new_atomic_design/molecule/select_date.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,13 +20,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize:
-          Platform.isMacOS ? const Size(1920, 1080) : const Size(428, 926),
+          Platform.isMacOS ? const Size(1920, 1080) : const Size(390, 844),
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
-          home: Platform.isMacOS ? SelectDate() : VantanLife(),
+          home: Platform.isMacOS
+              ? ManagementScreenTemplate()
+              : ScheduleTemplate(),
         );
       },
     );

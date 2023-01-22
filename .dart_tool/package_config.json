@@ -33,9 +33,9 @@
     },
     {
       "name": "args",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/args-2.3.1",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/args-2.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "async",
@@ -513,13 +513,13 @@
     },
     {
       "name": "image_picker",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.6",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.6+1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "image_picker_android",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_android-0.8.5+4",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_android-0.8.5+5",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -531,7 +531,7 @@
     },
     {
       "name": "image_picker_ios",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_ios-0.8.6+5",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_ios-0.8.6+6",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -549,7 +549,7 @@
     },
     {
       "name": "io",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/io-1.0.3",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/io-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -561,15 +561,15 @@
     },
     {
       "name": "json_annotation",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.7.0",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.8.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     },
     {
       "name": "json_serializable",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.5.4",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.6.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     },
     {
       "name": "lints",
@@ -873,13 +873,13 @@
     },
     {
       "name": "syncfusion_flutter_core",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-20.4.43",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-20.4.44",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "syncfusion_flutter_datepicker",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_datepicker-20.4.43",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_datepicker-20.4.44",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -903,9 +903,9 @@
     },
     {
       "name": "timing",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/timing-1.0.0",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/timing-1.0.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "tuple",
@@ -974,7 +974,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-01-18T05:41:53.747514Z",
+  "generated": "2023-01-22T14:45:10.129922Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }

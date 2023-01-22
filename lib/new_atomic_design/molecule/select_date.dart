@@ -9,7 +9,9 @@ import '../../view/atom/original_icon.dart';
 import '../../view/token/style_by_platform.dart';
 
 class SelectDate extends HookWidget {
-  const SelectDate({Key? key}) : super(key: key);
+  const SelectDate(this.labelText, {Key? key}) : super(key: key);
+
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -20,21 +22,19 @@ class SelectDate extends HookWidget {
         SizedBox(
           width: 328.sp,
           child: TextFormField(
+            autofocus: true,
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(width: 2.0.sp, color: primary),
               ),
-              labelText: 'Date',
-              suffixIcon: MouseRegion(
-                onHover: (event) => hover.value = true,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: OriginalIcon(
-                    iconData: Icons.today,
-                    iconSize: 24.sp,
-                    iconColor: midEmphasis,
-                  ),
+              labelText: labelText,
+              suffixIcon: IconButton(
+                onPressed: () => hover.value = true,
+                icon: OriginalIcon(
+                  iconData: Icons.today,
+                  iconSize: 24.sp,
+                  iconColor: midEmphasis,
                 ),
               ),
             ),
