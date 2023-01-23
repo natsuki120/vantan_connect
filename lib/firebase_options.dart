@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -46,6 +43,16 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDcAWy7kVbTJeCNyyeSUY1UHxiyMmIhF_I',
+    appId: '1:155305456263:web:8de95b89f0e0f469a1be22',
+    messagingSenderId: '155305456263',
+    projectId: 'vantan-connect',
+    authDomain: 'vantan-connect.firebaseapp.com',
+    storageBucket: 'vantan-connect.appspot.com',
+    measurementId: 'G-MM2D9TZQZD',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyARx-js85t6qD0hVJz7ubLg9cdDIFGL6JM',
     appId: '1:155305456263:android:ea5c0129f37c41d0a1be22',
@@ -66,11 +73,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCzoHm7BCmudW-dlPdXUZGur2Xwle4jQkE',
-    appId: '1:155305456263:ios:8e18ad3d8139081ea1be22',
+    appId: '1:155305456263:ios:c2d121092d6b1296a1be22',
     messagingSenderId: '155305456263',
     projectId: 'vantan-connect',
     storageBucket: 'vantan-connect.appspot.com',
-    iosClientId: '155305456263-b6m37ao0pgurtrtg338g7kr6juj2me7h.apps.googleusercontent.com',
-    iosBundleId: 'com.example.vantanConnect',
+    iosClientId: '155305456263-rbfrf7gabarg68433ip8ijc753oosa1v.apps.googleusercontent.com',
+    iosBundleId: 'com.example.vantanConnectForMac',
   );
 }

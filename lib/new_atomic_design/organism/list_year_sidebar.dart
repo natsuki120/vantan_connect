@@ -11,7 +11,9 @@ import 'package:vantan_connect/view/token/space_box.dart';
 import '../../view/token/style_by_platform.dart';
 
 class ListYearSidebar extends StatelessWidget {
-  const ListYearSidebar({Key? key}) : super(key: key);
+  const ListYearSidebar({Key? key, required this.callback}) : super(key: key);
+
+  final VoidCallback callback;
 
   @override
   Widget build(BuildContext context) {
@@ -168,7 +170,10 @@ class ListYearSidebar extends StatelessWidget {
                     children: [
                       Text('年度別一覧', style: caption1Bold(lowEmphasis)),
                       SpaceBox(width: 150.sp),
-                      Icon(Icons.add, size: 20.sp),
+                      GestureDetector(
+                        child: Icon(Icons.add, size: 20.sp),
+                        onTap: callback,
+                      ),
                     ],
                   ),
                 ],
