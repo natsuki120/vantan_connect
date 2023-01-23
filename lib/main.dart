@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/new_atomic_design/template/management_screen_template.dart';
-import 'package:vantan_connect/new_atomic_design/template/schedule/schedule_template.dart';
+import 'package:vantan_connect/new_atomic_design/template/test_app/test_app.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -26,9 +26,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
-          home: Platform.isMacOS
-              ? ManagementScreenTemplate()
-              : ScheduleTemplate(),
+          home: Platform.isMacOS ? ManagementScreenTemplate() : TestApp(),
         );
       },
     );

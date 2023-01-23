@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 
 const Color primary = Color(0xff377E90);
 
+const Color primary5 = Color(0xffE2F6FC);
+
 const Color secondary = Color(0xffE7A15F);
 
 const Color vantan = Color(0xffDE5761);
@@ -27,6 +29,8 @@ const Color surfaceSecondary = Color(0xff12181A0D);
 const Color surfaceTertiary = Color(0xff12181A1A);
 
 const Color surfaceDisabled = Color(0xff12181A33);
+
+const Color onSurface = Color(0xff201A19);
 
 // Text&Icon
 

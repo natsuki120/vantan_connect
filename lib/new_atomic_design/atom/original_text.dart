@@ -12,7 +12,6 @@ class OriginalText extends StatelessWidget {
     return Text(
       text,
       style: textStyle,
-      softWrap: false,
     );
   }
 }
