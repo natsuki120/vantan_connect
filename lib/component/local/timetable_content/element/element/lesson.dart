@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/new_atomic_design/atom/original_text.dart';
 import 'package:vantan_connect/view/token/space_box.dart';
 import 'package:vantan_connect/view/token/style_by_platform.dart';
-import 'color.dart';
+import '../../../../shered/single/color.dart';
 
 class Lesson extends StatelessWidget {
   const Lesson({
@@ -28,8 +27,13 @@ class Lesson extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SpaceBox(height: 10.sp),
-          OriginalText(
-              text: className, textStyle: caption1Regular(highEmphasis)),
+          Flexible(
+            child: Text(
+              className,
+              style: caption1Regular(highEmphasis),
+              maxLines: 1,
+            ),
+          ),
           SpaceBox(height: 44.sp),
           Container(
             width: 49.sp,
@@ -39,9 +43,9 @@ class Lesson extends StatelessWidget {
               borderRadius: BorderRadius.circular(4.sp),
               color: surfaceSecondary.withOpacity(0.05),
             ),
-            child: OriginalText(
-              text: classroom,
-              textStyle: caption2Regular(midEmphasis.withOpacity(0.7)),
+            child: Text(
+              classroom,
+              style: caption2Regular(midEmphasis.withOpacity(0.7)),
             ),
           )
         ],
