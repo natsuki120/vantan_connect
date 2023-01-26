@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/new_atomic_design/token/color.dart';
-import 'package:vantan_connect/view/token/space_box.dart';
+import 'package:vantan_connect/component/shered/single/space_box.dart';
+import 'color.dart';
 
 class FilledEnabledButton extends StatelessWidget {
   const FilledEnabledButton({
@@ -25,7 +25,11 @@ class FilledEnabledButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(100.sp),
         color: backgroundColor,
       ),
-      child: Text(text, style: textStyle),
+      child: Text(
+        text,
+        style: textStyle,
+        softWrap: false,
+      ),
     );
   }
 }
@@ -108,6 +112,27 @@ class FilledWithIconEnabledButton extends StatelessWidget {
   }
 }
 
+// class OriginalEnabledTextWithIconButton extends StatelessWidget {
+//   const OriginalEnabledTextWithIconButton(
+//       {Key? key,
+//       required this.text,
+//       required this.textStyle,
+//       required this.callback})
+//       : super(key: key);
+//
+//   final String text;
+//   final TextStyle textStyle;
+//   final VoidCallback callback;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return GestureDetector(
+//       onTap: callback,
+//       child: Text(text, style: textStyle),
+//     );
+//   }
+// }
+
 class OriginalUnEnabledOutLinedButton extends StatelessWidget {
   const OriginalUnEnabledOutLinedButton({
     Key? key,
@@ -169,8 +194,8 @@ class OriginalEnabledOutLinedButton extends StatelessWidget {
   }
 }
 
-class OriginalUnEnabledTextButton extends StatelessWidget {
-  const OriginalUnEnabledTextButton({
+class EnabledTextButton extends StatelessWidget {
+  const EnabledTextButton({
     Key? key,
     required this.text,
     required this.textStyle,
@@ -190,16 +215,18 @@ class OriginalUnEnabledTextButton extends StatelessWidget {
   }
 }
 
-class OriginalEnabledTextButton extends StatelessWidget {
-  const OriginalEnabledTextButton({
+class EnabledTextButtonWithIcon extends StatelessWidget {
+  const EnabledTextButtonWithIcon({
     Key? key,
     required this.text,
     required this.textStyle,
     required this.callback,
+    required this.icon,
   }) : super(key: key);
 
   final String text;
   final TextStyle textStyle;
+  final Icon icon;
   final VoidCallback callback;
 
   @override
@@ -208,8 +235,11 @@ class OriginalEnabledTextButton extends StatelessWidget {
       onPressed: callback,
       child: Row(
         children: [
-          Icon(Icons.add, size: 12.sp, color: white),
+          Spacer(),
+          icon,
+          SpaceBox(width: 11.sp),
           Text(text, style: textStyle),
+          Spacer(),
         ],
       ),
     );

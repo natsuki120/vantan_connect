@@ -12,6 +12,8 @@ class Class with _$Class {
   const factory Class({
     @Default('') String id,
     @Default('') String name,
+    @Default('') String weekDay,
+    @Default('') String classRoom,
     @Default('') String classImgUrl,
     @Default('') String overView,
     @Default([]) List<StudentId> studentIdList,
@@ -29,6 +31,8 @@ class Class with _$Class {
     @Default(false) bool isOnline,
     @Default('') String baseClass,
     @Default([]) List<Map<String, dynamic>> document,
+    @Default([]) List startTimeList,
+    @Default([]) List endTimeList,
   }) = _Class;
 
   factory Class.fromJson(Map<String, dynamic> json) => _$ClassFromJson(json);

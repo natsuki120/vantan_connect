@@ -9,6 +9,8 @@ part of 'class.dart';
 _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
+      weekDay: json['weekDay'] as String? ?? '',
+      classRoom: json['classRoom'] as String? ?? '',
       classImgUrl: json['classImgUrl'] as String? ?? '',
       overView: json['overView'] as String? ?? '',
       studentIdList: (json['studentIdList'] as List<dynamic>?)
@@ -41,11 +43,15 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
           const [],
+      startTimeList: json['startTimeList'] as List<dynamic>? ?? const [],
+      endTimeList: json['endTimeList'] as List<dynamic>? ?? const [],
     );
 
 Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
+      'weekDay': instance.weekDay,
+      'classRoom': instance.classRoom,
       'classImgUrl': instance.classImgUrl,
       'overView': instance.overView,
       'studentIdList': instance.studentIdList.map((e) => e.toJson()).toList(),
@@ -63,4 +69,6 @@ Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'isOnline': instance.isOnline,
       'baseClass': instance.baseClass,
       'document': instance.document,
+      'startTimeList': instance.startTimeList,
+      'endTimeList': instance.endTimeList,
     };

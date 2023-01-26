@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/new_atomic_design/atom/original_text.dart';
-import 'package:vantan_connect/new_atomic_design/token/color.dart';
-import 'package:vantan_connect/view/token/style_by_platform.dart';
+import '../../../../shered/single/color.dart';
+import '../../../../shered/single/test_style.dart';
 
 class UnSelectedTimetableHeaderRow extends StatelessWidget {
   const UnSelectedTimetableHeaderRow({Key? key, required this.weakDay})
@@ -20,9 +19,9 @@ class UnSelectedTimetableHeaderRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(4.sp),
         color: surfaceSecondary.withOpacity(0.05),
       ),
-      child: OriginalText(
-        text: weakDay,
-        textStyle: bodyRegular(midEmphasis.withOpacity(0.7)),
+      child: Text(
+        weakDay,
+        style: bodyRegular(midEmphasis.withOpacity(0.7)),
       ),
     );
   }
