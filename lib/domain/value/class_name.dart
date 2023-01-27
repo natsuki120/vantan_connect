@@ -1,20 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+part 'class_name.freezed.dart';
+part 'class_name.g.dart';
 
-class ClassName {
-  ClassName(this.value);
-  final String value;
-}
+@freezed
+class ClassName with _$ClassName {
+  const factory ClassName({
+    @Default('') String name,
+  }) = _ClassName;
 
-class ClassNameConverter extends JsonConverter<ClassName, String> {
-  const ClassNameConverter();
-
-  @override
-  ClassName fromJson(String name) {
-    return ClassName(name);
-  }
-
-  @override
-  String toJson(ClassName className) {
-    return className.value;
-  }
+  factory ClassName.fromJson(Map<String, dynamic> json) =>
+      _$ClassNameFromJson(json);
 }
