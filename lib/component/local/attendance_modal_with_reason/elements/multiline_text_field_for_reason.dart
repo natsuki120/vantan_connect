@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vantan_connect/component/shered/single/color.dart';
 
-class MultilineTextField extends StatelessWidget {
-  const MultilineTextField({super.key});
+class MultilineTextFieldForReason extends StatelessWidget {
+  const MultilineTextFieldForReason({super.key});
 
   @override
   Widget build(BuildContext context) {

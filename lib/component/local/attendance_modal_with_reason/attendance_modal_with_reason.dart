@@ -6,7 +6,7 @@ import '../../shered/single/space_box.dart';
 import '../../shered/single/buttons.dart';
 import '../../shered/single/test_style.dart';
 import 'elements/checkbox_with_class.dart';
-import 'elements/multiline_text_field.dart';
+import 'elements/multiline_text_field_for_reason.dart';
 import 'elements/radio_button_with_attendance_status.dart';
 
 Future attendanceModalWithReason(BuildContext context) {
@@ -125,7 +125,7 @@ Future attendanceModalWithReason(BuildContext context) {
                               style: bodySemiBold(black),
                             ),
                             SizedBox(height: 20.h),
-                            MultilineTextField(),
+                            MultilineTextFieldForReason(),
                           ],
                         ),
                       ),
