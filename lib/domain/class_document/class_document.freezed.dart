@@ -23,8 +23,7 @@ mixin _$ClassDocument {
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
-  @ClassNameConverter()
-  ClassName? get className => throw _privateConstructorUsedError;
+  ClassName get className => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,11 +37,9 @@ abstract class $ClassDocumentCopyWith<$Res> {
           ClassDocument value, $Res Function(ClassDocument) then) =
       _$ClassDocumentCopyWithImpl<$Res, ClassDocument>;
   @useResult
-  $Res call(
-      {String title,
-      String description,
-      int count,
-      @ClassNameConverter() ClassName? className});
+  $Res call({String title, String description, int count, ClassName className});
+
+  $ClassNameCopyWith<$Res> get className;
 }
 
 /// @nodoc
@@ -61,7 +58,7 @@ class _$ClassDocumentCopyWithImpl<$Res, $Val extends ClassDocument>
     Object? title = null,
     Object? description = null,
     Object? count = null,
-    Object? className = freezed,
+    Object? className = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -76,11 +73,19 @@ class _$ClassDocumentCopyWithImpl<$Res, $Val extends ClassDocument>
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int,
-      className: freezed == className
+      className: null == className
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
-              as ClassName?,
+              as ClassName,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ClassNameCopyWith<$Res> get className {
+    return $ClassNameCopyWith<$Res>(_value.className, (value) {
+      return _then(_value.copyWith(className: value) as $Val);
+    });
   }
 }
 
@@ -92,11 +97,10 @@ abstract class _$$_ClassDocumentCopyWith<$Res>
       __$$_ClassDocumentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String title,
-      String description,
-      int count,
-      @ClassNameConverter() ClassName? className});
+  $Res call({String title, String description, int count, ClassName className});
+
+  @override
+  $ClassNameCopyWith<$Res> get className;
 }
 
 /// @nodoc
@@ -113,7 +117,7 @@ class __$$_ClassDocumentCopyWithImpl<$Res>
     Object? title = null,
     Object? description = null,
     Object? count = null,
-    Object? className = freezed,
+    Object? className = null,
   }) {
     return _then(_$_ClassDocument(
       title: null == title
@@ -128,10 +132,10 @@ class __$$_ClassDocumentCopyWithImpl<$Res>
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int,
-      className: freezed == className
+      className: null == className
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
-              as ClassName?,
+              as ClassName,
     ));
   }
 }
@@ -143,7 +147,7 @@ class _$_ClassDocument implements _ClassDocument {
       {this.title = '',
       this.description = '',
       this.count = 0,
-      @ClassNameConverter() this.className});
+      this.className = const ClassName()});
 
   factory _$_ClassDocument.fromJson(Map<String, dynamic> json) =>
       _$$_ClassDocumentFromJson(json);
@@ -158,8 +162,8 @@ class _$_ClassDocument implements _ClassDocument {
   @JsonKey()
   final int count;
   @override
-  @ClassNameConverter()
-  final ClassName? className;
+  @JsonKey()
+  final ClassName className;
 
   @override
   String toString() {
@@ -203,7 +207,7 @@ abstract class _ClassDocument implements ClassDocument {
       {final String title,
       final String description,
       final int count,
-      @ClassNameConverter() final ClassName? className}) = _$_ClassDocument;
+      final ClassName className}) = _$_ClassDocument;
 
   factory _ClassDocument.fromJson(Map<String, dynamic> json) =
       _$_ClassDocument.fromJson;
@@ -215,8 +219,7 @@ abstract class _ClassDocument implements ClassDocument {
   @override
   int get count;
   @override
-  @ClassNameConverter()
-  ClassName? get className;
+  ClassName get className;
   @override
   @JsonKey(ignore: true)
   _$$_ClassDocumentCopyWith<_$_ClassDocument> get copyWith =>
