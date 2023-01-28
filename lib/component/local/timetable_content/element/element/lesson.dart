@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/attendance_modal/attendance_modal.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/component/shered/single/space_box.dart';
+import 'package:vantan_connect/domain/value/class_name.dart';
+import '../../../../../domain/student/student.dart';
 import '../../../../shered/single/color.dart';
 import '../../../../shered/single/test_style.dart';
 
-class Lesson extends StatelessWidget {
+class Lesson extends ConsumerWidget {
   const Lesson({Key? key, required this.classInfo}) : super(key: key);
 
   final Class classInfo;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
-      onTap: () => attendanceModal(context, classInfo),
+      // 仮置き
+      onTap: () => attendanceModal(
+        context,
+        classInfo,
+        ref,
+        Student(id: '高橋夏輝'),
+        ClassName(name: 'プログラミング'),
+      ),
       child: Container(
         width: 65.sp,
         height: 96.sp,
