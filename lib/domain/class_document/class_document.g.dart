@@ -11,8 +11,9 @@ _$_ClassDocument _$$_ClassDocumentFromJson(Map<String, dynamic> json) =>
       title: json['title'] as String? ?? '',
       description: json['description'] as String? ?? '',
       count: json['count'] as int? ?? 0,
-      className: _$JsonConverterFromJson<String, ClassName>(
-          json['className'], const ClassNameConverter().fromJson),
+      className: json['className'] == null
+          ? const ClassName()
+          : ClassName.fromJson(json['className'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ClassDocumentToJson(_$_ClassDocument instance) =>
@@ -20,18 +21,5 @@ Map<String, dynamic> _$$_ClassDocumentToJson(_$_ClassDocument instance) =>
       'title': instance.title,
       'description': instance.description,
       'count': instance.count,
-      'className': _$JsonConverterToJson<String, ClassName>(
-          instance.className, const ClassNameConverter().toJson),
+      'className': instance.className.toJson(),
     };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
