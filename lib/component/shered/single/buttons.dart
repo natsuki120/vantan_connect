@@ -10,25 +10,30 @@ class FilledEnabledButton extends StatelessWidget {
     required this.textStyle,
     required this.padding,
     required this.backgroundColor,
+    required this.callback,
   }) : super(key: key);
 
   final String text;
   final TextStyle textStyle;
   final EdgeInsets padding;
   final Color backgroundColor;
+  final VoidCallback callback;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: padding,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100.sp),
-        color: backgroundColor,
-      ),
-      child: Text(
-        text,
-        style: textStyle,
-        softWrap: false,
+    return GestureDetector(
+      onTap: callback,
+      child: Container(
+        padding: padding,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(100.sp),
+          color: backgroundColor,
+        ),
+        child: Text(
+          text,
+          style: textStyle,
+          softWrap: false,
+        ),
       ),
     );
   }
