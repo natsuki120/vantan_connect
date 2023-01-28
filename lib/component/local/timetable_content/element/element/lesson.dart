@@ -30,33 +30,38 @@ class Lesson extends ConsumerWidget {
         height: 96.sp,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4.sp),
-          color: primary5,
+          color: primary10,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SpaceBox(height: 10.sp),
-            Flexible(
-              child: Text(
-                classInfo.name,
-                style: caption1Regular(highEmphasis),
-                maxLines: 1,
+            Expanded(
+              child: Column(
+                children: [
+                  SpaceBox(height: 10.sp),
+                  Text(
+                    classInfo.name,
+                    style: caption1Regular(highEmphasis),
+                    textAlign: TextAlign.center,
+                  ),
+                  Spacer(),
+                  Container(
+                    width: 49.sp,
+                    height: 21.sp,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4.sp),
+                      color: surfaceSecondary.withOpacity(0.05),
+                    ),
+                    child: Text(
+                      classInfo.classRoom,
+                      style: caption2Regular(midEmphasis.withOpacity(0.7)),
+                    ),
+                  ),
+                ],
               ),
             ),
-            SpaceBox(height: 44.sp),
-            Container(
-              width: 49.sp,
-              height: 21.sp,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(4.sp),
-                color: surfaceSecondary.withOpacity(0.05),
-              ),
-              child: Text(
-                classInfo.classRoom,
-                style: caption2Regular(midEmphasis.withOpacity(0.7)),
-              ),
-            )
+            SpaceBox(height: 8.sp),
           ],
         ),
       ),
