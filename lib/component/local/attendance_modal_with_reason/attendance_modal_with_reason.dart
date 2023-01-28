@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../shered/single/color.dart';
+import '../../shered/single/radio_button.dart';
 import '../../shered/single/space_box.dart';
 import '../../shered/single/buttons.dart';
 import '../../shered/single/test_style.dart';
@@ -61,17 +62,25 @@ Future attendanceModalWithReason(BuildContext context) {
                             ),
                             SpaceBox(height: 10.h),
                             Container(
-                              child: Column(
-                                children: <Widget>[
-                                  RadioButtonWithAttendanceStatus(
-                                      attendanceState: '遅刻'),
-                                  RadioButtonWithAttendanceStatus(
-                                      attendanceState: '欠席'),
-                                  RadioButtonWithAttendanceStatus(
-                                      attendanceState: 'その他(公欠を除く)'),
-                                ],
-                              ),
-                            ),
+                                child: Column(
+                              children: [
+                                RadioButtonWithText(
+                                  text: '遅刻',
+                                  value: '遅刻',
+                                  groupValue: '',
+                                ),
+                                RadioButtonWithText(
+                                  text: '欠席',
+                                  value: '欠席',
+                                  groupValue: '',
+                                ),
+                                RadioButtonWithText(
+                                  text: 'その他(公欠を除く)',
+                                  value: 'その他',
+                                  groupValue: '',
+                                ),
+                              ],
+                            )),
                           ],
                         ),
                       ),
