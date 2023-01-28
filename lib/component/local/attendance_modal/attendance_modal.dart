@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/shered/riverpod.dart';
 import 'package:vantan_connect/component/shered/single/buttons.dart';
 import 'package:vantan_connect/component/shered/single/custom_icon_button.dart';
 import 'package:vantan_connect/component/shered/single/space_box.dart';
 import 'package:vantan_connect/component/shered/single/test_style.dart';
+import 'package:vantan_connect/domain/class/class.dart';
+import 'package:vantan_connect/domain/student/student.dart';
+import 'package:vantan_connect/domain/value/class_name.dart';
 import '../../shered/single/color.dart';
 
-Future attendanceModal(BuildContext context) {
+Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
+    Student student, ClassName className) {
   return showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,
@@ -118,7 +124,7 @@ Future attendanceModal(BuildContext context) {
                           ],
                         ),
                         SpaceBox(height: 8.sp),
-                        Text('UI/UXデザイン', style: headLineBold(highEmphasis)),
+                        Text(classInfo.name, style: headLineBold(highEmphasis)),
                         SpaceBox(height: 5.sp),
                         Row(
                           children: [
@@ -129,7 +135,7 @@ Future attendanceModal(BuildContext context) {
                             ),
                             SpaceBox(width: 6.sp),
                             Text(
-                              '9コマ',
+                              '${classInfo.frameCount}コマ',
                               style: caption2Regular(
                                 lowEmphasis.withOpacity(0.5),
                               ),
@@ -214,14 +220,18 @@ Future attendanceModal(BuildContext context) {
             ),
             SpaceBox(height: 24.sp),
             FilledEnabledButton(
-              text: '出席する',
-              textStyle: bodyBold(onPrimary),
-              padding: EdgeInsets.symmetric(
-                horizontal: 145.sp,
-                vertical: 13.sp,
-              ),
-              backgroundColor: primary,
-            ),
+                text: '出席する',
+                textStyle: bodyBold(onPrimary),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 145.sp,
+                  vertical: 13.sp,
+                ),
+                backgroundColor: primary,
+                callback: () {
+                  ref
+                      .read(studentUseCase)
+                      .attendanceLesson(student: student, className: className);
+                }),
             SpaceBox(height: 8.sp),
             EnabledTextButtonWithIcon(
               text: '遅刻・欠席する',

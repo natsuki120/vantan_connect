@@ -9,7 +9,7 @@ class ClassDocument with _$ClassDocument {
     @Default('') String title,
     @Default('') String description,
     @Default(0) int count,
-    @ClassNameConverter() ClassName? className,
+    @Default(ClassName()) ClassName className,
   }) = _ClassDocument;
 
   factory ClassDocument.fromJson(Map<String, dynamic> json) =>

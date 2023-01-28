@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vantan_connect/domain/value/class_name.dart';
 part 'student.freezed.dart';
 part 'student.g.dart';
 
@@ -18,4 +19,10 @@ class Student with _$Student {
 
   factory Student.fromJson(Map<String, dynamic> json) =>
       _$StudentFromJson(json);
+}
+
+abstract class IStudentRepository {
+  // TODO ClassNameをLessonNameに変更
+  void attendanceLesson(
+      {required Student student, required ClassName className}) {}
 }

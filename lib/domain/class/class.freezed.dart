@@ -22,6 +22,8 @@ Class _$ClassFromJson(Map<String, dynamic> json) {
 mixin _$Class {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get weekDay => throw _privateConstructorUsedError;
+  String get classRoom => throw _privateConstructorUsedError;
   String get classImgUrl => throw _privateConstructorUsedError;
   String get overView => throw _privateConstructorUsedError;
   List<StudentId> get studentIdList => throw _privateConstructorUsedError;
@@ -39,6 +41,8 @@ mixin _$Class {
   bool get isOnline => throw _privateConstructorUsedError;
   String get baseClass => throw _privateConstructorUsedError;
   List<Map<String, dynamic>> get document => throw _privateConstructorUsedError;
+  List<dynamic> get startTimeList => throw _privateConstructorUsedError;
+  List<dynamic> get endTimeList => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -53,6 +57,8 @@ abstract class $ClassCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
+      String weekDay,
+      String classRoom,
       String classImgUrl,
       String overView,
       List<StudentId> studentIdList,
@@ -69,7 +75,9 @@ abstract class $ClassCopyWith<$Res> {
       List<String> documentId,
       bool isOnline,
       String baseClass,
-      List<Map<String, dynamic>> document});
+      List<Map<String, dynamic>> document,
+      List<dynamic> startTimeList,
+      List<dynamic> endTimeList});
 }
 
 /// @nodoc
@@ -87,6 +95,8 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? weekDay = null,
+    Object? classRoom = null,
     Object? classImgUrl = null,
     Object? overView = null,
     Object? studentIdList = null,
@@ -104,6 +114,8 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
     Object? isOnline = null,
     Object? baseClass = null,
     Object? document = null,
+    Object? startTimeList = null,
+    Object? endTimeList = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -113,6 +125,14 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      weekDay: null == weekDay
+          ? _value.weekDay
+          : weekDay // ignore: cast_nullable_to_non_nullable
+              as String,
+      classRoom: null == classRoom
+          ? _value.classRoom
+          : classRoom // ignore: cast_nullable_to_non_nullable
               as String,
       classImgUrl: null == classImgUrl
           ? _value.classImgUrl
@@ -182,6 +202,14 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
           ? _value.document
           : document // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      startTimeList: null == startTimeList
+          ? _value.startTimeList
+          : startTimeList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
+      endTimeList: null == endTimeList
+          ? _value.endTimeList
+          : endTimeList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
     ) as $Val);
   }
 }
@@ -195,6 +223,8 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
+      String weekDay,
+      String classRoom,
       String classImgUrl,
       String overView,
       List<StudentId> studentIdList,
@@ -211,7 +241,9 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       List<String> documentId,
       bool isOnline,
       String baseClass,
-      List<Map<String, dynamic>> document});
+      List<Map<String, dynamic>> document,
+      List<dynamic> startTimeList,
+      List<dynamic> endTimeList});
 }
 
 /// @nodoc
@@ -225,6 +257,8 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? weekDay = null,
+    Object? classRoom = null,
     Object? classImgUrl = null,
     Object? overView = null,
     Object? studentIdList = null,
@@ -242,6 +276,8 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
     Object? isOnline = null,
     Object? baseClass = null,
     Object? document = null,
+    Object? startTimeList = null,
+    Object? endTimeList = null,
   }) {
     return _then(_$_Class(
       id: null == id
@@ -251,6 +287,14 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      weekDay: null == weekDay
+          ? _value.weekDay
+          : weekDay // ignore: cast_nullable_to_non_nullable
+              as String,
+      classRoom: null == classRoom
+          ? _value.classRoom
+          : classRoom // ignore: cast_nullable_to_non_nullable
               as String,
       classImgUrl: null == classImgUrl
           ? _value.classImgUrl
@@ -320,6 +364,14 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           ? _value._document
           : document // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      startTimeList: null == startTimeList
+          ? _value._startTimeList
+          : startTimeList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
+      endTimeList: null == endTimeList
+          ? _value._endTimeList
+          : endTimeList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
     ));
   }
 }
@@ -330,6 +382,8 @@ class _$_Class implements _Class {
   const _$_Class(
       {this.id = '',
       this.name = '',
+      this.weekDay = '',
+      this.classRoom = '',
       this.classImgUrl = '',
       this.overView = '',
       final List<StudentId> studentIdList = const [],
@@ -346,12 +400,16 @@ class _$_Class implements _Class {
       final List<String> documentId = const [],
       this.isOnline = false,
       this.baseClass = '',
-      final List<Map<String, dynamic>> document = const []})
+      final List<Map<String, dynamic>> document = const [],
+      final List<dynamic> startTimeList = const [],
+      final List<dynamic> endTimeList = const []})
       : _studentIdList = studentIdList,
         _teacherIdList = teacherIdList,
         _goalRequirements = goalRequirements,
         _documentId = documentId,
-        _document = document;
+        _document = document,
+        _startTimeList = startTimeList,
+        _endTimeList = endTimeList;
 
   factory _$_Class.fromJson(Map<String, dynamic> json) =>
       _$$_ClassFromJson(json);
@@ -362,6 +420,12 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String name;
+  @override
+  @JsonKey()
+  final String weekDay;
+  @override
+  @JsonKey()
+  final String classRoom;
   @override
   @JsonKey()
   final String classImgUrl;
@@ -444,9 +508,27 @@ class _$_Class implements _Class {
     return EqualUnmodifiableListView(_document);
   }
 
+  final List<dynamic> _startTimeList;
+  @override
+  @JsonKey()
+  List<dynamic> get startTimeList {
+    if (_startTimeList is EqualUnmodifiableListView) return _startTimeList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_startTimeList);
+  }
+
+  final List<dynamic> _endTimeList;
+  @override
+  @JsonKey()
+  List<dynamic> get endTimeList {
+    if (_endTimeList is EqualUnmodifiableListView) return _endTimeList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_endTimeList);
+  }
+
   @override
   String toString() {
-    return 'Class(id: $id, name: $name, classImgUrl: $classImgUrl, overView: $overView, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document)';
+    return 'Class(id: $id, name: $name, weekDay: $weekDay, classRoom: $classRoom, classImgUrl: $classImgUrl, overView: $overView, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document, startTimeList: $startTimeList, endTimeList: $endTimeList)';
   }
 
   @override
@@ -456,6 +538,9 @@ class _$_Class implements _Class {
             other is _$_Class &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.weekDay, weekDay) || other.weekDay == weekDay) &&
+            (identical(other.classRoom, classRoom) ||
+                other.classRoom == classRoom) &&
             (identical(other.classImgUrl, classImgUrl) ||
                 other.classImgUrl == classImgUrl) &&
             (identical(other.overView, overView) ||
@@ -487,7 +572,11 @@ class _$_Class implements _Class {
                 other.isOnline == isOnline) &&
             (identical(other.baseClass, baseClass) ||
                 other.baseClass == baseClass) &&
-            const DeepCollectionEquality().equals(other._document, _document));
+            const DeepCollectionEquality().equals(other._document, _document) &&
+            const DeepCollectionEquality()
+                .equals(other._startTimeList, _startTimeList) &&
+            const DeepCollectionEquality()
+                .equals(other._endTimeList, _endTimeList));
   }
 
   @JsonKey(ignore: true)
@@ -496,6 +585,8 @@ class _$_Class implements _Class {
         runtimeType,
         id,
         name,
+        weekDay,
+        classRoom,
         classImgUrl,
         overView,
         const DeepCollectionEquality().hash(_studentIdList),
@@ -512,7 +603,9 @@ class _$_Class implements _Class {
         const DeepCollectionEquality().hash(_documentId),
         isOnline,
         baseClass,
-        const DeepCollectionEquality().hash(_document)
+        const DeepCollectionEquality().hash(_document),
+        const DeepCollectionEquality().hash(_startTimeList),
+        const DeepCollectionEquality().hash(_endTimeList)
       ]);
 
   @JsonKey(ignore: true)
@@ -533,6 +626,8 @@ abstract class _Class implements Class {
   const factory _Class(
       {final String id,
       final String name,
+      final String weekDay,
+      final String classRoom,
       final String classImgUrl,
       final String overView,
       final List<StudentId> studentIdList,
@@ -549,7 +644,9 @@ abstract class _Class implements Class {
       final List<String> documentId,
       final bool isOnline,
       final String baseClass,
-      final List<Map<String, dynamic>> document}) = _$_Class;
+      final List<Map<String, dynamic>> document,
+      final List<dynamic> startTimeList,
+      final List<dynamic> endTimeList}) = _$_Class;
 
   factory _Class.fromJson(Map<String, dynamic> json) = _$_Class.fromJson;
 
@@ -557,6 +654,10 @@ abstract class _Class implements Class {
   String get id;
   @override
   String get name;
+  @override
+  String get weekDay;
+  @override
+  String get classRoom;
   @override
   String get classImgUrl;
   @override
@@ -591,6 +692,10 @@ abstract class _Class implements Class {
   String get baseClass;
   @override
   List<Map<String, dynamic>> get document;
+  @override
+  List<dynamic> get startTimeList;
+  @override
+  List<dynamic> get endTimeList;
   @override
   @JsonKey(ignore: true)
   _$$_ClassCopyWith<_$_Class> get copyWith =>

@@ -6,6 +6,8 @@ const Color primary = Color(0xff377E90);
 
 const Color primary5 = Color(0xffE2F6FC);
 
+const Color primary10 = Color(0xffB8E9F7);
+
 const Color secondary = Color(0xffE7A15F);
 
 const Color vantan = Color(0xffDE5761);
@@ -49,6 +51,8 @@ const Color accentSecondary = Color(0xffC87149);
 const Color link = Color(0xff0071CC);
 
 const Color disabled = Color(0xff12181A66);
+
+const Color onPrimary = Color(0xffffffff);
 
 // Border
 
