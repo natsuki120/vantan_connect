@@ -380,6 +380,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_tab_indicator_styler",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_tab_indicator_styler-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/natsuki/development/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -974,7 +980,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-01-24T06:53:41.977872Z",
+  "generated": "2023-01-28T06:40:48.441148Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }
