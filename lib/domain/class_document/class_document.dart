@@ -10,6 +10,7 @@ class ClassDocument with _$ClassDocument {
     @Default('') String description,
     @Default(0) int count,
     @Default(ClassName()) ClassName className,
+    @Default('') String day,
   }) = _ClassDocument;
 
   factory ClassDocument.fromJson(Map<String, dynamic> json) =>
