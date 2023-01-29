@@ -26,6 +26,8 @@ mixin _$Class {
   String get classRoom => throw _privateConstructorUsedError;
   String get classImgUrl => throw _privateConstructorUsedError;
   String get overView => throw _privateConstructorUsedError;
+  List<ClassDocument> get classDocumentList =>
+      throw _privateConstructorUsedError;
   List<StudentId> get studentIdList => throw _privateConstructorUsedError;
   List<TeacherId> get teacherIdList => throw _privateConstructorUsedError;
   String get targetSchool => throw _privateConstructorUsedError;
@@ -61,6 +63,7 @@ abstract class $ClassCopyWith<$Res> {
       String classRoom,
       String classImgUrl,
       String overView,
+      List<ClassDocument> classDocumentList,
       List<StudentId> studentIdList,
       List<TeacherId> teacherIdList,
       String targetSchool,
@@ -99,6 +102,7 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
     Object? classRoom = null,
     Object? classImgUrl = null,
     Object? overView = null,
+    Object? classDocumentList = null,
     Object? studentIdList = null,
     Object? teacherIdList = null,
     Object? targetSchool = null,
@@ -142,6 +146,10 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
+      classDocumentList: null == classDocumentList
+          ? _value.classDocumentList
+          : classDocumentList // ignore: cast_nullable_to_non_nullable
+              as List<ClassDocument>,
       studentIdList: null == studentIdList
           ? _value.studentIdList
           : studentIdList // ignore: cast_nullable_to_non_nullable
@@ -227,6 +235,7 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       String classRoom,
       String classImgUrl,
       String overView,
+      List<ClassDocument> classDocumentList,
       List<StudentId> studentIdList,
       List<TeacherId> teacherIdList,
       String targetSchool,
@@ -261,6 +270,7 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
     Object? classRoom = null,
     Object? classImgUrl = null,
     Object? overView = null,
+    Object? classDocumentList = null,
     Object? studentIdList = null,
     Object? teacherIdList = null,
     Object? targetSchool = null,
@@ -304,6 +314,10 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
+      classDocumentList: null == classDocumentList
+          ? _value._classDocumentList
+          : classDocumentList // ignore: cast_nullable_to_non_nullable
+              as List<ClassDocument>,
       studentIdList: null == studentIdList
           ? _value._studentIdList
           : studentIdList // ignore: cast_nullable_to_non_nullable
@@ -386,6 +400,7 @@ class _$_Class implements _Class {
       this.classRoom = '',
       this.classImgUrl = '',
       this.overView = '',
+      final List<ClassDocument> classDocumentList = const [],
       final List<StudentId> studentIdList = const [],
       final List<TeacherId> teacherIdList = const [],
       this.targetSchool = '',
@@ -403,7 +418,8 @@ class _$_Class implements _Class {
       final List<Map<String, dynamic>> document = const [],
       final List<dynamic> startTimeList = const [],
       final List<dynamic> endTimeList = const []})
-      : _studentIdList = studentIdList,
+      : _classDocumentList = classDocumentList,
+        _studentIdList = studentIdList,
         _teacherIdList = teacherIdList,
         _goalRequirements = goalRequirements,
         _documentId = documentId,
@@ -432,6 +448,16 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String overView;
+  final List<ClassDocument> _classDocumentList;
+  @override
+  @JsonKey()
+  List<ClassDocument> get classDocumentList {
+    if (_classDocumentList is EqualUnmodifiableListView)
+      return _classDocumentList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_classDocumentList);
+  }
+
   final List<StudentId> _studentIdList;
   @override
   @JsonKey()
@@ -528,7 +554,7 @@ class _$_Class implements _Class {
 
   @override
   String toString() {
-    return 'Class(id: $id, name: $name, weekDay: $weekDay, classRoom: $classRoom, classImgUrl: $classImgUrl, overView: $overView, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document, startTimeList: $startTimeList, endTimeList: $endTimeList)';
+    return 'Class(id: $id, name: $name, weekDay: $weekDay, classRoom: $classRoom, classImgUrl: $classImgUrl, overView: $overView, classDocumentList: $classDocumentList, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document, startTimeList: $startTimeList, endTimeList: $endTimeList)';
   }
 
   @override
@@ -545,6 +571,8 @@ class _$_Class implements _Class {
                 other.classImgUrl == classImgUrl) &&
             (identical(other.overView, overView) ||
                 other.overView == overView) &&
+            const DeepCollectionEquality()
+                .equals(other._classDocumentList, _classDocumentList) &&
             const DeepCollectionEquality()
                 .equals(other._studentIdList, _studentIdList) &&
             const DeepCollectionEquality()
@@ -589,6 +617,7 @@ class _$_Class implements _Class {
         classRoom,
         classImgUrl,
         overView,
+        const DeepCollectionEquality().hash(_classDocumentList),
         const DeepCollectionEquality().hash(_studentIdList),
         const DeepCollectionEquality().hash(_teacherIdList),
         targetSchool,
@@ -630,6 +659,7 @@ abstract class _Class implements Class {
       final String classRoom,
       final String classImgUrl,
       final String overView,
+      final List<ClassDocument> classDocumentList,
       final List<StudentId> studentIdList,
       final List<TeacherId> teacherIdList,
       final String targetSchool,
@@ -662,6 +692,8 @@ abstract class _Class implements Class {
   String get classImgUrl;
   @override
   String get overView;
+  @override
+  List<ClassDocument> get classDocumentList;
   @override
   List<StudentId> get studentIdList;
   @override

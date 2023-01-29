@@ -16,6 +16,7 @@ class Class with _$Class {
     @Default('') String classRoom,
     @Default('') String classImgUrl,
     @Default('') String overView,
+    @Default([]) List<ClassDocument> classDocumentList,
     @Default([]) List<StudentId> studentIdList,
     @Default([]) List<TeacherId> teacherIdList,
     @Default('') String targetSchool,
