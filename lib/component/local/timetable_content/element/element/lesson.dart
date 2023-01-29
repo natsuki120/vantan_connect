@@ -23,7 +23,7 @@ class Lesson extends ConsumerWidget {
         classInfo,
         ref,
         Student(id: '高橋夏輝'),
-        ClassName(name: 'プログラミング'),
+        ClassName(name: classInfo.name),
       ),
       child: Container(
         width: 65.sp,

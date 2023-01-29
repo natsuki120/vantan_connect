@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/shered/navigator.dart';
 import '../../../domain/class/class.dart';
 import '../../shered/single/buttons.dart';
 import '../../shered/single/color.dart';
@@ -26,7 +27,7 @@ class LessonDetailHeader extends StatelessWidget {
               color: Colors.red,
             ),
             Padding(
-              padding: EdgeInsets.all(16.sp),
+              padding: EdgeInsets.symmetric(horizontal: 16.sp, vertical: 64.sp),
               child: Row(
                 children: [
                   CustomIconButton(
@@ -34,7 +35,7 @@ class LessonDetailHeader extends StatelessWidget {
                     width: 40.sp,
                     height: 40.sp,
                     backgroundColor: primary10,
-                    callback: () {},
+                    callback: () => NavigatorPop(context),
                     borderColor: primary10,
                   ),
                   Spacer(),
@@ -95,7 +96,7 @@ class LessonDetailHeader extends StatelessWidget {
               SpaceBox(height: 10.sp),
               Row(
                 children: [
-                  Text('UI/UXデザイン', style: title1Bold(highEmphasis)),
+                  Text(classInfo.name, style: title1Bold(highEmphasis)),
                   SpaceBox(width: 8.sp),
                   RegisteredLessonByStudentMark(),
                 ],
