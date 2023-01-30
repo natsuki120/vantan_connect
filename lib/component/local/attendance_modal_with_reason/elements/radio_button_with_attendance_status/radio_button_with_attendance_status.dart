@@ -17,7 +17,7 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
           text: AttendanceState.tardy.displayState,
           value: AttendanceState.tardy,
           groupValue: _attendanceState,
-          onChanged: (AttendanceState? value) {
+          onChanged: (value) {
             _attendanceState.value = value;
           },
         ),
@@ -25,7 +25,7 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
           text: AttendanceState.absence.displayState,
           value: AttendanceState.absence,
           groupValue: _attendanceState,
-          onChanged: (AttendanceState? value) {
+          onChanged: (value) {
             _attendanceState.value = value;
           },
         ),
@@ -33,7 +33,7 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
           text: AttendanceState.other.displayState,
           value: AttendanceState.other,
           groupValue: _attendanceState,
-          onChanged: (AttendanceState? value) {
+          onChanged: (value) {
             _attendanceState.value = value;
           },
         ),

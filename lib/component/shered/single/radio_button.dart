@@ -14,7 +14,7 @@ class RadioButtonWithText extends StatelessWidget {
   final String text;
   final Object value;
   final Object? groupValue;
-  final Function onChanged;
+  final void Function(dynamic)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class RadioButtonWithText extends StatelessWidget {
       leading: Radio(
         value: value,
         groupValue: groupValue,
-        onChanged: onChanged(),
+        onChanged: onChanged,
       ),
     );
   }
