@@ -7,7 +7,7 @@ enum AttendanceState {
   const AttendanceState(this.displayState);
 }
 
-
+//TODO: 変更が必須
 // AttendanceState? useAttendanceState(BuildContext context) {
 //   return use(_AttendanceState());
 // }

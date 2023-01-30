@@ -1,19 +1,12 @@
-// final List<int> _selectedIndex = [];
+final List<Map<String, dynamic>> selectedClass = [];
 
-// void _handleCheckbox(int index, bool e) {
-//   setState(() {
-//     // 選択が解除されたらリストから消す
-//     if (_selectedIndex.contains(index)) {
-//       _selectedIndex.remove(index);
-//     } else {
-//       // 選択されたらリストに追加する
-//       _selectedIndex.add(index);
-//     }
-//     if (_selectedIndex.isEmpty) {
-//       // 何も選択されていないときは合計値は0円
-//       _price = 0;
-//       return;
-//     }
-//     print(_price);
-//   });
-// }
+void handleCheckbox(Map<String, dynamic> e) {
+  if (selectedClass.contains(e)) {
+    selectedClass.remove(e);
+    //print(selectedClass);
+  } else {
+    // 選択されたらリストに追加する
+    selectedClass.add(e);
+    //print(selectedClass);
+  }
+}
