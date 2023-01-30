@@ -25,4 +25,11 @@ abstract class IStudentRepository {
   // TODO ClassNameをLessonNameに変更
   void attendanceLesson(
       {required Student student, required ClassName className}) {}
+  void setAttendanceState({
+    required Student student,
+    required ClassName className,
+    //required Student attendanceState
+  }) {}
 }
+//Sample:
+//Here: 抽象クラス

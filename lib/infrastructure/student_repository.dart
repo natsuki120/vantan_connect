@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:vantan_connect/domain/student/student.dart';
 import 'package:vantan_connect/domain/value/class_name.dart';
 
+//Here: interface repository
+//Sample:
 class StudentRepository extends IStudentRepository {
   final firestore = FirebaseFirestore.instance;
 
@@ -14,5 +16,20 @@ class StudentRepository extends IStudentRepository {
             'v1/private/${student.id}/writeOnly/Lesson/${className.name}/${DateTime.now().month}.${DateTime.now().day}')
         .doc();
     doc.set({'attendance': true});
+  }
+
+  void setAttendanceState(
+      {required Student student, required ClassName className}) {
+    final reason = ''; //テスト
+    final attendanceState = '';
+    final selectedClass = '';
+    final doc = firestore
+        .collection(
+            'v1/private/${student.id}/writeOnly/Lesson/${className.name}/${DateTime.now().month}.${DateTime.now().day}')
+        .doc();
+    doc.set({'attendance': false});
+    doc.set({'attendanceState': attendanceState});
+    doc.set({'class': selectedClass});
+    doc.set({'reason': reason});
   }
 }
