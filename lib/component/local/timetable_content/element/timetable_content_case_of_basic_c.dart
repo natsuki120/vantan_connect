@@ -20,14 +20,20 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Lesson(classInfo: Class(name: 'S校レポート')),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'マーケティング',
-                    classDocumentList: marketingDocumentListInC)),
+              classInfo: Class(
+                name: 'マーケティング',
+                classDocumentList: marketingDocumentListInC,
+                classImgUrl: 'marketing.png',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'マーケティング',
-                    classDocumentList: marketingDocumentListInC)),
+              classInfo: Class(
+                name: 'マーケティング',
+                classDocumentList: marketingDocumentListInC,
+                classImgUrl: 'marketing.png',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Nomal(),
             SpaceBox(height: 4.sp),
@@ -45,28 +51,40 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Nomal(),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'Webデザイン',
-                    classDocumentList: WebDesignDocumentListInC)),
+              classInfo: Class(
+                name: 'Webデザイン',
+                classDocumentList: WebDesignDocumentListInC,
+                classImgUrl: 'wordpress-g1155af3be_1920.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'Webデザイン',
-                    classDocumentList: WebDesignDocumentListInC)),
+              classInfo: Class(
+                name: 'Webデザイン',
+                classDocumentList: WebDesignDocumentListInC,
+                classImgUrl: 'wordpress-g1155af3be_1920.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Nomal(),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'プログラミング',
+                classRoom: '',
+                classDocumentList: programmingDocumentListInBasicC,
+                classImgUrl: 'programming-jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'プログラミング',
+                classRoom: '',
+                classDocumentList: programmingDocumentListInBasicC,
+                classImgUrl: 'programming-jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
           ],
         ),
@@ -76,30 +94,41 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             UnSelectedTimetableHeaderRow(weakDay: '水'),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'ITパスポート',
-                    classDocumentList: ITPassportDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'ITパスポート',
+                classDocumentList: ITPassportDocumentListInBasicC,
+                classImgUrl: 'passport.png',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'ITパスポート',
-                    classDocumentList: ITPassportDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'ITパスポート',
+                classDocumentList: ITPassportDocumentListInBasicC,
+                classImgUrl: 'passport.png',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(classInfo: Class(name: 'HR')),
             SpaceBox(height: 4.sp),
             Nomal(),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'プログラミング',
+                classRoom: '',
+                classDocumentList: programmingDocumentListInBasicC,
+                classImgUrl: 'programming.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
                 classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              name: 'プログラミング',
+              classRoom: '',
+              classDocumentList: programmingDocumentListInBasicC,
+              classImgUrl: 'programming.jpg,',
+            )),
             SpaceBox(height: 4.sp),
           ],
         ),
@@ -109,28 +138,40 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             UnSelectedTimetableHeaderRow(weakDay: '木'),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'プログラミング',
+                classRoom: '',
+                classDocumentList: programmingDocumentListInBasicC,
+                classImgUrl: 'programming.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'プログラミング',
+                classRoom: '',
+                classDocumentList: programmingDocumentListInBasicC,
+                classImgUrl: 'programming.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Nomal(),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'アートシンキング',
-                    classDocumentList: artThinkingDocumentListInC)),
+              classInfo: Class(
+                name: 'アートシンキング',
+                classDocumentList: artThinkingDocumentListInC,
+                classImgUrl: 'art-thinking.png',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'アートシンキング',
-                    classDocumentList: artThinkingDocumentListInC)),
+              classInfo: Class(
+                name: 'アートシンキング',
+                classDocumentList: artThinkingDocumentListInC,
+                classImgUrl: 'art-thinking.png',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Nomal(),
             SpaceBox(height: 4.sp),
@@ -144,28 +185,40 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Nomal(),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'デザインシンキング',
-                    classDocumentList: designThinkingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'デザインシンキング',
+                classDocumentList: designThinkingDocumentListInBasicC,
+                classImgUrl: 'design-thinking.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'デザインシンキング',
-                    classDocumentList: designThinkingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'デザインシンキング',
+                classDocumentList: designThinkingDocumentListInBasicC,
+                classImgUrl: 'design-thinking.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Nomal(),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'プログラミング',
+                classRoom: '',
+                classDocumentList: programmingDocumentListInBasicC,
+                classImgUrl: 'programming.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
-                classInfo: Class(
-                    name: 'プログラミング',
-                    classRoom: '',
-                    classDocumentList: programmingDocumentListInBasicC)),
+              classInfo: Class(
+                name: 'プログラミング',
+                classRoom: '',
+                classDocumentList: programmingDocumentListInBasicC,
+                classImgUrl: 'programming.jpg',
+              ),
+            ),
             SpaceBox(height: 4.sp),
           ],
         ),
