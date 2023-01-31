@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/local/lesson_detail_body/hooks.dart';
-import 'package:vantan_connect/component/local/timetable_content/element/element/lesson.dart';
 import '../../../../domain/class/class.dart';
 import '../../../shered/single/space_box.dart';
+import '../../lesson_detail_body/hooks.dart';
+import 'element/lesson.dart';
 import 'element/timetable_header_row.dart';
 
 class TimetableContentCaseOfAppliedClass extends StatelessWidget {

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/local/attendance_modal/hooks.dart';
-import 'package:vantan_connect/component/shered/riverpod.dart';
-import 'package:vantan_connect/component/shered/single/buttons.dart';
-import 'package:vantan_connect/component/shered/single/custom_icon_button.dart';
-import 'package:vantan_connect/component/shered/single/department_tag.dart';
-import 'package:vantan_connect/component/shered/single/space_box.dart';
-import 'package:vantan_connect/component/shered/single/test_style.dart';
-import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/domain/student/student.dart';
-import 'package:vantan_connect/domain/value/class_name.dart';
+import '../../../domain/class/class.dart';
+import '../../../domain/student/student.dart';
+import '../../../domain/value/class_name.dart';
 import '../../../page/lesson_detail_page.dart';
 import '../../shered/navigator.dart';
+import '../../shered/riverpod.dart';
+import '../../shered/single/buttons.dart';
 import '../../shered/single/color.dart';
+import '../../shered/single/custom_icon_button.dart';
+import '../../shered/single/department_tag.dart';
+import '../../shered/single/space_box.dart';
+import '../../shered/single/test_style.dart';
+import 'hooks.dart';
 
 Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
     Student student, ClassName className) {
