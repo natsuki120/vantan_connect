@@ -6,11 +6,13 @@ import 'package:vantan_connect/query_service/query_service.dart';
 class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   final firestore = FirebaseFirestore.instance;
 
+  // 仮置き
   @override
   Future<List<Student>> fetchClassInfo(
       {required ClassDocument classDocument}) async {
     return await firestore
-        .collection('Lesson/${classDocument.className}/${classDocument.day}')
+        .collectionGroup('1.29')
+        .where('className', isEqualTo: classDocument.className)
         .get()
         .then(
           (QuerySnapshot querySnapshot) =>
