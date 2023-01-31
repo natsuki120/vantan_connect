@@ -9,33 +9,21 @@ class CheckBoxListState extends StatefulWidget {
 }
 
 class _CheckBoxListStateState extends State<CheckBoxListState> {
-  final List<Map<String, dynamic>> dailyClass = [
-    {'period': '1限', 'className': 'UI/UX', 'selected': false},
-    {'period': '2限', 'className': 'UI/UX', 'selected': false},
-    {'period': '3限', 'className': 'AWSプラクティショナー', 'selected': false},
-    {'period': '4限', 'className': 'AWSプラクティショナー', 'selected': false},
-    {'period': '5限', 'className': 'マーケティング', 'selected': false},
-    {'period': '6限', 'className': 'マーケティング', 'selected': false},
-  ];
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-      child: Column(
-        children: dailyClass
-            .map((e) => CheckboxWithClass(
-                period: (e['period']),
-                className: (e['className']),
-                value: e['selected'],
-                onChanged: (bool? checkedValue) {
-                  setState(() {
-                    e['selected'] = checkedValue;
-                  });
-                  handleCheckbox(e);
-                }))
-            .toList(),
-      ),
+    return Column(
+      children: dailyClass
+          .map((e) => CheckboxWithClass(
+              period: (e['period']),
+              className: (e['className']),
+              value: e['selected'],
+              onChanged: (bool? checkedValue) {
+                setState(() {
+                  e['selected'] = checkedValue;
+                });
+                handleSelectedClass(e);
+              }))
+          .toList(),
     );
   }
 }

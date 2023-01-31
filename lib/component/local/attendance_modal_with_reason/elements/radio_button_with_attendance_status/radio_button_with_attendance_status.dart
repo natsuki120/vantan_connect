@@ -7,10 +7,9 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
   RadioButtonWithAttendanceStatus({
     super.key,
   });
-
+  late final _attendanceState = useState<AttendanceState?>(null);
   @override
   Widget build(BuildContext context) {
-    final _attendanceState = useState<AttendanceState?>(null);
     return Column(
       children: [
         RadioButtonWithText(
@@ -19,6 +18,7 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
           groupValue: _attendanceState.value,
           onChanged: (value) {
             _attendanceState.value = value;
+            handleAttendanceState(value);
           },
         ),
         RadioButtonWithText(
@@ -27,6 +27,7 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
           groupValue: _attendanceState.value,
           onChanged: (value) {
             _attendanceState.value = value;
+            handleAttendanceState(value);
           },
         ),
         RadioButtonWithText(
@@ -35,6 +36,7 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
           groupValue: _attendanceState.value,
           onChanged: (value) {
             _attendanceState.value = value;
+            handleAttendanceState(value);
           },
         ),
       ],
