@@ -11,9 +11,7 @@ _$_ClassDocument _$$_ClassDocumentFromJson(Map<String, dynamic> json) =>
       title: json['title'] as String? ?? '',
       description: json['description'] as String? ?? '',
       count: json['count'] as int? ?? 0,
-      className: json['className'] == null
-          ? const ClassName()
-          : ClassName.fromJson(json['className'] as Map<String, dynamic>),
+      className: json['className'] as String? ?? '',
       day: json['day'] as String? ?? '',
     );
 
@@ -22,6 +20,6 @@ Map<String, dynamic> _$$_ClassDocumentToJson(_$_ClassDocument instance) =>
       'title': instance.title,
       'description': instance.description,
       'count': instance.count,
-      'className': instance.className.toJson(),
+      'className': instance.className,
       'day': instance.day,
     };

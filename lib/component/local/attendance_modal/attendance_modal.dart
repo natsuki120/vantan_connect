@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/local/attendance_modal/hooks.dart';
 import 'package:vantan_connect/component/shered/riverpod.dart';
 import 'package:vantan_connect/component/shered/single/buttons.dart';
 import 'package:vantan_connect/component/shered/single/custom_icon_button.dart';
 import 'package:vantan_connect/component/shered/single/department_tag.dart';
-import 'package:vantan_connect/component/shered/single/registerd_lesson_by_student_mark.dart';
 import 'package:vantan_connect/component/shered/single/space_box.dart';
 import 'package:vantan_connect/component/shered/single/test_style.dart';
 import 'package:vantan_connect/domain/class/class.dart';
@@ -59,7 +59,7 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
               ],
             ),
             SpaceBox(height: 20.sp),
-            Text('授業開始まであと5分です。『出席する』または『遅刻・欠席する』から出席状況を送信してください。'),
+            Text('『出席する』または『遅刻・欠席する』から出席状況を送信してください。'),
             SpaceBox(height: 16.sp),
             // 他のページの内容が不明なため、ひとまずそのまま書く
             // もしかしたらshared component にするかも
@@ -76,7 +76,17 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                 ),
                 child: Row(
                   children: [
-                    Placeholder(fallbackWidth: 100, fallbackHeight: 194),
+                    SizedBox(
+                      width: 100.sp,
+                      height: 210.sp,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0.sp),
+                        child: Image.asset(
+                          'images/${classInfo.classImgUrl}',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding: EdgeInsets.all(16.0.sp),
                       child: Column(
@@ -94,102 +104,53 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                                   borderRadius: BorderRadius.circular(8.sp),
                                 ),
                                 child: Text(
-                                  '1限',
-                                  style: subHeadLineBold(
-                                    midEmphasis.withOpacity(0.7),
-                                  ),
-                                ),
-                              ),
-                              SpaceBox(width: 8.sp),
-                              Container(
-                                width: 39.sp,
-                                height: 27.sp,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: surfaceSecondary.withOpacity(0.05),
-                                  borderRadius: BorderRadius.circular(8.sp),
-                                ),
-                                child: Text(
-                                  '2限',
+                                  '前期',
                                   style: subHeadLineBold(
                                     midEmphasis.withOpacity(0.7),
                                   ),
                                 ),
                               ),
                               SpaceBox(width: 91.sp),
-                              RegisteredLessonByStudentMark(),
                             ],
                           ),
                           SpaceBox(height: 8.sp),
                           Text(classInfo.name,
                               style: headLineBold(highEmphasis)),
                           SpaceBox(height: 5.sp),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.today,
-                                size: 15.sp,
-                                color: lowEmphasis.withOpacity(0.5),
-                              ),
-                              SpaceBox(width: 6.sp),
-                              Text(
-                                '${classInfo.frameCount}コマ',
-                                style: caption2Regular(
-                                  lowEmphasis.withOpacity(0.5),
-                                ),
-                              ),
-                              SpaceBox(width: 12.sp),
-                              Icon(
-                                Icons.videocam_off_outlined,
-                                size: 17.sp,
-                                color: lowEmphasis.withOpacity(0.5),
-                              ),
-                              SpaceBox(width: 5.sp),
-                              Text(
-                                'オンライン不可',
-                                style: caption2Regular(
-                                  lowEmphasis.withOpacity(0.5),
-                                ),
-                              ),
-                            ],
-                          ),
+
                           SpaceBox(height: 8.sp),
                           // shared component候補
-                          Container(
-                            height: 40.sp,
-                            decoration: BoxDecoration(
-                              color: surfaceSecondary.withOpacity(0.05),
-                              borderRadius: BorderRadius.circular(8.sp),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 16.0.sp,
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '担当',
-                                    style: caption1Regular(
-                                      lowEmphasis.withOpacity(0.5),
-                                    ),
-                                  ),
-                                  SpaceBox(width: 12.sp),
-                                  Placeholder(
-                                    fallbackWidth: 32.sp,
-                                    fallbackHeight: 32,
-                                  ),
-                                  SpaceBox(width: 8.sp),
-                                  Text(
-                                    '高橋　夏輝',
-                                    style: bodyRegular(
-                                      midEmphasis.withOpacity(0.7),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          // Container(
+                          //   height: 40.sp,
+                          //   decoration: BoxDecoration(
+                          //     color: surfaceSecondary.withOpacity(0.05),
+                          //     borderRadius: BorderRadius.circular(8.sp),
+                          //   ),
+                          //   child: Padding(
+                          //     padding: EdgeInsets.symmetric(
+                          //       horizontal: 16.0.sp,
+                          //     ),
+                          //     child: Row(
+                          //       crossAxisAlignment: CrossAxisAlignment.center,
+                          //       children: [
+                          //         Text(
+                          //           '担当',
+                          //           style: caption1Regular(
+                          //             lowEmphasis.withOpacity(0.5),
+                          //           ),
+                          //         ),
+                          //         SpaceBox(width: 12.sp),
+                          //         SpaceBox(width: 8.sp),
+                          //         Text(
+                          //           '高橋　夏輝',
+                          //           style: bodyRegular(
+                          //             midEmphasis.withOpacity(0.7),
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
                           SpaceBox(height: 24.sp),
                           DepartmentTag(department: 'テックフォードアカデミー'),
                         ],
@@ -199,31 +160,35 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                 ),
               ),
             ),
-            SpaceBox(height: 24.sp),
-            FilledEnabledButton(
-                text: '出席する',
-                textStyle: bodyBold(onPrimary),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 145.sp,
-                  vertical: 13.sp,
-                ),
-                backgroundColor: primary,
-                callback: () {
-                  ref
-                      .read(studentUseCase)
-                      .attendanceLesson(student: student, className: className);
-                }),
-            SpaceBox(height: 8.sp),
-            EnabledTextButtonWithIcon(
-              text: '遅刻・欠席する',
-              textStyle: bodyRegular(primary),
-              callback: () {},
-              icon: Icon(
-                Icons.edit_outlined,
-                size: 13.sp,
-                color: primary,
-              ),
-            ),
+            if (ref.watch(today) == classInfo.weakDay)
+              Column(
+                children: [
+                  SpaceBox(height: 24.sp),
+                  FilledEnabledButton(
+                      text: '出席する',
+                      textStyle: bodyBold(onPrimary),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 145.sp,
+                        vertical: 13.sp,
+                      ),
+                      backgroundColor: primary,
+                      callback: () {
+                        ref.read(studentUseCase).attendanceLesson(
+                            student: student, className: className);
+                      }),
+                  SpaceBox(height: 8.sp),
+                  EnabledTextButtonWithIcon(
+                    text: '遅刻・欠席する',
+                    textStyle: bodyRegular(primary),
+                    callback: () {},
+                    icon: Icon(
+                      Icons.edit_outlined,
+                      size: 13.sp,
+                      color: primary,
+                    ),
+                  ),
+                ],
+              )
           ],
         ),
       );

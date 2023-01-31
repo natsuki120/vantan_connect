@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/shered/navigator.dart';
+import 'package:vantan_connect/page/attendance_book_page.dart';
 import '../../../domain/class_document/class_document.dart';
 import '../../shered/single/color.dart';
 import '../../shered/single/space_box.dart';
@@ -34,40 +36,47 @@ class LessonDetailBody extends StatelessWidget {
                   final ClassDocument classDocument = classDocumentList[index];
                   return Column(
                     children: [
-                      Container(
-                        width: 358.sp,
-                        height: 58.sp,
-                        decoration: BoxDecoration(
-                          color: surfaceSecondary.withOpacity(0.05),
-                          borderRadius: BorderRadius.circular(12.sp),
+                      GestureDetector(
+                        onTap: () => NavigatorPush(
+                          context,
+                          page:
+                              AttendanceBookPage(classDocument: classDocument),
                         ),
-                        child: Row(
-                          children: [
-                            SpaceBox(width: 16.sp),
-                            Column(
-                              children: [
-                                SpaceBox(height: 8.sp),
-                                Text(
-                                  '第${classDocument.count}回',
-                                  style: caption1Regular(
-                                    midEmphasis.withOpacity(0.7),
+                        child: Container(
+                          width: 358.sp,
+                          height: 58.sp,
+                          decoration: BoxDecoration(
+                            color: surfaceSecondary.withOpacity(0.05),
+                            borderRadius: BorderRadius.circular(12.sp),
+                          ),
+                          child: Row(
+                            children: [
+                              SpaceBox(width: 16.sp),
+                              Column(
+                                children: [
+                                  SpaceBox(height: 8.sp),
+                                  Text(
+                                    '第${classDocument.count}回',
+                                    style: caption1Regular(
+                                      midEmphasis.withOpacity(0.7),
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  classDocument.day,
-                                  style: headLineBold(highEmphasis),
-                                ),
-                              ],
-                            ),
-                            SpaceBox(width: 16.sp),
-                            Container(
-                              width: 1.sp,
-                              height: 42.sp,
-                              decoration: BoxDecoration(
-                                color: lowEmphasis.withOpacity(0.2),
+                                  Text(
+                                    classDocument.day,
+                                    style: headLineBold(highEmphasis),
+                                  ),
+                                ],
                               ),
-                            )
-                          ],
+                              SpaceBox(width: 16.sp),
+                              Container(
+                                width: 1.sp,
+                                height: 42.sp,
+                                decoration: BoxDecoration(
+                                  color: lowEmphasis.withOpacity(0.2),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                       SpaceBox(height: 8.sp),

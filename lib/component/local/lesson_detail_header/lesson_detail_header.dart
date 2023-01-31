@@ -21,10 +21,29 @@ class LessonDetailHeader extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Container(
-              width: 390.sp,
-              height: 240.sp,
-              color: Colors.red,
+            ShaderMask(
+              shaderCallback: (bounds) {
+                return LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.white,
+                    Colors.white.withOpacity(0.01),
+                  ],
+                  stops: [
+                    0.8,
+                    1,
+                  ],
+                ).createShader(bounds);
+              },
+              child: Container(
+                width: 390.sp,
+                height: 240.sp,
+                child: Image.asset(
+                  'images/${classInfo.classImgUrl}',
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.sp, vertical: 64.sp),
