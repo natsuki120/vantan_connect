@@ -12,7 +12,7 @@ class Class with _$Class {
   const factory Class({
     @Default('') String id,
     @Default('') String name,
-    @Default('') String weekDay,
+    @Default('') String weakDay,
     @Default('') String classRoom,
     @Default('') String classImgUrl,
     @Default('') String overView,
