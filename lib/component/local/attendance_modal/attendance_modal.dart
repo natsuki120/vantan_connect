@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/local/attendance_modal/hooks.dart';
 import 'package:vantan_connect/component/shered/riverpod.dart';
 import 'package:vantan_connect/component/shered/single/buttons.dart';
 import 'package:vantan_connect/component/shered/single/custom_icon_button.dart';
@@ -159,31 +160,35 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                 ),
               ),
             ),
-            SpaceBox(height: 24.sp),
-            FilledEnabledButton(
-                text: '出席する',
-                textStyle: bodyBold(onPrimary),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 145.sp,
-                  vertical: 13.sp,
-                ),
-                backgroundColor: primary,
-                callback: () {
-                  ref
-                      .read(studentUseCase)
-                      .attendanceLesson(student: student, className: className);
-                }),
-            SpaceBox(height: 8.sp),
-            EnabledTextButtonWithIcon(
-              text: '遅刻・欠席する',
-              textStyle: bodyRegular(primary),
-              callback: () {},
-              icon: Icon(
-                Icons.edit_outlined,
-                size: 13.sp,
-                color: primary,
-              ),
-            ),
+            if (ref.watch(today) == classInfo.weakDay)
+              Column(
+                children: [
+                  SpaceBox(height: 24.sp),
+                  FilledEnabledButton(
+                      text: '出席する',
+                      textStyle: bodyBold(onPrimary),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 145.sp,
+                        vertical: 13.sp,
+                      ),
+                      backgroundColor: primary,
+                      callback: () {
+                        ref.read(studentUseCase).attendanceLesson(
+                            student: student, className: className);
+                      }),
+                  SpaceBox(height: 8.sp),
+                  EnabledTextButtonWithIcon(
+                    text: '遅刻・欠席する',
+                    textStyle: bodyRegular(primary),
+                    callback: () {},
+                    icon: Icon(
+                      Icons.edit_outlined,
+                      size: 13.sp,
+                      color: primary,
+                    ),
+                  ),
+                ],
+              )
           ],
         ),
       );
