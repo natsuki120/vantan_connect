@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shered/navigator.dart';
 import '../../../domain/class/class.dart';
+import '../../shered/navigator.dart';
 import '../../shered/single/buttons.dart';
 import '../../shered/single/color.dart';
 import '../../shered/single/custom_icon_button.dart';

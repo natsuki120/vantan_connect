@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../component/shered/riverpod.dart';
+import '../domain/class_document/class_document.dart';
 
 class AttendanceBookPage extends ConsumerWidget {
   const AttendanceBookPage({Key? key, required this.classDocument})

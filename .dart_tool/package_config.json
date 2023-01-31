@@ -117,7 +117,7 @@
     },
     {
       "name": "calendar_date_picker2",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/calendar_date_picker2-0.3.6",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/calendar_date_picker2-0.3.7",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
@@ -369,7 +369,7 @@
     },
     {
       "name": "flutter_screenutil",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.6.0",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.6.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -429,13 +429,13 @@
     },
     {
       "name": "geolocator_android",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator_android-4.1.4",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator_android-4.1.7",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "geolocator_apple",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator_apple-2.2.3",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator_apple-2.2.5",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
@@ -591,9 +591,9 @@
     },
     {
       "name": "logging",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.1.0",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "matcher",
@@ -681,7 +681,7 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.11",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.12",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -692,20 +692,14 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "path_provider_ios",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "path_provider_linux",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7",
+      "name": "path_provider_foundation",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_foundation-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "path_provider_macos",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.7",
+      "name": "path_provider_linux",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -837,13 +831,13 @@
     },
     {
       "name": "sqflite",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-2.2.3",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-2.2.4+1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "sqflite_common",
-      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.4.1",
+      "rootUri": "file:///Users/natsuki/development/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.4.2+2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -980,7 +974,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-01-28T06:40:48.441148Z",
+  "generated": "2023-01-31T12:29:26.096043Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }

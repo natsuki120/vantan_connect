@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shered/single/space_box.dart';
+import '../../../../shered/single/space_box.dart';
 import '../../../../shered/single/test_style.dart';
 import '../../../../shered/single/color.dart';
 

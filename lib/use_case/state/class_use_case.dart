@@ -46,7 +46,6 @@ final testTeacherList = [
 
 final testStudentList = [
   Student(
-    attendance: '出席',
     name: '高橋夏輝',
     id: '@natuki',
     profileText: '【太陽光発電所の保安・管理業務】※成長し続けるリテールビジネス分野総合商社の関連会社／スタートアップ',
