@@ -7,9 +7,9 @@ class RadioButtonWithAttendanceStatus extends HookWidget {
   RadioButtonWithAttendanceStatus({
     super.key,
   });
-  late final _attendanceState = useState<AttendanceState?>(null);
   @override
   Widget build(BuildContext context) {
+    final _attendanceState = useState<AttendanceState?>(null);
     return Column(
       children: [
         RadioButtonWithText(
