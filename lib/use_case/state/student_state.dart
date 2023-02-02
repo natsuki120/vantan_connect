@@ -4,7 +4,6 @@ import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/infrastructure/class_repository.dart';
 import '/domain/value/student_id.dart';
-import 'class_use_case.dart';
 
 class StudentState extends StateNotifier<List<Student>> {
   StudentState(this.classRepository) : super([]);

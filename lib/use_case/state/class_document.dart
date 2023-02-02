@@ -2,8 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '/domain/class/class.dart';
 import '/domain/class_document/class_document.dart';
-import '/infrastructure/fake_class_repository.dart';
-import '/use_case/state/class_use_case.dart';
 import '/infrastructure/class_repository.dart';
 
 class ClassDocumentNotifier extends StateNotifier<List<ClassDocument>> {
