@@ -12,10 +12,11 @@ class Class with _$Class {
   const factory Class({
     @Default('') String id,
     @Default('') String name,
-    @Default('') String weekDay,
+    @Default('') String weakDay,
     @Default('') String classRoom,
     @Default('') String classImgUrl,
     @Default('') String overView,
+    @Default([]) List<ClassDocument> classDocumentList,
     @Default([]) List<StudentId> studentIdList,
     @Default([]) List<TeacherId> teacherIdList,
     @Default('') String targetSchool,

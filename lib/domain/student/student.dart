@@ -12,7 +12,7 @@ class Student with _$Student {
     @Default('') String name,
     @Default('') String job,
     @Default('') String profileText,
-    @Default('') String attendance,
+    @Default(false) bool attendance,
     @Default(0) int attendedDay,
     @Default('') String accountNumber,
     @Default('') String userImagePath,

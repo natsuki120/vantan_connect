@@ -24,7 +24,7 @@ mixin _$Student {
   String get name => throw _privateConstructorUsedError;
   String get job => throw _privateConstructorUsedError;
   String get profileText => throw _privateConstructorUsedError;
-  String get attendance => throw _privateConstructorUsedError;
+  bool get attendance => throw _privateConstructorUsedError;
   int get attendedDay => throw _privateConstructorUsedError;
   String get accountNumber => throw _privateConstructorUsedError;
   String get userImagePath => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $StudentCopyWith<$Res> {
       String name,
       String job,
       String profileText,
-      String attendance,
+      bool attendance,
       int attendedDay,
       String accountNumber,
       String userImagePath,
@@ -95,7 +95,7 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
       attendance: null == attendance
           ? _value.attendance
           : attendance // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       attendedDay: null == attendedDay
           ? _value.attendedDay
           : attendedDay // ignore: cast_nullable_to_non_nullable
@@ -128,7 +128,7 @@ abstract class _$$_StudentCopyWith<$Res> implements $StudentCopyWith<$Res> {
       String name,
       String job,
       String profileText,
-      String attendance,
+      bool attendance,
       int attendedDay,
       String accountNumber,
       String userImagePath,
@@ -175,7 +175,7 @@ class __$$_StudentCopyWithImpl<$Res>
       attendance: null == attendance
           ? _value.attendance
           : attendance // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       attendedDay: null == attendedDay
           ? _value.attendedDay
           : attendedDay // ignore: cast_nullable_to_non_nullable
@@ -204,7 +204,7 @@ class _$_Student implements _Student {
       this.name = '',
       this.job = '',
       this.profileText = '',
-      this.attendance = '',
+      this.attendance = false,
       this.attendedDay = 0,
       this.accountNumber = '',
       this.userImagePath = '',
@@ -227,7 +227,7 @@ class _$_Student implements _Student {
   final String profileText;
   @override
   @JsonKey()
-  final String attendance;
+  final bool attendance;
   @override
   @JsonKey()
   final int attendedDay;
@@ -293,7 +293,7 @@ abstract class _Student implements Student {
       final String name,
       final String job,
       final String profileText,
-      final String attendance,
+      final bool attendance,
       final int attendedDay,
       final String accountNumber,
       final String userImagePath,
@@ -310,7 +310,7 @@ abstract class _Student implements Student {
   @override
   String get profileText;
   @override
-  String get attendance;
+  bool get attendance;
   @override
   int get attendedDay;
   @override

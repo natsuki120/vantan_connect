@@ -22,10 +22,12 @@ Class _$ClassFromJson(Map<String, dynamic> json) {
 mixin _$Class {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get weekDay => throw _privateConstructorUsedError;
+  String get weakDay => throw _privateConstructorUsedError;
   String get classRoom => throw _privateConstructorUsedError;
   String get classImgUrl => throw _privateConstructorUsedError;
   String get overView => throw _privateConstructorUsedError;
+  List<ClassDocument> get classDocumentList =>
+      throw _privateConstructorUsedError;
   List<StudentId> get studentIdList => throw _privateConstructorUsedError;
   List<TeacherId> get teacherIdList => throw _privateConstructorUsedError;
   String get targetSchool => throw _privateConstructorUsedError;
@@ -57,10 +59,11 @@ abstract class $ClassCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
-      String weekDay,
+      String weakDay,
       String classRoom,
       String classImgUrl,
       String overView,
+      List<ClassDocument> classDocumentList,
       List<StudentId> studentIdList,
       List<TeacherId> teacherIdList,
       String targetSchool,
@@ -95,10 +98,11 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? weekDay = null,
+    Object? weakDay = null,
     Object? classRoom = null,
     Object? classImgUrl = null,
     Object? overView = null,
+    Object? classDocumentList = null,
     Object? studentIdList = null,
     Object? teacherIdList = null,
     Object? targetSchool = null,
@@ -126,9 +130,9 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      weekDay: null == weekDay
-          ? _value.weekDay
-          : weekDay // ignore: cast_nullable_to_non_nullable
+      weakDay: null == weakDay
+          ? _value.weakDay
+          : weakDay // ignore: cast_nullable_to_non_nullable
               as String,
       classRoom: null == classRoom
           ? _value.classRoom
@@ -142,6 +146,10 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
+      classDocumentList: null == classDocumentList
+          ? _value.classDocumentList
+          : classDocumentList // ignore: cast_nullable_to_non_nullable
+              as List<ClassDocument>,
       studentIdList: null == studentIdList
           ? _value.studentIdList
           : studentIdList // ignore: cast_nullable_to_non_nullable
@@ -223,10 +231,11 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
-      String weekDay,
+      String weakDay,
       String classRoom,
       String classImgUrl,
       String overView,
+      List<ClassDocument> classDocumentList,
       List<StudentId> studentIdList,
       List<TeacherId> teacherIdList,
       String targetSchool,
@@ -257,10 +266,11 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? weekDay = null,
+    Object? weakDay = null,
     Object? classRoom = null,
     Object? classImgUrl = null,
     Object? overView = null,
+    Object? classDocumentList = null,
     Object? studentIdList = null,
     Object? teacherIdList = null,
     Object? targetSchool = null,
@@ -288,9 +298,9 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      weekDay: null == weekDay
-          ? _value.weekDay
-          : weekDay // ignore: cast_nullable_to_non_nullable
+      weakDay: null == weakDay
+          ? _value.weakDay
+          : weakDay // ignore: cast_nullable_to_non_nullable
               as String,
       classRoom: null == classRoom
           ? _value.classRoom
@@ -304,6 +314,10 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           ? _value.overView
           : overView // ignore: cast_nullable_to_non_nullable
               as String,
+      classDocumentList: null == classDocumentList
+          ? _value._classDocumentList
+          : classDocumentList // ignore: cast_nullable_to_non_nullable
+              as List<ClassDocument>,
       studentIdList: null == studentIdList
           ? _value._studentIdList
           : studentIdList // ignore: cast_nullable_to_non_nullable
@@ -382,10 +396,11 @@ class _$_Class implements _Class {
   const _$_Class(
       {this.id = '',
       this.name = '',
-      this.weekDay = '',
+      this.weakDay = '',
       this.classRoom = '',
       this.classImgUrl = '',
       this.overView = '',
+      final List<ClassDocument> classDocumentList = const [],
       final List<StudentId> studentIdList = const [],
       final List<TeacherId> teacherIdList = const [],
       this.targetSchool = '',
@@ -403,7 +418,8 @@ class _$_Class implements _Class {
       final List<Map<String, dynamic>> document = const [],
       final List<dynamic> startTimeList = const [],
       final List<dynamic> endTimeList = const []})
-      : _studentIdList = studentIdList,
+      : _classDocumentList = classDocumentList,
+        _studentIdList = studentIdList,
         _teacherIdList = teacherIdList,
         _goalRequirements = goalRequirements,
         _documentId = documentId,
@@ -422,7 +438,7 @@ class _$_Class implements _Class {
   final String name;
   @override
   @JsonKey()
-  final String weekDay;
+  final String weakDay;
   @override
   @JsonKey()
   final String classRoom;
@@ -432,6 +448,16 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String overView;
+  final List<ClassDocument> _classDocumentList;
+  @override
+  @JsonKey()
+  List<ClassDocument> get classDocumentList {
+    if (_classDocumentList is EqualUnmodifiableListView)
+      return _classDocumentList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_classDocumentList);
+  }
+
   final List<StudentId> _studentIdList;
   @override
   @JsonKey()
@@ -528,7 +554,7 @@ class _$_Class implements _Class {
 
   @override
   String toString() {
-    return 'Class(id: $id, name: $name, weekDay: $weekDay, classRoom: $classRoom, classImgUrl: $classImgUrl, overView: $overView, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document, startTimeList: $startTimeList, endTimeList: $endTimeList)';
+    return 'Class(id: $id, name: $name, weakDay: $weakDay, classRoom: $classRoom, classImgUrl: $classImgUrl, overView: $overView, classDocumentList: $classDocumentList, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document, startTimeList: $startTimeList, endTimeList: $endTimeList)';
   }
 
   @override
@@ -538,13 +564,15 @@ class _$_Class implements _Class {
             other is _$_Class &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.weekDay, weekDay) || other.weekDay == weekDay) &&
+            (identical(other.weakDay, weakDay) || other.weakDay == weakDay) &&
             (identical(other.classRoom, classRoom) ||
                 other.classRoom == classRoom) &&
             (identical(other.classImgUrl, classImgUrl) ||
                 other.classImgUrl == classImgUrl) &&
             (identical(other.overView, overView) ||
                 other.overView == overView) &&
+            const DeepCollectionEquality()
+                .equals(other._classDocumentList, _classDocumentList) &&
             const DeepCollectionEquality()
                 .equals(other._studentIdList, _studentIdList) &&
             const DeepCollectionEquality()
@@ -585,10 +613,11 @@ class _$_Class implements _Class {
         runtimeType,
         id,
         name,
-        weekDay,
+        weakDay,
         classRoom,
         classImgUrl,
         overView,
+        const DeepCollectionEquality().hash(_classDocumentList),
         const DeepCollectionEquality().hash(_studentIdList),
         const DeepCollectionEquality().hash(_teacherIdList),
         targetSchool,
@@ -626,10 +655,11 @@ abstract class _Class implements Class {
   const factory _Class(
       {final String id,
       final String name,
-      final String weekDay,
+      final String weakDay,
       final String classRoom,
       final String classImgUrl,
       final String overView,
+      final List<ClassDocument> classDocumentList,
       final List<StudentId> studentIdList,
       final List<TeacherId> teacherIdList,
       final String targetSchool,
@@ -655,13 +685,15 @@ abstract class _Class implements Class {
   @override
   String get name;
   @override
-  String get weekDay;
+  String get weakDay;
   @override
   String get classRoom;
   @override
   String get classImgUrl;
   @override
   String get overView;
+  @override
+  List<ClassDocument> get classDocumentList;
   @override
   List<StudentId> get studentIdList;
   @override

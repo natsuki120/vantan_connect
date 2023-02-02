@@ -23,7 +23,8 @@ mixin _$ClassDocument {
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
-  ClassName get className => throw _privateConstructorUsedError;
+  String get className => throw _privateConstructorUsedError;
+  String get day => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,9 +38,12 @@ abstract class $ClassDocumentCopyWith<$Res> {
           ClassDocument value, $Res Function(ClassDocument) then) =
       _$ClassDocumentCopyWithImpl<$Res, ClassDocument>;
   @useResult
-  $Res call({String title, String description, int count, ClassName className});
-
-  $ClassNameCopyWith<$Res> get className;
+  $Res call(
+      {String title,
+      String description,
+      int count,
+      String className,
+      String day});
 }
 
 /// @nodoc
@@ -59,6 +63,7 @@ class _$ClassDocumentCopyWithImpl<$Res, $Val extends ClassDocument>
     Object? description = null,
     Object? count = null,
     Object? className = null,
+    Object? day = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -76,16 +81,12 @@ class _$ClassDocumentCopyWithImpl<$Res, $Val extends ClassDocument>
       className: null == className
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
-              as ClassName,
+              as String,
+      day: null == day
+          ? _value.day
+          : day // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ClassNameCopyWith<$Res> get className {
-    return $ClassNameCopyWith<$Res>(_value.className, (value) {
-      return _then(_value.copyWith(className: value) as $Val);
-    });
   }
 }
 
@@ -97,10 +98,12 @@ abstract class _$$_ClassDocumentCopyWith<$Res>
       __$$_ClassDocumentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String description, int count, ClassName className});
-
-  @override
-  $ClassNameCopyWith<$Res> get className;
+  $Res call(
+      {String title,
+      String description,
+      int count,
+      String className,
+      String day});
 }
 
 /// @nodoc
@@ -118,6 +121,7 @@ class __$$_ClassDocumentCopyWithImpl<$Res>
     Object? description = null,
     Object? count = null,
     Object? className = null,
+    Object? day = null,
   }) {
     return _then(_$_ClassDocument(
       title: null == title
@@ -135,7 +139,11 @@ class __$$_ClassDocumentCopyWithImpl<$Res>
       className: null == className
           ? _value.className
           : className // ignore: cast_nullable_to_non_nullable
-              as ClassName,
+              as String,
+      day: null == day
+          ? _value.day
+          : day // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -147,7 +155,8 @@ class _$_ClassDocument implements _ClassDocument {
       {this.title = '',
       this.description = '',
       this.count = 0,
-      this.className = const ClassName()});
+      this.className = '',
+      this.day = ''});
 
   factory _$_ClassDocument.fromJson(Map<String, dynamic> json) =>
       _$$_ClassDocumentFromJson(json);
@@ -163,11 +172,14 @@ class _$_ClassDocument implements _ClassDocument {
   final int count;
   @override
   @JsonKey()
-  final ClassName className;
+  final String className;
+  @override
+  @JsonKey()
+  final String day;
 
   @override
   String toString() {
-    return 'ClassDocument(title: $title, description: $description, count: $count, className: $className)';
+    return 'ClassDocument(title: $title, description: $description, count: $count, className: $className, day: $day)';
   }
 
   @override
@@ -180,13 +192,14 @@ class _$_ClassDocument implements _ClassDocument {
                 other.description == description) &&
             (identical(other.count, count) || other.count == count) &&
             (identical(other.className, className) ||
-                other.className == className));
+                other.className == className) &&
+            (identical(other.day, day) || other.day == day));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, title, description, count, className);
+      Object.hash(runtimeType, title, description, count, className, day);
 
   @JsonKey(ignore: true)
   @override
@@ -207,7 +220,8 @@ abstract class _ClassDocument implements ClassDocument {
       {final String title,
       final String description,
       final int count,
-      final ClassName className}) = _$_ClassDocument;
+      final String className,
+      final String day}) = _$_ClassDocument;
 
   factory _ClassDocument.fromJson(Map<String, dynamic> json) =
       _$_ClassDocument.fromJson;
@@ -219,7 +233,9 @@ abstract class _ClassDocument implements ClassDocument {
   @override
   int get count;
   @override
-  ClassName get className;
+  String get className;
+  @override
+  String get day;
   @override
   @JsonKey(ignore: true)
   _$$_ClassDocumentCopyWith<_$_ClassDocument> get copyWith =>

@@ -9,10 +9,14 @@ part of 'class.dart';
 _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
-      weekDay: json['weekDay'] as String? ?? '',
+      weakDay: json['weakDay'] as String? ?? '',
       classRoom: json['classRoom'] as String? ?? '',
       classImgUrl: json['classImgUrl'] as String? ?? '',
       overView: json['overView'] as String? ?? '',
+      classDocumentList: (json['classDocumentList'] as List<dynamic>?)
+              ?.map((e) => ClassDocument.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       studentIdList: (json['studentIdList'] as List<dynamic>?)
               ?.map((e) => StudentId.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -50,10 +54,12 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
 Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'weekDay': instance.weekDay,
+      'weakDay': instance.weakDay,
       'classRoom': instance.classRoom,
       'classImgUrl': instance.classImgUrl,
       'overView': instance.overView,
+      'classDocumentList':
+          instance.classDocumentList.map((e) => e.toJson()).toList(),
       'studentIdList': instance.studentIdList.map((e) => e.toJson()).toList(),
       'teacherIdList': instance.teacherIdList.map((e) => e.toJson()).toList(),
       'targetSchool': instance.targetSchool,

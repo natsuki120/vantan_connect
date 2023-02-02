@@ -11,7 +11,7 @@ _$_Student _$$_StudentFromJson(Map<String, dynamic> json) => _$_Student(
       name: json['name'] as String? ?? '',
       job: json['job'] as String? ?? '',
       profileText: json['profileText'] as String? ?? '',
-      attendance: json['attendance'] as String? ?? '',
+      attendance: json['attendance'] as bool? ?? false,
       attendedDay: json['attendedDay'] as int? ?? 0,
       accountNumber: json['accountNumber'] as String? ?? '',
       userImagePath: json['userImagePath'] as String? ?? '',
