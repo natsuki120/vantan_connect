@@ -48,7 +48,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(
@@ -95,7 +95,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(
@@ -139,13 +139,13 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
           ],
         ),
@@ -182,7 +182,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(
@@ -201,13 +201,13 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
           children: [
             TimetableHeaderRow(weakDay: '金'),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(classInfo: Class(name: 'HR')),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(

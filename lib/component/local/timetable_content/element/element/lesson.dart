@@ -70,8 +70,8 @@ class Lesson extends ConsumerWidget {
   }
 }
 
-class Nomal extends StatelessWidget {
-  const Nomal({Key? key}) : super(key: key);
+class Normal extends StatelessWidget {
+  const Normal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
