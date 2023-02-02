@@ -50,7 +50,7 @@ class FakeClassRepository extends IClassRepository {
       'id': collection.doc().id,
       'name': teacher.name,
       'job': teacher.job,
-      'userImagaPath': teacher.userImagePath,
+      'userImagePath': teacher.userImagePath,
     });
   }
 
