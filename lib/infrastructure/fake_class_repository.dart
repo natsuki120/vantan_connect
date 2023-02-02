@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
-import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/domain/value/student_id.dart';
-import 'package:vantan_connect/domain/value/teacher_id.dart';
-import '../domain/class_document/class_document.dart';
-import '../domain/student/student.dart';
-import '../domain/teacher/teacher.dart';
+
+import '/domain/class/class.dart';
+import '/domain/value/student_id.dart';
+import '/domain/value/teacher_id.dart';
+import '/domain/class_document/class_document.dart';
+import '/domain/student/student.dart';
+import '/domain/teacher/teacher.dart';
 
 class FakeClassRepository extends IClassRepository {
   final firestore = FakeFirebaseFirestore();

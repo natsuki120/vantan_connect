@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/local/attendance_modal_with_reason/elements/multiline_text_field_for_reason/hooks/use_reason_text.dart';
-import 'package:vantan_connect/use_case/state/selectable_class_notifier.dart';
 
-import '../../../domain/student/student.dart';
-import '../../../domain/value/class_name.dart';
-import '../../shered/riverpod.dart';
-import '../../shered/single/color.dart';
-import '../../shered/single/space_box.dart';
-import '../../shered/single/buttons.dart';
-import '../../shered/single/test_style.dart';
+import '../../shared/riverpod.dart';
+import '../../shared/single/color.dart';
+import '../../shared/single/space_box.dart';
+import '../../shared/single/buttons.dart';
+import '../../shared/single/test_style.dart';
+import '/domain/student/student.dart';
+import '/domain/value/class_name.dart';
+import 'elements/multiline_text_field_for_reason/hooks/use_reason_text.dart';
 import 'elements/multiline_text_field_for_reason/multiline_text_field_for_reason.dart';
 import 'elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
 import 'elements/radio_button_with_attendance_status/radio_button_with_attendance_status.dart';

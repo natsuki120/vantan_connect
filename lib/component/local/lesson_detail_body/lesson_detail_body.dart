@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../domain/class_document/class_document.dart';
-import '../../../page/attendance_book_page.dart';
-import '../../shered/navigator.dart';
-import '../../shered/single/color.dart';
-import '../../shered/single/space_box.dart';
-import '../../shered/single/test_style.dart';
+
+import '../../shared/navigator.dart';
+import '../../shared/single/color.dart';
+import '../../shared/single/space_box.dart';
+import '../../shared/single/test_style.dart';
+import '/domain/class_document/class_document.dart';
+import '/page/attendance_book_page.dart';
 
 class LessonDetailBody extends StatelessWidget {
   const LessonDetailBody({Key? key, required this.classDocumentList})

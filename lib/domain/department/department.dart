@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vantan_connect/domain/school_term/school_term.dart';
+
+import '../school_term/school_term.dart';
 part 'department.freezed.dart';
 part 'department.g.dart';
 

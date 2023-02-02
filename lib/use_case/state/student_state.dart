@@ -1,8 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/domain/student/student.dart';
-import 'package:vantan_connect/infrastructure/class_repository.dart';
-import '../../domain/value/student_id.dart';
+
+import '/domain/class/class.dart';
+import '/domain/student/student.dart';
+import '/infrastructure/class_repository.dart';
+import '/domain/value/student_id.dart';
 import 'class_use_case.dart';
 
 class StudentState extends StateNotifier<List<Student>> {

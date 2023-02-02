@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shered/single/space_box.dart';
-import 'package:vantan_connect/component/shered/single/test_style.dart';
 
-import 'color.dart';
+import '../../shared/single/color.dart';
+import '../../shared/single/space_box.dart';
+import '../../shared/single/test_style.dart';
 
 class DepartmentTag extends StatelessWidget {
   const DepartmentTag({Key? key, required this.department}) : super(key: key);

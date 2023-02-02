@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:vantan_connect/domain/student/student.dart';
-import 'package:vantan_connect/domain/value/class_name.dart';
 
-import '../component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
+import '/component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
+import '/domain/student/student.dart';
+import '/domain/value/class_name.dart';
 
 //Here: interface repository
 //Sample:
