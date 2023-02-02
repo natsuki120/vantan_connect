@@ -8,7 +8,7 @@ import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
 import '../../../../shared/single/color.dart';
 import '../../../../shared/single/space_box.dart';
-import '../../../../shared/single/test_style.dart';
+import '../../../../shared/single/text_style.dart';
 
 class Lesson extends ConsumerWidget {
   const Lesson({Key? key, required this.classInfo}) : super(key: key);

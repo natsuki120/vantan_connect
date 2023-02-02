@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../shared/single/color.dart';
-import '../../shared/single/test_style.dart';
+import 'text_style.dart';
 
 class RegisteredLessonByStudentMark extends StatelessWidget {
   const RegisteredLessonByStudentMark({Key? key}) : super(key: key);

@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../shared/single/color.dart';
 import '../../shared/single/original_toggle_buttons.dart';
 import '../../shared/single/space_box.dart';
-import '../../shared/single/test_style.dart';
+import 'text_style.dart';
 
 class SelectDate extends HookWidget {
   const SelectDate(this.labelText, {Key? key}) : super(key: key);

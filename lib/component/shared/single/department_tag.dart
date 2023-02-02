@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../shared/single/color.dart';
 import '../../shared/single/space_box.dart';
-import '../../shared/single/test_style.dart';
+import 'text_style.dart';
 
 class DepartmentTag extends StatelessWidget {
   const DepartmentTag({Key? key, required this.department}) : super(key: key);

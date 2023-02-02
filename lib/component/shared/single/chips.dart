@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../shared/single/space_box.dart';
-import '../../shared/single/test_style.dart';
+import 'text_style.dart';
 
 class SelectedChips extends StatelessWidget {
   const SelectedChips({

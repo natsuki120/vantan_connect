@@ -8,7 +8,7 @@ import '../../shared/single/color.dart';
 import '../../shared/single/custom_icon_button.dart';
 import '../../shared/single/registerd_lesson_by_student_mark.dart';
 import '../../shared/single/space_box.dart';
-import '../../shared/single/test_style.dart';
+import '../../shared/single/text_style.dart';
 
 class LessonDetailHeader extends StatelessWidget {
   const LessonDetailHeader({Key? key, required this.classInfo})
