@@ -11,9 +11,8 @@ class TimeTablePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SpaceBox(height: 20.sp),
+          SpaceBox(height: 15.sp),
           TimetableHeader(),
           Expanded(child: TimeTableContent()),
         ],
