@@ -14,7 +14,7 @@ class AttendanceBookPage extends ConsumerWidget {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        child: ref.watch(queryService(classDocument)).when(
+        child: ref.watch(testProvider(classDocument)).when(
               data: (data) => Text(data.toString()),
               error: (error, _) => Text(error.toString()),
               loading: () => const CircularProgressIndicator(),
