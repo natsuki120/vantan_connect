@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:vantan_connect/component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
-import 'package:vantan_connect/component/shered/single/radio_button.dart';
+
+import '../../../../shared/single/radio_button.dart';
+import 'hooks/useAttendanceState.dart';
 
 class RadioButtonWithAttendanceStatus extends HookWidget {
   RadioButtonWithAttendanceStatus({

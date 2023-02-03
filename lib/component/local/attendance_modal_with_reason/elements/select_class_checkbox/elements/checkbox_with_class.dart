@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shered/single/space_box.dart';
 
-import '/component/shered/single/color.dart';
-import '/component/shered/single/test_style.dart';
+import '../../../../../shared/single/color.dart';
+import '../../../../../shared/single/space_box.dart';
+import '../../../../../shared/single/text_style.dart';
 
 //TODO: コンフリクトがあるので一旦ここで import含めてその際に行う。
 //TODO: ListTileにしたほうがいいかも？

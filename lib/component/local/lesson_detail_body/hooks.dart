@@ -1,6 +1,6 @@
 // 応用クラス
 
-import '../../../domain/class_document/class_document.dart';
+import '/domain/class_document/class_document.dart';
 
 final List<ClassDocument> programmingDocumentListInAP = [
   ClassDocument(day: '2/13', count: 1),

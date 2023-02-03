@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'color.dart';
-import 'test_style.dart';
+import '../../shared/single/color.dart';
+import 'text_style.dart';
 
 class RadioButtonWithText extends StatelessWidget {
   const RadioButtonWithText({

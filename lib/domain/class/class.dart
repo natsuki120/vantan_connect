@@ -1,9 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vantan_connect/domain/value/student_id.dart';
-import 'package:vantan_connect/domain/value/teacher_id.dart';
-import '../class_document/class_document.dart';
+
+import '../value/student_id.dart';
+import '../value/teacher_id.dart';
 import '../student/student.dart';
 import '../teacher/teacher.dart';
+import '../class_document/class_document.dart';
 part 'class.freezed.dart';
 part 'class.g.dart';
 

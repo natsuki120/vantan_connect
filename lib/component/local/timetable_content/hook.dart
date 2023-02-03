@@ -1,4 +1,4 @@
-import '../../../domain/class_time.dart';
+import '/domain/class_time.dart';
 
 final List classStartTimeList = [
   ClassTime(start: '9:30', end: '10:20'),

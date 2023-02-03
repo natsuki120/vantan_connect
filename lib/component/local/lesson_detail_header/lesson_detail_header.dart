@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../domain/class/class.dart';
-import '../../shered/navigator.dart';
-import '../../shered/single/buttons.dart';
-import '../../shered/single/color.dart';
-import '../../shered/single/custom_icon_button.dart';
-import '../../shered/single/registerd_lesson_by_student_mark.dart';
-import '../../shered/single/space_box.dart';
-import '../../shered/single/test_style.dart';
+
+import '/domain/class/class.dart';
+import '../../shared/navigator.dart';
+import '../../shared/single/buttons.dart';
+import '../../shared/single/color.dart';
+import '../../shared/single/custom_icon_button.dart';
+import '../../shared/single/registerd_lesson_by_student_mark.dart';
+import '../../shared/single/space_box.dart';
+import '../../shared/single/text_style.dart';
 
 class LessonDetailHeader extends StatelessWidget {
   const LessonDetailHeader({Key? key, required this.classInfo})

@@ -1,13 +1,13 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shered/single/test_style.dart';
 
-import 'color.dart';
-import 'original_toggle_buttons.dart';
-
-import 'package:vantan_connect/component/shered/single/space_box.dart';
+import '../../shared/single/color.dart';
+import '../../shared/single/original_toggle_buttons.dart';
+import '../../shared/single/space_box.dart';
+import 'text_style.dart';
 
 class SelectDate extends HookWidget {
   const SelectDate(this.labelText, {Key? key}) : super(key: key);

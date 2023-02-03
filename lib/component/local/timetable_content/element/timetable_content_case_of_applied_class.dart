@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../domain/class/class.dart';
-import '../../../shered/single/space_box.dart';
-import '../../lesson_detail_body/hooks.dart';
+
+import '../../../shared/single/space_box.dart';
+import '/domain/class/class.dart';
+import '/component/local/lesson_detail_body/hooks.dart';
 import 'element/lesson.dart';
 import 'element/timetable_header_row.dart';
 
@@ -138,9 +139,9 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             SpaceBox(height: 4.sp),
             Lesson(classInfo: Class(name: '昼休憩')),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
           ],
         ),
@@ -183,7 +184,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
                   weakDay: '木曜日'),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
           ],
         ),
@@ -220,7 +221,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             SpaceBox(height: 4.sp),
             Lesson(classInfo: Class(name: 'HR')),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
           ],
         ),

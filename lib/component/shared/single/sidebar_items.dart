@@ -1,69 +1,72 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shered/single/space_box.dart';
 
-class UnCheckboxes extends StatelessWidget {
-  const UnCheckboxes({
+import '../../shared/single/space_box.dart';
+
+class SidebarItems extends StatelessWidget {
+  const SidebarItems({
     Key? key,
     required this.text,
     required this.textStyle,
-    required this.padding,
+    required this.iconData,
+    required this.iconSize,
+    required this.iconColor,
     required this.backgroundColor,
-    required this.borderColor,
   }) : super(key: key);
 
   final String text;
   final TextStyle textStyle;
-  final EdgeInsets padding;
   final Color backgroundColor;
-  final Color borderColor;
+  final IconData iconData;
+  final double iconSize;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.sp),
-      ),
+      color: backgroundColor,
       child: Row(
         children: [
-          Text(text, style: textStyle),
+          Icon(iconData, size: iconSize, color: iconColor),
           SpaceBox(width: 11.sp),
-          Icon(Icons.add, size: 12.sp, color: borderColor)
+          Text(text, style: textStyle)
         ],
       ),
     );
   }
 }
 
-class Checkboxes extends StatelessWidget {
-  const Checkboxes({
+class SidebarItemsText extends StatelessWidget {
+  const SidebarItemsText({
     Key? key,
     required this.text,
     required this.textStyle,
-    required this.padding,
     required this.backgroundColor,
-    required this.borderColor,
+    required this.backgroundWidth,
+    required this.backgroundHeight,
+    required this.spaceSize,
   }) : super(key: key);
 
   final String text;
   final TextStyle textStyle;
-  final EdgeInsets padding;
+  final double backgroundWidth;
+  final double backgroundHeight;
   final Color backgroundColor;
-  final Color borderColor;
+  final double spaceSize;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding,
+      width: backgroundWidth,
+      height: backgroundHeight,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.sp),
+        borderRadius: BorderRadius.circular(4.sp),
+        color: backgroundColor,
       ),
       child: Row(
         children: [
+          SpaceBox(width: spaceSize),
           Text(text, style: textStyle),
-          SpaceBox(width: 11.sp),
-          Icon(Icons.check, size: 12.sp, color: borderColor)
         ],
       ),
     );

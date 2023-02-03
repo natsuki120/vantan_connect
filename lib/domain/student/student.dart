@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vantan_connect/domain/value/class_name.dart';
 
-import '../../component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
+import '/component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
+import '../value/class_name.dart';
 part 'student.freezed.dart';
 part 'student.g.dart';
 

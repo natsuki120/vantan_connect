@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:vantan_connect/component/shered/single/color.dart';
+import 'package:vantan_connect/component/shared/single/color.dart';
 
 import 'hooks/use_reason_text.dart';
 
