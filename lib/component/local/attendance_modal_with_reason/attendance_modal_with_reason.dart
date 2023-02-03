@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../shared/riverpod.dart';
 import '../../shared/single/color.dart';
 import '../../shared/single/space_box.dart';
@@ -26,7 +25,7 @@ Future attendanceModalWithReason(
         return GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Container(
-            height: 789.sp,
+            height: 810.sp,
             padding: EdgeInsets.symmetric(horizontal: 16.sp),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -37,6 +36,7 @@ Future attendanceModalWithReason(
             ),
             child: Column(
               children: [
+                SpaceBox(height: 24.sp),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -54,14 +54,14 @@ Future attendanceModalWithReason(
                   ],
                 ),
                 Container(
-                  height: 739,
+                  height: 739.sp,
                   padding:
                       EdgeInsets.symmetric(horizontal: 16.sp, vertical: 20.sp),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
                         Container(
-                          height: 230,
+                          height: 230.sp,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -71,11 +71,12 @@ Future attendanceModalWithReason(
                               ),
                               SpaceBox(height: 10.h),
                               Container(
-                                  child: Column(
-                                children: [
-                                  RadioButtonWithAttendanceStatus(),
-                                ],
-                              )),
+                                child: Column(
+                                  children: [
+                                    RadioButtonWithAttendanceStatus(),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -94,15 +95,12 @@ Future attendanceModalWithReason(
                                 style: callOutRegular(black),
                               ),
                               SpaceBox(height: 20.h),
-                              Container(
-                                height: 261.h,
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    CheckBoxListState(),
-                                  ],
-                                ),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  CheckBoxListState(),
+                                ],
                               ),
                             ],
                           ),
@@ -140,6 +138,7 @@ Future attendanceModalWithReason(
                                 );
                           },
                         ),
+                        SpaceBox(height: 16.sp),
                       ],
                     ),
                   ),

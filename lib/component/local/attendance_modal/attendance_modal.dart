@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/local/attendance_modal_with_reason/attendance_modal_with_reason.dart';
 
 import '../../shared/navigator.dart';
 import '../../shared/riverpod.dart';
@@ -181,7 +182,8 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                   EnabledTextButtonWithIcon(
                     text: '遅刻・欠席する',
                     textStyle: bodyRegular(primary),
-                    callback: () {},
+                    callback: () => attendanceModalWithReason(
+                        context, ref, student, className),
                     icon: Icon(
                       Icons.edit_outlined,
                       size: 13.sp,
