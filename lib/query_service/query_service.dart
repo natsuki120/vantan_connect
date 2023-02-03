@@ -3,4 +3,7 @@ import 'package:vantan_connect/domain/student/student.dart';
 
 abstract class IQueryService {
   Future<List<Student>> fetchClassInfo({required ClassDocument classDocument});
+
+  Future<Map<String, dynamic>> fetchStudentAttendance(
+      {required Student student, required String className});
 }

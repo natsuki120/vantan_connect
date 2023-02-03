@@ -8,11 +8,17 @@ import '../../use_case/query_survice/query_service.dart';
 
 final studentUseCase = Provider((ref) => StudentUseCase(StudentRepository()));
 
-final queryService =
+final testProvider =
     FutureProvider.family.autoDispose<List<Student>, ClassDocument>(
   (ref, ClassDocument classDocument) async {
     return await QueryServiceUseCase(
       queryService: QueryServiceRepositoryWhichUseFirebase(),
     ).fetchClassInfo(classDocument);
   },
+);
+
+final queryService = Provider(
+  (ref) => QueryServiceUseCase(
+    queryService: QueryServiceRepositoryWhichUseFirebase(),
+  ),
 );
