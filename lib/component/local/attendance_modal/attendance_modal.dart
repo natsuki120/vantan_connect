@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../domain/class/class.dart';
-import '../../../domain/student/student.dart';
-import '../../../domain/value/class_name.dart';
-import '../../../page/lesson_detail_page.dart';
-import '../../shered/navigator.dart';
-import '../../shered/riverpod.dart';
-import '../../shered/single/buttons.dart';
-import '../../shered/single/color.dart';
-import '../../shered/single/custom_icon_button.dart';
-import '../../shered/single/department_tag.dart';
-import '../../shered/single/space_box.dart';
-import '../../shered/single/test_style.dart';
+import 'package:vantan_connect/component/local/attendance_modal_with_reason/attendance_modal_with_reason.dart';
+
+import '../../shared/navigator.dart';
+import '../../shared/riverpod.dart';
+import '../../shared/single/buttons.dart';
+import '../../shared/single/color.dart';
+import '../../shared/single/custom_icon_button.dart';
+import '../../shared/single/department_tag.dart';
+import '../../shared/single/space_box.dart';
+import '../../shared/single/text_style.dart';
 import 'hooks.dart';
+import '/domain/class/class.dart';
+import '/domain/student/student.dart';
+import '/domain/value/class_name.dart';
+import '/page/lesson_detail_page.dart';
 
 Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
-    Student student, ClassName className, bool hasAttended) {
+    Student student, ClassName className) {
   return showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,
@@ -160,7 +162,7 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                 ),
               ),
             ),
-            if (ref.watch(today) == classInfo.weakDay && !hasAttended)
+            if (ref.watch(today) == classInfo.weakDay)
               Column(
                 children: [
                   SpaceBox(height: 24.sp),
@@ -180,27 +182,14 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                   EnabledTextButtonWithIcon(
                     text: '遅刻・欠席する',
                     textStyle: bodyRegular(primary),
-                    callback: () {},
+                    callback: () => attendanceModalWithReason(
+                        context, ref, student, className),
                     icon: Icon(
                       Icons.edit_outlined,
                       size: 13.sp,
                       color: primary,
                     ),
                   ),
-                ],
-              )
-            else if (hasAttended)
-              Column(
-                children: [
-                  SpaceBox(height: 40.sp),
-                  Text('出席確認済みの授業です'),
-                ],
-              )
-            else
-              Column(
-                children: [
-                  SpaceBox(height: 40.sp),
-                  Text('今日行われる授業以外の出席確認はできません'),
                 ],
               )
           ],

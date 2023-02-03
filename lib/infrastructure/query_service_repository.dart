@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:vantan_connect/domain/class_document/class_document.dart';
-import 'package:vantan_connect/domain/student/student.dart';
-import 'package:vantan_connect/query_service/query_service.dart';
+
+import '/domain/class_document/class_document.dart';
+import '/domain/student/student.dart';
+import '/query_service/query_service.dart';
 
 class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   final firestore = FirebaseFirestore.instance;
@@ -21,18 +22,5 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
             return Student.fromJson(json);
           }).toList(),
         );
-  }
-
-  @override
-  Future<Map<String, dynamic>> fetchStudentAttendance(
-      {required Student student, required String className}) {
-    final doc = firestore
-        .collection(
-            'v1/private/${student.id}/writeOnly/Lesson/${className}/${DateTime.now().month}.${DateTime.now().day}')
-        .doc();
-    return doc.get().then((DocumentSnapshot documentSnapshot) async {
-      final json = documentSnapshot.data() as Map<String, dynamic>;
-      return json['attendance'];
-    });
   }
 }

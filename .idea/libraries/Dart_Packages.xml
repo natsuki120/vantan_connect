@@ -215,7 +215,7 @@
         <entry key="cross_file">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/cross_file-0.3.3+2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/cross_file-0.3.3+4/lib" />
             </list>
           </value>
         </entry>
@@ -670,7 +670,7 @@
         <entry key="json_serializable">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.6.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.6.1/lib" />
             </list>
           </value>
         </entry>
@@ -1020,14 +1020,14 @@
         <entry key="syncfusion_flutter_core">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-20.4.44/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-20.4.48/lib" />
             </list>
           </value>
         </entry>
         <entry key="syncfusion_flutter_datepicker">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_datepicker-20.4.44/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_datepicker-20.4.48/lib" />
             </list>
           </value>
         </entry>
@@ -1162,7 +1162,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/code_builder-4.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.17.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/convert-3.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cross_file-0.3.3+2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cross_file-0.3.3+4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.2.4/lib" />
@@ -1223,7 +1223,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/io-1.0.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.6.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.8.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.6.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.6.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logger-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.1.1/lib" />
@@ -1272,8 +1272,8 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stream_channel-2.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-20.4.44/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_datepicker-20.4.44/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-20.4.48/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/syncfusion_flutter_datepicker-20.4.48/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/synchronized-3.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.4.16/lib" />

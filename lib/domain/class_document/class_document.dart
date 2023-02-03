@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vantan_connect/domain/value/class_name.dart';
+
+import '../value/class_name.dart';
 part 'class_document.freezed.dart';
 part 'class_document.g.dart';
 

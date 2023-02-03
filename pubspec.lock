@@ -245,10 +245,10 @@ packages:
     dependency: transitive
     description:
       name: cross_file
-      sha256: f71079978789bc2fe78d79227f1f8cfe195b31bbd8db2399b0d15a4b96fb843b
+      sha256: "0b0036e8cccbfbe0555fd83c1d31a6f30b77a96b598b35a5d36dd41f718695e9"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.3+2"
+    version: "0.3.3+4"
   crypto:
     dependency: transitive
     description:
@@ -753,10 +753,10 @@ packages:
     dependency: "direct main"
     description:
       name: json_serializable
-      sha256: "040088d9eb2337f3a51ddabe35261e2fea1c351e3dd29d755ed1290b6b700a75"
+      sha256: dadc08bd61f72559f938dd08ec20dbfec6c709bba83515085ea943d2078d187a
       url: "https://pub.dev"
     source: hosted
-    version: "6.6.0"
+    version: "6.6.1"
   lints:
     dependency: transitive
     description:
@@ -1150,18 +1150,18 @@ packages:
     dependency: transitive
     description:
       name: syncfusion_flutter_core
-      sha256: "66529f3f102c6501a75811e8d931a1908ad9865ea4d3416c40ac05cf62fdcd44"
+      sha256: b3e500b1896d40c8961ab430a94fc22eff8fa1b33af03584e2f0b89371c3fa6a
       url: "https://pub.dev"
     source: hosted
-    version: "20.4.44"
+    version: "20.4.48"
   syncfusion_flutter_datepicker:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_datepicker
-      sha256: "01997283827a8c4cb1a5fb0f3a2e4bce9081717a955a69df528aa046b240dd69"
+      sha256: "9dcd4e8a079e34d8807f137b70a4ad57b9ef606f0afee661ca50d0b2d1092771"
       url: "https://pub.dev"
     source: hosted
-    version: "20.4.44"
+    version: "20.4.48"
   synchronized:
     dependency: transitive
     description:

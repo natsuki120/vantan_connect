@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../domain/class/class.dart';
-import '../../../shered/single/space_box.dart';
-import '../../lesson_detail_body/hooks.dart';
+
+import '../../../shared/single/space_box.dart';
+import '/component/local/lesson_detail_body/hooks.dart';
+import '/domain/class/class.dart';
 import 'element/lesson.dart';
 import 'element/timetable_header_row.dart';
 
@@ -47,7 +48,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(
@@ -94,7 +95,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(
@@ -138,13 +139,13 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
           ],
         ),
@@ -181,7 +182,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(
@@ -200,13 +201,13 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
           children: [
             TimetableHeaderRow(weakDay: '金'),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(classInfo: Class(name: 'HR')),
             SpaceBox(height: 4.sp),
-            Nomal(),
+            Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
               classInfo: Class(
