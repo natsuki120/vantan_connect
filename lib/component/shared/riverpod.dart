@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vantan_connect/domain/class/class.dart';
 import '/domain/class_document/class_document.dart';
 import '/domain/student/student.dart';
 import '/infrastructure/student_repository.dart';
@@ -20,4 +21,10 @@ final classInfoProvider =
 final queryServiceProvider = Provider(
   (ref) => QueryServiceUseCase(
       queryService: QueryServiceRepositoryWhichUseFirebase()),
+);
+
+final studentAttendanceList = StreamProvider.family(
+  (ref, Class classInfo) => QueryServiceUseCase(
+    queryService: QueryServiceRepositoryWhichUseFirebase(),
+  ).fetchStudentAttendanceByClass(classInfo: classInfo),
 );

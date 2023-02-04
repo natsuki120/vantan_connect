@@ -8,4 +8,7 @@ abstract class IQueryService {
     required Student student,
     required Class classInfo,
   });
+  Stream<List<Student>> fetchStudentAttendanceByClass({
+    required Class classInfo,
+  });
 }

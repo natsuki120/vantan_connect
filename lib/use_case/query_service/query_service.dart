@@ -19,4 +19,9 @@ class QueryServiceUseCase {
       classInfo: classInfo,
     );
   }
+
+  Stream<List<Student>> fetchStudentAttendanceByClass(
+      {required Class classInfo}) {
+    return queryService.fetchStudentAttendanceByClass(classInfo: classInfo);
+  }
 }
