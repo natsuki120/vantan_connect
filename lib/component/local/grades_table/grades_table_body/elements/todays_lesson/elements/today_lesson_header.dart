@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../../shared/single/buttons.dart';
-import '../../../../../../../shared/single/space_box.dart';
-import '../../../../../../../shared/single/color.dart';
-import '../../../../../../../shared/single/text_style.dart';
+import '../../../../../../shared/single/space_box.dart';
+import '../../../../../../shared/single/color.dart';
+import '../../../../../../shared/single/text_style.dart';
 
 class TodayLessonHeader extends StatelessWidget {
   TodayLessonHeader({
@@ -18,6 +17,7 @@ class TodayLessonHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,10 +33,16 @@ class TodayLessonHeader extends StatelessWidget {
           ],
         ),
         Spacer(),
-        EnabledTextButton(
-          text: '全て表示',
-          textStyle: headLineRegular(lowEmphasis),
-          callback: () {},
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  '全て表示',
+                  style: headLineRegular(lowEmphasis),
+                )),
+          ],
         )
       ],
     );
