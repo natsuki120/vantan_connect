@@ -15,10 +15,7 @@ class GradesTableAppBar extends StatelessWidget {
       leading: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Text(
-            '成績',
-            style: title2Bold(black),
-          ),
+          Text('成績', style: title2Bold(black)),
         ],
       ),
       titleSpacing: 12.w,
@@ -50,7 +47,7 @@ class GradesTableAppBar extends StatelessWidget {
                 indicatorSize: TabBarIndicatorSize.label,
                 isScrollable: true, // スクロールを有効化
                 labelColor: Colors.black,
-                tabs: <Widget>[
+                tabs: [
                   Tab(text: '1年生'),
                   Tab(text: '2年生'),
                   Tab(text: '3年生'),
