@@ -37,4 +37,11 @@ class TestQueryServiceRepository extends IQueryService {
       return json['attendance'];
     });
   }
+
+  @override
+  Stream<List<Student>> fetchStudentAttendanceByClass(
+      {required Class classInfo}) {
+    // TODO: implement fetchStudentAttendanceByClass
+    throw UnimplementedError();
+  }
 }
