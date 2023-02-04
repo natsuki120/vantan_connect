@@ -4,6 +4,8 @@ import '/domain/student/student.dart';
 
 abstract class IQueryService {
   Future<List<Student>> fetchClassInfo({required ClassDocument classDocument});
-  Future<Map<String, dynamic>> fetchStudentAttendance(
-      {required Student student, required Class classInfo});
+  Future<Map<String, dynamic>> fetchStudentAttendance({
+    required Student student,
+    required Class classInfo,
+  });
 }
