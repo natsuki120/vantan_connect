@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../shared/single/color.dart';
 import '../../../../../../shared/single/space_box.dart';
 import '../../../../../../shared/single/text_style.dart';
-import '../elements/curriculum_subject_element_card.dart';
+import '../../grades_table_shared/grades_table_elements_card.dart';
 
 class CurriculumSubjectCard extends StatelessWidget {
   const CurriculumSubjectCard({
@@ -59,9 +59,9 @@ class CurriculumSubjectCard extends StatelessWidget {
                   Row(
                     children: [
                       //TODO:　要素を取得しその分だけ表示させる
-                      CurriculumSubjectElementsCard(elementText: '1年生'),
+                      GradesTableElementsCard(elementText: '1年生'),
                       SizedBox(width: 8.sp),
-                      CurriculumSubjectElementsCard(elementText: '2年生'),
+                      GradesTableElementsCard(elementText: '2年生'),
                       Spacer(),
                       Text('$classmate人が履修中',
                           style: caption1Regular(lowEmphasis)),

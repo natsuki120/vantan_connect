@@ -10,30 +10,27 @@ class CurriculumSubjectBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 800,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            '1年生の授業',
-            style: headLineBold(black),
-          ),
-          SizedBox(height: 20.sp),
-          CurriculumSubjectCard(
-            className: 'マーケティング',
-            classmate: '45',
-          ),
-          CurriculumSubjectCard(
-            className: 'UI/UXデザイン実践',
-            classmate: '63',
-          ),
-          CurriculumSubjectCard(
-            className: 'プロダクトマネジメント基礎&実践',
-            classmate: '45',
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          '1年生の授業',
+          style: headLineBold(black),
+        ),
+        SizedBox(height: 20.sp),
+        CurriculumSubjectCard(
+          className: 'マーケティング',
+          classmate: '45',
+        ),
+        CurriculumSubjectCard(
+          className: 'UI/UXデザイン実践',
+          classmate: '63',
+        ),
+        CurriculumSubjectCard(
+          className: 'プロダクトマネジメント基礎&実践',
+          classmate: '45',
+        ),
+      ],
     );
   }
 }
