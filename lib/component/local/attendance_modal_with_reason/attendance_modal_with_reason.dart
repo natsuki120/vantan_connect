@@ -80,7 +80,7 @@ Future attendanceModalWithReason(
                           ),
                         ),
                         Container(
-                          height: 360.h,
+                          height: 400.sp,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -95,7 +95,6 @@ Future attendanceModalWithReason(
                               ),
                               SpaceBox(height: 20.h),
                               Container(
-                                height: 261.h,
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
