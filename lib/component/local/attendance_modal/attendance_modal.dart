@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/local/attendance_modal_with_reason/attendance_modal_with_reason.dart';
-
 import '../../shared/navigator.dart';
 import '../../shared/riverpod.dart';
 import '../../shared/single/buttons.dart';
@@ -11,6 +10,7 @@ import '../../shared/single/custom_icon_button.dart';
 import '../../shared/single/department_tag.dart';
 import '../../shared/single/space_box.dart';
 import '../../shared/single/text_style.dart';
+import '../attendance_modal_with_reason/attendance_modal_with_reason.dart';
 import 'hooks.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
@@ -175,8 +175,13 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                       ),
                       backgroundColor: primary,
                       callback: () {
+                        EasyLoading.show(status: 'loading...');
                         ref.read(studentUseCase).attendanceLesson(
-                            student: student, className: className);
+                              student: student,
+                              className: className,
+                            );
+                        EasyLoading.showSuccess('送信しました');
+                        NavigatorPop(context);
                       }),
                   SpaceBox(height: 8.sp),
                   EnabledTextButtonWithIcon(
@@ -190,6 +195,13 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                       color: primary,
                     ),
                   ),
+                ],
+              )
+            else if (ref.watch(today) != classInfo.weakDay)
+              Column(
+                children: [
+                  SpaceBox(height: 24.sp),
+                  Text('今日行われる授業以外は出席確認できません'),
                 ],
               )
           ],

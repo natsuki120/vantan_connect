@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'firebase_options.dart';
@@ -20,11 +21,11 @@ class MyApp extends StatelessWidget {
       designSize: const Size(390, 844),
       builder: (context, child) {
         return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
-          home: TestApp(),
-        );
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
+            home: TestApp(),
+            builder: EasyLoading.init());
       },
     );
   }
