@@ -24,7 +24,7 @@ class TodaysLessonList extends StatelessWidget {
             ),
             SizedBoxWithCentralBorder(height: 12, flex: 3),
             TodaysLessonCard(
-              className: 'UI/UXデザイン実践',
+              className: 'プロダクトマネジメント基礎&実践',
               attendanceClassmate: '30',
               tardyClassmate: '3',
               otherClassmate: '3',

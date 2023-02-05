@@ -32,8 +32,15 @@ class TodaysLessonCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(className, style: callOutBold(black)),
-                SizedBox(width: 8.sp),
+                Container(
+                  width: 190.sp,
+                  child: Text(
+                    maxLines: 1,
+                    className,
+                    style: callOutBold(black),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
                 GradesTableElementsCard(elementText: '第1回目')
               ],
             ),

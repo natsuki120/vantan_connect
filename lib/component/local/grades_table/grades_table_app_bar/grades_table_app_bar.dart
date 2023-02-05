@@ -20,16 +20,23 @@ class GradesTableAppBar extends StatelessWidget {
       ),
       titleSpacing: 12.w,
       title: Container(
-        height: 36.h,
+        height: 36.sp,
         child: TextField(
           //controller: editingController,
           decoration: InputDecoration(
-              labelText: "Search",
-              hintText: "Search",
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8.0)))),
+            hintText: "...ム学部 /ゲームプログラム総合",
+            hintStyle: callOutRegular(midEmphasis),
+            filled: true,
+            fillColor: surfaceTertiary,
+            contentPadding: EdgeInsets.symmetric(horizontal: 10.sp),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.sp),
+              borderSide: BorderSide(color: surfaceTertiary),
+            ),
+          ),
         ),
       ),
+      // "...ム学部",
       actions: [
         IconButton(
           onPressed: () {},
