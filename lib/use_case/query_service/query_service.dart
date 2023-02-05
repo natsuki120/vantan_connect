@@ -12,9 +12,9 @@ class QueryServiceUseCase {
     return await queryService.fetchClassInfo(classDocument: classDocument);
   }
 
-  Future<Map<String, dynamic>> fetchStudentAttendance(
-      {required Student student, required Class classInfo}) async {
-    return await queryService.fetchStudentAttendance(
+  Stream<Student> fetchStudentAttendance(
+      {required Student student, required Class classInfo}) {
+    return queryService.fetchStudentAttendance(
       student: student,
       classInfo: classInfo,
     );

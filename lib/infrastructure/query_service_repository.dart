@@ -25,13 +25,13 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   }
 
   @override
-  Future<Map<String, dynamic>> fetchStudentAttendance(
+  Stream<Student> fetchStudentAttendance(
       {required Student student, required classInfo}) {
     final doc = firestore.doc(
         'v1/private/${student.id}/writeOnly/Lesson/${classInfo.name}/attendance/${DateTime.now().month}.${DateTime.now().day}');
-    return doc.get().then((DocumentSnapshot documentSnapshot) {
+    return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
       final json = documentSnapshot.data() as Map<String, dynamic>;
-      return json['attendance'];
+      return Student.fromJson(json);
     });
   }
 }
