@@ -25,7 +25,7 @@ class TodaysLessonCard extends StatelessWidget {
           height: 80.sp,
           width: 80.sp,
           //decoration: BoxDecoration(),
-          child: Container(),
+          child: Placeholder(),
         ),
         SizedBox(width: 12.sp),
         Column(

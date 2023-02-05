@@ -24,9 +24,9 @@ class CurriculumSubjectCard extends StatelessWidget {
       child: Column(
         children: [
           //TODO: 写真用のContainer
-          Container(
+          SizedBox(
             height: 120.sp,
-            color: primary,
+            child: Placeholder(),
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 12.sp),
