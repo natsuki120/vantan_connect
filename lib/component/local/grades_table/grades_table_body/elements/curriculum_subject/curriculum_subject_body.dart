@@ -13,11 +13,13 @@ class CurriculumSubjectBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          '1年生の授業',
-          style: headLineBold(black),
+        Padding(
+          padding: EdgeInsets.only(top: 20.sp, left: 20.sp),
+          child: Text(
+            '1年生の授業',
+            style: headLineBold(black),
+          ),
         ),
-        SizedBox(height: 20.sp),
         CurriculumSubjectCard(
           className: 'マーケティング',
           classmate: '45',

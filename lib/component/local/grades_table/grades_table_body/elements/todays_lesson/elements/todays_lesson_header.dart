@@ -16,35 +16,38 @@ class TodaysLessonHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Text(date, style: caption1Bold(lowEmphasis)),
-                SpaceBox(width: 5.w),
-                Text(day, style: caption1Bold(lowEmphasis)),
-              ],
-            ),
-            Text('今日の授業', style: title2Bold(black)),
-          ],
-        ),
-        Spacer(),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            TextButton(
-                onPressed: () {},
-                child: Text(
-                  '全て表示',
-                  style: headLineRegular(lowEmphasis),
-                )),
-          ],
-        )
-      ],
+    return Padding(
+      padding: EdgeInsets.all(20.0.sp),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text(date, style: caption1Bold(lowEmphasis)),
+                  SpaceBox(width: 5.w),
+                  Text(day, style: caption1Bold(lowEmphasis)),
+                ],
+              ),
+              Text('今日の授業', style: title2Bold(black)),
+            ],
+          ),
+          Spacer(),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    '全て表示',
+                    style: headLineRegular(lowEmphasis),
+                  )),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
