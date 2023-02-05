@@ -5,8 +5,8 @@ import '../../../../../../shared/single/space_box.dart';
 import '../../../../../../shared/single/color.dart';
 import '../../../../../../shared/single/text_style.dart';
 
-class TodayLessonHeader extends StatelessWidget {
-  TodayLessonHeader({
+class TodaysLessonHeader extends StatelessWidget {
+  TodaysLessonHeader({
     super.key,
     required this.date,
     required this.day,
