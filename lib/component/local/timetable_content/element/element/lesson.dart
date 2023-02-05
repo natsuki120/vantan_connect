@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/shared/riverpod.dart';
+import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
 
 import '/component/local/attendance_modal/attendance_modal.dart';
 import '/domain/class/class.dart';
@@ -17,15 +19,17 @@ class Lesson extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    AsyncValue studentAttendance = ref.watch(
+      queryServiceProvider(
+        StudentAttendance(student: Student(id: '高橋夏輝'), classInfo: classInfo),
+      ),
+    );
     return GestureDetector(
       // 仮置き
-      onTap: () => attendanceModal(
-        context,
-        classInfo,
-        ref,
-        Student(id: '高橋夏輝'),
-        ClassName(name: classInfo.name),
-      ),
+      onTap: () {
+        attendanceModal(context, classInfo, ref, Student(id: '高橋夏輝'),
+            ClassName(name: classInfo.name), studentAttendance);
+      },
       child: Container(
         width: 65.sp,
         height: 96.sp,

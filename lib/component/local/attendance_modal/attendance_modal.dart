@@ -11,14 +11,14 @@ import '../../shared/single/department_tag.dart';
 import '../../shared/single/space_box.dart';
 import '../../shared/single/text_style.dart';
 import '../attendance_modal_with_reason/attendance_modal_with_reason.dart';
-import 'hooks.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
 import '/page/lesson_detail_page.dart';
+import 'hooks.dart';
 
 Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
-    Student student, ClassName className) {
+    Student student, ClassName className, AsyncValue asyncValue) {
   return showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,
@@ -163,47 +163,53 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
               ),
             ),
             if (ref.watch(today) == classInfo.weakDay)
-              Column(
-                children: [
-                  SpaceBox(height: 24.sp),
-                  FilledEnabledButton(
-                      text: '出席する',
-                      textStyle: bodyBold(onPrimary),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 145.sp,
-                        vertical: 13.sp,
+              asyncValue.when(
+                data: (data) => Column(
+                  children: [SpaceBox(height: 24.sp), Text('出席確認完了済みの授業です')],
+                ),
+                error: (error, stack) => Column(
+                  children: [
+                    SpaceBox(height: 24.sp),
+                    FilledEnabledButton(
+                        text: '出席する',
+                        textStyle: bodyBold(onPrimary),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 145.sp,
+                          vertical: 13.sp,
+                        ),
+                        backgroundColor: primary,
+                        callback: () {
+                          EasyLoading.show(status: 'loading...');
+                          ref.read(studentUseCase).attendanceLesson(
+                                student: student,
+                                className: className,
+                              );
+                          EasyLoading.showSuccess('送信しました');
+                          NavigatorPop(context);
+                        }),
+                    SpaceBox(height: 8.sp),
+                    EnabledTextButtonWithIcon(
+                      text: '遅刻・欠席する',
+                      textStyle: bodyRegular(primary),
+                      callback: () => attendanceModalWithReason(
+                          context, ref, student, className),
+                      icon: Icon(
+                        Icons.edit_outlined,
+                        size: 13.sp,
+                        color: primary,
                       ),
-                      backgroundColor: primary,
-                      callback: () {
-                        EasyLoading.show(status: 'loading...');
-                        ref.read(studentUseCase).attendanceLesson(
-                              student: student,
-                              className: className,
-                            );
-                        EasyLoading.showSuccess('送信しました');
-                        NavigatorPop(context);
-                      }),
-                  SpaceBox(height: 8.sp),
-                  EnabledTextButtonWithIcon(
-                    text: '遅刻・欠席する',
-                    textStyle: bodyRegular(primary),
-                    callback: () => attendanceModalWithReason(
-                        context, ref, student, className),
-                    icon: Icon(
-                      Icons.edit_outlined,
-                      size: 13.sp,
-                      color: primary,
                     ),
-                  ),
-                ],
+                  ],
+                ),
+                loading: () => CircularProgressIndicator(),
               )
-            else if (ref.watch(today) != classInfo.weakDay)
+            else
               Column(
                 children: [
                   SpaceBox(height: 24.sp),
-                  Text('今日行われる授業以外は出席確認できません'),
+                  Text('今日行われる授業以外の授業の出席確認はできません')
                 ],
-              )
+              ),
           ],
         ),
       );
