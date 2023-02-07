@@ -16,11 +16,11 @@ class GradesTableElementsCard extends StatelessWidget {
         border: Border.all(color: borderLowEmphasis),
         borderRadius: BorderRadius.circular(4),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 11.sp, vertical: 3.sp),
+      padding: EdgeInsets.symmetric(horizontal: 8.sp, vertical: 4.sp),
       child: Center(
         child: Text(
           elementText,
-          style: caption1Regular(midEmphasis),
+          style: caption1Regular(highEmphasis),
         ),
       ),
     );

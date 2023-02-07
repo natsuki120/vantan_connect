@@ -51,6 +51,7 @@ class TodaysLessonCard extends StatelessWidget {
                     GradesTableElementsCard(elementText: '第1回目')
                   ],
                 ),
+                SpaceBox.height(),
                 Row(
                   children: [
                     Column(

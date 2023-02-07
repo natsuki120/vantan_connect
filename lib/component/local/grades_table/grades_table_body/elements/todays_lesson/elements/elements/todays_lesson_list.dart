@@ -6,7 +6,7 @@ import 'todays_lesson_card.dart';
 
 List todaysLessons = [
   {
-    'className': 'UI/UXデザイン',
+    'className': 'UI/UX',
     'attendanceClassmate': 30,
     'tardyClassmate': 3,
     'otherClassmate': 3
@@ -18,7 +18,7 @@ List todaysLessons = [
     'otherClassmate': 0
   },
   {
-    'className': 'UI/UXデザイン',
+    'className': 'UI/UX',
     'attendanceClassmate': 30,
     'tardyClassmate': 5,
     'otherClassmate': 1
