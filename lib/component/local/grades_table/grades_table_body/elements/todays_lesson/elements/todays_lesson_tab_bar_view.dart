@@ -23,7 +23,3 @@ class TodaysLessonTabBarView extends HookWidget {
     );
   }
 }
-
-//TODO: 上記のフォント調整とNaoさんが変更した点の変更 
-////TabBarとTabBarViewが連携できていなかったのでcontrollerを見直す 
-///indicatorの色を確認する　カリキュラムもlistbuilder化する

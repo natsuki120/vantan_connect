@@ -77,7 +77,7 @@ class CurriculumSubjectCard extends StatelessWidget {
                             children: [
                               //TODO:　要素を取得しその分だけ表示させる
                               GradesTableElementsCard(elementText: '1年生'),
-                              SizedBox(width: 8.sp),
+                              SpaceBox.width(),
                               GradesTableElementsCard(elementText: '2年生'),
                               Spacer(),
                               Text('$classmate人が履修中',

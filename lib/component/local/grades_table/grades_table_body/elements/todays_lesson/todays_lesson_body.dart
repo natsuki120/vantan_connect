@@ -14,15 +14,7 @@ class TodaysLessonBody extends HookWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            SizedBox(width: 20),
-            TodaysLessonTab(
-              tabController: todaysLessonTabController,
-            ),
-          ],
-        ),
-        SizedBox(height: 16.sp),
+        TodaysLessonTab(tabController: todaysLessonTabController),
         Container(
           height: 283.sp,
           child: Hero(

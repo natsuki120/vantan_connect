@@ -9,20 +9,23 @@ class TodaysLessonTab extends HookWidget {
   final TabController tabController;
   @override
   Widget build(BuildContext context) {
-    return TabBar(
-      controller: tabController,
-      indicator: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: primary,
+    return Padding(
+      padding: EdgeInsets.only(left: 20.sp, bottom: 10.sp),
+      child: TabBar(
+        controller: tabController,
+        indicator: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: primary,
+        ),
+        isScrollable: true,
+        labelColor: white,
+        unselectedLabelColor: midEmphasis,
+        tabs: [
+          Tab(text: 'aクラス', height: 28.sp),
+          Tab(text: 'bクラス', height: 28.sp),
+          Tab(text: 'cクラス', height: 28.sp),
+        ],
       ),
-      isScrollable: true,
-      labelColor: white,
-      unselectedLabelColor: midEmphasis,
-      tabs: [
-        Tab(text: 'aクラス', height: 28.sp),
-        Tab(text: 'bクラス', height: 28.sp),
-        Tab(text: 'cクラス', height: 28.sp),
-      ],
     );
   }
 }

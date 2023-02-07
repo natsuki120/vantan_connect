@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/shared/single/space_box.dart';
 
 import '../../../../../../../shared/single/color.dart';
 import '../../../../../../../shared/single/text_style.dart';
@@ -18,63 +19,73 @@ class TodaysLessonCard extends StatelessWidget {
   final String otherClassmate;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          //TODO: ここに写真予定
-          height: 80.sp,
-          width: 80.sp,
-          //decoration: BoxDecoration(),
-          child: Placeholder(),
-        ),
-        SizedBox(width: 12.sp),
-        Column(
-          children: [
-            Row(
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 6.sp),
+      child: Row(
+        children: [
+          SizedBox(
+            //TODO: ここに写真予定
+            height: 80.sp,
+            width: 80.sp,
+            //decoration: BoxDecoration(),
+            child: Placeholder(),
+          ),
+          SizedBox(width: 12.sp),
+          Expanded(
+            child: Column(
               children: [
-                Container(
-                  width: 190.sp,
-                  child: Text(
-                    maxLines: 1,
-                    className,
-                    style: callOutBold(black),
-                    overflow: TextOverflow.ellipsis,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      constraints: BoxConstraints(maxWidth: 190.sp),
+                      child: Text(
+                        maxLines: 1,
+                        className,
+                        style: callOutBold(black),
+                        textAlign: TextAlign.left,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    SpaceBox.width(),
+                    GradesTableElementsCard(elementText: '第1回目')
+                  ],
                 ),
-                GradesTableElementsCard(elementText: '第1回目')
+                Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('出席', style: caption1Regular(lowEmphasis)),
+                        Text('$attendanceClassmate人',
+                            style: headerMedium(midEmphasis))
+                      ],
+                    ),
+                    SizedBox(width: 60),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('欠席', style: caption1Regular(lowEmphasis)),
+                        Text('$tardyClassmate人',
+                            style: headerMedium(midEmphasis)),
+                      ],
+                    ),
+                    SizedBox(width: 60),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('その他', style: caption1Regular(lowEmphasis)),
+                        Text('$otherClassmate人',
+                            style: headerMedium(midEmphasis)),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             ),
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('出席', style: caption1Regular(lowEmphasis)),
-                    Text('$attendanceClassmate人',
-                        style: headerMedium(midEmphasis))
-                  ],
-                ),
-                SizedBox(width: 60),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('欠席', style: caption1Regular(lowEmphasis)),
-                    Text('$tardyClassmate人', style: headerMedium(midEmphasis)),
-                  ],
-                ),
-                SizedBox(width: 60),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('その他', style: caption1Regular(lowEmphasis)),
-                    Text('$otherClassmate人', style: headerMedium(midEmphasis)),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

@@ -12,6 +12,7 @@ class GradesTableElementsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        color: surfaceTertiary,
         border: Border.all(color: borderLowEmphasis),
         borderRadius: BorderRadius.circular(4),
       ),
@@ -19,7 +20,7 @@ class GradesTableElementsCard extends StatelessWidget {
       child: Center(
         child: Text(
           elementText,
-          style: caption1Regular(lowEmphasis),
+          style: caption1Regular(midEmphasis),
         ),
       ),
     );

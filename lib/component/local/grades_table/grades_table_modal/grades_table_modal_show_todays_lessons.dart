@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar_view.dart';
 
 import '../../../shared/single/color.dart';
@@ -33,6 +34,7 @@ class GradesTableModalShowTodaysLessons extends HookWidget {
             child: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TodaysLessonHeader(
                     date: date,
