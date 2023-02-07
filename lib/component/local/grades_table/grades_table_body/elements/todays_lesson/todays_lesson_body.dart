@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'elements/todays_lesson_tab/todays_lesson_tab.dart';
+import 'elements/todays_lesson_tab.dart';
 import 'elements/todays_lesson_tab_bar_view.dart';
 
 class TodaysLessonBody extends StatelessWidget {
@@ -22,8 +22,10 @@ class TodaysLessonBody extends StatelessWidget {
         Container(
           height: 283.sp,
           child: Hero(
-            tag: 'grades_table_modal_show_todays_lessons',
-            child: TodaysLessonTabBarView(),
+            tag: 'hero',
+            child: TodaysLessonTabBarView(
+              onlyShowThreeLessons: true,
+            ),
           ),
         ),
       ],

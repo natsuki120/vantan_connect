@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar_view.dart';
 
 import '../../../shared/single/color.dart';
 import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_header.dart';
-import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_tab/elements/todays_lesson_list.dart';
-import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_tab/todays_lesson_tab.dart';
-import '../grades_table_body/elements/todays_lesson/todays_lesson_body.dart';
+import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_tab.dart';
 import '../grades_table_body/grades_table_body.dart';
 
 class GradesTableModalShowTodaysLessons extends StatelessWidget {
@@ -40,9 +39,12 @@ class GradesTableModalShowTodaysLessons extends StatelessWidget {
                     isModal: true,
                   ),
                   TodaysLessonTab(),
-                  Hero(
-                    tag: 'grades_table_modal_show_todays_lessons',
-                    child: TodaysLessonTabBarView(),
+                  Expanded(
+                    child: Hero(
+                      tag: 'hero',
+                      child:
+                          TodaysLessonTabBarView(onlyShowThreeLessons: false),
+                    ),
                   ),
                 ],
               ),

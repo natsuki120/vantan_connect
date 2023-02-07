@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../../../shared/single/color.dart';
-import '../../../../../../../../shared/single/text_style.dart';
-import '../../../../grades_table_shared/grades_table_elements_card.dart';
+import '../../../../../../../shared/single/color.dart';
+import '../../../../../../../shared/single/text_style.dart';
+import '../../../grades_table_shared/grades_table_elements_card.dart';
 
 class TodaysLessonCard extends StatelessWidget {
   TodaysLessonCard(

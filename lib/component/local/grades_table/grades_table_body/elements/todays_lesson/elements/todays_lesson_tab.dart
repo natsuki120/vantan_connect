@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../../shared/single/color.dart';
+import '../../../../../../shared/single/color.dart';
 
 class TodaysLessonTab extends HookWidget {
   const TodaysLessonTab({super.key});
@@ -13,7 +13,7 @@ class TodaysLessonTab extends HookWidget {
     return TabBar(
       controller: _todaysLessonTabController,
       indicator: BoxDecoration(
-        borderRadius: BorderRadius.circular(8), // Creates border
+        borderRadius: BorderRadius.circular(8),
         color: primary,
       ),
       isScrollable: true,
@@ -27,6 +27,3 @@ class TodaysLessonTab extends HookWidget {
     );
   }
 }
-
-//git commit -m "move file to todays_lesson_tab"
-//git add grades_table_modal_show_todays_lesson

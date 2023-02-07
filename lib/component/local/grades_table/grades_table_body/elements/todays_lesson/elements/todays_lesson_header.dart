@@ -61,12 +61,12 @@ class TodaysLessonHeader extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  GradesTableModalShowTodaysLessons(
-                                date: '3/21',
-                                day: '火曜日',
-                              ),
-                              fullscreenDialog: true,
+                              builder: (context) {
+                                return GradesTableModalShowTodaysLessons(
+                                  date: '3/21',
+                                  day: '火曜日',
+                                );
+                              },
                             ),
                           );
                         },
