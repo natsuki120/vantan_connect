@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../shared/navigator.dart';
 import '../../shared/single/color.dart';
 import '../../shared/single/space_box.dart';
 import '../../shared/single/text_style.dart';
 import '/domain/class_document/class_document.dart';
-import '/page/attendance_book_page.dart';
 
 class LessonDetailBody extends StatelessWidget {
   const LessonDetailBody({Key? key, required this.classDocumentList})
@@ -38,11 +35,7 @@ class LessonDetailBody extends StatelessWidget {
                   return Column(
                     children: [
                       GestureDetector(
-                        onTap: () => NavigatorPush(
-                          context,
-                          page:
-                              AttendanceBookPage(classDocument: classDocument),
-                        ),
+                        onTap: () {},
                         child: Container(
                           width: 358.sp,
                           height: 58.sp,
