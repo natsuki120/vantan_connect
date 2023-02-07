@@ -1,6 +1,6 @@
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
-import '../domain/student/student.dart';
-import '../domain/value/class_name.dart';
+import '../../domain/student/student.dart';
+import '../../domain/value/class_name.dart';
 
 class TestStudentRepository extends IStudentRepository {
   FakeFirebaseFirestore firestore = FakeFirebaseFirestore();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/component/local/lesson_detail_body/lesson_detail_body.dart';
-import '/component/local/lesson_detail_header/lesson_detail_header.dart';
+import '../component/shared/combined/lesson_detail_header.dart';
 import '/domain/class/class.dart';
 
 class LessonDetailPage extends StatelessWidget {

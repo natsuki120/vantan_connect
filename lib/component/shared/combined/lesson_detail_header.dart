@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '/domain/class/class.dart';
-import '../../shared/navigator.dart';
-import '../../shared/single/buttons.dart';
-import '../../shared/single/color.dart';
-import '../../shared/single/custom_icon_button.dart';
-import '../../shared/single/registerd_lesson_by_student_mark.dart';
-import '../../shared/single/space_box.dart';
-import '../../shared/single/text_style.dart';
+import '../navigator.dart';
+import '../single/color.dart';
+import '../single/custom_icon_button.dart';
+import '../single/registerd_lesson_by_student_mark.dart';
+import '../single/space_box.dart';
+import '../single/text_style.dart';
 
 class LessonDetailHeader extends StatelessWidget {
   const LessonDetailHeader({Key? key, required this.classInfo})
@@ -58,24 +56,24 @@ class LessonDetailHeader extends StatelessWidget {
                     callback: () => NavigatorPop(context),
                     borderColor: primary10,
                   ),
-                  Spacer(),
-                  CustomIconButton(
-                    icon: Icon(Icons.calendar_today),
-                    width: 40.sp,
-                    height: 40.sp,
-                    backgroundColor: primary10,
-                    callback: () {},
-                    borderColor: primary10,
-                  ),
-                  SpaceBox(width: 12.sp),
-                  CustomIconButton(
-                    icon: Icon(Icons.more_vert),
-                    width: 40.sp,
-                    height: 40.sp,
-                    backgroundColor: primary10,
-                    callback: () {},
-                    borderColor: primary10,
-                  ),
+                  // Spacer(),
+                  // CustomIconButton(
+                  //   icon: Icon(Icons.calendar_today),
+                  //   width: 40.sp,
+                  //   height: 40.sp,
+                  //   backgroundColor: primary10,
+                  //   callback: () {},
+                  //   borderColor: primary10,
+                  // ),
+                  // SpaceBox(width: 12.sp),
+                  // CustomIconButton(
+                  //   icon: Icon(Icons.more_vert),
+                  //   width: 40.sp,
+                  //   height: 40.sp,
+                  //   backgroundColor: primary10,
+                  //   callback: () {},
+                  //   borderColor: primary10,
+                  // ),
                 ],
               ),
             )
@@ -97,7 +95,7 @@ class LessonDetailHeader extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8.sp),
                     ),
                     child: Text(
-                      '1限',
+                      '前期',
                       style: subHeadLineBold(
                         midEmphasis.withOpacity(0.7),
                       ),
@@ -105,12 +103,6 @@ class LessonDetailHeader extends StatelessWidget {
                   ),
                   SpaceBox(width: 8.sp),
                   Spacer(),
-                  OriginalUnEnabledOutLinedButton(
-                    text: '詳細',
-                    textStyle: bodyBold(primary),
-                    borderColor: midEmphasis,
-                    callback: () {},
-                  ),
                 ],
               ),
               SpaceBox(height: 10.sp),
@@ -122,18 +114,6 @@ class LessonDetailHeader extends StatelessWidget {
                 ],
               ),
               SpaceBox(height: 20.sp),
-              Container(
-                width: 358.sp,
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: lowEmphasis.withOpacity(0.2),
-                      width: 1,
-                    ),
-                  ),
-                ),
-              ),
-              SpaceBox(height: 21.sp),
             ],
           ),
         )
