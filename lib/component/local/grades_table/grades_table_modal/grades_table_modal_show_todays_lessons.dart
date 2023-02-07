@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar_view.dart';
 
 import '../../../shared/single/color.dart';
@@ -7,7 +7,7 @@ import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_heade
 import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_tab.dart';
 import '../grades_table_body/grades_table_body.dart';
 
-class GradesTableModalShowTodaysLessons extends StatelessWidget {
+class GradesTableModalShowTodaysLessons extends HookWidget {
   GradesTableModalShowTodaysLessons({
     super.key,
     required this.date,
@@ -18,6 +18,7 @@ class GradesTableModalShowTodaysLessons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final todaysLessonTabController = useTabController(initialLength: 3);
     return Dismissible(
       direction: DismissDirection.vertical,
       key: Key('key'),
@@ -38,12 +39,15 @@ class GradesTableModalShowTodaysLessons extends StatelessWidget {
                     day: day,
                     isModal: true,
                   ),
-                  TodaysLessonTab(),
+                  TodaysLessonTab(
+                    tabController: todaysLessonTabController,
+                  ),
                   Expanded(
                     child: Hero(
                       tag: 'hero',
-                      child:
-                          TodaysLessonTabBarView(onlyShowThreeLessons: false),
+                      child: TodaysLessonTabBarView(
+                          tabController: todaysLessonTabController,
+                          onlyShowThreeLessons: false),
                     ),
                   ),
                 ],

@@ -5,13 +5,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../shared/single/color.dart';
 
 class TodaysLessonTab extends HookWidget {
-  const TodaysLessonTab({super.key});
-
+  TodaysLessonTab({super.key, required this.tabController});
+  final TabController tabController;
   @override
   Widget build(BuildContext context) {
-    final _todaysLessonTabController = useTabController(initialLength: 3);
     return TabBar(
-      controller: _todaysLessonTabController,
+      controller: tabController,
       indicator: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: primary,
