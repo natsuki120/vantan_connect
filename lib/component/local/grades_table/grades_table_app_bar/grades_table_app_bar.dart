@@ -52,8 +52,14 @@ class GradesTableAppBar extends StatelessWidget {
               flex: 5,
               child: TabBar(
                 indicatorSize: TabBarIndicatorSize.label,
-                isScrollable: true, // スクロールを有効化
-                labelColor: Colors.black,
+                indicatorWeight: 4.0,
+                splashBorderRadius: BorderRadius.circular(4.sp),
+                indicatorColor: primary,
+                isScrollable: true,
+                labelColor: primary,
+                labelStyle: callOutBold(primary),
+                unselectedLabelColor: midEmphasis,
+                unselectedLabelStyle: callOutRegular(midEmphasis),
                 tabs: [
                   Tab(text: '1年生'),
                   Tab(text: '2年生'),
