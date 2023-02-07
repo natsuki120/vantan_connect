@@ -19,4 +19,28 @@ class QueryServiceUseCase {
       classInfo: classInfo,
     );
   }
+
+  Stream<List<Student>> fetchStudentAttendanceByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentAttendanceByClass(
+        classInfo: classInfo, classDocument: classDocument);
+  }
+
+  Stream<List<Student>> fetchStudentNotAttendByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentNotAttendanceByClass(
+        classInfo: classInfo, classDocument: classDocument);
+  }
+
+  Stream<List<Student>> fetchStudentLateByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentLateByClass(
+        classInfo: classInfo, classDocument: classDocument);
+  }
+
+  Stream<List<Student>> fetchStudentOtherByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentOtherByClass(
+        classInfo: classInfo, classDocument: classDocument);
+  }
 }
