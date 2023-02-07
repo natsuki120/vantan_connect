@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 
 import 'elements/todays_lesson_list.dart';
 
-class TodaysLessonTabBarView extends HookWidget {
+class TodaysLessonTabBarView extends StatelessWidget {
   TodaysLessonTabBarView({
     super.key,
     required this.onlyShowThreeLessons,
-    required this.tabController,
+    this.todaysLessonTabController,
   });
   final bool onlyShowThreeLessons;
-  final TabController tabController;
+  final TabController? todaysLessonTabController;
   @override
   Widget build(BuildContext context) {
     return TabBarView(
-      controller: tabController,
+      controller: todaysLessonTabController,
       children: [
         TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),
         TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),

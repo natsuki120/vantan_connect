@@ -12,10 +12,12 @@ class TodaysLessonHeader extends StatelessWidget {
     required this.date,
     required this.day,
     this.isModal = false,
+    this.todaysLessonTabController,
   });
   final String date;
   final String day;
   final bool isModal;
+  final TabController? todaysLessonTabController;
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +65,8 @@ class TodaysLessonHeader extends StatelessWidget {
                             MaterialPageRoute(
                               builder: (context) {
                                 return GradesTableModalShowTodaysLessons(
+                                  todaysLessonTabController:
+                                      todaysLessonTabController,
                                   date: '3/21',
                                   day: '火曜日',
                                 );

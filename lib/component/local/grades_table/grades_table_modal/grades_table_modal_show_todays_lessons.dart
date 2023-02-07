@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar_view.dart';
 
+import '../../../../page/grades_table_page.dart';
 import '../../../shared/single/color.dart';
 import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_header.dart';
 import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_tab.dart';
-import '../grades_table_body/grades_table_body.dart';
 
 class GradesTableModalShowTodaysLessons extends HookWidget {
   GradesTableModalShowTodaysLessons({
     super.key,
     required this.date,
     required this.day,
+    this.todaysLessonTabController,
   });
   final String date;
   final String day;
+  final TabController? todaysLessonTabController;
 
   @override
   Widget build(BuildContext context) {
-    final todaysLessonTabController = useTabController(initialLength: 3);
     return Dismissible(
       direction: DismissDirection.vertical,
       key: Key('key'),
-      background: GradesTableBody(),
-      onDismissed: (_) => Navigator.of(context).pop(),
+      background: GradesTablePage(),
       child: Scaffold(
         backgroundColor: white,
         body: SafeArea(
@@ -42,13 +41,13 @@ class GradesTableModalShowTodaysLessons extends HookWidget {
                     isModal: true,
                   ),
                   TodaysLessonTab(
-                    tabController: todaysLessonTabController,
+                    todaysLessonTabController: todaysLessonTabController,
                   ),
                   Expanded(
                     child: Hero(
                       tag: 'hero',
                       child: TodaysLessonTabBarView(
-                          tabController: todaysLessonTabController,
+                          todaysLessonTabController: todaysLessonTabController,
                           onlyShowThreeLessons: false),
                     ),
                   ),

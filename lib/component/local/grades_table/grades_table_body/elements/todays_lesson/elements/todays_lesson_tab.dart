@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../shared/single/color.dart';
 
-class TodaysLessonTab extends HookWidget {
-  TodaysLessonTab({super.key, required this.tabController});
-  final TabController tabController;
+class TodaysLessonTab extends StatelessWidget {
+  TodaysLessonTab({super.key, required this.todaysLessonTabController});
+  final TabController? todaysLessonTabController;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 20.sp, bottom: 10.sp),
       child: TabBar(
-        controller: tabController,
+        controller: todaysLessonTabController,
         indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           color: primary,
