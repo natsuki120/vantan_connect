@@ -19,6 +19,7 @@ class TodaysLessonBody extends StatelessWidget {
           height: 283.sp,
           child: Hero(
             tag: 'hero',
+            transitionOnUserGestures: true,
             child: TodaysLessonTabBarView(
               onlyShowThreeLessons: true,
               todaysLessonTabController: todaysLessonTabController,

@@ -45,6 +45,7 @@ class GradesTableModalShowTodaysLessons extends HookWidget {
                   ),
                   Expanded(
                     child: Hero(
+                      transitionOnUserGestures: false,
                       tag: 'hero',
                       child: TodaysLessonTabBarView(
                           todaysLessonTabController: todaysLessonTabController,
