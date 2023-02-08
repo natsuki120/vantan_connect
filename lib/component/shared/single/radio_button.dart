@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/single/color.dart';
-import 'text_style.dart';
-
+//TODO: ListTile化する
 class RadioButtonWithText extends StatelessWidget {
   const RadioButtonWithText({
     super.key,
     required this.text,
+    required this.textStyle,
+    required this.activeColor,
     required this.value,
     required this.groupValue,
     required this.onChanged,
   });
   final String text;
+  final TextStyle textStyle;
+  final Color activeColor;
   final Object value;
   final Object? groupValue;
   final void Function(dynamic)? onChanged;
@@ -24,10 +26,11 @@ class RadioButtonWithText extends StatelessWidget {
       horizontalTitleGap: 0,
       title: Text(
         text,
-        style: callOutRegular(black),
+        style: textStyle,
       ),
       leading: Radio(
         value: value,
+        activeColor: activeColor,
         groupValue: groupValue,
         onChanged: onChanged,
       ),

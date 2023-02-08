@@ -81,7 +81,7 @@ Future attendanceModalWithReason(
                           ),
                         ),
                         Container(
-                          height: 360.h,
+                          height: 400.sp,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

@@ -6,18 +6,20 @@ import 'package:vantan_connect/component/local/attendance_modal_with_reason/elem
 class CheckBoxListState extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    var _checkBoxState = useState<bool?>(null);
+    var _checkBoxState = useState<bool?>(false);
     return Column(
       children: dailyClass
           .map((e) => CheckboxWithClass(
-              period: (e['period']),
-              className: (e['className']),
-              value: e['selected'],
-              onChanged: (bool? checkedValue) {
-                _checkBoxState.value = checkedValue;
-                e['selected'] = _checkBoxState.value;
-                handleSelectedClass(e);
-              }))
+                period: (e['period']),
+                className: (e['className']),
+                value: e['selected'],
+                onChanged: (bool? checkedValue) {
+                  _checkBoxState.value = e['selected'];
+                  _checkBoxState.value = checkedValue;
+                  e['selected'] = _checkBoxState.value;
+                  handleSelectedClass(e);
+                },
+              ))
           .toList(),
     );
   }
