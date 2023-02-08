@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'elements/todays_lesson_tab.dart';
-import 'elements/todays_lesson_tab_bar_view.dart';
+import '../../../elements/grades_table_body/elements/todays_lesson_body/elements/todays_tab/todays_lesson_tab.dart';
+import '../../../elements/grades_table_body/elements/todays_lesson_body/elements/todays_tab_bar_view/todays_lesson_tab_bar_view.dart';
 
 class TodaysLessonBody extends StatelessWidget {
   TodaysLessonBody({super.key, this.todaysLessonTabController}) : super();
