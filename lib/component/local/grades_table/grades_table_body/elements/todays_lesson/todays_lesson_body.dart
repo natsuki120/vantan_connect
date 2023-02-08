@@ -20,9 +20,11 @@ class TodaysLessonBody extends StatelessWidget {
           child: Hero(
             tag: 'todaysLessonHeroTag',
             transitionOnUserGestures: false,
-            child: TodaysLessonTabBarView(
-              onlyShowThreeLessons: true,
-              todaysLessonTabController: todaysLessonTabController,
+            child: Material(
+              child: TodaysLessonTabBarView(
+                onlyShowThreeLessons: true,
+                todaysLessonTabController: todaysLessonTabController,
+              ),
             ),
           ),
         ),
