@@ -11,14 +11,9 @@ class GradesTableAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leadingWidth: 74.w,
-      leading: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text('成績', style: title2Bold(black)),
-        ],
-      ),
-      titleSpacing: 12.w,
+      leadingWidth: 72.sp,
+      leading: Center(child: Text('成績', style: title2Bold(black))),
+      titleSpacing: 0,
       title: Container(
         height: 36.sp,
         child: TextField(
@@ -36,26 +31,24 @@ class GradesTableAppBar extends StatelessWidget {
           ),
         ),
       ),
-      // "...ム学部",
       actions: [
         IconButton(
           onPressed: () {},
           icon: Icon(Icons.search),
         ),
-        SpaceBox(width: 24.w)
+        SpaceBox(width: 20.sp)
       ],
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(56),
+        preferredSize: Size.fromHeight(56.sp),
         child: Row(
           children: [
             Expanded(
               flex: 5,
               child: TabBar(
                 indicatorSize: TabBarIndicatorSize.label,
-                indicatorWeight: 4.0,
-                splashBorderRadius: BorderRadius.circular(4.sp),
-                indicatorColor: primary,
+                indicatorWeight: 4.sp,
                 isScrollable: true,
+                indicatorColor: primary,
                 labelColor: primary,
                 labelStyle: callOutBold(primary),
                 unselectedLabelColor: midEmphasis,
