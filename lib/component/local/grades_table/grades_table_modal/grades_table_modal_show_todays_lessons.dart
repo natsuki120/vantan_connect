@@ -21,7 +21,7 @@ class GradesTableModalShowTodaysLessons extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return Dismissible(
-      direction: DismissDirection.vertical,
+      direction: DismissDirection.down,
       key: Key('key'),
       background: GradesTablePage(),
       child: Scaffold(
@@ -45,8 +45,8 @@ class GradesTableModalShowTodaysLessons extends HookWidget {
                   ),
                   Expanded(
                     child: Hero(
+                      tag: 'todaysLessonHeroTag',
                       transitionOnUserGestures: false,
-                      tag: 'hero',
                       child: TodaysLessonTabBarView(
                           todaysLessonTabController: todaysLessonTabController,
                           onlyShowThreeLessons: false),

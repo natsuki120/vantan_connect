@@ -43,6 +43,7 @@ class TodaysLessonList extends StatelessWidget {
       child: Padding(
           padding: EdgeInsets.only(left: 20.0.sp),
           child: ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: onlyShowThreeLessons ? 3 : todaysLessons.length,
             itemBuilder: (BuildContext context, int index) {
               var _todaysLesson = todaysLessons[index];
