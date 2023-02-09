@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../shared/single/token/color/color.dart';
+import '../../../../../../shared/token/color/color.dart';
 
 class GradationContainer extends StatelessWidget {
   GradationContainer({

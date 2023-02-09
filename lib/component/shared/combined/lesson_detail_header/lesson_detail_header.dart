@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/domain/class/class.dart';
 import '../../token/navigator/navigator.dart';
 import '../../token/color/color.dart';
 import '../../single/custom_icon_button/custom_icon_button.dart';
-import '../../single/registerd_lesson_by_student_mark/registerd_lesson_by_student_mark.dart';
+import '../../single/registered_lesson_by_student_mark/registered_lesson_by_student_mark.dart';
 import '../../token/space_box/space_box.dart';
 import '../../token/text_style/text_style.dart';
 
