@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shared/single/space_box/space_box.dart';
+import 'package:vantan_connect/component/shared/single/token/space_box/space_box.dart';
 
-import '../../../../../../../../../../shared/single/color/color.dart';
-import '../../../../../../../../../../shared/single/text_style/text_style.dart';
+import '../../../../../../../../../../shared/single/token/color/color.dart';
+import '../../../../../../../../../../shared/single/token/text_style/text_style.dart';
 import '../../../../../../../grades_table_shared/elements/grades_table_elements_card/grades_table_elements_card.dart';
 
 class TodaysLessonCard extends StatelessWidget {

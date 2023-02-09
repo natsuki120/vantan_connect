@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../shared/single/color/color.dart';
-import '../../../../../../shared/single/space_box/space_box.dart';
-import '../../../../../../shared/single/text_style/text_style.dart';
-import 'elements/grades_table_modal/modal.dart';
+import '../../../../../../shared/single/token/color/color.dart';
+import '../../../../../../shared/single/token/space_box/space_box.dart';
+import '../../../../../../shared/single/token/text_style/text_style.dart';
+import 'elements/grades_table_modal/grades_table_modal.dart';
 
 class TodaysLessonHeader extends StatelessWidget {
   TodaysLessonHeader({

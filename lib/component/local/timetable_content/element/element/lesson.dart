@@ -8,9 +8,9 @@ import '../../../attendance_modal/styles/styles.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
-import '../../../../shared/single/color/color.dart';
-import '../../../../shared/single/space_box/space_box.dart';
-import '../../../../shared/single/text_style/text_style.dart';
+import '../../../../shared/single/token/color/color.dart';
+import '../../../../shared/single/token/space_box/space_box.dart';
+import '../../../../shared/single/token/text_style/text_style.dart';
 
 class Lesson extends ConsumerWidget {
   const Lesson({Key? key, required this.classInfo}) : super(key: key);

@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../color/color.dart';
+import '../token/color/color.dart';
 import '../original_toggle_buttons/original_toggle_buttons.dart';
-import '../space_box/space_box.dart';
-import '../text_style/text_style.dart';
+import '../token/space_box/space_box.dart';
+import '../token/text_style/text_style.dart';
 
 class SelectDate extends HookWidget {
   const SelectDate(this.labelText, {Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../shared/single/color/color.dart';
-import '../../../../../../shared/single/text_style/text_style.dart';
+import '../../../../../../shared/single/token/color/color.dart';
+import '../../../../../../shared/single/token/text_style/text_style.dart';
 
 class CheckboxWithClass extends StatelessWidget {
   const CheckboxWithClass({

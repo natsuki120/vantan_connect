@@ -7,9 +7,9 @@ import 'package:vantan_connect/component/shared/single/border_line/border_line.d
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
-import '../../shared/single/color/color.dart';
-import '../../shared/single/space_box/space_box.dart';
-import '../../shared/single/text_style/text_style.dart';
+import '../../shared/single/token/color/color.dart';
+import '../../shared/single/token/space_box/space_box.dart';
+import '../../shared/single/token/text_style/text_style.dart';
 
 class LessonRecordCard extends HookConsumerWidget {
   const LessonRecordCard(

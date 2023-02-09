@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../shared/single/space_box/space_box.dart';
+import '../../../shared/single/token/space_box/space_box.dart';
 import '../../lesson_detail_body/hooks/hooks.dart';
 import '/domain/class/class.dart';
 import 'element/lesson.dart';
