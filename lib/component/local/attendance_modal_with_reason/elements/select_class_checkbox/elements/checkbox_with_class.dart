@@ -5,8 +5,6 @@ import '../../../../../shared/single/color.dart';
 import '../../../../../shared/single/space_box.dart';
 import '../../../../../shared/single/text_style.dart';
 
-//TODO: コンフリクトがあるので一旦ここで import含めてその際に行う。
-//TODO: ListTileにしたほうがいいかも？
 class CheckboxWithClass extends StatelessWidget {
   const CheckboxWithClass({
     super.key,
@@ -17,33 +15,29 @@ class CheckboxWithClass extends StatelessWidget {
   });
   final String period;
   final String className;
-  final bool value;
+  final bool? value;
   final void Function(bool?)? onChanged;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Checkbox(
-          focusColor: primary,
-          activeColor: primary,
-          value: value,
-          onChanged: onChanged,
-        ),
-        Row(
-          children: [
-            Text(
-              period,
-              style: callOutRegular(highEmphasis),
-            ),
-            SpaceBox(width: 8.w),
-            Text(
-              className,
-              style: callOutRegular(highEmphasis),
-            ),
-          ],
-        )
-      ],
+    return CheckboxListTile(
+      activeColor: primary,
+      value: value,
+      onChanged: onChanged,
+      controlAffinity: ListTileControlAffinity.leading,
+      title: Row(
+        children: [
+          Text(
+            period,
+            style: callOutRegular(highEmphasis),
+          ),
+          SpaceBox(width: 8.w),
+          Text(
+            className,
+            style: callOutRegular(highEmphasis),
+          ),
+        ],
+      ),
     );
   }
 }
