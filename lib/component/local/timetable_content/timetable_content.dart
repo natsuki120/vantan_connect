@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../shared/single/token/space_box/space_box.dart';
+import '../../shared/token/space_box/space_box.dart';
 import 'element/element/timetable_header_column.dart';
 import 'element/timetable_content_case_of_applied_class.dart';
 import 'hooks/hook.dart';

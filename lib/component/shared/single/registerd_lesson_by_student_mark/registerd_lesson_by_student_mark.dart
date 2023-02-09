@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../token/color/color.dart';
-import '../token/text_style/text_style.dart';
+import '../../token/color/color.dart';
+import '../../token/text_style/text_style.dart';
 
 class RegisteredLessonByStudentMark extends StatelessWidget {
   const RegisteredLessonByStudentMark({Key? key}) : super(key: key);

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../shared/single/token/space_box/space_box.dart';
-import '../../../../shared/single/token/text_style/text_style.dart';
-import '../../../../shared/single/token/color/color.dart';
+import '../../../../shared/token/space_box/space_box.dart';
+import '../../../../shared/token/text_style/text_style.dart';
+import '../../../../shared/token/color/color.dart';
 
 class UnSelectedTimeTableHeaderColumn extends StatelessWidget {
   const UnSelectedTimeTableHeaderColumn({

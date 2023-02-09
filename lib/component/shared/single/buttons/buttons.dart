@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../token/color/color.dart';
-import '../token/space_box/space_box.dart';
+import '../../token/color/color.dart';
+import '../../token/space_box/space_box.dart';
 
 class FilledEnabledButton extends StatelessWidget {
   const FilledEnabledButton({

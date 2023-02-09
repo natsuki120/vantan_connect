@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 import '../../../../../../../../../page/grades_table_page.dart';
-import '../../../../../../../../shared/single/token/color/color.dart';
+import '../../../../../../../../shared/token/color/color.dart';
 import '../../../todays_tab/todays_lesson_tab.dart';
 import '../../../todays_tab_bar_view/todays_lesson_tab_bar_view.dart';
 
