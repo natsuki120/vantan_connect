@@ -3,22 +3,22 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/attendance_modal_with_reason/attendance_modal_with_reason.dart';
 
-import '../../shared/navigator.dart';
-import '../../shared/riverpod.dart';
-import '../../shared/single/buttons.dart';
-import '../../shared/single/color.dart';
-import '../../shared/single/custom_icon_button.dart';
-import '../../shared/single/department_tag.dart';
-import '../../shared/single/space_box.dart';
-import '../../shared/single/text_style.dart';
-import 'hooks.dart';
+import '../../../shared/single/buttons/buttons.dart';
+import '../../../shared/single/color/color.dart';
+import '../../../shared/single/custom_icon_button/custom_icon_button.dart';
+import '../../../shared/single/department_tag/department_tag.dart';
+import '../../../shared/single/navigator/navigator.dart';
+import '../../../shared/single/riverpod/riverpod.dart';
+import '../../../shared/single/space_box/space_box.dart';
+import '../../../shared/single/text_style/text_style.dart';
+import '../hooks/hooks.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
 import '/page/lesson_detail_page.dart';
 
 Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
-    Student student, ClassName className) {
+    Student student, ClassName className, AsyncValue studentAttendance) {
   return showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
 
-import '/component/local/attendance_modal/attendance_modal.dart';
+import '../../../attendance_modal/styles/styles.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:vantan_connect/component/local/attendance_modal_with_reason/elements/select_class_checkbox/elements/checkbox_with_class.dart';
-import 'package:vantan_connect/component/local/attendance_modal_with_reason/elements/select_class_checkbox/hooks/use_check.dart';
+
+import 'elements/checkbox_with_class/checkbox_with_class.dart';
+import 'hooks/use_check.dart';
 
 class CheckBoxListState extends HookWidget {
   @override

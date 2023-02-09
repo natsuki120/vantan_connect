@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../shared/single/space_box/space_box.dart';
-import '/component/local/lesson_detail_body/hooks.dart';
+import '../../lesson_detail_body/hooks/hooks.dart';
 import '/domain/class/class.dart';
 import 'element/lesson.dart';
 import 'element/timetable_header_row.dart';
