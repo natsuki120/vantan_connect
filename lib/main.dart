@@ -1,11 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/domain/class/class.dart';
-import 'package:vantan_connect/page/lesson_detail_page_in_result_page.dart';
+import 'package:vantan_connect/page/grades_table_page.dart';
 import 'firebase_options.dart';
+import 'page/test_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,10 +24,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
-          home: LessonDetailPageInResultPage(
-            classInfo: Class(name: 'UIUXデザイン実践'),
-          ),
-          builder: EasyLoading.init(),
+          home: GradesTablePage(),
         );
       },
     );

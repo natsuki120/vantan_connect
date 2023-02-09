@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:vantan_connect/component/shared/riverpod.dart';
-import 'package:vantan_connect/component/shared/single/border_line.dart';
+import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
+import 'package:vantan_connect/component/shared/single/border_line/border_line.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
-import '../../shared/single/color.dart';
-import '../../shared/single/space_box.dart';
-import '../../shared/single/text_style.dart';
+import '../../shared/single/color/color.dart';
+import '../../shared/single/space_box/space_box.dart';
+import '../../shared/single/text_style/text_style.dart';
 
 class LessonRecordCard extends HookConsumerWidget {
   const LessonRecordCard(

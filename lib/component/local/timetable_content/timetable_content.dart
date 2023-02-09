@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../shared/single/space_box.dart';
+import '../../shared/single/space_box/space_box.dart';
 import 'element/element/timetable_header_column.dart';
 import 'element/timetable_content_case_of_applied_class.dart';
-import 'hook.dart';
+import 'hooks/hook.dart';
 
 class TimeTableContent extends StatelessWidget {
   const TimeTableContent({Key? key}) : super(key: key);

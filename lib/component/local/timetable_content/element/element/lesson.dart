@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shared/riverpod.dart';
+import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
 
 import '/component/local/attendance_modal/attendance_modal.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
-import '../../../../shared/single/color.dart';
-import '../../../../shared/single/space_box.dart';
-import '../../../../shared/single/text_style.dart';
+import '../../../../shared/single/color/color.dart';
+import '../../../../shared/single/space_box/space_box.dart';
+import '../../../../shared/single/text_style/text_style.dart';
 
 class Lesson extends ConsumerWidget {
   const Lesson({Key? key, required this.classInfo}) : super(key: key);

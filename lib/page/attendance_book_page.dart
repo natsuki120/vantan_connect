@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../component/shared/riverpod.dart';
+import '../component/shared/single/riverpod/riverpod.dart';
 import '/domain/class_document/class_document.dart';
 
 class AttendanceBookPage extends ConsumerWidget {
