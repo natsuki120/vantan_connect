@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import '../../../../shared/single/color.dart';
-import '../../../../shared/single/text_style.dart';
+import '../../../../shared/single/color/color.dart';
+import '../../../../shared/single/text_style/text_style.dart';
 
 class TimetableHeaderRow extends HookWidget {
   const TimetableHeaderRow({Key? key, required this.weakDay}) : super(key: key);

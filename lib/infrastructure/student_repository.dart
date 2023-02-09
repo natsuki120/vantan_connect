@@ -13,10 +13,8 @@ class StudentRepository extends IStudentRepository {
   @override
   void attendanceLesson(
       {required Student student, required ClassName className}) {
-    final doc = firestore
-        .collection(
-            'v1/private/${student.id}/writeOnly/Lesson/${className.name}/${DateTime.now().month}.${DateTime.now().day}')
-        .doc();
+    final doc = firestore.doc(
+        'v1/private/${student.id}/writeOnly/Lesson/${className.name}/attendance/${DateTime.now().month}.${DateTime.now().day}');
     doc.set({'attendance': true});
   }
 
@@ -27,10 +25,8 @@ class StudentRepository extends IStudentRepository {
     required List<Map<String, dynamic>> selectedClass,
     required String? reasonText,
   }) {
-    final doc = firestore
-        .collection(
-            'v1/private/${student.id}/writeOnly/Lesson/${className.name}/${DateTime.now().month}.${DateTime.now().day}')
-        .doc();
+    final doc = firestore.doc(
+        'v1/private/${student.id}/writeOnly/Lesson/${className.name}/attendance/${DateTime.now().month}.${DateTime.now().day}');
     doc.set({'attendance': false});
     doc.set({'attendanceState': attendanceState});
     doc.set({'class': selectedClass});
