@@ -29,6 +29,7 @@ class LessonDetailPageInResultPage extends HookConsumerWidget {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return [
               SliverAppBar(
+                automaticallyImplyLeading: false,
                 backgroundColor: white,
                 pinned: true,
                 expandedHeight: 360.sp,
@@ -50,13 +51,7 @@ class LessonDetailPageInResultPage extends HookConsumerWidget {
           },
           body: TabBarView(
             children: [
-              ListView.builder(
-                  itemCount: classInfo.classDocumentList.length,
-                  itemBuilder: (context, index) {
-                    final classDocument = classInfo.classDocumentList[index];
-                    return LessonRecordCard(
-                        classInfo: classInfo, classDocument: classDocument);
-                  }),
+              LessonRecordCard(classInfo: classInfo),
               Container(),
             ],
           ),
