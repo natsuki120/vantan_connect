@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
+import 'package:vantan_connect/domain/class/class.dart';
+
 import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
 import '/domain/class_document/class_document.dart';
 import '/domain/student/student.dart';
@@ -29,52 +30,27 @@ final queryServiceProvider = StreamProvider.family<dynamic, StudentAttendance>(
 );
 
 final fetchStudentAttendanceByClass =
-    StreamProvider.family((ref, ClassAndDocument classAndDocument) {
+    StreamProvider.family((ref, Class classInfo) {
   return QueryServiceUseCase(
     queryService: QueryServiceRepositoryWhichUseFirebase(),
-  ).fetchStudentAttendanceByClass(
-      classInfo: classAndDocument.classInfo,
-      classDocument: classAndDocument.classDocument);
+  ).fetchStudentAttendanceByClass(classInfo: classInfo);
 });
 
 final fetchStudentNotAttendanceByClass =
-    StreamProvider.family((ref, ClassAndDocument classAndDocument) {
+    StreamProvider.family((ref, Class classInfo) {
   return QueryServiceUseCase(
     queryService: QueryServiceRepositoryWhichUseFirebase(),
-  ).fetchStudentNotAttendByClass(
-      classInfo: classAndDocument.classInfo,
-      classDocument: classAndDocument.classDocument);
+  ).fetchStudentNotAttendByClass(classInfo: classInfo);
 });
 
-final fetchStudentLateByClass =
-    StreamProvider.family((ref, ClassAndDocument classAndDocument) {
+final fetchStudentLateByClass = StreamProvider.family((ref, Class classInfo) {
   return QueryServiceUseCase(
     queryService: QueryServiceRepositoryWhichUseFirebase(),
-  ).fetchStudentLateByClass(
-      classInfo: classAndDocument.classInfo,
-      classDocument: classAndDocument.classDocument);
+  ).fetchStudentLateByClass(classInfo: classInfo);
 });
 
-final fetchStudentOtherByClass =
-    StreamProvider.family((ref, ClassAndDocument classAndDocument) {
+final fetchStudentOtherByClass = StreamProvider.family((ref, Class classInfo) {
   return QueryServiceUseCase(
     queryService: QueryServiceRepositoryWhichUseFirebase(),
-  ).fetchStudentOtherByClass(
-      classInfo: classAndDocument.classInfo,
-      classDocument: classAndDocument.classDocument);
+  ).fetchStudentOtherByClass(classInfo: classInfo);
 });
-
-final studentList = [
-  Student(attendance: true),
-  Student(attendance: true),
-  Student(attendance: true),
-  Student(attendance: true),
-  Student(attendance: true),
-  Student(attendance: true),
-  Student(attendance: true),
-  Student(attendance: true),
-  Student(attendance: false),
-  Student(attendance: false),
-  Student(attendance: false),
-  Student(attendance: false),
-];
