@@ -78,4 +78,28 @@ class TestQueryServiceRepository extends IQueryService {
     // TODO: implement fetchStudentOtherByClass
     throw UnimplementedError();
   }
+
+  @override
+  Stream<List<Class>> fetchLessonListInAClass() {
+    // TODO: implement fetchLessonListInAClass
+    throw UnimplementedError();
+  }
+
+  @override
+  Stream<List<Class>> fetchLessonListInAPClass() {
+    // TODO: implement fetchLessonListInAPClass
+    throw UnimplementedError();
+  }
+
+  @override
+  Stream<List<Class>> fetchLessonListInBClass() {
+    // TODO: implement fetchLessonListInBClass
+    throw UnimplementedError();
+  }
+
+  @override
+  Stream<List<Class>> fetchLessonListInCClass() {
+    // TODO: implement fetchLessonListInCClass
+    throw UnimplementedError();
+  }
 }
