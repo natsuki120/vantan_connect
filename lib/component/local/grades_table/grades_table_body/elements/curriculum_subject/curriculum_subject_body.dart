@@ -1,24 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/curriculum_subject/hooks/hooks.dart';
 import '../../../../../shared/single/color/color.dart';
 import '../../../../../shared/single/text_style/text_style.dart';
 import 'elements/curriculum_subject_card.dart';
-
-List curriculumSubjectList = [
-  {
-    'className': 'マーケティング',
-    'classmate': 45,
-  },
-  {
-    'className': 'UI/UXデザイン実践',
-    'classmate': 63,
-  },
-  {
-    'className': 'プロダクトマネジメント基礎&実践',
-    'classmate': 45,
-  },
-];
 
 class CurriculumSubjectBody extends StatelessWidget {
   const CurriculumSubjectBody({super.key});
@@ -37,15 +22,12 @@ class CurriculumSubjectBody extends StatelessWidget {
         ),
         ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: curriculumSubjectList.length,
+          itemCount: allClassList.length,
           shrinkWrap: true,
           itemBuilder: (BuildContext context, int index) {
-            var curriculumSubject = curriculumSubjectList[index];
+            var classInfo = allClassList[index];
 
-            return CurriculumSubjectCard(
-              className: curriculumSubject['className'],
-              classmate: curriculumSubject['classmate'].toString(),
-            );
+            return CurriculumSubjectCard(classInfo: classInfo);
           },
         )
       ],

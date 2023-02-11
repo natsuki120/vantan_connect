@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/attendance_record/attendance_record.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../component/shared/single/color/color.dart';
 import '../component/shared/single/text_style/text_style.dart';
 import '../domain/class/class.dart';
 
 class StudentListInLessonDetailPage extends ConsumerWidget {
-  const StudentListInLessonDetailPage({Key? key, required this.classInfo})
+  const StudentListInLessonDetailPage(
+      {Key? key, required this.classInfo, required this.classDocument})
       : super(key: key);
 
   final Class classInfo;
+  final ClassDocument classDocument;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -52,7 +55,10 @@ class StudentListInLessonDetailPage extends ConsumerWidget {
                   child: TabBarView(
                     children: [
                       Container(),
-                      AttendanceRecord(classInfo: classInfo),
+                      AttendanceRecord(
+                        classInfo: classInfo,
+                        classDocument: classDocument,
+                      ),
                     ],
                   ),
                 ),

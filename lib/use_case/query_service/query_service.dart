@@ -1,15 +1,11 @@
 import 'package:vantan_connect/domain/class/class.dart';
-import '/domain/class_document/class_document.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '/domain/student/student.dart';
 import '/query_service/query_service.dart';
 
 class QueryServiceUseCase {
   QueryServiceUseCase({required this.queryService});
   final IQueryService queryService;
-
-  Future<List<Student>> fetchClassInfo(ClassDocument classDocument) async {
-    return await queryService.fetchClassInfo(classDocument: classDocument);
-  }
 
   Stream<Student> fetchStudentAttendance(
       {required Student student, required Class classInfo}) {
@@ -19,22 +15,33 @@ class QueryServiceUseCase {
     );
   }
 
-  Stream<List<Student>> fetchStudentAttendanceByClass(
+  Future<List<ClassDocument>> fetchAllClassDocumentByClass(
       {required Class classInfo}) {
-    return queryService.fetchStudentAttendanceByClass(classInfo: classInfo);
+    return queryService.fetchAllClassDocumentByClass(classInfo: classInfo);
+  }
+
+  Stream<List<Student>> fetchStudentAttendanceByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentAttendanceByClass(
+        classInfo: classInfo, classDocument: classDocument);
   }
 
   Stream<List<Student>> fetchStudentNotAttendByClass(
-      {required Class classInfo}) {
-    return queryService.fetchStudentNotAttendanceByClass(classInfo: classInfo);
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentNotAttendanceByClass(
+        classInfo: classInfo, classDocument: classDocument);
   }
 
-  Stream<List<Student>> fetchStudentLateByClass({required Class classInfo}) {
-    return queryService.fetchStudentLateByClass(classInfo: classInfo);
+  Stream<List<Student>> fetchStudentLateByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentLateByClass(
+        classInfo: classInfo, classDocument: classDocument);
   }
 
-  Stream<List<Student>> fetchStudentOtherByClass({required Class classInfo}) {
-    return queryService.fetchStudentOtherByClass(classInfo: classInfo);
+  Stream<List<Student>> fetchStudentOtherByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchStudentOtherByClass(
+        classInfo: classInfo, classDocument: classDocument);
   }
 
   Stream<List<Class>> fetchClassListInAPClass() {

@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../../shared/single/color.dart';
-import '../../../../../../shared/single/space_box.dart';
-import '../../../../../../shared/single/text_style.dart';
+import '../../../../../../../domain/class/class.dart';
+import '../../../../../../shared/single/color/color.dart';
+import '../../../../../../shared/single/space_box/space_box.dart';
+import '../../../../../../shared/single/text_style/text_style.dart';
 import '../../grades_table_shared/gradation_container.dart';
 import '../../grades_table_shared/grades_table_elements_card.dart';
 
 class CurriculumSubjectCard extends StatelessWidget {
-  const CurriculumSubjectCard({
-    super.key,
-    required this.className,
-    required this.classmate,
-  });
+  const CurriculumSubjectCard({super.key, required this.classInfo});
 
-  final String className;
-  final String classmate;
+  final Class classInfo;
 
   @override
   Widget build(BuildContext context) {
@@ -24,22 +19,19 @@ class CurriculumSubjectCard extends StatelessWidget {
         padding: EdgeInsets.all(20.sp),
         child: Stack(
           children: [
-            Positioned(
-              top: 64.sp,
-              right: 8.sp,
-              child: CircleAvatar(
-                radius: 40,
-                backgroundColor: primary,
-                //TODO: 写真用　backgroundImage:
-              ),
-            ),
             Column(
               children: [
                 //TODO: 写真用のContainer
                 SizedBox(
                   width: 350.sp,
                   height: 120.sp,
-                  child: Placeholder(),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.sp),
+                    child: Image.asset(
+                      'images/${classInfo.classImgUrl}',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 SizedBox(height: 12.sp),
                 Container(
@@ -62,7 +54,7 @@ class CurriculumSubjectCard extends StatelessWidget {
                           ),
                           SpaceBox.width(),
                           Text(
-                            className,
+                            classInfo.name,
                             style: bodyBold(black),
                           ),
                         ],
@@ -72,10 +64,8 @@ class CurriculumSubjectCard extends StatelessWidget {
                         children: [
                           GradesTableElementsCard(elementText: '1年生'),
                           SpaceBox.width(),
-                          GradesTableElementsCard(elementText: '2年生'),
-                          Spacer(),
-                          Text('$classmate人が履修中',
-                              style: caption1Regular(lowEmphasis)),
+                          // Text('$classmate人が履修中',
+                          //     style: caption1Regular(lowEmphasis)),
                         ],
                       )
                     ],

@@ -7,19 +7,29 @@ import '/query_service/query_service.dart';
 class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   final firestore = FirebaseFirestore.instance;
 
-  // 仮置き
   @override
-  Future<List<Student>> fetchClassInfo(
-      {required ClassDocument classDocument}) async {
-    return await firestore
-        .collectionGroup('1.29')
-        .where('className', isEqualTo: classDocument.className)
-        .get()
-        .then(
-          (QuerySnapshot querySnapshot) =>
-              querySnapshot.docs.map((DocumentSnapshot documentSnapshot) {
+  Future<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
+    final collection =
+        firestore.collection('ap_class/2.13/lesson/student_list');
+    return collection.get().then(
+          (QuerySnapshot snapshot) =>
+              snapshot.docs.map((DocumentSnapshot documentSnapshot) {
             final json = documentSnapshot.data() as Map<String, dynamic>;
             return Student.fromJson(json);
+          }).toList(),
+        );
+  }
+
+  @override
+  Future<List<ClassDocument>> fetchAllClassDocumentByClass(
+      {required Class classInfo}) {
+    final collection = firestore
+        .collection('ap_class/2.13/lesson/${classInfo.name}/attendance');
+    return collection.get().then(
+          (QuerySnapshot snapshot) =>
+              snapshot.docs.map((DocumentSnapshot documentSnapshot) {
+            final json = documentSnapshot.data() as Map<String, dynamic>;
+            return ClassDocument.fromJson(json);
           }).toList(),
         );
   }
@@ -80,9 +90,9 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Stream<List<Student>> fetchStudentAttendanceByClass(
-      {required Class classInfo}) {
-    final collection = firestore
-        .collection('ap_class/2.13/lesson/${classInfo.name}/attendance');
+      {required Class classInfo, required ClassDocument classDocument}) {
+    final collection = firestore.collection(
+        'ap_class/2.13/lesson/${classInfo.name}/attendance/${classDocument.day}/attended');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -93,9 +103,10 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   }
 
   @override
-  Stream<List<Student>> fetchStudentLateByClass({required Class classInfo}) {
-    final collection =
-        firestore.collection('ap_class/2.13/lesson/${classInfo.name}/late');
+  Stream<List<Student>> fetchStudentLateByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    final collection = firestore.collection(
+        'ap_class/2.13/lesson/${classInfo.name}/attendance/${classDocument.day}/late');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -107,9 +118,9 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Stream<List<Student>> fetchStudentNotAttendanceByClass(
-      {required Class classInfo}) {
-    final collection = firestore
-        .collection('ap_class/2.13/lesson/${classInfo.name}/notAttendance');
+      {required Class classInfo, required ClassDocument classDocument}) {
+    final collection = firestore.collection(
+        'ap_class/2.13/lesson/${classInfo.name}/attendance/${classDocument.day}/notAttended');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -120,9 +131,10 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   }
 
   @override
-  Stream<List<Student>> fetchStudentOtherByClass({required Class classInfo}) {
-    final collection =
-        firestore.collection('ap_class/2.13/lesson/${classInfo.name}/other');
+  Stream<List<Student>> fetchStudentOtherByClass(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    final collection = firestore.collection(
+        'ap_class/2.13/lesson/${classInfo.name}/attendance/${classDocument.day}/other');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
