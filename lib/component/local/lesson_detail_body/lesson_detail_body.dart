@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../shared/single/color.dart';
-import '../../shared/single/space_box.dart';
-import '../../shared/single/text_style.dart';
+import '../../shared/single/color/color.dart';
+import '../../shared/single/space_box/space_box.dart';
+import '../../shared/single/text_style/text_style.dart';
 import '/domain/class_document/class_document.dart';
 
 class LessonDetailBody extends StatelessWidget {

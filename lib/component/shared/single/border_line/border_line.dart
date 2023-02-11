@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'color.dart';
+import '../color/color.dart';
 
 class BorderLine extends StatelessWidget {
   const BorderLine({Key? key}) : super(key: key);

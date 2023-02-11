@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../shared/riverpod.dart';
-import '../../shared/single/color.dart';
-import '../../shared/single/space_box.dart';
-import '../../shared/single/buttons.dart';
-import '../../shared/single/text_style.dart';
+import '../../shared/single/riverpod/riverpod.dart';
+import '../../shared/single/color/color.dart';
+import '../../shared/single/space_box/space_box.dart';
+import '../../shared/single/buttons/buttons.dart';
+import '../../shared/single/text_style/text_style.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
 import 'elements/multiline_text_field_for_reason/hooks/use_reason_text.dart';

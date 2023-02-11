@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/elements/todays_lesson_list/hooks/hooks.dart';
-import 'package:vantan_connect/component/shared/riverpod.dart';
-import '../../../../../../../../shared/single/color.dart';
-import '../../../../../../../../shared/single/text_style.dart';
+import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
+import '../../../../../../../../shared/single/color/color.dart';
+import '../../../../../../../../shared/single/text_style/text_style.dart';
 import '../../../../grades_table_shared/gradation_container.dart';
 import '../todays_lesson_card.dart';
 

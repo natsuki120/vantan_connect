@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../shared/single/space_box.dart';
+import '../space_box/space_box.dart';
+import '../text_style/text_style.dart';
 
-class UnCheckboxes extends StatelessWidget {
-  const UnCheckboxes({
+class SelectedChips extends StatelessWidget {
+  const SelectedChips({
     Key? key,
     required this.text,
     required this.textStyle,
     required this.padding,
     required this.backgroundColor,
-    required this.borderColor,
   }) : super(key: key);
 
   final String text;
   final TextStyle textStyle;
   final EdgeInsets padding;
   final Color backgroundColor;
-  final Color borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -26,32 +25,24 @@ class UnCheckboxes extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.sp),
       ),
-      child: Row(
-        children: [
-          Text(text, style: textStyle),
-          SpaceBox(width: 11.sp),
-          Icon(Icons.add, size: 12.sp, color: borderColor)
-        ],
-      ),
+      child: Text(text, style: textStyle),
     );
   }
 }
 
-class Checkboxes extends StatelessWidget {
-  const Checkboxes({
+class UnSelectedChips extends StatelessWidget {
+  const UnSelectedChips({
     Key? key,
     required this.text,
-    required this.textStyle,
+    required this.textColor,
     required this.padding,
     required this.backgroundColor,
-    required this.borderColor,
   }) : super(key: key);
 
   final String text;
-  final TextStyle textStyle;
+  final Color textColor;
   final EdgeInsets padding;
   final Color backgroundColor;
-  final Color borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -59,12 +50,13 @@ class Checkboxes extends StatelessWidget {
       padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.sp),
+        color: backgroundColor,
       ),
       child: Row(
         children: [
-          Text(text, style: textStyle),
-          SpaceBox(width: 11.sp),
-          Icon(Icons.check, size: 12.sp, color: borderColor)
+          Icon(Icons.add, size: 12.sp, color: textColor),
+          SpaceBox(width: 10.sp),
+          Text(text, style: bodyBold(textColor)),
         ],
       ),
     );

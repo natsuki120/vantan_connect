@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '/domain/class/class.dart';
-import '../navigator.dart';
-import '../single/color.dart';
-import '../single/custom_icon_button.dart';
-import '../single/registerd_lesson_by_student_mark.dart';
-import '../single/space_box.dart';
-import '../single/text_style.dart';
+import '../single/navigator/navigator.dart';
+import '../single/color/color.dart';
+import '../single/department_tag/custom_icon_button.dart';
+import '../single/registerd_lesson_by_student_mark/registerd_lesson_by_student_mark.dart';
+import '../single/space_box/space_box.dart';
+import '../single/text_style/text_style.dart';
 
 class LessonDetailHeader extends StatelessWidget {
   const LessonDetailHeader({Key? key, required this.classInfo})

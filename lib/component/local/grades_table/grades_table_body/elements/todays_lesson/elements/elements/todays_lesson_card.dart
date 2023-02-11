@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../../../domain/class/class.dart';
 import '../../../../../../../../page/lesson_detail_page_in_result_page.dart';
-import '../../../../../../../shared/navigator.dart';
-import '../../../../../../../shared/single/color.dart';
-import '../../../../../../../shared/single/space_box.dart';
-import '../../../../../../../shared/single/text_style.dart';
+import '../../../../../../../shared/single/navigator/navigator.dart';
+import '../../../../../../../shared/single/color/color.dart';
+import '../../../../../../../shared/single/space_box/space_box.dart';
+import '../../../../../../../shared/single/text_style/text_style.dart';
 import '../../../grades_table_shared/grades_table_elements_card.dart';
 
 class TodaysLessonCard extends StatelessWidget {

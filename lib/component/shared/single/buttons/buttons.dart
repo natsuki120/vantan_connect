@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../shared/single/color.dart';
-import '../../shared/single/space_box.dart';
+import '../color/color.dart';
+import '../space_box/space_box.dart';
 
 class FilledEnabledButton extends StatelessWidget {
   const FilledEnabledButton({
@@ -134,7 +134,7 @@ class FilledWithIconEnabledButton extends StatelessWidget {
 //   Widget build(BuildContext context) {
 //     return GestureDetector(
 //       onTap: callback,
-//       child: Text(text, style: textStyle),
+//       child: Text(text, styles: textStyle),
 //     );
 //   }
 // }

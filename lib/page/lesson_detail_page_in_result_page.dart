@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:vantan_connect/component/local/lesson_record_card/lesson_record_card.dart';
 import '../component/shared/combined/lesson_detail_header.dart';
-import '../component/shared/single/color.dart';
-import '../component/shared/single/text_style.dart';
+import '../component/shared/single/color/color.dart';
+import '../component/shared/single/text_style/text_style.dart';
 import '../domain/class/class.dart';
 import 'package:stack_trace/stack_trace.dart' as stack_trace;
 

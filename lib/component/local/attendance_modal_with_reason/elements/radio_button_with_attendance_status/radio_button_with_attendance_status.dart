@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-import '../../../../shared/single/color.dart';
-import '../../../../shared/single/radio_button.dart';
-import '../../../../shared/single/text_style.dart';
+import '../../../../shared/single/color/color.dart';
+import '../../../../shared/single/radio_button/radio_button.dart';
+import '../../../../shared/single/text_style/text_style.dart';
 import 'hooks/useAttendanceState.dart';
 
 class RadioButtonWithAttendanceStatus extends HookWidget {

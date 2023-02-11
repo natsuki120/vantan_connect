@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../shared/single/color.dart';
-import '../../../../../../shared/single/text_style.dart';
+import '../../../../../../shared/single/color/color.dart';
+import '../../../../../../shared/single/text_style/text_style.dart';
 
 class Status extends StatelessWidget {
   const Status({Key? key}) : super(key: key);

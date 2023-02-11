@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../domain/class/class.dart';
-import '../../../../shared/riverpod.dart';
-import '../../../../shared/single/border_line.dart';
-import '../../../../shared/single/color.dart';
-import '../../../../shared/single/space_box.dart';
-import '../../../../shared/single/text_style.dart';
+import '../../../../shared/single/riverpod/riverpod.dart';
+import '../../../../shared/single/border_line/border_line.dart';
+import '../../../../shared/single/color/color.dart';
+import '../../../../shared/single/space_box/space_box.dart';
+import '../../../../shared/single/text_style/text_style.dart';
 import 'elements/status/status.dart';
 
 class NotAttendedStudent extends ConsumerWidget {
