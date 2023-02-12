@@ -36,8 +36,6 @@ class GradesTableModalShowTodaysLessons extends HookWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TodaysLessonHeader(
-                    date: date,
-                    day: day,
                     isModal: true,
                   ),
                   TodaysLessonTab(
