@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'elements/todays_lesson_list.dart';
+import 'elements/todays_lesson_list/todays_lesson_list.dart';
 
 class TodaysLessonTabBarView extends StatelessWidget {
   TodaysLessonTabBarView({
@@ -15,9 +15,18 @@ class TodaysLessonTabBarView extends StatelessWidget {
     return TabBarView(
       controller: todaysLessonTabController,
       children: [
-        TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),
-        TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),
-        TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),
+        Container(
+          height: 300,
+          child: TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),
+        ),
+        Container(
+          height: 300,
+          child: TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),
+        ),
+        Container(
+          height: 300,
+          child: TodaysLessonList(onlyShowThreeLessons: onlyShowThreeLessons),
+        ),
       ],
     );
   }

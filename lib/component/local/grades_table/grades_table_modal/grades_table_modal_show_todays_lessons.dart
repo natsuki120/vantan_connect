@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar_view.dart';
+import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar_view/todays_lesson_tab_bar_view.dart';
 
 import '../../../../page/grades_table_page.dart';
 import '../../../shared/single/color.dart';
-import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_header.dart';
-import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_tab.dart';
+import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_header/todays_lesson_header.dart';
+import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar/todays_lesson_tab.dart';
 
 class GradesTableModalShowTodaysLessons extends HookWidget {
   GradesTableModalShowTodaysLessons({
