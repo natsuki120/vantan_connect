@@ -153,4 +153,13 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       }
     }
   }
+
+  Future<Map<String, dynamic>> login(
+      {required String name, required String course}) async {
+    final doc = await firestore.doc('$course/$name');
+    return doc.get().then((DocumentSnapshot documentSnapshot) {
+      final json = documentSnapshot.data() as Map<String, dynamic>;
+      return json;
+    });
+  }
 }
