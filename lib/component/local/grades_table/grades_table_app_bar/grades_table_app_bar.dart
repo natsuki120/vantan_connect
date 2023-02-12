@@ -11,32 +11,43 @@ class GradesTableAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leadingWidth: 72.sp,
-      leading: Center(child: Text('成績', style: title2Bold(black))),
       titleSpacing: 0,
-      title: Container(
-        height: 36.sp,
-        decoration: BoxDecoration(
-          color: surfaceTertiary,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-          child: Text(
-            '...ム学部/ゲームプログラミング',
-            style: callOutRegular(midEmphasis),
+      title: Padding(
+        padding: EdgeInsets.only(
+            top: 8.sp, bottom: 18.sp, left: 20.sp, right: 28.sp),
+        child: Center(
+          child: Row(
+            children: [
+              Text('成績', style: title2Bold(black)),
+              SpaceBox(width: 12.sp),
+              Container(
+                height: 36.sp,
+                decoration: BoxDecoration(
+                  color: surfaceTertiary,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(vertical: 8.sp, horizontal: 8.sp),
+                  child: Text(
+                    '...ム学部/ゲームプログラミング',
+                    style: callOutRegular(midEmphasis),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(3.0.sp),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.search),
+                ),
+              ),
+            ],
           ),
         ),
       ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.search),
-        ),
-        SpaceBox(width: 20.sp)
-      ],
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(56.sp),
+        preferredSize: Size.fromHeight(48.sp),
         child: Row(
           children: [
             Expanded(
