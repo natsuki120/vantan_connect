@@ -30,7 +30,7 @@ class StudentListInLessonDetailPage extends ConsumerWidget {
                 height: 114,
                 padding: EdgeInsets.symmetric(horizontal: 16.sp),
                 alignment: Alignment.centerLeft,
-                child: Text('UI/UXとは', style: header(highEmphasis)),
+                child: Text(classDocument.day, style: header(highEmphasis)),
               ),
               SizedBox(
                 height: 100,
