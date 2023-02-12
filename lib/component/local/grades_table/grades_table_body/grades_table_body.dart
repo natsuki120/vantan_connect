@@ -14,8 +14,6 @@ class GradesTableBody extends HookWidget {
       child: Column(
         children: [
           TodaysLessonHeader(
-            date: '${DateTime.now().month}月${DateTime.now().day}日',
-            day: '${DateTime.now().weekday}',
             todaysLessonTabController: todaysLessonTabController,
           ),
           TodaysLessonBody(
