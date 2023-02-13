@@ -13,18 +13,25 @@ class MultilineTextFieldForReason extends HookWidget {
     return TextField(
       keyboardType: TextInputType.multiline,
       controller: myController,
+      cursorColor: primary,
       onChanged: ((text) {
         final inputText = myController.text;
         handleReasonText(inputText);
       }),
       maxLines: 4,
       decoration: InputDecoration(
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 1,
+              color: primary,
+            ),
+          ),
           border: OutlineInputBorder(
-        borderSide: BorderSide(
-          width: 1,
-          color: borderMidEmphasis,
-        ),
-      )),
+            borderSide: BorderSide(
+              width: 1,
+              color: borderMidEmphasis,
+            ),
+          )),
     );
   }
 }

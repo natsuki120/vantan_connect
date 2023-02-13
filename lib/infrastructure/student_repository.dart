@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../domain/class/class.dart';
 import '/component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
@@ -22,14 +23,14 @@ class StudentRepository extends IStudentRepository {
     required Student student,
     required ClassName className,
     required AttendanceState? attendanceState,
-    required List<Map<String, dynamic>> selectedClass,
+    required Class classInfo,
     required String? reasonText,
   }) {
     final doc = firestore.doc(
         'v1/private/${student.id}/writeOnly/Lesson/${className.name}/attendance/${DateTime.now().month}.${DateTime.now().day}');
     doc.set({'attendance': false});
     doc.set({'attendanceState': attendanceState});
-    doc.set({'class': selectedClass});
+    doc.set({'class': classInfo});
     doc.set({'reason': reasonText});
   }
 }

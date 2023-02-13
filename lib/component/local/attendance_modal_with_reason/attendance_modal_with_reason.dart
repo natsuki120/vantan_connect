@@ -1,29 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/local/attendance_modal/elements/class_detail_card/class_card.dart';
-import '../../../domain/class/class.dart';
+
+import '../../shared/single/navigator/navigator.dart';
 import '../../shared/single/riverpod/riverpod.dart';
 import '../../shared/single/color/color.dart';
 import '../../shared/single/space_box/space_box.dart';
 import '../../shared/single/buttons/buttons.dart';
 import '../../shared/single/text_style/text_style.dart';
+import '../attendance_modal/elements/class_detail_card/class_card.dart';
+import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
-import 'elements/cancel_button/cacncel_button.dart';
+import 'elements/cancel_button/cancel_button.dart';
 import 'elements/multiline_text_field_for_reason/hooks/use_reason_text.dart';
 import 'elements/multiline_text_field_for_reason/multiline_text_field_for_reason.dart';
 import 'elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
 import 'elements/radio_button_with_attendance_status/radio_button_with_attendance_status.dart';
-import 'elements/select_class_checkbox/hooks/use_check.dart';
 
-Future attendanceModalWithReason(
-  BuildContext context,
-  WidgetRef ref,
-  Student student,
-  ClassName className,
-  Class classInfo,
-) {
+Future attendanceModalWithReason(BuildContext context, WidgetRef ref,
+    Student student, ClassName className, Class classInfo) {
   return showModalBottomSheet(
       backgroundColor: Colors.transparent,
       isScrollControlled: true,
@@ -115,14 +112,19 @@ Future attendanceModalWithReason(
                                   ),
                                   backgroundColor: primary,
                                   callback: () {
+                                    EasyLoading.show(status: 'loading...');
+                                    print(
+                                        '$student, $className, $classInfo, $selectedAttendanceState, $reasonText');
                                     ref.read(studentUseCase).setAttendanceState(
                                           student: student,
                                           className: className,
                                           attendanceState:
                                               selectedAttendanceState,
-                                          selectedClass: selectedClass,
+                                          classInfo: classInfo,
                                           reasonText: reasonText,
                                         );
+                                    EasyLoading.showSuccess('送信しました');
+                                    NavigatorPopUntilFirstPage(context);
                                   },
                                 ),
                               ],
