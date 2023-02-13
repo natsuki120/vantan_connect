@@ -56,7 +56,9 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                   height: 40.sp,
                   borderColor: midEmphasis.withOpacity(0.7),
                   backgroundColor: Colors.transparent,
-                  callback: () {},
+                  callback: () {
+                    NavigatorPop(context);
+                  },
                 ),
               ],
             ),
