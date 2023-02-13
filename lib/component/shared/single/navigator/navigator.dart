@@ -7,3 +7,7 @@ NavigatorPush(BuildContext context, {required Widget page}) {
 NavigatorPop(BuildContext context) {
   return Navigator.of(context).pop();
 }
+
+NavigatorPopUntilFirstPage(BuildContext context) {
+  return Navigator.popUntil(context, (route) => route.isFirst);
+}

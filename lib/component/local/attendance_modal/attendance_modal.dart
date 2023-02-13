@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'elements/class_detail_card/class_card.dart';
 import '../../shared/single/navigator/navigator.dart';
 import '../../shared/single/riverpod/riverpod.dart';
 import '../../shared/single/buttons/buttons.dart';
 import '../../shared/single/color/color.dart';
 import '../../shared/single/department_tag/custom_icon_button.dart';
-import '../../shared/single/department_tag/department_tag.dart';
 import '../../shared/single/space_box/space_box.dart';
 import '../../shared/single/text_style/text_style.dart';
 import '../attendance_modal_with_reason/attendance_modal_with_reason.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
-import '/page/lesson_detail_page.dart';
 import 'hooks.dart';
 
 Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
@@ -65,103 +65,8 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
             SpaceBox(height: 16.sp),
             // 他のページの内容が不明なため、ひとまずそのまま書く
             // もしかしたらshared component にするかも
-            GestureDetector(
-              onTap: () => NavigatorPush(
-                context,
-                page: LessonDetailPage(classInfo: classInfo),
-              ),
-              child: Container(
-                width: 358.sp,
-                decoration: BoxDecoration(
-                  border: Border.all(color: midEmphasis.withOpacity(0.4)),
-                  borderRadius: BorderRadius.circular(12.sp),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 100.sp,
-                      height: 210.sp,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(12.0.sp),
-                        child: Image.asset(
-                          'images/${classInfo.classImgUrl}',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(16.0.sp),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 39.sp,
-                                height: 27.sp,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: surfaceSecondary.withOpacity(0.05),
-                                  borderRadius: BorderRadius.circular(8.sp),
-                                ),
-                                child: Text(
-                                  '前期',
-                                  style: subHeadLineBold(
-                                    midEmphasis.withOpacity(0.7),
-                                  ),
-                                ),
-                              ),
-                              SpaceBox(width: 91.sp),
-                            ],
-                          ),
-                          SpaceBox(height: 8.sp),
-                          Text(classInfo.name,
-                              style: headLineBold(highEmphasis)),
-                          SpaceBox(height: 5.sp),
-
-                          SpaceBox(height: 8.sp),
-                          // shared component候補
-                          // Container(
-                          //   height: 40.sp,
-                          //   decoration: BoxDecoration(
-                          //     color: surfaceSecondary.withOpacity(0.05),
-                          //     borderRadius: BorderRadius.circular(8.sp),
-                          //   ),
-                          //   child: Padding(
-                          //     padding: EdgeInsets.symmetric(
-                          //       horizontal: 16.0.sp,
-                          //     ),
-                          //     child: Row(
-                          //       crossAxisAlignment: CrossAxisAlignment.center,
-                          //       children: [
-                          //         Text(
-                          //           '担当',
-                          //           style: caption1Regular(
-                          //             lowEmphasis.withOpacity(0.5),
-                          //           ),
-                          //         ),
-                          //         SpaceBox(width: 12.sp),
-                          //         SpaceBox(width: 8.sp),
-                          //         Text(
-                          //           '高橋　夏輝',
-                          //           style: bodyRegular(
-                          //             midEmphasis.withOpacity(0.7),
-                          //           ),
-                          //         ),
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
-                          SpaceBox(height: 24.sp),
-                          DepartmentTag(department: 'テックフォードアカデミー'),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            //一旦elementsに移行
+            ClassCard(classInfo: classInfo),
             if (ref.watch(today) == classInfo.weakDay)
               asyncValue.when(
                 data: (data) => Column(
@@ -192,7 +97,7 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
                       text: '遅刻・欠席する',
                       textStyle: bodyRegular(primary),
                       callback: () => attendanceModalWithReason(
-                          context, ref, student, className),
+                          context, ref, student, className, classInfo),
                       icon: Icon(
                         Icons.edit_outlined,
                         size: 13.sp,
