@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../../shared/single/space_box/space_box.dart';
@@ -7,7 +9,7 @@ import '../../../../../../shared/single/color/color.dart';
 import '../../../../../../shared/single/text_style/text_style.dart';
 import '../../../../grades_table_modal/grades_table_modal_show_todays_lessons.dart';
 
-class TodaysLessonHeader extends StatelessWidget {
+class TodaysLessonHeader extends HookWidget {
   TodaysLessonHeader({
     super.key,
     this.isModal = false,
@@ -18,6 +20,7 @@ class TodaysLessonHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    initializeDateFormatting('ja');
     return Padding(
       padding: EdgeInsets.all(20.0.sp),
       child: Row(
@@ -28,14 +31,13 @@ class TodaysLessonHeader extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  //FIXME: 日本語化
                   Text(
                     '${DateTime.now().month}月${DateTime.now().day}日',
                     style: caption1Bold(lowEmphasis),
                   ),
                   SpaceBox(width: 5.w),
                   Text(
-                    '${DateFormat.EEEE().format(DateTime.now())}',
+                    '${DateFormat.EEEE('ja').format(DateTime.now())}',
                     style: caption1Bold(lowEmphasis),
                   ),
                 ],
