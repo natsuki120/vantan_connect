@@ -7,9 +7,9 @@ import '../../../../shared/single/color/color.dart';
 class LessonStudentPart extends ConsumerWidget {
   LessonStudentPart({
     super.key,
-    required this.studentName,
+    required this.studentId,
   });
-  final String studentName;
+  final String studentId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -19,11 +19,11 @@ class LessonStudentPart extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [CircleAvatar()],
       ),
-      title: Text(studentName),
+      title: Text(studentId),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('@$studentName'),
+          Text('@$studentId'),
           SizedBox(height: 8.sp),
           Row(
             children: [

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
-import 'package:vantan_connect/domain/class/class.dart';
+import '../../../domain/class/class.dart';
 import '../../shared/single/color/color.dart';
+import '../../shared/single/riverpod/riverpod.dart';
 import 'elements/lesson_student_part/lesson_student_part.dart';
 
 class LessonStudentList extends HookConsumerWidget {
-  const LessonStudentList({Key? key, required this.classInfo})
-      : super(key: key);
+  LessonStudentList({Key? key, required this.classInfo}) : super(key: key);
 
   final Class classInfo;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ref.watch(fetchAllClassDocumentByClass(classInfo)).when(
-          data: (studentIdList) {
+          //dataにはclassDocumentしか入らなかったので型を無視して使用中。必要に応じて変更予定。
+          data: (classDocument) {
             return ColoredBox(
               color: white,
               child: Padding(
@@ -36,13 +36,11 @@ class LessonStudentList extends HookConsumerWidget {
                     ]),
                     Expanded(
                       child: ListView.builder(
-                        itemCount: studentIdList.length,
+                        itemCount: classInfo.studentIdList.length,
                         itemBuilder: (context, index) {
-                          final studentName =
+                          final studentId =
                               classInfo.studentIdList[index].toString();
-                          return LessonStudentPart(
-                            studentName: studentName,
-                          );
+                          return LessonStudentPart(studentId: studentId);
                         },
                       ),
                     ),
@@ -51,7 +49,7 @@ class LessonStudentList extends HookConsumerWidget {
               ),
             );
           },
-          error: (err, _) => Text('通信エラーです。開発者にお問合せください'),
+          error: (err, _) => Text('通信エラーです。開発者にお問い合せください'),
           loading: () => CircularProgressIndicator(),
         );
   }
