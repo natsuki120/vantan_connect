@@ -29,106 +29,111 @@ Future attendanceModalWithReason(
       isScrollControlled: true,
       context: context,
       builder: (BuildContext context) {
-        return GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Container(
-            height: 800.sp,
-            padding: EdgeInsets.symmetric(horizontal: 20.sp),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              ),
-            ),
-            child: Column(
-              children: [
-                SpaceBox(height: 24.sp),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    CancelButton(),
-                    SizedBox(width: 40.w),
-                    Text(
-                      '理由を書く',
-                      style: bodySemiBold(black),
-                    )
-                  ],
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+          ),
+          child: GestureDetector(
+            onTap: () => FocusScope.of(context).unfocus(),
+            child: Container(
+              height: 800.sp,
+              padding: EdgeInsets.symmetric(horizontal: 20.sp),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 20.sp),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '対象の授業を選択',
-                                style: bodySemiBold(black),
-                              ),
-                              SpaceBox(height: 20.h),
-                              ClassCard(classInfo: classInfo)
-                            ],
-                          ),
-                          SizedBox(height: 28.sp),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '出欠状況を選択',
-                                style: bodySemiBold(black),
-                              ),
-                              SpaceBox(height: 10.h),
-                              RadioButtonWithAttendanceStatus(),
-                            ],
-                          ),
-                          SizedBox(height: 34.h),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                '理由を記述',
-                                style: bodySemiBold(black),
-                              ),
-                              SizedBox(height: 20.h),
-                              MultilineTextFieldForReason(),
-                            ],
-                          ),
-                          SizedBox(height: 40.sp),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              CancelButton(),
-                              SizedBox(width: 24.sp),
-                              FilledEnabledButton(
-                                text: '送信する',
-                                textStyle: bodyBold(onPrimary),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 10.sp,
-                                  horizontal: 24.sp,
+              ),
+              child: Column(
+                children: [
+                  SpaceBox(height: 24.sp),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CancelButton(),
+                      SizedBox(width: 40.w),
+                      Text(
+                        '理由を書く',
+                        style: bodySemiBold(black),
+                      )
+                    ],
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20.sp),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '対象の授業を選択',
+                                  style: bodySemiBold(black),
                                 ),
-                                backgroundColor: primary,
-                                callback: () {
-                                  ref.read(studentUseCase).setAttendanceState(
-                                        student: student,
-                                        className: className,
-                                        attendanceState:
-                                            selectedAttendanceState,
-                                        selectedClass: selectedClass,
-                                        reasonText: reasonText,
-                                      );
-                                },
-                              ),
-                            ],
-                          ),
-                        ],
+                                SpaceBox(height: 20.h),
+                                ClassCard(classInfo: classInfo)
+                              ],
+                            ),
+                            SizedBox(height: 28.sp),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '出欠状況を選択',
+                                  style: bodySemiBold(black),
+                                ),
+                                SpaceBox(height: 10.h),
+                                RadioButtonWithAttendanceStatus(),
+                              ],
+                            ),
+                            SizedBox(height: 34.h),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  '理由を記述',
+                                  style: bodySemiBold(black),
+                                ),
+                                SizedBox(height: 20.h),
+                                MultilineTextFieldForReason(),
+                              ],
+                            ),
+                            SizedBox(height: 40.sp),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                CancelButton(),
+                                SizedBox(width: 24.sp),
+                                FilledEnabledButton(
+                                  text: '送信する',
+                                  textStyle: bodyBold(onPrimary),
+                                  padding: EdgeInsets.symmetric(
+                                    vertical: 10.sp,
+                                    horizontal: 24.sp,
+                                  ),
+                                  backgroundColor: primary,
+                                  callback: () {
+                                    ref.read(studentUseCase).setAttendanceState(
+                                          student: student,
+                                          className: className,
+                                          attendanceState:
+                                              selectedAttendanceState,
+                                          selectedClass: selectedClass,
+                                          reasonText: reasonText,
+                                        );
+                                  },
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );
