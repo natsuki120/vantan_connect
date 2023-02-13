@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../shared/combined/not_attended_student/elements/lesson_result_part/elements/reason_text/reason_text.dart';
 import '../../../../domain/student/student.dart';
 import '../../single/border_line/border_line.dart';
 import '../../single/color/color.dart';
@@ -41,10 +43,12 @@ class NotAttendedStudent extends ConsumerWidget {
                       ],
                     ),
                     SpaceBox(height: 12.sp),
-                    Placeholder(fallbackWidth: 276.sp, fallbackHeight: 61.sp),
+                    //TODO: ここにattendance_modalから送ったreasontextを入れる
+                    ReasonText(reasonText: ''),
+                    //  Placeholder(fallbackWidth: 276.sp, fallbackHeight: 61.sp),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
