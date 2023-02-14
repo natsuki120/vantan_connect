@@ -24,7 +24,10 @@ mixin _$Student {
   String get name => throw _privateConstructorUsedError;
   String get job => throw _privateConstructorUsedError;
   String get profileText => throw _privateConstructorUsedError;
-  bool get attendance => throw _privateConstructorUsedError;
+  bool get attended => throw _privateConstructorUsedError;
+  bool get noAttended => throw _privateConstructorUsedError;
+  bool get late => throw _privateConstructorUsedError;
+  bool get other => throw _privateConstructorUsedError;
   int get attendedDay => throw _privateConstructorUsedError;
   String get accountNumber => throw _privateConstructorUsedError;
   String get userImagePath => throw _privateConstructorUsedError;
@@ -45,7 +48,10 @@ abstract class $StudentCopyWith<$Res> {
       String name,
       String job,
       String profileText,
-      bool attendance,
+      bool attended,
+      bool noAttended,
+      bool late,
+      bool other,
       int attendedDay,
       String accountNumber,
       String userImagePath,
@@ -69,7 +75,10 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
     Object? name = null,
     Object? job = null,
     Object? profileText = null,
-    Object? attendance = null,
+    Object? attended = null,
+    Object? noAttended = null,
+    Object? late = null,
+    Object? other = null,
     Object? attendedDay = null,
     Object? accountNumber = null,
     Object? userImagePath = null,
@@ -92,9 +101,21 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
           ? _value.profileText
           : profileText // ignore: cast_nullable_to_non_nullable
               as String,
-      attendance: null == attendance
-          ? _value.attendance
-          : attendance // ignore: cast_nullable_to_non_nullable
+      attended: null == attended
+          ? _value.attended
+          : attended // ignore: cast_nullable_to_non_nullable
+              as bool,
+      noAttended: null == noAttended
+          ? _value.noAttended
+          : noAttended // ignore: cast_nullable_to_non_nullable
+              as bool,
+      late: null == late
+          ? _value.late
+          : late // ignore: cast_nullable_to_non_nullable
+              as bool,
+      other: null == other
+          ? _value.other
+          : other // ignore: cast_nullable_to_non_nullable
               as bool,
       attendedDay: null == attendedDay
           ? _value.attendedDay
@@ -128,7 +149,10 @@ abstract class _$$_StudentCopyWith<$Res> implements $StudentCopyWith<$Res> {
       String name,
       String job,
       String profileText,
-      bool attendance,
+      bool attended,
+      bool noAttended,
+      bool late,
+      bool other,
       int attendedDay,
       String accountNumber,
       String userImagePath,
@@ -149,7 +173,10 @@ class __$$_StudentCopyWithImpl<$Res>
     Object? name = null,
     Object? job = null,
     Object? profileText = null,
-    Object? attendance = null,
+    Object? attended = null,
+    Object? noAttended = null,
+    Object? late = null,
+    Object? other = null,
     Object? attendedDay = null,
     Object? accountNumber = null,
     Object? userImagePath = null,
@@ -172,9 +199,21 @@ class __$$_StudentCopyWithImpl<$Res>
           ? _value.profileText
           : profileText // ignore: cast_nullable_to_non_nullable
               as String,
-      attendance: null == attendance
-          ? _value.attendance
-          : attendance // ignore: cast_nullable_to_non_nullable
+      attended: null == attended
+          ? _value.attended
+          : attended // ignore: cast_nullable_to_non_nullable
+              as bool,
+      noAttended: null == noAttended
+          ? _value.noAttended
+          : noAttended // ignore: cast_nullable_to_non_nullable
+              as bool,
+      late: null == late
+          ? _value.late
+          : late // ignore: cast_nullable_to_non_nullable
+              as bool,
+      other: null == other
+          ? _value.other
+          : other // ignore: cast_nullable_to_non_nullable
               as bool,
       attendedDay: null == attendedDay
           ? _value.attendedDay
@@ -204,7 +243,10 @@ class _$_Student implements _Student {
       this.name = '',
       this.job = '',
       this.profileText = '',
-      this.attendance = false,
+      this.attended = false,
+      this.noAttended = false,
+      this.late = false,
+      this.other = false,
       this.attendedDay = 0,
       this.accountNumber = '',
       this.userImagePath = '',
@@ -227,7 +269,16 @@ class _$_Student implements _Student {
   final String profileText;
   @override
   @JsonKey()
-  final bool attendance;
+  final bool attended;
+  @override
+  @JsonKey()
+  final bool noAttended;
+  @override
+  @JsonKey()
+  final bool late;
+  @override
+  @JsonKey()
+  final bool other;
   @override
   @JsonKey()
   final int attendedDay;
@@ -243,7 +294,7 @@ class _$_Student implements _Student {
 
   @override
   String toString() {
-    return 'Student(id: $id, name: $name, job: $job, profileText: $profileText, attendance: $attendance, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
+    return 'Student(id: $id, name: $name, job: $job, profileText: $profileText, attended: $attended, noAttended: $noAttended, late: $late, other: $other, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
   }
 
   @override
@@ -256,8 +307,12 @@ class _$_Student implements _Student {
             (identical(other.job, job) || other.job == job) &&
             (identical(other.profileText, profileText) ||
                 other.profileText == profileText) &&
-            (identical(other.attendance, attendance) ||
-                other.attendance == attendance) &&
+            (identical(other.attended, attended) ||
+                other.attended == attended) &&
+            (identical(other.noAttended, noAttended) ||
+                other.noAttended == noAttended) &&
+            (identical(other.late, late) || other.late == late) &&
+            (identical(other.other, this.other) || other.other == this.other) &&
             (identical(other.attendedDay, attendedDay) ||
                 other.attendedDay == attendedDay) &&
             (identical(other.accountNumber, accountNumber) ||
@@ -270,8 +325,20 @@ class _$_Student implements _Student {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, job, profileText,
-      attendance, attendedDay, accountNumber, userImagePath, rootCollection);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      job,
+      profileText,
+      attended,
+      noAttended,
+      late,
+      other,
+      attendedDay,
+      accountNumber,
+      userImagePath,
+      rootCollection);
 
   @JsonKey(ignore: true)
   @override
@@ -293,7 +360,10 @@ abstract class _Student implements Student {
       final String name,
       final String job,
       final String profileText,
-      final bool attendance,
+      final bool attended,
+      final bool noAttended,
+      final bool late,
+      final bool other,
       final int attendedDay,
       final String accountNumber,
       final String userImagePath,
@@ -310,7 +380,13 @@ abstract class _Student implements Student {
   @override
   String get profileText;
   @override
-  bool get attendance;
+  bool get attended;
+  @override
+  bool get noAttended;
+  @override
+  bool get late;
+  @override
+  bool get other;
   @override
   int get attendedDay;
   @override

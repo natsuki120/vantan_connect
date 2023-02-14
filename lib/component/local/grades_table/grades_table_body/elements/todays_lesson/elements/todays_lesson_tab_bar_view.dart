@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'elements/todays_lesson_list.dart';
+import 'elements/todays_lesson_list/todays_lesson_list.dart';
 
 class TodaysLessonTabBarView extends StatelessWidget {
   TodaysLessonTabBarView({

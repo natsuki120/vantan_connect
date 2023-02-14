@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '/domain/class/class.dart';
-import '../navigator.dart';
-import '../single/color.dart';
-import '../single/custom_icon_button.dart';
-import '../single/registerd_lesson_by_student_mark.dart';
-import '../single/space_box.dart';
-import '../single/text_style.dart';
+import '../single/navigator/navigator.dart';
+import '../single/color/color.dart';
+import '../single/department_tag/custom_icon_button.dart';
+import '../single/space_box/space_box.dart';
+import '../single/text_style/text_style.dart';
 
 class LessonDetailHeader extends StatelessWidget {
   const LessonDetailHeader({Key? key, required this.classInfo})
@@ -84,6 +83,7 @@ class LessonDetailHeader extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SpaceBox(height: 12.sp),
               Row(
                 children: [
                   Container(
@@ -105,15 +105,8 @@ class LessonDetailHeader extends StatelessWidget {
                   Spacer(),
                 ],
               ),
-              SpaceBox(height: 10.sp),
-              Row(
-                children: [
-                  Text(classInfo.name, style: title1Bold(highEmphasis)),
-                  SpaceBox(width: 8.sp),
-                  RegisteredLessonByStudentMark(),
-                ],
-              ),
-              SpaceBox(height: 20.sp),
+              SpaceBox(height: 8.sp),
+              Text(classInfo.name, style: title1Bold(highEmphasis)),
             ],
           ),
         )

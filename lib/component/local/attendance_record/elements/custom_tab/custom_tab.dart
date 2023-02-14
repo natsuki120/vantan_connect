@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../shared/single/color.dart';
-import '../../../../shared/single/text_style.dart';
+import '../../../../shared/single/color/color.dart';
+import '../../../../shared/single/text_style/text_style.dart';
 
 class CustomTab extends StatelessWidget implements PreferredSizeWidget {
   const CustomTab({Key? key}) : super(key: key);
@@ -9,6 +9,7 @@ class CustomTab extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       bottom: TabBar(
         isScrollable: true,
         indicator: BoxDecoration(

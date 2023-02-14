@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:vantan_connect/component/local/lesson_record_card/lesson_record_card.dart';
+import '../component/local/lesson_student_list/lesson_student_list.dart';
+import '../component/local/lesson_result_list/lesson_result_list.dart';
 import '../component/shared/combined/lesson_detail_header.dart';
-import '../component/shared/single/color.dart';
-import '../component/shared/single/text_style.dart';
-import '../domain/class/class.dart';
+import '../component/shared/single/color/color.dart';
+import '../component/shared/single/text_style/text_style.dart';
+import '/domain/class/class.dart';
 import 'package:stack_trace/stack_trace.dart' as stack_trace;
 
 class LessonDetailPageInResultPage extends HookConsumerWidget {
@@ -29,6 +30,7 @@ class LessonDetailPageInResultPage extends HookConsumerWidget {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return [
               SliverAppBar(
+                automaticallyImplyLeading: false,
                 backgroundColor: white,
                 pinned: true,
                 expandedHeight: 360.sp,
@@ -50,14 +52,8 @@ class LessonDetailPageInResultPage extends HookConsumerWidget {
           },
           body: TabBarView(
             children: [
-              ListView.builder(
-                  itemCount: classInfo.classDocumentList.length,
-                  itemBuilder: (context, index) {
-                    final classDocument = classInfo.classDocumentList[index];
-                    return LessonRecordCard(
-                        classInfo: classInfo, classDocument: classDocument);
-                  }),
-              Container(),
+              LessonResultList(classInfo: classInfo),
+              LessonStudentList(classInfo: classInfo)
             ],
           ),
         ),

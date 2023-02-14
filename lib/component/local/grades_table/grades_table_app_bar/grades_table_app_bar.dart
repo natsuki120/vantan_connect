@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../shared/single/color.dart';
-import '../../../shared/single/space_box.dart';
-import '../../../shared/single/text_style.dart';
+import '../../../shared/single/color/color.dart';
+import '../../../shared/single/space_box/space_box.dart';
+import '../../../shared/single/text_style/text_style.dart';
 
 class GradesTableAppBar extends StatelessWidget {
   const GradesTableAppBar({super.key});
@@ -20,23 +20,15 @@ class GradesTableAppBar extends StatelessWidget {
       ),
       titleSpacing: 12.w,
       title: Container(
-        height: 36.sp,
-        child: TextField(
-          //controller: editingController,
-          decoration: InputDecoration(
-            hintText: "...ム学部 /ゲームプログラム総合",
-            hintStyle: callOutRegular(midEmphasis),
-            filled: true,
-            fillColor: surfaceTertiary,
-            contentPadding: EdgeInsets.symmetric(horizontal: 10.sp),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.sp),
-              borderSide: BorderSide(color: surfaceTertiary),
-            ),
+          height: 36.sp,
+          decoration: BoxDecoration(
+            color: surfaceTertiary,
+            borderRadius: BorderRadius.circular(8.sp),
           ),
-        ),
-      ),
-      // "...ム学部",
+          child: Padding(
+            padding: EdgeInsets.all(8.sp),
+            child: Text('', style: callOutRegular(midEmphasis)),
+          )),
       actions: [
         IconButton(
           onPressed: () {},

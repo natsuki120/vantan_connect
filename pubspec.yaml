@@ -32,7 +32,7 @@ dependencies:
 
 
   # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  # Use with the CupertinoIcons class for iOS styles icons.
   firebase_core:
   flutter_riverpod: ^2.1.1
   cloud_firestore:
@@ -112,7 +112,7 @@ flutter:
   #     fonts:
   #       - images: fonts/Schyler-Regular.ttf
   #       - images: fonts/Schyler-Italic.ttf
-  #         style: italic
+  #         styles: italic
   #   - family: Trajan Pro
   #     fonts:
   #       - images: fonts/TrajanPro.ttf

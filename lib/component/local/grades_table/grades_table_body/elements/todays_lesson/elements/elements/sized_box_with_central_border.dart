@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../../shared/single/color.dart';
+import '../../../../../../../shared/single/color/color.dart';
 
 class SizedBoxWithCentralBorder extends StatelessWidget {
   SizedBoxWithCentralBorder({

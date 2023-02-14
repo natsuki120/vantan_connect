@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shared/single/space_box.dart';
-import 'package:vantan_connect/component/shared/single/text_style.dart';
+import 'package:vantan_connect/component/shared/single/space_box/space_box.dart';
+import 'package:vantan_connect/component/shared/single/text_style/text_style.dart';
 
-import '../../../../shared/single/color.dart';
+import '../../../../shared/single/color/color.dart';
 
 class UserInfoCard extends StatelessWidget {
   const UserInfoCard({Key? key}) : super(key: key);
