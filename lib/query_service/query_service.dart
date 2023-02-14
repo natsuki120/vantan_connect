@@ -30,4 +30,6 @@ abstract class IQueryService {
       {required Class classInfo, required ClassDocument classDocument});
   Stream<List<Student>> fetchStudentOtherByClass(
       {required Class classInfo, required ClassDocument classDocument});
+
+  Future<Student> fetchStudentInfo({required String name});
 }

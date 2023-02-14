@@ -15,8 +15,8 @@ class StudentRepository extends IStudentRepository {
   void attendanceLesson(
       {required Student student, required ClassName className}) {
     final doc = firestore.doc(
-        'v1/private/${student.id}/writeOnly/Lesson/${className.name}/attendance/${DateTime.now().month}.${DateTime.now().day}');
-    doc.set({'attendance': true});
+        'ap_class/2.13/lesson/${className.name}/attendance/2月3日/attended/${student.id}');
+    doc.set({'name': student.id, 'day': "2月3日"});
   }
 
   void setAttendanceState({

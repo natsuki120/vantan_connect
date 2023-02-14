@@ -1,7 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
+import 'package:vantan_connect/domain/riverpod_argument/student_and_course.dart';
 import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
+import '../../../../domain/student/student.dart';
 import '/infrastructure/student_repository.dart';
 import '/infrastructure/query_service_repository.dart';
 import '/use_case/actor/student.dart';
@@ -59,3 +61,18 @@ final fetchStudentOtherByClass =
       classInfo: classAndDocument.classInfo,
       classDocument: classAndDocument.classDocument);
 });
+
+final login = FutureProvider.family(
+  (ref, String name) => QueryServiceRepositoryWhichUseFirebase()
+      .login(name: name, course: '応用クラス'),
+);
+
+final fetchStudentInfo = FutureProvider.family(
+  (ref, Student student) async {
+    return QueryServiceUseCase(
+            queryService: QueryServiceRepositoryWhichUseFirebase())
+        .fetchStudentInfo(
+      name: student.name,
+    );
+  },
+);

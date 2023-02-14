@@ -3,8 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/page/grades_table_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
+import 'package:vantan_connect/domain/riverpod_argument/student_and_course.dart';
+import 'package:vantan_connect/page/login.dart';
+import 'package:vantan_connect/page/test_app.dart';
 import 'firebase_options.dart';
+
+final hasLoggedProvider = FutureProvider((ref) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  Map studentMap = {
+    'name': prefs.getString('name')!,
+    'course': prefs.getString('course')!
+  };
+  return studentMap;
+});
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,11 +25,12 @@ Future<void> main() async {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hasLogged = ref.watch(hasLoggedProvider);
     return ScreenUtilInit(
       designSize: const Size(390, 844),
       builder: (context, child) {
@@ -24,7 +38,17 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
-          home: GradesTablePage(),
+          // ログインしたことあるかないかで場合わけ
+          home: hasLogged.when(
+            data: (data) {
+              //　データをフェッチするまで待機
+              return TestApp(
+                studentName: data['name'],
+              );
+            },
+            error: (err, stack) => Login(),
+            loading: () => CircularProgressIndicator(),
+          ),
           builder: EasyLoading.init(),
         );
       },
