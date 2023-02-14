@@ -23,6 +23,7 @@ mixin _$Student {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get job => throw _privateConstructorUsedError;
+  String get course => throw _privateConstructorUsedError;
   String get profileText => throw _privateConstructorUsedError;
   bool get attended => throw _privateConstructorUsedError;
   bool get noAttended => throw _privateConstructorUsedError;
@@ -47,6 +48,7 @@ abstract class $StudentCopyWith<$Res> {
       {String id,
       String name,
       String job,
+      String course,
       String profileText,
       bool attended,
       bool noAttended,
@@ -74,6 +76,7 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
     Object? id = null,
     Object? name = null,
     Object? job = null,
+    Object? course = null,
     Object? profileText = null,
     Object? attended = null,
     Object? noAttended = null,
@@ -96,6 +99,10 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
       job: null == job
           ? _value.job
           : job // ignore: cast_nullable_to_non_nullable
+              as String,
+      course: null == course
+          ? _value.course
+          : course // ignore: cast_nullable_to_non_nullable
               as String,
       profileText: null == profileText
           ? _value.profileText
@@ -148,6 +155,7 @@ abstract class _$$_StudentCopyWith<$Res> implements $StudentCopyWith<$Res> {
       {String id,
       String name,
       String job,
+      String course,
       String profileText,
       bool attended,
       bool noAttended,
@@ -172,6 +180,7 @@ class __$$_StudentCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? job = null,
+    Object? course = null,
     Object? profileText = null,
     Object? attended = null,
     Object? noAttended = null,
@@ -194,6 +203,10 @@ class __$$_StudentCopyWithImpl<$Res>
       job: null == job
           ? _value.job
           : job // ignore: cast_nullable_to_non_nullable
+              as String,
+      course: null == course
+          ? _value.course
+          : course // ignore: cast_nullable_to_non_nullable
               as String,
       profileText: null == profileText
           ? _value.profileText
@@ -242,6 +255,7 @@ class _$_Student implements _Student {
       {this.id = '',
       this.name = '',
       this.job = '',
+      this.course = '',
       this.profileText = '',
       this.attended = false,
       this.noAttended = false,
@@ -264,6 +278,9 @@ class _$_Student implements _Student {
   @override
   @JsonKey()
   final String job;
+  @override
+  @JsonKey()
+  final String course;
   @override
   @JsonKey()
   final String profileText;
@@ -294,7 +311,7 @@ class _$_Student implements _Student {
 
   @override
   String toString() {
-    return 'Student(id: $id, name: $name, job: $job, profileText: $profileText, attended: $attended, noAttended: $noAttended, late: $late, other: $other, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
+    return 'Student(id: $id, name: $name, job: $job, course: $course, profileText: $profileText, attended: $attended, noAttended: $noAttended, late: $late, other: $other, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
   }
 
   @override
@@ -305,6 +322,7 @@ class _$_Student implements _Student {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.job, job) || other.job == job) &&
+            (identical(other.course, course) || other.course == course) &&
             (identical(other.profileText, profileText) ||
                 other.profileText == profileText) &&
             (identical(other.attended, attended) ||
@@ -330,6 +348,7 @@ class _$_Student implements _Student {
       id,
       name,
       job,
+      course,
       profileText,
       attended,
       noAttended,
@@ -359,6 +378,7 @@ abstract class _Student implements Student {
       {final String id,
       final String name,
       final String job,
+      final String course,
       final String profileText,
       final bool attended,
       final bool noAttended,
@@ -377,6 +397,8 @@ abstract class _Student implements Student {
   String get name;
   @override
   String get job;
+  @override
+  String get course;
   @override
   String get profileText;
   @override

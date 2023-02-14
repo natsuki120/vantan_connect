@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import '/domain/class_document/class_document.dart';
 import '/domain/student/student.dart';
@@ -6,6 +7,7 @@ import '/query_service/query_service.dart';
 
 class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   final firestore = FirebaseFirestore.instance;
+  final auth = FirebaseAuth.instance;
 
   @override
   Future<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
@@ -160,6 +162,15 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     return doc.get().then((DocumentSnapshot documentSnapshot) {
       final json = documentSnapshot.data() as Map<String, dynamic>;
       return json;
+    });
+  }
+
+  @override
+  Future<Student> fetchStudentInfo({required String name}) async {
+    final doc = await firestore.doc('応用クラス/$name');
+    return doc.get().then((DocumentSnapshot documentSnapshot) {
+      final json = documentSnapshot.data() as Map<String, dynamic>;
+      return Student.fromJson(json);
     });
   }
 }

@@ -11,6 +11,7 @@ class Student with _$Student {
     @Default('') String id,
     @Default('') String name,
     @Default('') String job,
+    @Default('') String course,
     @Default('') String profileText,
     @Default(false) bool attended,
     @Default(false) bool noAttended,
