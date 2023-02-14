@@ -27,7 +27,15 @@ class GradesTableAppBar extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.all(8.sp),
-            child: Text('', style: callOutRegular(midEmphasis)),
+            //TODO: ここに現在開いているクラスを　AppBarに表示させる。今回は応用クラス
+            //上位階層が不明なため一時的にこのような形で置いている
+            child: Row(
+              children: [
+                Text('...アカデミー', style: callOutRegular(midEmphasis)),
+                Icon(Icons.navigate_next, color: lowEmphasis),
+                Text('応用クラス', style: callOutBold(black)),
+              ],
+            ),
           )),
       actions: [
         IconButton(
