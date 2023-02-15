@@ -96,7 +96,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     final collection = firestore
         .collection(
             'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
-        .where('attended', isEqualTo: true);
+        .where('attendanceState', isEqualTo: '出席');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -112,7 +112,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     final collection = firestore
         .collection(
             'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
-        .where('late', isEqualTo: true);
+        .where('attendanceState', isEqualTo: '欠席');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -128,7 +128,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     final collection = firestore
         .collection(
             'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
-        .where('noAttended', isEqualTo: true);
+        .where('attendanceState', isEqualTo: '遅刻');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -144,7 +144,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     final collection = firestore
         .collection(
             'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
-        .where('other', isEqualTo: true);
+        .where('attendanceState', isEqualTo: 'その他(公欠を除く)');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
