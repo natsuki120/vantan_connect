@@ -1,3 +1,5 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 enum AttendanceState {
   tardy('遅刻'),
   absence('欠席'),
@@ -7,8 +9,10 @@ enum AttendanceState {
   const AttendanceState(this.displayState);
 }
 
-AttendanceState? selectedAttendanceState;
+AttendanceState selectedAttendanceState = AttendanceState.absence;
 
-void handleAttendanceState(AttendanceState? attendanceState) {
+void handleAttendanceState(AttendanceState attendanceState) {
   selectedAttendanceState = attendanceState;
 }
+
+final attendanceStateProvider = StateProvider((ref) => AttendanceState.absence);

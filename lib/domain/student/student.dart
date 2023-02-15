@@ -35,8 +35,7 @@ abstract class IStudentRepository {
       {required Student student, required ClassName className}) {}
   void setAttendanceState({
     required Student student,
-    required ClassName className,
-    required AttendanceState? attendanceState,
+    required AttendanceState attendanceState,
     required Class classInfo,
     required String? reasonText,
   }) {}
