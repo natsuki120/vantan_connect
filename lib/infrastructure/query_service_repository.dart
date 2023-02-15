@@ -10,10 +10,10 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   final auth = FirebaseAuth.instance;
 
   @override
-  Future<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
-    final collection =
-        firestore.collection('ap_class/2.13/lesson/student_list');
-    return collection.get().then(
+  Stream<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
+    final collection = firestore.collection(
+        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed');
+    return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
             final json = documentSnapshot.data() as Map<String, dynamic>;
@@ -112,7 +112,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     final collection = firestore
         .collection(
             'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
-        .where('attendanceState', isEqualTo: '欠席');
+        .where('attendanceState', isEqualTo: '遅刻');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -128,7 +128,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     final collection = firestore
         .collection(
             'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
-        .where('attendanceState', isEqualTo: '遅刻');
+        .where('attendanceState', isEqualTo: '欠席');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -180,5 +180,13 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       final json = documentSnapshot.data() as Map<String, dynamic>;
       return Student.fromJson(json);
     });
+  }
+
+  void sendTestStudent({required List<Student> studentList}) {
+    for (Student student in studentList) {
+      final doc = firestore.doc(
+          'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/プログラミング/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
+      doc.set({'name': student.name, 'attendanceState': '出席'});
+    }
   }
 }
