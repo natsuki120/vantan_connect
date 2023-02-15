@@ -17,7 +17,7 @@ class TodaysLessonList extends ConsumerWidget {
   final bool onlyShowThreeLessons;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref.watch(fetchClassListInAPClass).when(
+    return ref.watch(fetchClassListInCClass).when(
         data: (data) {
           return GradationContainer(
             child: Padding(
