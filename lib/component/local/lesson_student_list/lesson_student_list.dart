@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/component/shared/single/student_list/student_list.dart';
 import '../../../domain/class/class.dart';
 import '../../shared/single/color/color.dart';
 import '../../shared/single/riverpod/riverpod.dart';
@@ -36,14 +37,11 @@ class LessonStudentList extends HookConsumerWidget {
                     ]),
                     Expanded(
                       child: ListView.builder(
-                        itemCount: classInfo.targetStudentList.length,
+                        itemCount: studentList.length,
                         itemBuilder: (context, index) {
-                          final studentName =
-                              classInfo.targetStudentList[index].name;
-                          final studentId =
-                              classInfo.targetStudentList[index].id;
+                          final student = studentList[index];
                           return LessonStudentPart(
-                              studentId: studentId, studentName: studentName);
+                              studentId: student.id, studentName: student.name);
                         },
                       ),
                     ),
