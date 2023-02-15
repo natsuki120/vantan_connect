@@ -3,7 +3,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'elements/class_detail_card/class_card.dart';
+import '../../shared/single/dateTime/dateTime_japan/date_time_japan.dart';
 import '../../shared/single/navigator/navigator.dart';
 import '../../shared/single/riverpod/riverpod.dart';
 import '../../shared/single/buttons/buttons.dart';
@@ -15,7 +15,7 @@ import '../attendance_modal_with_reason/attendance_modal_with_reason.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
-import 'hooks.dart';
+import 'elements/class_detail_card/class_card.dart';
 
 Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
     Student student, ClassName className, AsyncValue asyncValue) {
@@ -69,7 +69,7 @@ Future attendanceModal(BuildContext context, Class classInfo, WidgetRef ref,
             // もしかしたらshared component にするかも
             //一旦elementsに移行
             ClassCard(classInfo: classInfo),
-            if (ref.watch(today) == classInfo.weakDay)
+            if (ref.watch(dayProvider).value == classInfo.weakDay)
               asyncValue.when(
                 data: (data) => Column(
                   children: [SpaceBox(height: 24.sp), Text('出席確認完了済みの授業です')],
