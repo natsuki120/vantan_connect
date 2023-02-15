@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:vantan_connect/component/shared/single/color/color.dart';
 import '../../../shared/single/space_box/space_box.dart';
 import '/domain/class/class.dart';
 import '/component/local/lesson_detail_body/hooks.dart';
@@ -19,6 +19,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             TimetableHeaderRow(weakDay: '月'),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classRoom: '',
@@ -28,6 +29,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classRoom: '',
@@ -37,6 +39,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classRoom: '',
@@ -45,9 +48,13 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
                   weakDay: '月曜日'),
             ),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: '昼休憩', classRoom: '')),
+            Lesson(
+              classInfo: Class(name: '昼休憩', classRoom: ''),
+              color: primary10,
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'デザインシンキング',
                   classDocumentList: designThinkingDocumentListInAP,
@@ -56,6 +63,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'デザインシンキング',
                   classDocumentList: designThinkingDocumentListInAP,
@@ -71,6 +79,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             TimetableHeaderRow(weakDay: '火'),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classDocumentList: programmingDocumentListInAP,
@@ -79,6 +88,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classDocumentList: programmingDocumentListInAP,
@@ -87,6 +97,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classDocumentList: programmingDocumentListInAP,
@@ -94,9 +105,13 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
                   weakDay: '火曜日'),
             ),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: '昼休憩')),
+            Lesson(
+              classInfo: Class(name: '昼休憩'),
+              color: primary10,
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'アートシンキング',
                   classDocumentList: artThinkingDocumentListInAP,
@@ -105,6 +120,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'アートシンキング',
                   classDocumentList: artThinkingDocumentListInAP,
@@ -119,9 +135,13 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
           children: [
             TimetableHeaderRow(weakDay: '水'),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: 'S高レポート')),
+            Lesson(
+              classInfo: Class(name: 'S高レポート'),
+              color: primary10,
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'マーケティング',
                   classDocumentList: marketingDocumentListInAP,
@@ -130,6 +150,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'マーケティング',
                   classDocumentList: marketingDocumentListInAP,
@@ -137,7 +158,10 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
                   weakDay: '水曜日'),
             ),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: '昼休憩')),
+            Lesson(
+              classInfo: Class(name: '昼休憩'),
+              color: primary10,
+            ),
             SpaceBox(height: 4.sp),
             Normal(),
             SpaceBox(height: 4.sp),
@@ -151,6 +175,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             TimetableHeaderRow(weakDay: '木'),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'ITパスポート',
                   classDocumentList: ITPassportDocumentListInAP,
@@ -159,6 +184,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'ITパスポート',
                   classDocumentList: ITPassportDocumentListInAP,
@@ -167,6 +193,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'Webデザイン',
                   classDocumentList: WebDesignDocumentListInAP,
@@ -174,9 +201,13 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
                   weakDay: '木曜日'),
             ),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: '昼休憩')),
+            Lesson(
+              classInfo: Class(name: '昼休憩'),
+              color: primary10,
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'Webデザイン',
                   classDocumentList: WebDesignDocumentListInAP,
@@ -194,6 +225,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             TimetableHeaderRow(weakDay: '金'),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classDocumentList: programmingDocumentListInAP,
@@ -202,6 +234,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classDocumentList: programmingDocumentListInAP,
@@ -210,6 +243,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                   name: 'プログラミング',
                   classDocumentList: programmingDocumentListInAP,
@@ -217,9 +251,15 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
                   weakDay: '金曜日'),
             ),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: '昼休憩')),
+            Lesson(
+              classInfo: Class(name: '昼休憩'),
+              color: primary10,
+            ),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: 'HR')),
+            Lesson(
+              classInfo: Class(name: 'HR'),
+              color: primary10,
+            ),
             SpaceBox(height: 4.sp),
             Normal(),
             SpaceBox(height: 4.sp),

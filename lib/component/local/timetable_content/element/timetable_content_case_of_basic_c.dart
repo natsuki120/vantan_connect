@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:vantan_connect/component/shared/single/color/color.dart';
 import '../../../shared/single/space_box/space_box.dart';
 import '/component/local/lesson_detail_body/hooks.dart';
 import '/domain/class/class.dart';
 import 'element/lesson.dart';
 import 'element/timetable_header_row.dart';
 
-class TimetableContentCaseOfBasicA extends StatelessWidget {
-  const TimetableContentCaseOfBasicA({Key? key}) : super(key: key);
+class TimetableContentCaseOfBasicC extends StatelessWidget {
+  const TimetableContentCaseOfBasicC({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,13 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
           children: [
             TimetableHeaderRow(weakDay: '月'),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: 'S校レポート')),
+            Lesson(
+              classInfo: Class(name: 'S校サポート'),
+              color: Colors.grey,
+            ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffC5FDCE),
               classInfo: Class(
                 name: 'マーケティング',
                 classDocumentList: marketingDocumentListInC,
@@ -30,6 +34,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffC5FDCE),
               classInfo: Class(
                 name: 'マーケティング',
                 classDocumentList: marketingDocumentListInC,
@@ -54,6 +59,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: tertiaryPale,
               classInfo: Class(
                 name: 'Webデザイン',
                 classDocumentList: WebDesignDocumentListInC,
@@ -63,6 +69,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: tertiaryPale,
               classInfo: Class(
                 name: 'Webデザイン',
                 classDocumentList: WebDesignDocumentListInC,
@@ -74,6 +81,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                 name: 'プログラミング',
                 classRoom: '',
@@ -84,6 +92,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                 name: 'プログラミング',
                 classRoom: '',
@@ -101,6 +110,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             TimetableHeaderRow(weakDay: '水'),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffE5BEEF),
               classInfo: Class(
                 name: 'ITパスポート',
                 classDocumentList: ITPassportDocumentListInBasicC,
@@ -110,6 +120,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffE5BEEF),
               classInfo: Class(
                 name: 'ITパスポート',
                 classDocumentList: ITPassportDocumentListInBasicC,
@@ -118,11 +129,15 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
               ),
             ),
             SpaceBox(height: 4.sp),
-            Lesson(classInfo: Class(name: 'HR')),
+            Lesson(
+              classInfo: Class(name: 'HR'),
+              color: Colors.yellow,
+            ),
             SpaceBox(height: 4.sp),
             Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                 name: 'プログラミング',
                 classRoom: '',
@@ -133,13 +148,14 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+                color: primary10,
                 classInfo: Class(
-              name: 'プログラミング',
-              classRoom: '',
-              classDocumentList: programmingDocumentListInBasicC,
-              classImgUrl: 'programming.jpg,',
-              weakDay: '水曜日',
-            )),
+                  name: 'プログラミング',
+                  classRoom: '',
+                  classDocumentList: programmingDocumentListInBasicC,
+                  classImgUrl: 'programming.jpg,',
+                  weakDay: '水曜日',
+                )),
             SpaceBox(height: 4.sp),
           ],
         ),
@@ -149,6 +165,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             TimetableHeaderRow(weakDay: '木'),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                 name: 'プログラミング',
                 classRoom: '',
@@ -159,6 +176,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                 name: 'プログラミング',
                 classRoom: '',
@@ -171,6 +189,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffF5DDC4),
               classInfo: Class(
                 name: 'アートシンキング',
                 classDocumentList: artThinkingDocumentListInC,
@@ -180,6 +199,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffF5DDC4),
               classInfo: Class(
                 name: 'アートシンキング',
                 classDocumentList: artThinkingDocumentListInC,
@@ -200,6 +220,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffFFDDAB),
               classInfo: Class(
                 name: 'デザインシンキング',
                 classDocumentList: designThinkingDocumentListInBasicC,
@@ -209,6 +230,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: Color(0xffFFDDAB),
               classInfo: Class(
                 name: 'デザインシンキング',
                 classDocumentList: designThinkingDocumentListInBasicC,
@@ -220,6 +242,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             Normal(),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                 name: 'プログラミング',
                 classRoom: '',
@@ -230,6 +253,7 @@ class TimetableContentCaseOfBasicA extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
+              color: primary10,
               classInfo: Class(
                 name: 'プログラミング',
                 classRoom: '',
