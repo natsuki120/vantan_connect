@@ -27,6 +27,7 @@ mixin _$Student {
   String get profileText => throw _privateConstructorUsedError;
   bool get attended => throw _privateConstructorUsedError;
   bool get noAttended => throw _privateConstructorUsedError;
+  String get reason => throw _privateConstructorUsedError;
   bool get late => throw _privateConstructorUsedError;
   bool get other => throw _privateConstructorUsedError;
   int get attendedDay => throw _privateConstructorUsedError;
@@ -52,6 +53,7 @@ abstract class $StudentCopyWith<$Res> {
       String profileText,
       bool attended,
       bool noAttended,
+      String reason,
       bool late,
       bool other,
       int attendedDay,
@@ -80,6 +82,7 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
     Object? profileText = null,
     Object? attended = null,
     Object? noAttended = null,
+    Object? reason = null,
     Object? late = null,
     Object? other = null,
     Object? attendedDay = null,
@@ -116,6 +119,10 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
           ? _value.noAttended
           : noAttended // ignore: cast_nullable_to_non_nullable
               as bool,
+      reason: null == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
       late: null == late
           ? _value.late
           : late // ignore: cast_nullable_to_non_nullable
@@ -159,6 +166,7 @@ abstract class _$$_StudentCopyWith<$Res> implements $StudentCopyWith<$Res> {
       String profileText,
       bool attended,
       bool noAttended,
+      String reason,
       bool late,
       bool other,
       int attendedDay,
@@ -184,6 +192,7 @@ class __$$_StudentCopyWithImpl<$Res>
     Object? profileText = null,
     Object? attended = null,
     Object? noAttended = null,
+    Object? reason = null,
     Object? late = null,
     Object? other = null,
     Object? attendedDay = null,
@@ -220,6 +229,10 @@ class __$$_StudentCopyWithImpl<$Res>
           ? _value.noAttended
           : noAttended // ignore: cast_nullable_to_non_nullable
               as bool,
+      reason: null == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
       late: null == late
           ? _value.late
           : late // ignore: cast_nullable_to_non_nullable
@@ -259,6 +272,7 @@ class _$_Student implements _Student {
       this.profileText = '',
       this.attended = false,
       this.noAttended = false,
+      this.reason = '',
       this.late = false,
       this.other = false,
       this.attendedDay = 0,
@@ -292,6 +306,9 @@ class _$_Student implements _Student {
   final bool noAttended;
   @override
   @JsonKey()
+  final String reason;
+  @override
+  @JsonKey()
   final bool late;
   @override
   @JsonKey()
@@ -311,7 +328,7 @@ class _$_Student implements _Student {
 
   @override
   String toString() {
-    return 'Student(id: $id, name: $name, job: $job, course: $course, profileText: $profileText, attended: $attended, noAttended: $noAttended, late: $late, other: $other, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
+    return 'Student(id: $id, name: $name, job: $job, course: $course, profileText: $profileText, attended: $attended, noAttended: $noAttended, reason: $reason, late: $late, other: $other, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
   }
 
   @override
@@ -329,6 +346,7 @@ class _$_Student implements _Student {
                 other.attended == attended) &&
             (identical(other.noAttended, noAttended) ||
                 other.noAttended == noAttended) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.late, late) || other.late == late) &&
             (identical(other.other, this.other) || other.other == this.other) &&
             (identical(other.attendedDay, attendedDay) ||
@@ -352,6 +370,7 @@ class _$_Student implements _Student {
       profileText,
       attended,
       noAttended,
+      reason,
       late,
       other,
       attendedDay,
@@ -382,6 +401,7 @@ abstract class _Student implements Student {
       final String profileText,
       final bool attended,
       final bool noAttended,
+      final String reason,
       final bool late,
       final bool other,
       final int attendedDay,
@@ -405,6 +425,8 @@ abstract class _Student implements Student {
   bool get attended;
   @override
   bool get noAttended;
+  @override
+  String get reason;
   @override
   bool get late;
   @override

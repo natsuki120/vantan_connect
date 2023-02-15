@@ -16,6 +16,7 @@ class Student with _$Student {
     @Default('') String profileText,
     @Default(false) bool attended,
     @Default(false) bool noAttended,
+    @Default('') String reason,
     @Default(false) bool late,
     @Default(false) bool other,
     @Default(0) int attendedDay,
