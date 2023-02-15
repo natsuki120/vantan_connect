@@ -12,9 +12,11 @@ class Student with _$Student {
     @Default('') String id,
     @Default('') String name,
     @Default('') String job,
+    @Default('') String course,
     @Default('') String profileText,
     @Default(false) bool attended,
     @Default(false) bool noAttended,
+    @Default('') String reason,
     @Default(false) bool late,
     @Default(false) bool other,
     @Default(0) int attendedDay,
@@ -33,8 +35,7 @@ abstract class IStudentRepository {
       {required Student student, required ClassName className}) {}
   void setAttendanceState({
     required Student student,
-    required ClassName className,
-    required AttendanceState? attendanceState,
+    required AttendanceState attendanceState,
     required Class classInfo,
     required String? reasonText,
   }) {}

@@ -17,14 +17,14 @@ class TodaysLessonList extends ConsumerWidget {
   final bool onlyShowThreeLessons;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref.watch(fetchClassListInAPClass).when(
+    return ref.watch(fetchClassListInCClass).when(
         data: (data) {
           return GradationContainer(
             child: Padding(
               padding: EdgeInsets.only(left: 20.0.sp),
               child: ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: data.length,
+                itemCount: data.length <= 3 ? data.length : 3,
                 itemBuilder: (BuildContext context, int index) {
                   var classInfo = data[index];
                   return ref.watch(today).when(

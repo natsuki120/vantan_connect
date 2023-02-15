@@ -59,4 +59,8 @@ class QueryServiceUseCase {
   Stream<List<Class>> fetchClassListInCClass() {
     return queryService.fetchLessonListInCClass();
   }
+
+  Future<Student> fetchStudentInfo({required String name}) {
+    return queryService.fetchStudentInfo(name: name);
+  }
 }

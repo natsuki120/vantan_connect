@@ -113,13 +113,13 @@ Future attendanceModalWithReason(BuildContext context, WidgetRef ref,
                                   backgroundColor: primary,
                                   callback: () {
                                     EasyLoading.show(status: 'loading...');
-                                    print(
-                                        '$student, $className, $classInfo, $selectedAttendanceState, $reasonText');
+
                                     ref.read(studentUseCase).setAttendanceState(
                                           student: student,
-                                          className: className,
-                                          attendanceState:
-                                              selectedAttendanceState,
+                                          attendanceState: ref
+                                              .watch(attendanceStateProvider
+                                                  .notifier)
+                                              .state,
                                           classInfo: classInfo,
                                           reasonText: reasonText,
                                         );

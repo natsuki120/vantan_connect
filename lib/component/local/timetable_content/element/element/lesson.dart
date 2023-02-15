@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
-
 import '/component/local/attendance_modal/attendance_modal.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
@@ -13,9 +12,11 @@ import '../../../../shared/single/space_box/space_box.dart';
 import '../../../../shared/single/text_style/text_style.dart';
 
 class Lesson extends ConsumerWidget {
-  const Lesson({Key? key, required this.classInfo}) : super(key: key);
+  const Lesson({Key? key, required this.classInfo, required this.color})
+      : super(key: key);
 
   final Class classInfo;
+  final Color color;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -27,15 +28,18 @@ class Lesson extends ConsumerWidget {
     return GestureDetector(
       // 仮置き
       onTap: () {
-        attendanceModal(context, classInfo, ref, Student(id: '高橋夏輝'),
-            ClassName(name: classInfo.name), studentAttendance);
+        if (classInfo.name != '昼休憩' &&
+            classInfo.name != 'S高レポート' &&
+            classInfo.name != 'HR')
+          attendanceModal(context, classInfo, ref, Student(id: '高橋夏輝'),
+              ClassName(name: classInfo.name), studentAttendance);
       },
       child: Container(
         width: 65.sp,
         height: 96.sp,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4.sp),
-          color: primary10,
+          color: color,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,20 +52,6 @@ class Lesson extends ConsumerWidget {
                     classInfo.name,
                     style: caption1Regular(highEmphasis),
                     textAlign: TextAlign.center,
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 49.sp,
-                    height: 21.sp,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4.sp),
-                      color: surfaceSecondary.withOpacity(0.05),
-                    ),
-                    child: Text(
-                      classInfo.classRoom,
-                      style: caption2Regular(midEmphasis.withOpacity(0.7)),
-                    ),
                   ),
                 ],
               ),

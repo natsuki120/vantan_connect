@@ -44,7 +44,7 @@ class NotAttendedStudent extends ConsumerWidget {
                     ),
                     SpaceBox(height: 12.sp),
                     //TODO: ここにattendance_modalから送ったreasontextを入れる
-                    ReasonText(reasonText: ''),
+                    ReasonText(reasonText: student.reason),
                     //  Placeholder(fallbackWidth: 276.sp, fallbackHeight: 61.sp),
                   ],
                 ),

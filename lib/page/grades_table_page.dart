@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../component/local/grades_table/grades_table_app_bar/grades_table_app_bar.dart';
 import '../component/local/grades_table/grades_table_body/grades_table_body.dart';
@@ -8,22 +9,14 @@ class GradesTablePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      initialIndex: 0,
-      length: 3,
-      child: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(116),
+    return Scaffold(
+      appBar: AppBar(
+        flexibleSpace: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
           child: GradesTableAppBar(),
         ),
-        body: TabBarView(
-          children: [
-            GradesTableBody(),
-            GradesTableBody(),
-            GradesTableBody(),
-          ],
-        ),
       ),
+      body: GradesTableBody(),
     );
   }
 }

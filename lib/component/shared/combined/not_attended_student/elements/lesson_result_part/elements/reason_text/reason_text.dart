@@ -17,13 +17,16 @@ class ReasonText extends StatelessWidget {
           decoration: BoxDecoration(
               color: surfaceTertiary, borderRadius: BorderRadius.circular(8)),
           child: Padding(
-            padding: EdgeInsets.all(8.0),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('理由', style: caption1Bold(midEmphasis)),
-              SizedBox(height: 8.sp),
-              Text(reasonText, style: callOutRegular(black)),
-            ]),
+            padding: EdgeInsets.only(
+                top: 8.0.sp, left: 12.sp, right: 12.sp, bottom: 12.sp),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('理由', style: caption1Bold(midEmphasis)),
+                SizedBox(height: 8.sp),
+                Text(reasonText, style: callOutRegular(black)),
+              ],
+            ),
           ),
         ),
       ],

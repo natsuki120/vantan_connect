@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../shared/single/color/color.dart';
-import '../../../shared/single/space_box/space_box.dart';
 import '../../../shared/single/text_style/text_style.dart';
 
 class GradesTableAppBar extends StatelessWidget {
@@ -11,7 +9,6 @@ class GradesTableAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leadingWidth: 74.w,
       leading: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

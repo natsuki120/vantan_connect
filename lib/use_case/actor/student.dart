@@ -16,14 +16,12 @@ class StudentUseCase {
 
   void setAttendanceState({
     required Student student,
-    required ClassName className,
-    required AttendanceState? attendanceState,
+    required AttendanceState attendanceState,
     required Class classInfo,
     required String? reasonText,
   }) {
     studentRepository.setAttendanceState(
       student: student,
-      className: className,
       attendanceState: attendanceState,
       classInfo: classInfo,
       reasonText: reasonText,

@@ -115,4 +115,10 @@ class TestQueryServiceRepository extends IQueryService {
     // TODO: implement fetchAllStudentByClass
     throw UnimplementedError();
   }
+
+  @override
+  Future<Student> fetchStudentInfo({required String name}) {
+    // TODO: implement fetchStudentInfo
+    throw UnimplementedError();
+  }
 }

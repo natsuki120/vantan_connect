@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import '../domain/class/class.dart';
 import '/component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
 import '/domain/student/student.dart';
@@ -15,22 +14,24 @@ class StudentRepository extends IStudentRepository {
   void attendanceLesson(
       {required Student student, required ClassName className}) {
     final doc = firestore.doc(
-        'v1/private/${student.id}/writeOnly/Lesson/${className.name}/attendance/${DateTime.now().month}.${DateTime.now().day}');
-    doc.set({'attendance': true});
+        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${className.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
+    doc.set({
+      'name': student.id,
+      'day': "${DateTime.now().month}月${DateTime.now().day}日"
+    });
   }
 
   void setAttendanceState({
     required Student student,
-    required ClassName className,
-    required AttendanceState? attendanceState,
+    required AttendanceState attendanceState,
     required Class classInfo,
     required String? reasonText,
   }) {
     final doc = firestore.doc(
-        'v1/private/${student.id}/writeOnly/Lesson/${className.name}/attendance/${DateTime.now().month}.${DateTime.now().day}');
-    doc.set({'attendance': false});
-    doc.set({'attendanceState': attendanceState});
-    doc.set({'class': classInfo});
-    doc.set({'reason': reasonText});
+        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
+    doc.set({
+      'attendaceState': attendanceState.displayState,
+      'studentName': student.name,
+    });
   }
 }
