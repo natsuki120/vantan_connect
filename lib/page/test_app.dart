@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/domain/student/student.dart';
 import 'package:vantan_connect/page/profile.dart';
 import '../component/shared/single/color/color.dart';
 import '/page/timetable.dart';
@@ -15,8 +14,7 @@ class TestApp extends HookWidget {
   Widget build(BuildContext context) {
     List<Widget> pageList = [
       TimeTablePage(),
-      Container(),
-      Profile(studentName: studentName),
+      Profile(),
     ];
     final selectedIndex = useState(0);
     return Scaffold(
@@ -33,8 +31,6 @@ class TestApp extends HookWidget {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.view_agenda, size: 21.sp), label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.bar_chart, size: 21.sp), label: ''),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_outline, size: 21.sp), label: ''),
           ],
