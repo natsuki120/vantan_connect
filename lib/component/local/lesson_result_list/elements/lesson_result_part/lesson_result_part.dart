@@ -11,6 +11,7 @@ import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class
 import 'package:vantan_connect/page/student_list_lesson_detail_page.dart';
 import '../../../../shared/single/color/color.dart';
 import '../../../../shared/single/space_box/space_box.dart';
+import '../../../../shared/single/student_list/student_list.dart';
 import '../../../../shared/single/text_style/text_style.dart';
 
 class LessonResultPart extends ConsumerWidget {
@@ -26,15 +27,10 @@ class LessonResultPart extends ConsumerWidget {
         ClassAndDocument(classInfo: classInfo, classDocument: classDocument)));
     final notAttend = ref.watch(fetchStudentNotAttendanceByClass(
         ClassAndDocument(classInfo: classInfo, classDocument: classDocument)));
-    final late = ref.watch(fetchStudentLateByClass(
-        ClassAndDocument(classInfo: classInfo, classDocument: classDocument)));
     final other = ref.watch(fetchStudentOtherByClass(
         ClassAndDocument(classInfo: classInfo, classDocument: classDocument)));
-    final calculatePer = FutureProvider((ref) =>
-        attend.value!.length +
-        notAttend.value!.length +
-        late.value!.length +
-        other.value!.length / attend.value!.length);
+    final calculatePer =
+        FutureProvider((ref) => (attend.value!.length / studentList.length));
     final percent = ref.watch(calculatePer);
     return GestureDetector(
       onTap: () => NavigatorPush(
@@ -117,7 +113,7 @@ class LessonResultPart extends ConsumerWidget {
                             Text('出席率', style: caption1Regular(lowEmphasis)),
                             SpaceBox(height: 4.sp),
                             Text(
-                              '${percent}%',
+                              '${(percent * 100).round()}%',
                               style: bodyBold(primary),
                             ),
                           ],
@@ -127,7 +123,7 @@ class LessonResultPart extends ConsumerWidget {
                           circularStrokeCap: CircularStrokeCap.round,
                           radius: 25.0.sp,
                           lineWidth: 10.0.sp,
-                          percent: percent / 100,
+                          percent: percent,
                           progressColor: primary,
                         ),
                       ],
