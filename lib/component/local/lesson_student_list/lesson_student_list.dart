@@ -36,11 +36,14 @@ class LessonStudentList extends HookConsumerWidget {
                     ]),
                     Expanded(
                       child: ListView.builder(
-                        itemCount: classInfo.studentIdList.length,
+                        itemCount: classInfo.targetStudentList.length,
                         itemBuilder: (context, index) {
+                          final studentName =
+                              classInfo.targetStudentList[index].name;
                           final studentId =
-                              classInfo.studentIdList[index].toString();
-                          return LessonStudentPart(studentId: studentId);
+                              classInfo.targetStudentList[index].id;
+                          return LessonStudentPart(
+                              studentId: studentId, studentName: studentName);
                         },
                       ),
                     ),

@@ -31,7 +31,7 @@ mixin _$Class {
   List<StudentId> get studentIdList => throw _privateConstructorUsedError;
   List<TeacherId> get teacherIdList => throw _privateConstructorUsedError;
   String get targetSchool => throw _privateConstructorUsedError;
-  String get targetStudent => throw _privateConstructorUsedError;
+  List<Student> get targetStudentList => throw _privateConstructorUsedError;
   String get goalPoint => throw _privateConstructorUsedError;
   List<String> get goalRequirements => throw _privateConstructorUsedError;
   String get endTime => throw _privateConstructorUsedError;
@@ -67,7 +67,7 @@ abstract class $ClassCopyWith<$Res> {
       List<StudentId> studentIdList,
       List<TeacherId> teacherIdList,
       String targetSchool,
-      String targetStudent,
+      List<Student> targetStudentList,
       String goalPoint,
       List<String> goalRequirements,
       String endTime,
@@ -106,7 +106,7 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
     Object? studentIdList = null,
     Object? teacherIdList = null,
     Object? targetSchool = null,
-    Object? targetStudent = null,
+    Object? targetStudentList = null,
     Object? goalPoint = null,
     Object? goalRequirements = null,
     Object? endTime = null,
@@ -162,10 +162,10 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
               as String,
-      targetStudent: null == targetStudent
-          ? _value.targetStudent
-          : targetStudent // ignore: cast_nullable_to_non_nullable
-              as String,
+      targetStudentList: null == targetStudentList
+          ? _value.targetStudentList
+          : targetStudentList // ignore: cast_nullable_to_non_nullable
+              as List<Student>,
       goalPoint: null == goalPoint
           ? _value.goalPoint
           : goalPoint // ignore: cast_nullable_to_non_nullable
@@ -239,7 +239,7 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
       List<StudentId> studentIdList,
       List<TeacherId> teacherIdList,
       String targetSchool,
-      String targetStudent,
+      List<Student> targetStudentList,
       String goalPoint,
       List<String> goalRequirements,
       String endTime,
@@ -274,7 +274,7 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
     Object? studentIdList = null,
     Object? teacherIdList = null,
     Object? targetSchool = null,
-    Object? targetStudent = null,
+    Object? targetStudentList = null,
     Object? goalPoint = null,
     Object? goalRequirements = null,
     Object? endTime = null,
@@ -330,10 +330,10 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           ? _value.targetSchool
           : targetSchool // ignore: cast_nullable_to_non_nullable
               as String,
-      targetStudent: null == targetStudent
-          ? _value.targetStudent
-          : targetStudent // ignore: cast_nullable_to_non_nullable
-              as String,
+      targetStudentList: null == targetStudentList
+          ? _value._targetStudentList
+          : targetStudentList // ignore: cast_nullable_to_non_nullable
+              as List<Student>,
       goalPoint: null == goalPoint
           ? _value.goalPoint
           : goalPoint // ignore: cast_nullable_to_non_nullable
@@ -404,7 +404,7 @@ class _$_Class implements _Class {
       final List<StudentId> studentIdList = const [],
       final List<TeacherId> teacherIdList = const [],
       this.targetSchool = '',
-      this.targetStudent = '',
+      final List<Student> targetStudentList = const [],
       this.goalPoint = '',
       final List<String> goalRequirements = const [],
       this.endTime = '',
@@ -421,6 +421,7 @@ class _$_Class implements _Class {
       : _classDocumentList = classDocumentList,
         _studentIdList = studentIdList,
         _teacherIdList = teacherIdList,
+        _targetStudentList = targetStudentList,
         _goalRequirements = goalRequirements,
         _documentId = documentId,
         _document = document,
@@ -479,9 +480,16 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String targetSchool;
+  final List<Student> _targetStudentList;
   @override
   @JsonKey()
-  final String targetStudent;
+  List<Student> get targetStudentList {
+    if (_targetStudentList is EqualUnmodifiableListView)
+      return _targetStudentList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_targetStudentList);
+  }
+
   @override
   @JsonKey()
   final String goalPoint;
@@ -554,7 +562,7 @@ class _$_Class implements _Class {
 
   @override
   String toString() {
-    return 'Class(id: $id, name: $name, weakDay: $weakDay, classRoom: $classRoom, classImgUrl: $classImgUrl, overView: $overView, classDocumentList: $classDocumentList, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudent: $targetStudent, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document, startTimeList: $startTimeList, endTimeList: $endTimeList)';
+    return 'Class(id: $id, name: $name, weakDay: $weakDay, classRoom: $classRoom, classImgUrl: $classImgUrl, overView: $overView, classDocumentList: $classDocumentList, studentIdList: $studentIdList, teacherIdList: $teacherIdList, targetSchool: $targetSchool, targetStudentList: $targetStudentList, goalPoint: $goalPoint, goalRequirements: $goalRequirements, endTime: $endTime, frameCount: $frameCount, startTime: $startTime, announceTime: $announceTime, timeTable: $timeTable, documentId: $documentId, isOnline: $isOnline, baseClass: $baseClass, document: $document, startTimeList: $startTimeList, endTimeList: $endTimeList)';
   }
 
   @override
@@ -579,8 +587,8 @@ class _$_Class implements _Class {
                 .equals(other._teacherIdList, _teacherIdList) &&
             (identical(other.targetSchool, targetSchool) ||
                 other.targetSchool == targetSchool) &&
-            (identical(other.targetStudent, targetStudent) ||
-                other.targetStudent == targetStudent) &&
+            const DeepCollectionEquality()
+                .equals(other._targetStudentList, _targetStudentList) &&
             (identical(other.goalPoint, goalPoint) ||
                 other.goalPoint == goalPoint) &&
             const DeepCollectionEquality()
@@ -621,7 +629,7 @@ class _$_Class implements _Class {
         const DeepCollectionEquality().hash(_studentIdList),
         const DeepCollectionEquality().hash(_teacherIdList),
         targetSchool,
-        targetStudent,
+        const DeepCollectionEquality().hash(_targetStudentList),
         goalPoint,
         const DeepCollectionEquality().hash(_goalRequirements),
         endTime,
@@ -663,7 +671,7 @@ abstract class _Class implements Class {
       final List<StudentId> studentIdList,
       final List<TeacherId> teacherIdList,
       final String targetSchool,
-      final String targetStudent,
+      final List<Student> targetStudentList,
       final String goalPoint,
       final List<String> goalRequirements,
       final String endTime,
@@ -701,7 +709,7 @@ abstract class _Class implements Class {
   @override
   String get targetSchool;
   @override
-  String get targetStudent;
+  List<Student> get targetStudentList;
   @override
   String get goalPoint;
   @override

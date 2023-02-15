@@ -26,7 +26,10 @@ _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
               .toList() ??
           const [],
       targetSchool: json['targetSchool'] as String? ?? '',
-      targetStudent: json['targetStudent'] as String? ?? '',
+      targetStudentList: (json['targetStudentList'] as List<dynamic>?)
+              ?.map((e) => Student.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       goalPoint: json['goalPoint'] as String? ?? '',
       goalRequirements: (json['goalRequirements'] as List<dynamic>?)
               ?.map((e) => e as String)
@@ -63,7 +66,8 @@ Map<String, dynamic> _$$_ClassToJson(_$_Class instance) => <String, dynamic>{
       'studentIdList': instance.studentIdList.map((e) => e.toJson()).toList(),
       'teacherIdList': instance.teacherIdList.map((e) => e.toJson()).toList(),
       'targetSchool': instance.targetSchool,
-      'targetStudent': instance.targetStudent,
+      'targetStudentList':
+          instance.targetStudentList.map((e) => e.toJson()).toList(),
       'goalPoint': instance.goalPoint,
       'goalRequirements': instance.goalRequirements,
       'endTime': instance.endTime,

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/timetable_content/element/timetable_content_case_of_basic_c.dart';
 import '../../shared/single/space_box/space_box.dart';
 import 'element/element/timetable_header_column.dart';
+import 'element/timetable_content_case_of_basic_c.dart';
 import 'hook.dart';
 
 class TimeTableContent extends StatelessWidget {
