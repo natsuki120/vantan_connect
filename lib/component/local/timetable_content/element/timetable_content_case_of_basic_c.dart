@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../domain/student/student.dart';
+import '../../../shared/single/color/color.dart';
 import '../../../shared/single/space_box/space_box.dart';
+import '../../../shared/single/student_list/student_list.dart';
 import '/component/local/lesson_detail_body/hooks.dart';
 import '/domain/class/class.dart';
 import 'element/lesson.dart';
 import 'element/timetable_header_row.dart';
 
-final studentList = <Student>[
-  Student(name: '丸山千颯', id: '@maruyama'),
-  Student(name: '松田怜士', id: '@matsuda'),
-  Student(name: '豊田龍之介', id: '@toyota'),
-  Student(name: '山越拓海', id: '@yamagoshi'),
-  Student(name: '内藤希心', id: '@naito'),
-  Student(name: '山本琉斗', id: '@yamamoto'),
-  Student(name: '江口紫音', id: '@eguchi'),
-  Student(name: '安西美来', id: '@anzai'),
-];
 class TimetableContentCaseOfBasicC extends StatelessWidget {
   const TimetableContentCaseOfBasicC({Key? key}) : super(key: key);
 
