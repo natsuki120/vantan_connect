@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
 import '../../../../shared/single/color/color.dart';
 import '../../../../shared/single/text_style/text_style.dart';
 
@@ -49,16 +48,15 @@ class LessonStudentPart extends ConsumerWidget {
               )
             ],
           ),
-          isThreeLine: true,
-          trailing: Icon(Icons.navigate_next),
-          onTap: () {
-            //TODO:
-            // NavigatorPush(
-            //   context,
-            //   page: ,
-            //   //生徒詳細ページへ
-            // );
-          },
+          // isThreeLine: true,
+          // trailing: Icon(Icons.navigate_next),
+          // onTap: () {
+          //   // NavigatorPush(
+          //   //   context,
+          //   //   page: ,
+          //   //   //生徒詳細ページへ
+          //   // );
+          // },
         ),
       ],
     );
