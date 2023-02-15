@@ -18,12 +18,6 @@ class Login extends HookWidget {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('name', name);
       prefs.setString('course', course);
-      print('登録しました');
-    }
-
-    Future<String> getUserInfo() async {
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      return prefs.getString('name')!;
     }
 
     return Scaffold(
@@ -68,19 +62,6 @@ class Login extends HookWidget {
             backgroundColor: primary,
             callback: () {
               setUserInfo(controller.text, menuState.value);
-            },
-          ),
-          FilledEnabledButton(
-            text: '確認する',
-            textStyle: bodyBold(onPrimary),
-            padding: EdgeInsets.symmetric(
-              horizontal: 145.sp,
-              vertical: 13.sp,
-            ),
-            backgroundColor: primary,
-            callback: () async {
-              controller.text = await getUserInfo();
-              print(controller.text);
             },
           ),
         ],
