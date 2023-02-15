@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
-import 'package:vantan_connect/domain/riverpod_argument/student_and_course.dart';
 import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
 import '../../../../domain/student/student.dart';
 import '/infrastructure/student_repository.dart';
@@ -76,3 +75,10 @@ final fetchStudentInfo = FutureProvider.family(
     );
   },
 );
+
+final fetchAllStudentAttendanceStatusByClass =
+    StreamProvider.family((ref, Class classInfo) {
+  return QueryServiceUseCase(
+          queryService: QueryServiceRepositoryWhichUseFirebase())
+      .fetchAllStudentAttendanceStatusByClass(classInfo: classInfo);
+});
