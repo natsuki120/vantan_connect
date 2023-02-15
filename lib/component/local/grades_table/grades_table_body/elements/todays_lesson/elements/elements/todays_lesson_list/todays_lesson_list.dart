@@ -24,7 +24,7 @@ class TodaysLessonList extends ConsumerWidget {
               padding: EdgeInsets.only(left: 20.0.sp),
               child: ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: data.length,
+                itemCount: data.length <= 3 ? data.length : 3,
                 itemBuilder: (BuildContext context, int index) {
                   var classInfo = data[index];
                   return ref.watch(today).when(
