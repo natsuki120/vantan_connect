@@ -8,8 +8,10 @@ class LessonStudentPart extends ConsumerWidget {
   LessonStudentPart({
     super.key,
     required this.studentId,
+    required this.studentName,
   });
   final String studentId;
+  final String studentName;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -19,11 +21,11 @@ class LessonStudentPart extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [CircleAvatar()],
       ),
-      title: Text(studentId),
+      title: Text('$studentName'),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('@$studentId'),
+          Text('$studentId'),
           SizedBox(height: 8.sp),
           Row(
             children: [

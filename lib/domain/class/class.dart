@@ -21,7 +21,7 @@ class Class with _$Class {
     @Default([]) List<StudentId> studentIdList,
     @Default([]) List<TeacherId> teacherIdList,
     @Default('') String targetSchool,
-    @Default('') String targetStudent,
+    @Default([]) List<Student> targetStudentList,
     @Default('') String goalPoint,
     @Default([]) List<String> goalRequirements,
     @Default('') String endTime,
