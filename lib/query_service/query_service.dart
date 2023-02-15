@@ -3,7 +3,7 @@ import '../domain/class/class.dart';
 import '/domain/student/student.dart';
 
 abstract class IQueryService {
-  Future<List<Student>> fetchAllStudentByClass({required Class classInfo});
+  Stream<List<Student>> fetchAllStudentByClass({required Class classInfo});
 
   Future<List<ClassDocument>> fetchAllClassDocumentByClass(
       {required Class classInfo});

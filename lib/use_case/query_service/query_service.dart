@@ -63,4 +63,9 @@ class QueryServiceUseCase {
   Future<Student> fetchStudentInfo({required String name}) {
     return queryService.fetchStudentInfo(name: name);
   }
+
+  Stream<List<Student>> fetchAllStudentAttendanceStatusByClass(
+      {required Class classInfo}) {
+    return queryService.fetchAllStudentByClass(classInfo: classInfo);
+  }
 }
