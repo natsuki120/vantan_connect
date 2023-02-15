@@ -18,7 +18,7 @@ class OtherStudentList extends ConsumerWidget {
     return Column(
       children: [
         ref
-            .watch(fetchStudentNotAttendanceByClass(ClassAndDocument(
+            .watch(fetchStudentOtherByClass(ClassAndDocument(
                 classInfo: classInfo, classDocument: classDocument)))
             .when(
               data: (studentList) => ListView.builder(
