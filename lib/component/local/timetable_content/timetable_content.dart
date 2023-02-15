@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:vantan_connect/component/local/timetable_content/element/timetable_content_case_of_basic_c.dart';
 import '../../shared/single/space_box/space_box.dart';
 import 'element/element/timetable_header_column.dart';
-import 'element/timetable_content_case_of_applied_class.dart';
 import 'hook.dart';
 
 class TimeTableContent extends StatelessWidget {
@@ -32,7 +31,7 @@ class TimeTableContent extends StatelessWidget {
                               timeTable: index + 1,
                               end: classStartTime.end,
                             ),
-                            SpaceBox(height: 4.sp),
+                            SpaceBox(height: 2.sp),
                           ],
                         );
                       }),
@@ -41,7 +40,7 @@ class TimeTableContent extends StatelessWidget {
             ),
             SpaceBox(width: 9.sp),
             // 月〜金まで日程の表示を繰り返す
-            TimetableContentCaseOfAppliedClass(),
+            TimetableContentCaseOfBasicC(),
           ],
         ),
       ),
