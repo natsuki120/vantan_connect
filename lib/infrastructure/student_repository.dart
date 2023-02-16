@@ -31,8 +31,10 @@ class StudentRepository extends IStudentRepository {
     final doc = firestore.doc(
         'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
     doc.set({
+      'name': student.id,
       'attendanceState': attendanceState.displayState,
       'studentName': student.name,
+      'reason': reasonText,
     });
   }
 }

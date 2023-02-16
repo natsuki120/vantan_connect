@@ -9,4 +9,5 @@ final studentList = <Student>[
   Student(name: '山本琉斗', id: '@yamamoto'),
   Student(name: '江口紫音', id: '@eguchi'),
   Student(name: '安西美来', id: '@anzai'),
+  Student(name: '高橋夏輝', id: '@anzai'),
 ];

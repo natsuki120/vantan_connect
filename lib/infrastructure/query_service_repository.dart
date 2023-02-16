@@ -175,7 +175,15 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Future<Student> fetchStudentInfo({required String name}) async {
-    final doc = await firestore.doc('応用クラス/$name');
+    final doc = await firestore.doc('student/$name');
+    return doc.get().then((DocumentSnapshot documentSnapshot) {
+      final json = documentSnapshot.data() as Map<String, dynamic>;
+      return Student.fromJson(json);
+    });
+  }
+
+  Future<Student> fetchStudent({required String studentName}) async {
+    final doc = await firestore.doc('student/$studentName');
     return doc.get().then((DocumentSnapshot documentSnapshot) {
       final json = documentSnapshot.data() as Map<String, dynamic>;
       return Student.fromJson(json);
@@ -184,9 +192,8 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   void sendTestStudent({required List<Student> studentList}) {
     for (Student student in studentList) {
-      final doc = firestore.doc(
-          'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/プログラミング/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
-      doc.set({'name': student.name, 'attendanceState': '出席'});
+      final doc = firestore.doc('student/${student.name}');
+      doc.set(student.toJson());
     }
   }
 }

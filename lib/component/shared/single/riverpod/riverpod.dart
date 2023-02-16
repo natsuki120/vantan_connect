@@ -82,3 +82,5 @@ final fetchAllStudentAttendanceStatusByClass =
           queryService: QueryServiceRepositoryWhichUseFirebase())
       .fetchAllStudentAttendanceStatusByClass(classInfo: classInfo);
 });
+
+final myAccount = StateProvider((ref) => Student());

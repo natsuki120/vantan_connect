@@ -4,10 +4,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
-import 'package:vantan_connect/domain/riverpod_argument/student_and_course.dart';
-import 'package:vantan_connect/page/login.dart';
-import 'package:vantan_connect/page/test_app.dart';
+import 'package:vantan_connect/page/grades_table_page.dart';
 import 'firebase_options.dart';
 
 final hasLoggedProvider = FutureProvider((ref) async {
@@ -30,7 +27,6 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final hasLogged = ref.watch(hasLoggedProvider);
     return ScreenUtilInit(
       designSize: const Size(390, 844),
       builder: (context, child) {
@@ -38,17 +34,7 @@ class MyApp extends ConsumerWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(brightness: Brightness.light, useMaterial3: true),
-          // ログインしたことあるかないかで場合わけ
-          home: hasLogged.when(
-            data: (data) {
-              //　データをフェッチするまで待機
-              return TestApp(
-                studentName: data['name'],
-              );
-            },
-            error: (err, stack) => Login(),
-            loading: () => CircularProgressIndicator(),
-          ),
+          home: GradesTablePage(),
           builder: EasyLoading.init(),
         );
       },

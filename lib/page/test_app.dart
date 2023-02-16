@@ -14,7 +14,7 @@ class TestApp extends HookWidget {
   Widget build(BuildContext context) {
     List<Widget> pageList = [
       TimeTablePage(),
-      Profile(),
+      Profile(studentName: studentName),
     ];
     final selectedIndex = useState(0);
     return Scaffold(

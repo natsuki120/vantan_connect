@@ -111,14 +111,14 @@ class TestQueryServiceRepository extends IQueryService {
   }
 
   @override
-  Future<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
-    // TODO: implement fetchAllStudentByClass
+  Future<Student> fetchStudentInfo({required String name}) {
+    // TODO: implement fetchStudentInfo
     throw UnimplementedError();
   }
 
   @override
-  Future<Student> fetchStudentInfo({required String name}) {
-    // TODO: implement fetchStudentInfo
+  Stream<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
+    // TODO: implement fetchAllStudentByClass
     throw UnimplementedError();
   }
 }
