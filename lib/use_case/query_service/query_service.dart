@@ -68,4 +68,18 @@ class QueryServiceUseCase {
       {required Class classInfo}) {
     return queryService.fetchAllStudentByClass(classInfo: classInfo);
   }
+
+  Stream<List<ClassDocument>> fetchClassDayWhichWasHeld(
+      {required String course, required String className}) {
+    return queryService.fetchClassDayWhichWasHeld(
+      className: className,
+      course: course,
+    );
+  }
+
+  Stream<List<Student>> fetchAllClassDocumentByDay(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    return queryService.fetchAllClassDocumentByDay(
+        classInfo: classInfo, classDocument: classDocument);
+  }
 }
