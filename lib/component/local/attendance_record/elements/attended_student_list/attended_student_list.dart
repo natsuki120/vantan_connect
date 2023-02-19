@@ -4,9 +4,7 @@ import 'package:vantan_connect/component/shared/combined/attended_student/attend
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../../../../../domain/class/class.dart';
-import '../../../../../domain/student/student.dart';
 import '../../../../shared/combined/late_attended_student/late_attended_student.dart';
-import '../../../../shared/single/student_list/student_list.dart';
 
 class AttendedStudentList extends ConsumerWidget {
   const AttendedStudentList(
@@ -21,20 +19,17 @@ class AttendedStudentList extends ConsumerWidget {
     return ref.watch(fetchAllStudentAttendanceStatusByClass(classInfo)).when(
           data: (dataList) => ListView.builder(
               shrinkWrap: true,
-              itemCount: studentList.length,
+              itemCount: dataList.length,
               itemBuilder: (context, index) {
-                final student = studentList[index];
-                for (Student data in dataList)
-                  if (data.name == student.name) {
-                    if (data.attendanceState == '出席' ||
-                        data.attendanceState == '遅刻') {
-                      if (data.attendanceState == '出席')
-                        return AttendedStudent(student: student);
-                      else
-                        return LateAttendedStudent(student: student);
-                    }
-                  }
-                ;
+                final student = dataList[index];
+                return Column(children: [
+                  student.attendanceState == '出席'
+                      ? AttendedStudent(student: student)
+                      : Container(),
+                  student.attendanceState == '遅刻'
+                      ? LateAttendedStudent(student: student)
+                      : Container(),
+                ]);
               }),
           error: (error, _) => Icon(Icons.error),
           loading: () => CircularProgressIndicator(),
