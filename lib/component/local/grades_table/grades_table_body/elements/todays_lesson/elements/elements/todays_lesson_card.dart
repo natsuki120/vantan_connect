@@ -25,8 +25,7 @@ class TodaysLessonCard extends StatelessWidget {
       onTap: () => NavigatorPush(context,
           page: StudentListInLessonDetailPage(
             classInfo: classInfo,
-            classDocument: ClassDocument(
-                day: '${DateTime.now().month}月${DateTime.now().day}日'),
+            classDocument: ClassDocument(day: '2月16日'),
           )),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 6.sp),

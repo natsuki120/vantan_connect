@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/elements/todays_lesson_list/hooks/hooks.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
+import 'package:vantan_connect/domain/class_document/class_document.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
 import '../../../../../../../../shared/single/color/color.dart';
 import '../../../../../../../../shared/single/text_style/text_style.dart';
@@ -35,7 +36,7 @@ class TodaysLessonList extends ConsumerWidget {
                                 .watch(fetchStudentAttendanceByClass(
                                     ClassAndDocument(
                                   classInfo: classInfo,
-                                  classDocument: today,
+                                  classDocument: ClassDocument(day: '2月16日'),
                                 )))
                                 .when(
                                   data: (data) => Text(
