@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/component/shared/combined/attended_student/attended_student.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
+import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
 import '../../../../../domain/class/class.dart';
-import '../../../../shared/combined/late_attended_student/late_attended_student.dart';
 
 class AttendedStudentList extends ConsumerWidget {
   const AttendedStudentList(
@@ -16,20 +16,16 @@ class AttendedStudentList extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref.watch(fetchAllStudentAttendanceStatusByClass(classInfo)).when(
+    return ref
+        .watch(fetchStudentAttendanceByClass(ClassAndDocument(
+            classInfo: classInfo, classDocument: classDocument)))
+        .when(
           data: (dataList) => ListView.builder(
               shrinkWrap: true,
               itemCount: dataList.length,
               itemBuilder: (context, index) {
                 final student = dataList[index];
-                return Column(children: [
-                  student.attendanceState == '出席'
-                      ? AttendedStudent(student: student)
-                      : Container(),
-                  student.attendanceState == '遅刻'
-                      ? LateAttendedStudent(student: student)
-                      : Container(),
-                ]);
+                return AttendedStudent(student: student);
               }),
           error: (error, _) => Icon(Icons.error),
           loading: () => CircularProgressIndicator(),
