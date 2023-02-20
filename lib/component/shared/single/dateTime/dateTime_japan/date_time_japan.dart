@@ -75,21 +75,22 @@ final dayProvider = StreamProvider<String>((ref) async* {
   );
 });
 
-final minuteProvider = StreamProvider<String>((ref) async* {
-  initializeDateFormatting('ja');
-  yield DateFormat.m('ja').format(DateTime.now());
-  yield* Stream.periodic(
-    Duration(minutes: 1),
-    (_) => DateFormat.m('ja').format(DateTime.now()),
-    //表示例 45 ※ 分は含まれない
-  );
-});
+//描画時の偏差を埋めるのが難しい上　現状使用しないので一旦保留
+// final minuteProvider = StreamProvider<String>((ref) async* {
+//   initializeDateFormatting('ja');
+//   yield DateFormat.m('ja').format(DateTime.now());
+//   yield* Stream.periodic(
+//     Duration(seconds: 60 - DateTime.now().second),
+//     (_) => DateFormat.m('ja').format(DateTime.now()),
+//     //表示例 45 ※ 分は含まれない
+//   );
+// });
 
 final secondProvider = StreamProvider<String>((ref) async* {
   initializeDateFormatting('ja');
   yield DateFormat.s('ja').format(DateTime.now());
   yield* Stream.periodic(
-    Duration(seconds: 1),
+    Duration(milliseconds: 1000 - DateTime.now().millisecond),
     (_) => DateFormat.s('ja').format(DateTime.now()),
     //表示例 15   ※秒は含まれない
   );
