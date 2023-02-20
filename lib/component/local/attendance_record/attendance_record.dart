@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:vantan_connect/component/local/attendance_record/elements/all_student_status_list/all_student_status_list.dart';
+import 'package:vantan_connect/component/local/attendance_record/elements/late_student_list/late_student_list.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../../../domain/class/class.dart';
 import 'elements/attended_student_list/attended_student_list.dart';
@@ -20,7 +21,7 @@ class AttendanceRecord extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         appBar: CustomTab(),
         body: Padding(
@@ -32,6 +33,10 @@ class AttendanceRecord extends HookConsumerWidget {
                 classDocument: classDocument,
               ),
               AttendedStudentList(
+                classInfo: classInfo,
+                classDocument: classDocument,
+              ),
+              LateAttendedStudentList(
                 classInfo: classInfo,
                 classDocument: classDocument,
               ),

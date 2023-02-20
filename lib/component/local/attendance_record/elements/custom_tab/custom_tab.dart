@@ -31,6 +31,10 @@ class CustomTab extends StatelessWidget implements PreferredSizeWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.sp),
+            child: Tab(text: '遅刻', height: 32.sp),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.sp),
             child: Tab(text: '欠席', height: 32.sp),
           ),
           Padding(
