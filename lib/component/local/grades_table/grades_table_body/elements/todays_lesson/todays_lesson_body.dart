@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'elements/todays_lesson_tab_bar_view.dart';
+import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/elements/todays_lesson_list/todays_lesson_list.dart';
 
 class TodaysLessonBody extends StatelessWidget {
   TodaysLessonBody({super.key, this.todaysLessonTabController}) : super();
@@ -18,12 +18,7 @@ class TodaysLessonBody extends StatelessWidget {
           child: Hero(
             tag: 'todaysLessonHeroTag',
             transitionOnUserGestures: false,
-            child: Material(
-              child: TodaysLessonTabBarView(
-                onlyShowThreeLessons: true,
-                todaysLessonTabController: todaysLessonTabController,
-              ),
-            ),
+            child: Material(child: TodaysLessonList()),
           ),
         ),
       ],
