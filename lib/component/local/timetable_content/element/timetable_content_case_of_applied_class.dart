@@ -257,7 +257,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
-              classInfo: Class(name: 'HR'),
+              classInfo: Class(name: 'HR', classImgUrl: 'home_room.jng'),
               color: primary10,
             ),
             SpaceBox(height: 4.sp),

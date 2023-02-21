@@ -205,7 +205,11 @@
 //             SpaceBox(height: 4.sp),
 //             Normal(),
 //             SpaceBox(height: 4.sp),
-//             Lesson(classInfo: Class(name: 'HR')),
+//             Lesson(classInfo: 
+// Class(
+//                 name: 'HR',
+//                 classImgUrl: 'home_room.jng'
+//               ),
 //             SpaceBox(height: 4.sp),
 //             Normal(),
 //             SpaceBox(height: 4.sp),
