@@ -6,7 +6,7 @@ import '/domain/value/student_id.dart';
 import '/domain/value/teacher_id.dart';
 import '/domain/class/class.dart';
 import '/domain/student/student.dart';
-import '/infrastructure/class_repository.dart';
+import '../../infrastructure/actor/class_repository.dart';
 
 final testTeacherList = [
   Teacher(

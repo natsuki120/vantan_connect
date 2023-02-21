@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '/domain/class/class.dart';
 import '/domain/class_document/class_document.dart';
-import '/infrastructure/class_repository.dart';
+import '../../infrastructure/actor/class_repository.dart';
 
 class ClassDocumentNotifier extends StateNotifier<List<ClassDocument>> {
   ClassDocumentNotifier(this.classRepository) : super([]);

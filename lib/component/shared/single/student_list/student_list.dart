@@ -10,5 +10,9 @@ final studentList = <Student>[
   Student(name: '山本琉斗', id: '@yamamoto', attendanceState: '遅刻', reason: '電車遅延'),
   Student(name: '江口紫音', id: '@eguchi', attendanceState: '出席'),
   Student(name: '安西美来', id: '@anzai', attendanceState: '欠席', reason: '家庭の都合'),
-  Student(name: '高橋夏輝', id: '@takahashi', attendanceState: '出席'),
+  Student(
+      name: '高橋夏輝',
+      id: '@takahashi',
+      attendanceState: '出席',
+      email: 'synchro0718@icloud.com'),
 ];
