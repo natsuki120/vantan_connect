@@ -36,7 +36,7 @@ dependencies:
   firebase_core:
   flutter_riverpod: ^2.1.1
   cloud_firestore:
-  firebase_auth:
+  firebase_auth: ^4.2.8
   freezed_annotation:
   gsheets: ^0.4.2
   image_picker: ^0.8.5+3
