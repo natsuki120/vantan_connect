@@ -201,15 +201,20 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     });
   }
 
-  void sendTestStudent(
-      {required List<Student> studentList,
-      required String className,
-      required ClassDocument classDocument}) {
-    for (Student student in studentList) {
-      final doc = firestore.doc(
-          'c_class/$className/day/${classDocument.day}/confirmed/${student.name}');
-      doc.set(student.toJson());
-    }
+  void registerLoggedStudent({required Student student}) {
+    final doc = firestore.doc('c_class_student/${student.name}');
+    doc.set(student.toJson());
+  }
+
+  Future<Student> identifyStudent({required String email}) async {
+    final collection = await firestore
+        .collection('c_class_student')
+        .where('email', isEqualTo: email);
+    return await collection.get().then((QuerySnapshot snapshot) =>
+        snapshot.docs.map((DocumentSnapshot documentSnapshot) {
+          final json = documentSnapshot.data() as Map<String, dynamic>;
+          return Student.fromJson(json);
+        }).first);
   }
 
   @override
