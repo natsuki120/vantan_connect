@@ -90,7 +90,7 @@ final secondProvider = StreamProvider<String>((ref) async* {
   initializeDateFormatting('ja');
   yield DateFormat.s('ja').format(DateTime.now());
   yield* Stream.periodic(
-    Duration(milliseconds: 1000 - DateTime.now().millisecond),
+    Duration(seconds: 1),
     (_) => DateFormat.s('ja').format(DateTime.now()),
     //表示例 15   ※秒は含まれない
   );
