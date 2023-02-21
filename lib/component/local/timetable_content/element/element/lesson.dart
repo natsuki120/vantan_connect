@@ -27,11 +27,9 @@ class Lesson extends ConsumerWidget {
       ),
     );
     return GestureDetector(
-      // 仮置き
+      // TODO
       onTap: () {
-        if (classInfo.name != '昼休憩' &&
-            classInfo.name != 'S高レポート' &&
-            classInfo.name != 'HR')
+        if (classInfo.name != '昼休憩' && classInfo.name != 'S校サポート')
           attendanceModal(
               context,
               classInfo,

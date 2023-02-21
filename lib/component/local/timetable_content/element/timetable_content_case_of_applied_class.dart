@@ -136,7 +136,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             TimetableHeaderRow(weakDay: '水'),
             SpaceBox(height: 4.sp),
             Lesson(
-              classInfo: Class(name: 'S高レポート'),
+              classInfo: Class(name: 'S校サポート'),
               color: primary10,
             ),
             SpaceBox(height: 4.sp),
@@ -257,7 +257,7 @@ class TimetableContentCaseOfAppliedClass extends StatelessWidget {
             ),
             SpaceBox(height: 4.sp),
             Lesson(
-              classInfo: Class(name: 'HR'),
+              classInfo: Class(name: 'HR', classImgUrl: 'home_room.jng'),
               color: primary10,
             ),
             SpaceBox(height: 4.sp),
