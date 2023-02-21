@@ -69,7 +69,7 @@ final dayProvider = StreamProvider<String>((ref) async* {
   initializeDateFormatting('ja');
   yield DateFormat.EEEE('ja').format(DateTime.now());
   yield* Stream.periodic(
-    Duration(days: 7),
+    Duration(days: 1),
     (_) => DateFormat.EEEE('ja').format(DateTime.now()),
     //表示例　水曜日
   );
