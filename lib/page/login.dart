@@ -2,24 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/component/shared/single/space_box/space_box.dart';
-import 'package:vantan_connect/infrastructure/query_service_repository.dart';
-import 'package:vantan_connect/page/test_app.dart';
+import 'package:vantan_connect/infrastructure/query_service/query_service_repository.dart';
 import '../component/shared/single/buttons/buttons.dart';
 import '../component/shared/single/color/color.dart';
 import '../component/shared/single/text_style/text_style.dart';
 
-class Login extends HookWidget {
+class Login extends HookConsumerWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final controller = useTextEditingController();
-    void setUserInfo(String name) async {
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      prefs.setString('name', name);
-    }
+  Widget build(BuildContext context, WidgetRef ref) {
+    final emailTextController = useTextEditingController();
+    final passwordTextController = useTextEditingController();
 
     return Scaffold(
       body: Padding(
@@ -28,10 +25,14 @@ class Login extends HookWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextFormField(
-              controller: controller,
-              decoration: const InputDecoration(hintText: '名前'),
+              controller: emailTextController,
+              decoration: const InputDecoration(hintText: 'メールアドレス'),
             ),
             SpaceBox(height: 40.sp),
+            TextFormField(
+              controller: passwordTextController,
+              decoration: const InputDecoration(hintText: 'パスワード'),
+            ),
             SpaceBox(height: 60.sp),
             FilledEnabledButton(
               text: 'ログイン',
@@ -44,17 +45,16 @@ class Login extends HookWidget {
               callback: () async {
                 try {
                   EasyLoading.show();
-                  await QueryServiceRepositoryWhichUseFirebase()
-                      .fetchStudentInfo(name: controller.text);
-                  setUserInfo(controller.text);
-                  EasyLoading.showSuccess('登録しました');
-                  Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              TestApp(studentName: controller.text)),
-                      (_) => false);
+                  await ref.watch(authProvider).signInWithEmail(
+                      emailTextController.text, passwordTextController.text);
+                  final student = await QueryServiceRepositoryWhichUseFirebase()
+                      .identifyStudent(email: 'synchro0718@icloud.com');
+                  await ref
+                      .watch(myAccount.notifier)
+                      .update((state) => state = student);
+                  EasyLoading.showSuccess('識別しました');
                 } catch (e) {
+                  print(e);
                   EasyLoading.showError('存在しないユーザーです');
                 }
               },
