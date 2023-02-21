@@ -1,10 +1,12 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
 import 'package:vantan_connect/domain/student_attendance/student_attendance.dart';
+import 'package:vantan_connect/infrastructure/auth/auth.dart';
 import '../../../../domain/student/student.dart';
-import '/infrastructure/student_repository.dart';
-import '/infrastructure/query_service_repository.dart';
+import '../../../../infrastructure/actor/student_repository.dart';
+import '../../../../infrastructure/query_service/query_service_repository.dart';
 import '/use_case/actor/student.dart';
 import '../../../../use_case/query_service/query_service.dart';
 
@@ -86,3 +88,7 @@ final fetchAllStudentAttendanceStatusByClass =
 final myAccount = StateProvider((ref) => Student());
 
 final selectedAttendanceButtonProvider = StateProvider((ref) => 'すべて');
+
+final firebaseAuthProvider = Provider((ref) => FirebaseAuth.instance);
+
+final authProvider = Provider((ref) => AuthRepository(ref));
