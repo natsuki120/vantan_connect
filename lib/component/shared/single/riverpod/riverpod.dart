@@ -84,3 +84,5 @@ final fetchAllStudentAttendanceStatusByClass =
 });
 
 final myAccount = StateProvider((ref) => Student());
+
+final selectedAttendanceButtonProvider = StateProvider((ref) => 'すべて');

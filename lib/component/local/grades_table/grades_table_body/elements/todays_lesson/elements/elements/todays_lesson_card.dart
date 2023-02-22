@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/local/attendance_record/attendance_record.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
-import 'package:vantan_connect/page/student_list_lesson_detail_page.dart';
 import '../../../../../../../../domain/class/class.dart';
 import '../../../../../../../shared/single/navigator/navigator.dart';
 import '../../../../../../../shared/single/color/color.dart';
@@ -23,10 +23,9 @@ class TodaysLessonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => NavigatorPush(context,
-          page: StudentListInLessonDetailPage(
+          page: AttendanceRecord(
             classInfo: classInfo,
-            classDocument: ClassDocument(
-                day: '${DateTime.now().month}月${DateTime.now().day}日'),
+            classDocument: ClassDocument(day: '2月16日'),
           )),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 6.sp),

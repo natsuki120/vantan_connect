@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/component/local/lesson_result_list/hooks/hooks.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import '../../shared/single/color/color.dart';
@@ -12,7 +13,7 @@ class LessonResultList extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref.watch(fetchAllClassDocumentByClass(classInfo)).when(
+    return ref.watch(fetchClassDayWhichWasHeld(classInfo)).when(
           data: (documentList) {
             return ColoredBox(
               color: white,
@@ -28,7 +29,7 @@ class LessonResultList extends HookConsumerWidget {
               ),
             );
           },
-          error: (err, _) => Text('通信エラーです。開発者にお問合せください'),
+          error: (err, _) => Text('$err'),
           loading: () => CircularProgressIndicator(),
         );
   }

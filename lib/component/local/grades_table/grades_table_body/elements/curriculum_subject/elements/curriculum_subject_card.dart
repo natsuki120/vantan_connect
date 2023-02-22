@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/shared/single/navigator/navigator.dart';
+import 'package:vantan_connect/page/lesson_detail_page_in_result_page.dart';
 import '../../../../../../../domain/class/class.dart';
 import '../../../../../../shared/single/color/color.dart';
 import '../../../../../../shared/single/space_box/space_box.dart';
@@ -14,66 +16,69 @@ class CurriculumSubjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GradationContainer(
-      child: Padding(
-        padding: EdgeInsets.all(20.sp),
-        child: Stack(
-          children: [
-            Column(
-              children: [
-                //TODO: 写真用のContainer
-                SizedBox(
-                  width: 350.sp,
-                  height: 120.sp,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.sp),
-                    child: Image.asset(
-                      'images/${classInfo.classImgUrl}',
-                      fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: () => NavigatorPush(context,
+          page: LessonDetailPageInResultPage(classInfo: classInfo)),
+      child: GradationContainer(
+        child: Padding(
+          padding: EdgeInsets.all(20.sp),
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  SizedBox(
+                    width: 350.sp,
+                    height: 120.sp,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.sp),
+                      child: Image.asset(
+                        'images/${classInfo.classImgUrl}',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 12.sp),
-                Container(
-                  height: 70.sp,
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          //すでに同じようなコンポーネントがあるかも？
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 8.sp,
-                              vertical: 6.sp,
+                  SizedBox(height: 12.sp),
+                  Container(
+                    height: 70.sp,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            //すでに同じようなコンポーネントがあるかも？
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 8.sp,
+                                vertical: 6.sp,
+                              ),
+                              decoration: BoxDecoration(
+                                color: surfaceTertiary,
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Center(child: Text('前期')),
                             ),
-                            decoration: BoxDecoration(
-                              color: surfaceTertiary,
-                              borderRadius: BorderRadius.circular(4),
+                            SpaceBox.width(),
+                            Text(
+                              classInfo.name,
+                              style: bodyBold(black),
                             ),
-                            child: Center(child: Text('前期')),
-                          ),
-                          SpaceBox.width(),
-                          Text(
-                            classInfo.name,
-                            style: bodyBold(black),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Row(
-                        children: [
-                          GradesTableElementsCard(elementText: '1年生'),
-                          SpaceBox.width(),
-                          // Text('$classmate人が履修中',
-                          //     style: caption1Regular(lowEmphasis)),
-                        ],
-                      )
-                    ],
+                          ],
+                        ),
+                        Spacer(),
+                        Row(
+                          children: [
+                            GradesTableElementsCard(elementText: '1年生'),
+                            SpaceBox.width(),
+                            // Text('$classmate人が履修中',
+                            //     style: caption1Regular(lowEmphasis)),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

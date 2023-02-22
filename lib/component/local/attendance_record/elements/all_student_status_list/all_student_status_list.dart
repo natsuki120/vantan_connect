@@ -22,23 +22,21 @@ class AllStudentList extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ref.watch(fetchAllStudentAttendanceStatusByClass(classInfo)).when(
           data: (dataList) => ListView.builder(
+              physics: BouncingScrollPhysics(),
               shrinkWrap: true,
               itemCount: studentList.length,
               itemBuilder: (context, index) {
                 final student = studentList[index];
                 for (Student data in dataList)
                   if (data.name == student.name) {
-                    if (data.attendanceState == '出席' ||
-                        data.attendanceState == '遅刻') {
-                      if (data.attendanceState == '出席')
-                        return AttendedStudent(student: student);
-                      else
-                        return LateAttendedStudent(student: student);
-                    } else if (data.attendanceState == '欠席') {
-                      return NotAttendedStudent(student: student);
-                    } else {
-                      return OtherStudent(student: student);
-                    }
+                    if (data.attendanceState == '出席')
+                      return AttendedStudent(student: student);
+                    else if (data.attendanceState == '遅刻')
+                      return LateAttendedStudent(student: student);
+                  } else if (data.attendanceState == '欠席') {
+                    return NotAttendedStudent(student: student);
+                  } else {
+                    return OtherStudent(student: student);
                   }
               }),
           error: (error, _) => Icon(Icons.error),

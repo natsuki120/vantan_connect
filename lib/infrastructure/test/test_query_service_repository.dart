@@ -3,6 +3,7 @@ import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import 'package:vantan_connect/domain/student/student.dart';
+import 'package:vantan_connect/domain/value/class_name.dart';
 import 'package:vantan_connect/query_service/query_service.dart';
 
 class TestQueryServiceRepository extends IQueryService {
@@ -119,6 +120,20 @@ class TestQueryServiceRepository extends IQueryService {
   @override
   Stream<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
     // TODO: implement fetchAllStudentByClass
+    throw UnimplementedError();
+  }
+
+  @override
+  Stream<List<Student>> fetchAllClassDocumentByDay(
+      {required Class classInfo, required ClassDocument classDocument}) {
+    // TODO: implement fetchAllClassDocumentByDay
+    throw UnimplementedError();
+  }
+
+  @override
+  Stream<List<ClassDocument>> fetchClassDayWhichWasHeld(
+      {required String className, required String course}) {
+    // TODO: implement fetchClassDayWhichWasHeld
     throw UnimplementedError();
   }
 }

@@ -1,47 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../shared/single/color/color.dart';
-import '../../../../shared/single/text_style/text_style.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vantan_connect/component/shared/single/space_box/space_box.dart';
+import 'elements/display_how_attendance_button/display_how_attendance_button.dart';
 
-class CustomTab extends StatelessWidget implements PreferredSizeWidget {
+class CustomTab extends ConsumerWidget {
   const CustomTab({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      bottom: TabBar(
-        isScrollable: true,
-        indicator: BoxDecoration(
-          borderRadius: BorderRadius.circular(8.sp),
-          color: primary,
-        ),
-        labelColor: white,
-        unselectedLabelColor: midEmphasis,
-        labelStyle: bodyBold(white),
-        unselectedLabelStyle: bodyRegular(midEmphasis.withOpacity(0.6)),
-        tabs: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.sp),
-            child: Tab(text: 'すべて', height: 32.sp),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.sp),
-            child: Tab(text: '出席', height: 32.sp),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.sp),
-            child: Tab(text: '欠席', height: 32.sp),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.sp),
-            child: Tab(text: 'その他', height: 32.sp),
-          ),
+  Widget build(BuildContext context, WidgetRef ref) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          DisplayHowAttendanceButton(attendance: 'すべて'),
+          SpaceBox(),
+          DisplayHowAttendanceButton(attendance: '出席'),
+          SpaceBox(),
+          DisplayHowAttendanceButton(attendance: '遅刻'),
+          SpaceBox(),
+          DisplayHowAttendanceButton(attendance: '欠席'),
+          SpaceBox(),
+          DisplayHowAttendanceButton(attendance: 'その他'),
+          SpaceBox(),
         ],
       ),
     );
   }
-
-  @override
-  Size get preferredSize => new Size.fromHeight(kToolbarHeight);
 }
