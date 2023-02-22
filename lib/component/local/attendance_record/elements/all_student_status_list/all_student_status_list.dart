@@ -22,6 +22,7 @@ class AllStudentList extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ref.watch(fetchAllStudentAttendanceStatusByClass(classInfo)).when(
           data: (dataList) => ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemCount: studentList.length,
               itemBuilder: (context, index) {
@@ -40,6 +41,7 @@ class AllStudentList extends ConsumerWidget {
                       return OtherStudent(student: student);
                     }
                   }
+                return Container();
               }),
           error: (error, _) => Icon(Icons.error),
           loading: () => CircularProgressIndicator(),

@@ -4,6 +4,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:vantan_connect/component/local/attendance_record/elements/all_student_status_list/all_student_status_list.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../../../domain/class/class.dart';
+import '../../../domain/riverpod_argument/class_and_document/class_and_document.dart';
+import '../../shared/combined/late_attended_student/late_attended_student.dart';
+import '../../shared/single/riverpod/riverpod.dart';
 import 'elements/attended_student_list/attended_student_list.dart';
 import 'elements/custom_tab/custom_tab.dart';
 import 'elements/not_attended_student_list/not_attended_student_list.dart';
@@ -20,7 +23,7 @@ class AttendanceRecord extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         appBar: CustomTab(),
         body: Padding(
@@ -35,6 +38,10 @@ class AttendanceRecord extends HookConsumerWidget {
                 classInfo: classInfo,
                 classDocument: classDocument,
               ),
+              TempLateAttendedStudentList(
+                classDocument: classDocument,
+                classInfo: classInfo,
+              ),
               NotAttendedStudentList(
                 classInfo: classInfo,
                 classDocument: classDocument,
@@ -48,5 +55,35 @@ class AttendanceRecord extends HookConsumerWidget {
         ),
       ),
     );
+  }
+}
+
+class TempLateAttendedStudentList extends ConsumerWidget {
+  const TempLateAttendedStudentList({
+    Key? key,
+    required this.classInfo,
+    required this.classDocument,
+  }) : super(key: key);
+
+  final Class classInfo;
+  final ClassDocument classDocument;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return ref
+        .watch(fetchStudentLateByClass(ClassAndDocument(
+            classInfo: classInfo, classDocument: classDocument)))
+        .when(
+          data: (studentList) => ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: studentList.length,
+              itemBuilder: (context, index) {
+                final student = studentList[index];
+                return LateAttendedStudent(student: student);
+              }),
+          error: (error, _) => Icon(Icons.error),
+          loading: () => CircularProgressIndicator(),
+        );
   }
 }

@@ -23,6 +23,7 @@ class NotAttendedStudentList extends ConsumerWidget {
             classInfo: classInfo, classDocument: classDocument)))
         .when(
           data: (studentList) => ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemCount: studentList.length,
               itemBuilder: (context, index) {

@@ -12,7 +12,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   @override
   Stream<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
     final collection = firestore.collection(
-        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed');
+        'c_class/${DateTime.now().month}.${16}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${16}日/confirmed');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -26,7 +26,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   Future<List<ClassDocument>> fetchAllClassDocumentByClass(
       {required Class classInfo}) {
     final collection = firestore.collection(
-        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance');
+        'c_class/${DateTime.now().month}.${16}/lesson/${classInfo.name}/attendance');
     return collection.get().then(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -48,8 +48,8 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Stream<List<Class>> fetchLessonListInAClass() {
-    final collection = firestore.collection(
-        'a_class/${DateTime.now().month}.${DateTime.now().day}/lesson');
+    final collection =
+        firestore.collection('a_class/${DateTime.now().month}.${16}/lesson');
     return collection.snapshots().map((QuerySnapshot snapshot) =>
         snapshot.docs.map((DocumentSnapshot documentSnapshot) {
           final json = documentSnapshot.data() as Map<String, dynamic>;
@@ -59,8 +59,8 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Stream<List<Class>> fetchLessonListInBClass() {
-    final collection = firestore.collection(
-        'b_class/${DateTime.now().month}.${DateTime.now().day}/lesson');
+    final collection =
+        firestore.collection('b_class/${DateTime.now().month}.${16}/lesson');
     return collection.snapshots().map((QuerySnapshot snapshot) =>
         snapshot.docs.map((DocumentSnapshot documentSnapshot) {
           final json = documentSnapshot.data() as Map<String, dynamic>;
@@ -68,10 +68,11 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
         }).toList());
   }
 
+//メモFirebase関係のやつは時々こうなっているので直した方が良いかも？
   @override
   Stream<List<Class>> fetchLessonListInCClass() {
-    final collection = firestore.collection(
-        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson');
+    final collection =
+        firestore.collection('c_class/${DateTime.now().month}.${16}/lesson');
     return collection.snapshots().map((QuerySnapshot snapshot) =>
         snapshot.docs.map((DocumentSnapshot documentSnapshot) {
           final json = documentSnapshot.data() as Map<String, dynamic>;
@@ -83,7 +84,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   Stream<Student> fetchStudentAttendance(
       {required Student student, required classInfo}) {
     final doc = firestore.doc(
-        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
+        'c_class/${DateTime.now().month}.${16}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${16}日/confirmed/${student.id}');
     return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
       final json = documentSnapshot.data() as Map<String, dynamic>;
       return Student.fromJson(json);
@@ -95,7 +96,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
+            'c_class/${DateTime.now().month}.${16}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
         .where('attendanceState', isEqualTo: '出席');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
@@ -111,7 +112,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
+            'c_class/${DateTime.now().month}.${16}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
         .where('attendanceState', isEqualTo: '遅刻');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
@@ -127,7 +128,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
+            'c_class/${DateTime.now().month}.${16}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
         .where('attendanceState', isEqualTo: '欠席');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
@@ -143,7 +144,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
+            'c_class/${DateTime.now().month}.${16}/lesson/${classInfo.name}/attendance/${classDocument.day}/confirmed')
         .where('attendanceState', isEqualTo: 'その他(公欠を除く)');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
