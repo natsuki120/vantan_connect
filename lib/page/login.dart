@@ -5,14 +5,9 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:material_segmented_control/material_segmented_control.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
+import 'package:vantan_connect/component/local/login/hooks/hooks.dart';
 import 'package:vantan_connect/component/shared/single/space_box/space_box.dart';
 import 'package:vantan_connect/component/shared/single/student_list/student_list.dart';
-import 'package:vantan_connect/domain/student/student.dart';
-import 'package:vantan_connect/infrastructure/query_service/query_service_repository.dart';
-import 'package:vantan_connect/page/grades_table_page.dart';
-import 'package:vantan_connect/page/test_app.dart';
 import '../component/shared/single/color/color.dart';
 import '../component/shared/single/text_style/text_style.dart';
 
@@ -63,15 +58,6 @@ class Login extends HookConsumerWidget {
                   labelText: 'ユーザーを選択',
                 ),
                 clearOption: true,
-                searchDecoration: const InputDecoration(
-                    hintText: "enter your custom hint text here"),
-                validator: (value) {
-                  if (value == null) {
-                    return "Required field";
-                  } else {
-                    return null;
-                  }
-                },
                 dropDownItemCount: 6,
                 dropDownList: _currentSelection.value == 0
                     ? studentList
@@ -93,31 +79,11 @@ class Login extends HookConsumerWidget {
               child: FilledButton(
                 onPressed: () async {
                   try {
-                    EasyLoading.show(status: '読み込み中');
-                    final prefs = await SharedPreferences.getInstance();
-                    if (ref
-                            .watch(myAccountProvider.notifier)
-                            .state
-                            .runtimeType ==
-                        Student) {
-                      ref.watch(myAccountProvider.notifier).state =
-                          await QueryServiceRepositoryWhichUseFirebase()
-                              .identifyStudent(name: name);
-                    } else {
-                      await QueryServiceRepositoryWhichUseFirebase()
-                          .identifyStuff(name: name);
-                    }
-                    prefs.setString('name',
-                        ref.watch(myAccountProvider.notifier).state.name);
-                    EasyLoading.showSuccess('識別しました');
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            _currentSelection.value == 0
-                                ? TestApp()
-                                : GradesTablePage(),
-                      ),
+                    loginProcess(
+                      ref: ref,
+                      name: name,
+                      context: context,
+                      currentSection: _currentSelection.value,
                     );
                   } catch (e) {
                     EasyLoading.showError('存在しないユーザーです');
