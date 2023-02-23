@@ -273,6 +273,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.4"
+  dropdown_textfield:
+    dependency: "direct main"
+    description:
+      name: dropdown_textfield
+      sha256: "6e306d29d4bf8f88e2f9a4336d5e8dcc551d797fa8f541bb52a72817cc275cc4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
+  dropdownfield2:
+    dependency: "direct main"
+    description:
+      name: dropdownfield2
+      sha256: "83d7c25c253f64d86d3541543b5a118b150acd2810e0f57330c970e81032db35"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.7"
   equatable:
     dependency: transitive
     description:
@@ -797,6 +813,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.0"
+  material_segmented_control:
+    dependency: "direct main"
+    description:
+      name: material_segmented_control
+      sha256: ac87ca730875f967451bb0e8e4abd15a9785dec8ec74d24586f90607771cb3bb
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.1"
   meta:
     dependency: transitive
     description:

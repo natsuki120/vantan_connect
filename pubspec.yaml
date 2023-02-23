@@ -65,6 +65,9 @@ dependencies:
   flutter_tab_indicator_styler: ^2.0.0
   percent_indicator: ^4.2.2
   shared_preferences: ^2.0.17
+  material_segmented_control: ^4.1.1
+  dropdown_textfield: ^1.0.8
+  dropdownfield2: ^1.0.7
 
 
 
