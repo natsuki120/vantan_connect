@@ -1,6 +1,5 @@
 import 'package:dropdown_textfield/dropdown_textfield.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -66,11 +65,7 @@ class Login extends HookConsumerWidget {
                         .toList()
                     : [DropDownValueModel(name: '上原さん', value: '上原さん')],
                 onChanged: (val) {
-                  if (name == '') {
-                    name = '';
-                  } else {
-                    name = val.name;
-                  }
+                  name = val.name;
                 },
               ),
             ),
@@ -78,16 +73,12 @@ class Login extends HookConsumerWidget {
             SizedBox(
               child: FilledButton(
                 onPressed: () async {
-                  try {
-                    loginProcess(
-                      ref: ref,
-                      name: name,
-                      context: context,
-                      currentSection: _currentSelection.value,
-                    );
-                  } catch (e) {
-                    EasyLoading.showError('存在しないユーザーです');
-                  }
+                  await loginProcess(
+                    ref: ref,
+                    name: name,
+                    context: context,
+                    currentSection: _currentSelection.value,
+                  );
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 110),
