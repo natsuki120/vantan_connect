@@ -22,6 +22,7 @@ Student _$StudentFromJson(Map<String, dynamic> json) {
 mixin _$Student {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
   String get job => throw _privateConstructorUsedError;
   String get course => throw _privateConstructorUsedError;
   String get profileText => throw _privateConstructorUsedError;
@@ -46,6 +47,7 @@ abstract class $StudentCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
+      String email,
       String job,
       String course,
       String profileText,
@@ -73,6 +75,7 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? email = null,
     Object? job = null,
     Object? course = null,
     Object? profileText = null,
@@ -92,6 +95,10 @@ class _$StudentCopyWithImpl<$Res, $Val extends Student>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
               as String,
       job: null == job
           ? _value.job
@@ -147,6 +154,7 @@ abstract class _$$_StudentCopyWith<$Res> implements $StudentCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
+      String email,
       String job,
       String course,
       String profileText,
@@ -171,6 +179,7 @@ class __$$_StudentCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? email = null,
     Object? job = null,
     Object? course = null,
     Object? profileText = null,
@@ -190,6 +199,10 @@ class __$$_StudentCopyWithImpl<$Res>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
               as String,
       job: null == job
           ? _value.job
@@ -241,6 +254,7 @@ class _$_Student implements _Student {
   const _$_Student(
       {this.id = '',
       this.name = '',
+      this.email = '',
       this.job = '',
       this.course = '',
       this.profileText = '',
@@ -261,6 +275,9 @@ class _$_Student implements _Student {
   @override
   @JsonKey()
   final String name;
+  @override
+  @JsonKey()
+  final String email;
   @override
   @JsonKey()
   final String job;
@@ -294,7 +311,7 @@ class _$_Student implements _Student {
 
   @override
   String toString() {
-    return 'Student(id: $id, name: $name, job: $job, course: $course, profileText: $profileText, attendanceState: $attendanceState, late: $late, reason: $reason, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
+    return 'Student(id: $id, name: $name, email: $email, job: $job, course: $course, profileText: $profileText, attendanceState: $attendanceState, late: $late, reason: $reason, attendedDay: $attendedDay, accountNumber: $accountNumber, userImagePath: $userImagePath, rootCollection: $rootCollection)';
   }
 
   @override
@@ -304,6 +321,7 @@ class _$_Student implements _Student {
             other is _$_Student &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.email, email) || other.email == email) &&
             (identical(other.job, job) || other.job == job) &&
             (identical(other.course, course) || other.course == course) &&
             (identical(other.profileText, profileText) ||
@@ -328,6 +346,7 @@ class _$_Student implements _Student {
       runtimeType,
       id,
       name,
+      email,
       job,
       course,
       profileText,
@@ -357,6 +376,7 @@ abstract class _Student implements Student {
   const factory _Student(
       {final String id,
       final String name,
+      final String email,
       final String job,
       final String course,
       final String profileText,
@@ -374,6 +394,8 @@ abstract class _Student implements Student {
   String get id;
   @override
   String get name;
+  @override
+  String get email;
   @override
   String get job;
   @override

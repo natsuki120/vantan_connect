@@ -6,15 +6,13 @@ import '../component/shared/single/color/color.dart';
 import '/page/timetable.dart';
 
 class TestApp extends HookWidget {
-  TestApp({Key? key, required this.studentName}) : super(key: key);
-
-  final String studentName;
+  TestApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     List<Widget> pageList = [
       TimeTablePage(),
-      Profile(studentName: studentName),
+      Profile(),
     ];
     final selectedIndex = useState(0);
     return Scaffold(

@@ -23,7 +23,8 @@ class Lesson extends ConsumerWidget {
     AsyncValue studentAttendance = ref.watch(
       queryServiceProvider(
         StudentAttendance(
-            student: ref.watch(myAccount.notifier).state, classInfo: classInfo),
+            student: ref.watch(myAccountProvider.notifier).state,
+            classInfo: classInfo),
       ),
     );
     return GestureDetector(

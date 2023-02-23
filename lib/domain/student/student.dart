@@ -11,6 +11,7 @@ class Student with _$Student {
   const factory Student({
     @Default('') String id,
     @Default('') String name,
+    @Default('') String email,
     @Default('') String job,
     @Default('') String course,
     @Default('') String profileText,

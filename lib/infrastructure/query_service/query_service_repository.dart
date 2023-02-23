@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:vantan_connect/domain/class/class.dart';
+import 'package:vantan_connect/domain/teacher/teacher.dart';
 import '/domain/class_document/class_document.dart';
 import '/domain/student/student.dart';
 import '/query_service/query_service.dart';
@@ -201,15 +202,26 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
     });
   }
 
-  void sendTestStudent(
-      {required List<Student> studentList,
-      required String className,
-      required ClassDocument classDocument}) {
-    for (Student student in studentList) {
-      final doc = firestore.doc(
-          'c_class/$className/day/${classDocument.day}/confirmed/${student.name}');
-      doc.set(student.toJson());
-    }
+  void registerLoggedStudent({required Student student}) {
+    final doc = firestore.doc('c_class_student/${student.name}');
+    doc.set(student.toJson());
+  }
+
+  Future<Student> identifyStudent({required String name}) async {
+    final doc = await firestore.doc('c_class_student/$name');
+    return await doc.get().then((DocumentSnapshot documentSnapshot) {
+      final json = documentSnapshot.data() as Map<String, dynamic>;
+      return Student.fromJson(json);
+    });
+  }
+
+  // TODO　便宜上Teacher型にしてる
+  Future<Teacher> identifyStuff({required String name}) async {
+    final doc = await firestore.doc('teacher/$name');
+    return await doc.get().then((DocumentSnapshot documentSnapshot) {
+      final json = documentSnapshot.data() as Map<String, dynamic>;
+      return Teacher.fromJson(json);
+    });
   }
 
   @override

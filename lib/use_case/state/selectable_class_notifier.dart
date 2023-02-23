@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '/domain/class/class.dart';
-import '/infrastructure/class_repository.dart';
+import '../../infrastructure/actor/class_repository.dart';
 
 class SelectableClassNotifier extends StateNotifier<List<Class>> {
   SelectableClassNotifier(this.classRepository) : super([]);

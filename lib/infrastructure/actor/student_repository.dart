@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../domain/class/class.dart';
+import '../../domain/class/class.dart';
 import '/component/local/attendance_modal_with_reason/elements/radio_button_with_attendance_status/hooks/useAttendanceState.dart';
 import '/domain/student/student.dart';
 import '/domain/value/class_name.dart';
