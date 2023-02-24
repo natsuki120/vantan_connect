@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../color/color.dart';
 import '../../text_style/text_style.dart';
 
-class LateAfterAttendedStatus extends StatelessWidget {
-  const LateAfterAttendedStatus({Key? key}) : super(key: key);
+class LateAttendedStatus extends StatelessWidget {
+  const LateAttendedStatus({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class LateAfterAttendedStatus extends StatelessWidget {
         color: Color(0xffF2CFAA),
         borderRadius: BorderRadius.circular(4.sp),
       ),
-      child: Text('出席', style: bodyRegular(midEmphasis)),
+      child: Text('遅刻', style: bodyRegular(midEmphasis)),
     );
   }
 }

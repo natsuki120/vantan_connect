@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shared/single/late_attendance_status/late_attendance_status.dart';
+import 'package:vantan_connect/component/shared/single/attendance_status/late_attendance_status/late_attendance_status.dart';
 
 import '../../../shared/combined/not_attended_student/elements/lesson_result_part/elements/reason_text/reason_text.dart';
 import '../../../../domain/student/student.dart';

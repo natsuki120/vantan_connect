@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../domain/student/student.dart';
 import '../../single/border_line/border_line.dart';
 import '../../single/color/color.dart';
-import '../../single/other_status/other_status.dart';
+import '../../single/attendance_status/other_status/other_status.dart';
 import '../../single/space_box/space_box.dart';
 import '../../single/text_style/text_style.dart';
 

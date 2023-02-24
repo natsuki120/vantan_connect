@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:vantan_connect/component/local/attendance_record/elements/all_student_status_list/all_student_status_list.dart';
@@ -6,7 +7,11 @@ import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../../../domain/class/class.dart';
 import '../../../domain/riverpod_argument/class_and_document/class_and_document.dart';
 import '../../shared/combined/late_attended_student/late_attended_student.dart';
+import '../../shared/single/buttons/buttons.dart';
+import '../../shared/single/color/color.dart';
 import '../../shared/single/riverpod/riverpod.dart';
+import '../../shared/single/text_style/text_style.dart';
+import '../attendance_modal_with_reason/elements/cancel_button/cacncel_button.dart';
 import 'elements/attended_student_list/attended_student_list.dart';
 import 'elements/custom_tab/custom_tab.dart';
 import 'elements/not_attended_student_list/not_attended_student_list.dart';
@@ -22,6 +27,7 @@ class AttendanceRecord extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final isEditable = useState(true);
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -38,9 +44,33 @@ class AttendanceRecord extends HookConsumerWidget {
                 classInfo: classInfo,
                 classDocument: classDocument,
               ),
-              TempLateAttendedStudentList(
-                classDocument: classDocument,
-                classInfo: classInfo,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  TextButton(onPressed: () {}, child: Text('編集')),
+                  TempLateAttendedStudentList(
+                    classDocument: classDocument,
+                    classInfo: classInfo,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      //FIXME: 修正必須
+                      isEditable ? Container() : CancelButton(),
+                      SizedBox(width: 24.sp),
+                      FilledEnabledButton(
+                        text: '決定',
+                        textStyle: bodyBold(onPrimary),
+                        padding: EdgeInsets.symmetric(
+                          vertical: 10.sp,
+                          horizontal: 24.sp,
+                        ),
+                        backgroundColor: primary,
+                        callback: () {},
+                      ),
+                    ],
+                  ),
+                ],
               ),
               NotAttendedStudentList(
                 classInfo: classInfo,

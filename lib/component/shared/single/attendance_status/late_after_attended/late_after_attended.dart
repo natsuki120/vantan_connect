@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shared/single/attend_status/attend_status.dart';
-import 'package:vantan_connect/component/shared/single/late_after_attended/elements/late_after_attended_status.dart';
-import '../../../../domain/student/student.dart';
-import '../../single/border_line/border_line.dart';
-import '../../single/color/color.dart';
-import '../../single/space_box/space_box.dart';
-import '../../single/text_style/text_style.dart';
+import 'package:vantan_connect/component/shared/single/attendance_status/attend_status/attend_status.dart';
+import 'package:vantan_connect/component/shared/single/attendance_status/late_after_attended/elements/late_after_attended_status.dart';
+import '../../../../../domain/student/student.dart';
+import '../../border_line/border_line.dart';
+import '../../color/color.dart';
+import '../../space_box/space_box.dart';
+import '../../text_style/text_style.dart';
 
 class LateAfterAttendedStudent extends ConsumerWidget {
   const LateAfterAttendedStudent({Key? key, required this.student})

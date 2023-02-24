@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/shared/single/attend_status/attend_status.dart';
+import 'package:vantan_connect/component/shared/single/attendance_status/attend_status/attend_status.dart';
 import '../../../../domain/student/student.dart';
 import '../../single/border_line/border_line.dart';
 import '../../single/color/color.dart';

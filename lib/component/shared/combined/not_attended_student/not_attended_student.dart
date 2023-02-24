@@ -6,7 +6,7 @@ import '../../../shared/combined/not_attended_student/elements/lesson_result_par
 import '../../../../domain/student/student.dart';
 import '../../single/border_line/border_line.dart';
 import '../../single/color/color.dart';
-import '../../single/no_attend_status/not_attended_status.dart';
+import '../../single/attendance_status/no_attend_status/not_attended_status.dart';
 import '../../single/space_box/space_box.dart';
 import '../../single/text_style/text_style.dart';
 

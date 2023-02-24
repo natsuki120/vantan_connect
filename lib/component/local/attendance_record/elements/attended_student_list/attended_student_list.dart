@@ -6,7 +6,7 @@ import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../../../../../domain/class/class.dart';
 import '../../../../../domain/student/student.dart';
 import '../../../../shared/combined/late_attended_student/late_attended_student.dart';
-import '../../../../shared/single/late_after_attended/late_after_attended.dart';
+import '../../../../shared/single/attendance_status/late_after_attended/late_after_attended.dart';
 import '../../../../shared/single/student_list/student_list.dart';
 
 class AttendedStudentList extends ConsumerWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../color/color.dart';
-import '../text_style/text_style.dart';
+import '../../color/color.dart';
+import '../../text_style/text_style.dart';
 
 class AttendStatus extends StatelessWidget {
   const AttendStatus({Key? key}) : super(key: key);
