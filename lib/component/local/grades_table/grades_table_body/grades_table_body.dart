@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 import 'elements/curriculum_subject/curriculum_subject_body.dart';
-import 'elements/todays_lesson/elements/todays_lesson_header.dart';
-import 'elements/todays_lesson/todays_lesson_body.dart';
+import 'elements/todays_lesson/todays_lesson_body/todays_lesson_body.dart';
 
 class GradesTableBody extends HookWidget {
   const GradesTableBody({super.key});
@@ -13,12 +12,8 @@ class GradesTableBody extends HookWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          TodaysLessonHeader(
-            todaysLessonTabController: todaysLessonTabController,
-          ),
           TodaysLessonBody(
-            todaysLessonTabController: todaysLessonTabController,
-          ),
+              todaysLessonTabController: todaysLessonTabController),
           CurriculumSubjectBody(),
         ],
       ),

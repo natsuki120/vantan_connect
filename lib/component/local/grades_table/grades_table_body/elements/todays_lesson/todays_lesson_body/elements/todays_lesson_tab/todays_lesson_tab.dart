@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../shared/single/color/color.dart';
+import '../../../../../../../../shared/single/color/color.dart';
 
 class TodaysLessonTab extends StatelessWidget {
   TodaysLessonTab({super.key, required this.todaysLessonTabController});

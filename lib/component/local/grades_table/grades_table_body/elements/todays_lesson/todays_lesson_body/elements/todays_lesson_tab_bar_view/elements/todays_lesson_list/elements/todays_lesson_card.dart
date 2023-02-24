@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/attendance_record/attendance_record.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
-import '../../../../../../../../domain/class/class.dart';
-import '../../../../../../../shared/single/navigator/navigator.dart';
-import '../../../../../../../shared/single/color/color.dart';
-import '../../../../../../../shared/single/space_box/space_box.dart';
-import '../../../../../../../shared/single/text_style/text_style.dart';
+import '../../../../../../../../../../../../domain/class/class.dart';
+import '../../../../../../../../../../../shared/single/navigator/navigator.dart';
+import '../../../../../../../../../../../shared/single/color/color.dart';
+import '../../../../../../../../../../../shared/single/space_box/space_box.dart';
+import '../../../../../../../../../../../shared/single/text_style/text_style.dart';
 
 class TodaysLessonCard extends StatelessWidget {
   TodaysLessonCard(

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../../shared/single/dateTime/dateTime_japan/date_time_japan.dart';
-import '../../../../../../shared/single/space_box/space_box.dart';
-import '../../../../../../shared/single/color/color.dart';
-import '../../../../../../shared/single/text_style/text_style.dart';
-import '../../../../grades_table_modal/grades_table_modal_show_todays_lessons.dart';
+import '../../../../../../../../shared/single/dateTime/dateTime_japan/date_time_japan.dart';
+import '../../../../../../../../shared/single/space_box/space_box.dart';
+import '../../../../../../../../shared/single/color/color.dart';
+import '../../../../../../../../shared/single/text_style/text_style.dart';
+import '../../../../../../grades_table_modal/grades_table_modal_show_todays_lessons.dart';
 
 class TodaysLessonHeader extends HookConsumerWidget {
   TodaysLessonHeader({
@@ -75,8 +75,6 @@ class TodaysLessonHeader extends HookConsumerWidget {
                                 return GradesTableModalShowTodaysLessons(
                                   todaysLessonTabController:
                                       todaysLessonTabController,
-                                  date: '$month$date',
-                                  day: '$day',
                                 );
                               },
                             ),

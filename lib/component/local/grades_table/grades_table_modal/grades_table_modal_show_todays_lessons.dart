@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/todays_lesson_tab_bar_view.dart';
+import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/todays_lesson_body/elements/todays_lesson_tab_bar_view/todays_lesson_tab_bar_view.dart';
 import '../../../../page/grades_table_page.dart';
 import '../../../shared/single/color/color.dart';
-import '../grades_table_body/elements/todays_lesson/elements/todays_lesson_header.dart';
+import '../grades_table_body/elements/todays_lesson/todays_lesson_body/elements/todays_lesson_header/todays_lesson_header.dart';
 
 class GradesTableModalShowTodaysLessons extends HookWidget {
   GradesTableModalShowTodaysLessons({
     super.key,
-    required this.date,
-    required this.day,
     this.todaysLessonTabController,
   });
-  final String date;
-  final String day;
   final TabController? todaysLessonTabController;
 
   @override
@@ -45,9 +41,8 @@ class GradesTableModalShowTodaysLessons extends HookWidget {
                       transitionOnUserGestures: false,
                       child: Material(
                         child: TodaysLessonTabBarView(
-                            todaysLessonTabController:
-                                todaysLessonTabController,
-                            onlyShowThreeLessons: false),
+                          todaysLessonTabController: todaysLessonTabController,
+                        ),
                       ),
                     ),
                   ),

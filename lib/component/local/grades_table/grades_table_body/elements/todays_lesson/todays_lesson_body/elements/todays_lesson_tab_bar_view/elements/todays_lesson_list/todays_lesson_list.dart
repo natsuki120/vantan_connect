@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/elements/todays_lesson_list/hooks/hooks.dart';
+import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/todays_lesson_body/elements/todays_lesson_tab_bar_view/elements/todays_lesson_list/hooks/hooks.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
-import '../../../../../../../../shared/single/color/color.dart';
-import '../../../../../../../../shared/single/text_style/text_style.dart';
-import '../../../../grades_table_shared/gradation_container.dart';
-import '../todays_lesson_card.dart';
+import '../../../../../../../../../../shared/single/color/color.dart';
+import '../../../../../../../../../../shared/single/text_style/text_style.dart';
+import '../../../../../../grades_table_shared/gradation_container.dart';
+import 'elements/todays_lesson_card.dart';
 
 class TodaysLessonList extends ConsumerWidget {
   TodaysLessonList({
     super.key,
-    this.onlyShowThreeLessons = false,
   });
-  final bool onlyShowThreeLessons;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ref.watch(fetchClassListInCClass).when(
