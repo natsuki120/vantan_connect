@@ -78,13 +78,15 @@ class AttendedStudentTile extends HookWidget {
                         SizedBox(height: 10.sp),
                         Row(
                           children: [
-                            Text('student.name', style: bodyBold(highEmphasis)),
+                            Text(student.name, style: bodyBold(highEmphasis)),
                             Spacer(),
                             Text('7:30'),
                           ],
                         ),
                         SpaceBox(height: 12.sp),
-                        ReasonText(reasonText: 'a')
+                        attendanceState.value != '出席'
+                            ? ReasonText(reasonText: student.reason)
+                            : Container()
                       ],
                     ),
                   ),
