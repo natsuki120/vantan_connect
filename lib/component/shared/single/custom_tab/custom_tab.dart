@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../shared/single/color/color.dart';
 
 class SharedCustomTab extends StatelessWidget {
-  SharedCustomTab({super.key, this.controller, required this.tabs});
-  final TabController? controller;
+  SharedCustomTab({super.key, required this.controller, required this.tabs});
+  final TabController controller;
   final List<Widget> tabs;
   @override
   Widget build(BuildContext context) {

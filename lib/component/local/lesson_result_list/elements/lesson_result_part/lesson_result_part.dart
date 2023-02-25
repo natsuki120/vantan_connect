@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:vantan_connect/component/local/attendance_record/attendance_record.dart';
 import 'package:vantan_connect/component/shared/single/navigator/navigator.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
 import 'package:vantan_connect/component/shared/single/border_line/border_line.dart';
@@ -13,6 +12,7 @@ import '../../../../shared/single/color/color.dart';
 import '../../../../shared/single/space_box/space_box.dart';
 import '../../../../shared/single/student_list/student_list.dart';
 import '../../../../shared/single/text_style/text_style.dart';
+import '../../../attendance_record/attendance_record.dart';
 
 class LessonResultPart extends ConsumerWidget {
   const LessonResultPart(

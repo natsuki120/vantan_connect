@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../color/color.dart';
-import '../text_style/text_style.dart';
+import '../../../../../../../shared/single/color/color.dart';
+import '../../../../../../../shared/single/text_style/text_style.dart';
 
-class LateAttendedStatus extends StatelessWidget {
-  const LateAttendedStatus({Key? key}) : super(key: key);
+class NotAttendedStatus extends StatelessWidget {
+  const NotAttendedStatus({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +13,10 @@ class LateAttendedStatus extends StatelessWidget {
       height: 28.sp,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Color(0xffF2CFAA),
+        color: tertiaryPale,
         borderRadius: BorderRadius.circular(4.sp),
       ),
-      child: Text('遅刻', style: bodyRegular(midEmphasis)),
+      child: Text('欠席', style: bodyRegular(midEmphasis)),
     );
   }
 }

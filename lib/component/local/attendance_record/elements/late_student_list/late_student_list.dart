@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/component/shared/combined/late_attended_student/late_attended_student.dart';
-import 'package:vantan_connect/domain/class_document/class_document.dart';
-import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
-import '../../../../../domain/class/class.dart';
+
+import '/domain/class_document/class_document.dart';
+import '/domain/riverpod_argument/class_and_document/class_and_document.dart';
+import '/domain/class/class.dart';
 import '../../../../shared/single/riverpod/riverpod.dart';
+import '../../shared/attended_student_tile/attended_student_tile.dart';
 
 class LateAttendedStudentList extends ConsumerWidget {
   const LateAttendedStudentList({
@@ -23,11 +24,14 @@ class LateAttendedStudentList extends ConsumerWidget {
             classInfo: classInfo, classDocument: classDocument)))
         .when(
           data: (studentList) => ListView.builder(
+              physics: BouncingScrollPhysics(),
               shrinkWrap: true,
               itemCount: studentList.length,
               itemBuilder: (context, index) {
                 final student = studentList[index];
-                return LateAttendedStudent(student: student);
+                return AttendedStudentTile(
+                  student: student,
+                );
               }),
           error: (error, _) => Icon(Icons.error),
           loading: () => CircularProgressIndicator(),
