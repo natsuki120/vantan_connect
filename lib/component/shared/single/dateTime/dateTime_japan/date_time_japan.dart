@@ -55,3 +55,12 @@ final secondProvider = StreamProvider<String>((ref) {
     //表示例 15   ※秒は含まれない
   );
 });
+
+final weekProvider = StreamProvider((ref) {
+  return Stream.periodic(Duration(days: 1), (_) {
+    var now = DateTime.now();
+    var weekdayFormat = DateFormat('EEEE'); // EEEEで曜日の文字列を取得
+    var weekday = weekdayFormat.format(now);
+    return weekday;
+  });
+});
