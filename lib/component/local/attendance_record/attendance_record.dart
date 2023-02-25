@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/component/local/attendance_record/shared/attendance_editor/attendance_editor.dart';
 import 'package:vantan_connect/component/shared/single/custom_tab/custom_tab.dart';
 
 import '../../../domain/class/class.dart';
 import '../../../domain/class_document/class_document.dart';
-import '../../shared/single/buttons/buttons.dart';
-import '../../shared/single/color/color.dart';
-import '../../shared/single/text_style/text_style.dart';
-import '../attendance_modal_with_reason/elements/cancel_button/cancel_button.dart';
 import 'elements/all_student_status_list/all_student_status_list.dart';
 import 'elements/attended_student_list/attended_student_list.dart';
 import 'elements/late_student_list/late_student_list.dart';
@@ -49,33 +45,12 @@ class AttendanceRecord extends HookConsumerWidget {
                   classInfo: classInfo,
                   classDocument: classDocument,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    TextButton(onPressed: () {}, child: Text('編集')),
-                    LateAttendedStudentList(
-                      classDocument: classDocument,
+                AttendanceEditor(
+                    attendance: LateAttendedStudentList(
                       classInfo: classInfo,
+                      classDocument: classDocument,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        CancelButton(),
-                        SizedBox(width: 24.sp),
-                        FilledEnabledButton(
-                          text: '決定',
-                          textStyle: bodyBold(onPrimary),
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.sp,
-                            horizontal: 24.sp,
-                          ),
-                          backgroundColor: primary,
-                          callback: () {},
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                    isEditable: isEditable.value),
                 NotAttendedStudentList(
                   classInfo: classInfo,
                   classDocument: classDocument,

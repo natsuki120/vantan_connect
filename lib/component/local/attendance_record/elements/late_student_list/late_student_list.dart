@@ -5,7 +5,7 @@ import '/domain/class_document/class_document.dart';
 import '/domain/riverpod_argument/class_and_document/class_and_document.dart';
 import '/domain/class/class.dart';
 import '../../../../shared/single/riverpod/riverpod.dart';
-import '../../shared/attended_student_tile/attended_student_tile.dart';
+import '../../shared/attendance_student_tile/attendance_student_tile.dart';
 
 class LateAttendedStudentList extends ConsumerWidget {
   const LateAttendedStudentList({
