@@ -48,7 +48,9 @@ Future attendanceModalWithReason(BuildContext context, WidgetRef ref,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      CancelButton(),
+                      CancelButton(
+                        onPressed: NavigatorPopUntilFirstPage(context),
+                      ),
                       SizedBox(width: 40.w),
                       Text(
                         '理由を書く',
@@ -101,7 +103,9 @@ Future attendanceModalWithReason(BuildContext context, WidgetRef ref,
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                CancelButton(),
+                                CancelButton(
+                                    onPressed:
+                                        NavigatorPopUntilFirstPage(context)),
                                 SizedBox(width: 24.sp),
                                 FilledEnabledButton(
                                   text: '送信する',
