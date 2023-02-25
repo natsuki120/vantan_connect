@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:intl/intl.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/teacher/teacher.dart';
 import '/domain/class_document/class_document.dart';
@@ -83,7 +84,12 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Stream<List<Class>> fetchLessonListInCClass() {
-    final collection = firestore.collection('c_class/2.16/lesson');
+    var now = DateTime.now();
+    var weekdayFormat = DateFormat('EEEE', 'ja_JP');
+    var weekday = weekdayFormat.format(now);
+    final collection = firestore
+        .collection('c_class')
+        .where('weakDay', arrayContains: weekday);
     return collection.snapshots().map((QuerySnapshot snapshot) =>
         snapshot.docs.map((DocumentSnapshot documentSnapshot) {
           final json = documentSnapshot.data() as Map<String, dynamic>;
@@ -94,8 +100,8 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   @override
   Stream<Student> fetchStudentAttendance(
       {required Student student, required classInfo}) {
-    final doc = firestore.doc(
-        'c_class/2.16/lesson/${classInfo.name}/attendance/2月16日/confirmed/${student.id}');
+    final doc = firestore
+        .doc('c_class/${classInfo.name}/day/2月16日/confirmed/${student.name}');
     return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
       final json = documentSnapshot.data() as Map<String, dynamic>;
       return Student.fromJson(json);
@@ -168,11 +174,8 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   void sendClassInfo({required List<Class> classList}) {
     for (Class classInfo in classList) {
-      for (ClassDocument classDocument in classInfo.classDocumentList) {
-        final doc =
-            firestore.doc('c_class/${classInfo.name}/day/${classDocument.day}');
-        doc.set(classDocument.toJson());
-      }
+      final doc = firestore.doc('c_class/${classInfo.name}');
+      doc.set(classInfo.toJson());
     }
   }
 

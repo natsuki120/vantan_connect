@@ -13,10 +13,10 @@ class StudentRepository extends IStudentRepository {
   @override
   void attendanceLesson(
       {required Student student, required ClassName className}) {
-    final doc = firestore.doc(
-        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${className.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
+    final doc = firestore
+        .doc('c_class/${className.name}/day/2月16日/confirmed/${student.name}');
     doc.set({
-      'name': student.id,
+      'name': student.name,
       'day': "${DateTime.now().month}月${DateTime.now().day}日",
       'attendanceState': '出席',
     });
@@ -28,10 +28,10 @@ class StudentRepository extends IStudentRepository {
     required Class classInfo,
     required String? reasonText,
   }) {
-    final doc = firestore.doc(
-        'c_class/${DateTime.now().month}.${DateTime.now().day}/lesson/${classInfo.name}/attendance/${DateTime.now().month}月${DateTime.now().day}日/confirmed/${student.id}');
+    final doc = firestore
+        .doc('c_class/${classInfo.name}/day/2月16日/confirmed/${student.name}');
     doc.set({
-      'name': student.id,
+      'name': student.name,
       'attendanceState': attendanceState.displayState,
       'studentName': student.name,
       'reason': reasonText,
