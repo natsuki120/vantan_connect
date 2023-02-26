@@ -5,7 +5,7 @@ final isEditableProvider =
 
 class IsEditable extends Notifier<bool> {
   @override
-  bool build() => true;
+  bool build() => false;
 
   void startEdit() => state = true;
   void finishEdit() => state = false;

@@ -21,14 +21,12 @@ class AttendanceRecord extends HookConsumerWidget {
   final Class classInfo;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final attendanceTabController =
-        useTabController(initialLength: 5, initialIndex: 2);
+    final attendanceTabController = useTabController(initialLength: 5);
     final isEditable = ref.watch(isEditableProvider);
     return Scaffold(
       appBar: AppBar(),
       body: Column(
         children: [
-          //Tabをクリック不可にするやつ
           IgnorePointer(
             ignoring: isEditable,
             child: SharedCustomTab(
@@ -45,8 +43,6 @@ class AttendanceRecord extends HookConsumerWidget {
           Expanded(
             child: TabBarView(
               controller: attendanceTabController,
-              //TODO: 横スクロールを禁止できる
-
               physics: isEditable
                   ? NeverScrollableScrollPhysics()
                   : BouncingScrollPhysics(),
