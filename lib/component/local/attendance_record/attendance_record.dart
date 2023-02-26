@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/component/local/attendance_record/hooks/use_is_editable/use_is_editable.dart';
 
 import '../../shared/single/custom_tab/custom_tab.dart';
 import '/domain/class/class.dart';
@@ -11,21 +13,24 @@ import 'elements/not_attended_student_list/not_attended_student_list.dart';
 import 'elements/other_student_list/other_student_list.dart';
 import 'shared/attendance_editor/attendance_editor.dart';
 
-class AttendanceRecord extends HookWidget {
+class AttendanceRecord extends HookConsumerWidget {
   const AttendanceRecord(
       {Key? key, required this.classInfo, required this.classDocument})
       : super(key: key);
   final ClassDocument classDocument;
   final Class classInfo;
   @override
-  Widget build(BuildContext context) {
-    final attendanceTabController = useTabController(initialLength: 5);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final attendanceTabController =
+        useTabController(initialLength: 5, initialIndex: 2);
+    final isEditable = ref.watch(isEditableProvider);
     return Scaffold(
       appBar: AppBar(),
       body: Column(
         children: [
           //Tabをクリック不可にするやつ
           IgnorePointer(
+            ignoring: isEditable,
             child: SharedCustomTab(
               controller: attendanceTabController,
               tabs: [
@@ -41,7 +46,10 @@ class AttendanceRecord extends HookWidget {
             child: TabBarView(
               controller: attendanceTabController,
               //TODO: 横スクロールを禁止できる
-              physics: NeverScrollableScrollPhysics(),
+
+              physics: isEditable
+                  ? NeverScrollableScrollPhysics()
+                  : BouncingScrollPhysics(),
               children: [
                 AllStudentList(
                   classInfo: classInfo,

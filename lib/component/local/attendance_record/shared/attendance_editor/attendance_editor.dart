@@ -17,13 +17,13 @@ class AttendanceEditor extends ConsumerWidget {
   final Widget attendance;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _isEditable = ref.watch(isEditableProvider);
+    final isEditable = ref.watch(isEditableProvider);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 8.sp),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          _isEditable
+          isEditable
               ? Container()
               : TextButton(
                   onPressed: () {
@@ -31,7 +31,7 @@ class AttendanceEditor extends ConsumerWidget {
                   },
                   child: Text('編集', style: callOutRegular(black))),
           attendance,
-          _isEditable
+          isEditable
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
