@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:vantan_connect/component/local/attendance_record/hooks/use_is_editable/use_is_editable.dart';
 
 import '/domain/student/student.dart';
 import 'elements/attendance_status/attend_status/attend_status.dart';
@@ -13,7 +15,7 @@ import '../../../../shared/single/color/color.dart';
 import '../../../../shared/single/space_box/space_box.dart';
 import '../../../../shared/single/text_style/text_style.dart';
 
-class AttendedStudentTile extends HookWidget {
+class AttendedStudentTile extends HookConsumerWidget {
   AttendedStudentTile({
     Key? key,
     required this.student,
@@ -22,8 +24,9 @@ class AttendedStudentTile extends HookWidget {
   final Student student;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final attendanceState = useState(student.attendanceState);
+    final isEditable = ref.watch(isEditableProvider);
     return Column(
       children: [
         Padding(
@@ -37,20 +40,21 @@ class AttendedStudentTile extends HookWidget {
                   TextButton(
                     style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
                     onPressed: () {
-                      switch (attendanceState.value) {
-                        case '出席':
-                          attendanceState.value = '遅刻';
-                          break;
-                        case '遅刻':
-                          attendanceState.value = '欠席';
-                          break;
-                        case '欠席':
-                          attendanceState.value = 'その他';
-                          break;
-                        case 'その他':
-                          attendanceState.value = '出席';
-                          break;
-                      }
+                      if (isEditable)
+                        switch (attendanceState.value) {
+                          case '出席':
+                            attendanceState.value = '遅刻';
+                            break;
+                          case '遅刻':
+                            attendanceState.value = '欠席';
+                            break;
+                          case '欠席':
+                            attendanceState.value = 'その他';
+                            break;
+                          case 'その他':
+                            attendanceState.value = '出席';
+                            break;
+                        }
                     },
                     child: Column(
                       children: [
