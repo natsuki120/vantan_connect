@@ -27,12 +27,7 @@ class AttendedStudentTile extends HookWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.only(
-            top: 8.0.sp,
-            right: 8.0.sp,
-            left: 8.0.sp,
-            bottom: 12.sp,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: 8.0.sp),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -83,9 +78,14 @@ class AttendedStudentTile extends HookWidget {
                             Text('7:30'),
                           ],
                         ),
-                        SpaceBox(height: 12.sp),
+                        SpaceBox(height: 10.sp),
                         attendanceState.value != '出席'
-                            ? ReasonText(reasonText: student.reason)
+                            ? Column(
+                                children: [
+                                  ReasonText(reasonText: student.reason),
+                                  SpaceBox(height: 10.sp),
+                                ],
+                              )
                             : Container()
                       ],
                     ),

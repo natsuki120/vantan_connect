@@ -1,41 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vantan_connect/component/local/attendance_record/hooks/use_is_editable/use_is_editable.dart';
 
 import '../../../../shared/single/buttons/buttons.dart';
 import '../../../../shared/single/color/color.dart';
 import '../../../../shared/single/text_style/text_style.dart';
 import '../../../attendance_modal_with_reason/elements/cancel_button/cancel_button.dart';
 
-class AttendanceEditor extends HookWidget {
-  AttendanceEditor(
-      {super.key, required this.attendance, required this.isEditable});
+class AttendanceEditor extends ConsumerWidget {
+  AttendanceEditor({
+    super.key,
+    required this.attendance,
+  });
 
-  final bool isEditable;
   final Widget attendance;
   @override
-  Widget build(BuildContext context) {
-    final _isEditable = useState<bool>(isEditable);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final _isEditable = ref.watch(isEditableProvider);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 8.sp),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          _isEditable.value
+          _isEditable
               ? Container()
               : TextButton(
                   onPressed: () {
-                    _isEditable.value = true;
+                    ref.read(isEditableProvider.notifier).startEdit();
                   },
                   child: Text('編集', style: callOutRegular(black))),
           attendance,
-          _isEditable.value
+          _isEditable
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     CancelButton(
                       onPressed: () {
-                        _isEditable.value = false;
+                        ref.read(isEditableProvider.notifier).finishEdit();
                       },
                     ),
                     SizedBox(width: 24.sp),
@@ -48,7 +50,7 @@ class AttendanceEditor extends HookWidget {
                       ),
                       backgroundColor: primary,
                       callback: () {
-                        _isEditable.value = false;
+                        ref.read(isEditableProvider.notifier).finishEdit();
                       },
                     ),
                   ],
