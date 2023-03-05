@@ -20,20 +20,13 @@ class RadioButtonWithText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
+    return RadioListTile(
       contentPadding: EdgeInsets.zero,
-      minVerticalPadding: 0,
-      horizontalTitleGap: 0,
-      title: Text(
-        text,
-        style: textStyle,
-      ),
-      leading: Radio(
-        value: value,
-        activeColor: activeColor,
-        groupValue: groupValue,
-        onChanged: onChanged,
-      ),
+      title: Text(text, style: textStyle),
+      value: value,
+      activeColor: activeColor,
+      groupValue: groupValue,
+      onChanged: onChanged,
     );
   }
 }
