@@ -57,10 +57,10 @@ final secondProvider = StreamProvider<String>((ref) {
 });
 
 final weekProvider = StreamProvider((ref) {
+  initializeDateFormatting('ja');
   return Stream.periodic(Duration(days: 1), (_) {
     var now = DateTime.now();
-    var weekdayFormat = DateFormat('EEEE'); // EEEEで曜日の文字列を取得
-    var weekday = weekdayFormat.format(now);
+    var weekday = DateFormat.E().format(now);
     return weekday;
   });
 });

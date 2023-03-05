@@ -42,9 +42,15 @@ class LessonResultPart extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SpaceBox(height: 26.sp),
-            Text(
-              '${classDocument.day}',
-              style: bodyBold(highEmphasis),
+            Row(
+              children: [
+                Text(
+                  '${classDocument.day}',
+                  style: bodyBold(highEmphasis),
+                ),
+                Spacer(),
+                Icon(Icons.navigate_next),
+              ],
             ),
             SpaceBox(height: 26.sp),
             Padding(

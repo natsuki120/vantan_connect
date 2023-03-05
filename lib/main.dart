@@ -5,16 +5,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
-import 'package:vantan_connect/domain/student/student.dart';
 import 'package:vantan_connect/page/grades_table_page.dart';
 import 'package:vantan_connect/page/login.dart';
 import 'package:vantan_connect/page/test_app.dart';
+import 'domain/student/student.dart';
 import 'firebase_options.dart';
 
 Future<String?> searchLoggedUserNameFromLocalData() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   prefs.clear();
-  return prefs.getString('name');
 }
 
 Future<void> main() async {
