@@ -75,7 +75,7 @@
 //           children: [
 //             TimetableHeaderRow(weakDay: '火'),
 //             SpaceBox(height: 4.sp),
-//             Lesson(classInfo: Class(name: 'S校レポート')),
+//             Lesson(classInfo: Class(name: 'S校サポート')),
 //             SpaceBox(height: 4.sp),
 //             Lesson(
 //               classInfo: Class(
@@ -205,7 +205,11 @@
 //             SpaceBox(height: 4.sp),
 //             Normal(),
 //             SpaceBox(height: 4.sp),
-//             Lesson(classInfo: Class(name: 'HR')),
+//             Lesson(classInfo: 
+// Class(
+//                 name: 'HR',
+//                 classImgUrl: 'home_room.jng'
+//               ),
 //             SpaceBox(height: 4.sp),
 //             Normal(),
 //             SpaceBox(height: 4.sp),
