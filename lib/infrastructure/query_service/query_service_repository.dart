@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:vantan_connect/component/shared/single/test_data/test_data.dart';
 import 'package:vantan_connect/domain/class/class.dart';
 import 'package:vantan_connect/domain/teacher/teacher.dart';
 import '/domain/class_document/class_document.dart';
@@ -13,8 +14,8 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Stream<List<Student>> fetchAllStudentByClass({required Class classInfo}) {
-    final collection = firestore
-        .collection('c_class/2.16/lesson/プログラミング/attendance/2月16日/confirmed');
+    final collection = firestore.collection(
+        'c_class/${classInfo.name}/day/$testClassDocument/confirmed');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
               snapshot.docs.map((DocumentSnapshot documentSnapshot) {
@@ -84,12 +85,9 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
 
   @override
   Stream<List<Class>> fetchLessonListInCClass() {
-    var now = DateTime.now();
-    var weekdayFormat = DateFormat('EEEE', 'ja_JP');
-    var weekday = weekdayFormat.format(now);
-    final collection = firestore
-        .collection('c_class')
-        .where('weakDay', arrayContains: weekday);
+    initializeDateFormatting('EEEE');
+    final collection =
+        firestore.collection('c_class').where('weakDay', arrayContains: '火');
     return collection.snapshots().map((QuerySnapshot snapshot) =>
         snapshot.docs.map((DocumentSnapshot documentSnapshot) {
           final json = documentSnapshot.data() as Map<String, dynamic>;
@@ -100,8 +98,8 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
   @override
   Stream<Student> fetchStudentAttendance(
       {required Student student, required classInfo}) {
-    final doc = firestore
-        .doc('c_class/${classInfo.name}/day/2月16日/confirmed/${student.name}');
+    final doc = firestore.doc(
+        'c_class/${classInfo.name}/day/$testClassDocument/confirmed/${student.name}');
     return doc.snapshots().map((DocumentSnapshot documentSnapshot) {
       final json = documentSnapshot.data() as Map<String, dynamic>;
       return Student.fromJson(json);
@@ -113,7 +111,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${classInfo.name}/day/${classDocument.day}/confirmed')
+            'c_class/${classInfo.name}/day/${testClassDocument}/confirmed')
         .where('attendanceState', isEqualTo: '出席');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
@@ -129,7 +127,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${classInfo.name}/day/${classDocument.day}/confirmed')
+            'c_class/${classInfo.name}/day/${testClassDocument}/confirmed')
         .where('attendanceState', isEqualTo: '遅刻');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
@@ -145,7 +143,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${classInfo.name}/day/${classDocument.day}/confirmed')
+            'c_class/${classInfo.name}/day/${testClassDocument}/confirmed')
         .where('attendanceState', isEqualTo: '欠席');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
@@ -161,7 +159,7 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
       {required Class classInfo, required ClassDocument classDocument}) {
     final collection = firestore
         .collection(
-            'c_class/${classInfo.name}/day/${classDocument.day}/confirmed')
+            'c_class/${classInfo.name}/day/${testClassDocument}/confirmed')
         .where('attendanceState', isEqualTo: 'その他(公欠を除く)');
     return collection.snapshots().map(
           (QuerySnapshot snapshot) =>
@@ -172,10 +170,14 @@ class QueryServiceRepositoryWhichUseFirebase extends IQueryService {
         );
   }
 
-  void sendClassInfo({required List<Class> classList}) {
-    for (Class classInfo in classList) {
-      final doc = firestore.doc('c_class/${classInfo.name}');
-      doc.set(classInfo.toJson());
+  void sendClassInfo({
+    required List<Student> studentList,
+    required Class classInfo,
+  }) {
+    for (Student student in studentList) {
+      final doc = firestore.doc(
+          'c_class/${classInfo.name}/day/$testClassDocument/confirmed/${student.name}');
+      doc.set(student.toJson());
     }
   }
 

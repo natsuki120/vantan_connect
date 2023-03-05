@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/attendance_record/attendance_record.dart';
+import 'package:vantan_connect/component/shared/single/test_data/test_data.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import '../../../../../../../../domain/class/class.dart';
 import '../../../../../../../shared/single/navigator/navigator.dart';
@@ -25,7 +26,7 @@ class TodaysLessonCard extends StatelessWidget {
       onTap: () => NavigatorPush(context,
           page: AttendanceRecord(
             classInfo: classInfo,
-            classDocument: ClassDocument(day: '2月16日'),
+            classDocument: ClassDocument(day: testClassDocument),
           )),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 6.sp),
