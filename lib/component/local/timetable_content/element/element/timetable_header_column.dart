@@ -20,21 +20,21 @@ class UnSelectedTimeTableHeaderColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 32.sp,
-      height: 96.sp,
+      width: 32,
+      height: 92,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            start,
-            style: caption1Regular(
-              lowEmphasis.withOpacity(0.5),
-            ),
-          ),
-          SpaceBox(height: 8.sp),
+          SpaceBox(height: 8),
+          Text(start,
+              style: caption1Regular(
+                lowEmphasis.withOpacity(0.5),
+              ),
+              softWrap: false),
+          SpaceBox(height: 8),
           Container(
-            width: 24.sp,
-            height: 24.sp,
+            width: 24,
+            height: 24,
             alignment: Alignment.center,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4.sp),
@@ -45,11 +45,10 @@ class UnSelectedTimeTableHeaderColumn extends StatelessWidget {
               style: bodyRegular(midEmphasis.withOpacity(0.7)),
             ),
           ),
-          SpaceBox(height: 8.sp),
-          Text(
-            end,
-            style: caption1Regular(lowEmphasis.withOpacity(0.5)),
-          ),
+          SpaceBox(height: 8),
+          Text(end,
+              style: caption1Regular(lowEmphasis.withOpacity(0.5)),
+              softWrap: false),
         ],
       ),
     );
