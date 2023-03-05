@@ -12,7 +12,7 @@ import '../../../../use_case/query_service/query_service.dart';
 
 final studentUseCase = Provider((ref) => StudentUseCase(StudentRepository()));
 
-final queryServiceProvider = StreamProvider.family<dynamic, StudentAttendance>(
+final queryServiceProvider = StreamProvider.family<Student, StudentAttendance>(
   (ref, studentAttendance) => QueryServiceUseCase(
     queryService: QueryServiceRepositoryWhichUseFirebase(),
   ).fetchStudentAttendance(

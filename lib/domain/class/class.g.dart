@@ -9,7 +9,7 @@ part of 'class.dart';
 _$_Class _$$_ClassFromJson(Map<String, dynamic> json) => _$_Class(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
-      weakDay: json['weakDay'] as String? ?? '',
+      weakDay: json['weakDay'] as List<dynamic>? ?? const [],
       classRoom: json['classRoom'] as String? ?? '',
       classImgUrl: json['classImgUrl'] as String? ?? '',
       overView: json['overView'] as String? ?? '',

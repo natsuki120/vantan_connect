@@ -6,6 +6,7 @@ import '../../../shared/single/student_list/student_list.dart';
 import '/component/local/lesson_detail_body/hooks.dart';
 import '/domain/class/class.dart';
 import 'element/lesson.dart';
+import 'element/timetable_header_column.dart';
 import 'element/timetable_header_row.dart';
 
 class TimetableContentCaseOfBasicC extends StatelessWidget {
@@ -17,42 +18,109 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
       children: [
         Column(
           children: [
-            TimetableHeaderRow(weakDay: '月'),
-            SpaceBox(height: 4.sp),
-            Lesson(
-              classInfo: Class(name: 'S校サポート'),
-              color: Colors.grey,
+            Row(
+              children: [
+                SpaceBox(width: 32),
+                SpaceBox(width: 8),
+                TimetableHeaderRow(weakDay: '月'),
+              ],
             ),
             SpaceBox(height: 4.sp),
-            Lesson(
-              color: Color(0xffC5FDCE),
-              classInfo: Class(
-                  name: 'マーケティング',
-                  classDocumentList: marketingDocumentListInC,
-                  classImgUrl: 'marketing.png',
-                  weakDay: '月曜日',
-                  targetStudentList: studentList),
+            Row(
+              children: [
+                UnSelectedTimeTableHeaderColumn(
+                  start: '9:30',
+                  timeTable: 1,
+                  end: '10:20',
+                ),
+                SpaceBox(width: 8),
+                Lesson(
+                  classInfo: Class(name: 'S高サポート'),
+                  color: Colors.grey,
+                ),
+              ],
             ),
             SpaceBox(height: 4.sp),
-            Lesson(
-              color: Color(0xffC5FDCE),
-              classInfo: Class(
-                  name: 'マーケティング',
-                  classDocumentList: marketingDocumentListInC,
-                  classImgUrl: 'marketing.png',
-                  weakDay: '月曜日',
-                  targetStudentList: studentList),
+            Row(
+              children: [
+                UnSelectedTimeTableHeaderColumn(
+                  start: '10:30',
+                  timeTable: 2,
+                  end: '11:20',
+                ),
+                SpaceBox(width: 8),
+                Lesson(
+                  color: Color(0xffC5FDCE),
+                  classInfo: Class(
+                      name: 'マーケティング',
+                      classDocumentList: marketingDocumentListInC,
+                      classImgUrl: 'marketing.png',
+                      targetStudentList: studentList,
+                      weakDay: ['月']),
+                ),
+              ],
             ),
             SpaceBox(height: 4.sp),
-            Normal(),
+            Row(
+              children: [
+                UnSelectedTimeTableHeaderColumn(
+                  start: '11:30',
+                  timeTable: 3,
+                  end: '12:20',
+                ),
+                SpaceBox(width: 8),
+                Lesson(
+                  color: Color(0xffC5FDCE),
+                  classInfo: Class(
+                    name: 'マーケティング',
+                    classDocumentList: marketingDocumentListInC,
+                    classImgUrl: 'marketing.png',
+                    targetStudentList: studentList,
+                    weakDay: ['月'],
+                  ),
+                ),
+              ],
+            ),
             SpaceBox(height: 4.sp),
-            Normal(),
+            Row(
+              children: [
+                UnSelectedTimeTableHeaderColumn(
+                  start: '13:30',
+                  timeTable: 4,
+                  end: '14:20',
+                ),
+                SpaceBox(width: 8),
+                Normal(),
+              ],
+            ),
             SpaceBox(height: 4.sp),
-            Normal(),
+            Row(
+              children: [
+                UnSelectedTimeTableHeaderColumn(
+                  start: '14:30',
+                  timeTable: 5,
+                  end: '15:20',
+                ),
+                SpaceBox(width: 8),
+                Normal(),
+              ],
+            ),
+            SpaceBox(height: 4.sp),
+            Row(
+              children: [
+                UnSelectedTimeTableHeaderColumn(
+                  start: '15:30',
+                  timeTable: 6,
+                  end: '16:20',
+                ),
+                SpaceBox(width: 8),
+                Normal(),
+              ],
+            ),
             SpaceBox(height: 4.sp),
           ],
         ),
-        SpaceBox(width: 2.sp),
+        SpaceBox(width: 2),
         Column(
           children: [
             TimetableHeaderRow(weakDay: '火'),
@@ -65,8 +133,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'Webデザイン',
                   classDocumentList: WebDesignDocumentListInC,
                   classImgUrl: 'wordpress-g1155af3be_1920.jpg',
-                  weakDay: '火曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['火曜日']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -75,8 +143,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'Webデザイン',
                   classDocumentList: WebDesignDocumentListInC,
                   classImgUrl: 'wordpress-g1155af3be_1920.jpg',
-                  weakDay: '火曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['火曜日']),
             ),
             SpaceBox(height: 4.sp),
             Normal(),
@@ -87,9 +155,9 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'プログラミング',
                   classRoom: '',
                   classDocumentList: programmingDocumentListInBasicC,
-                  classImgUrl: 'programming-jpg',
-                  weakDay: '火曜日',
-                  targetStudentList: studentList),
+                  classImgUrl: 'programming.jpg',
+                  targetStudentList: studentList,
+                  weakDay: ['火曜日']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -98,14 +166,14 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'プログラミング',
                   classRoom: '',
                   classDocumentList: programmingDocumentListInBasicC,
-                  classImgUrl: 'programming-jpg',
-                  weakDay: '火曜日',
-                  targetStudentList: studentList),
+                  classImgUrl: 'programming.jpg',
+                  targetStudentList: studentList,
+                  weakDay: ['火曜日']),
             ),
             SpaceBox(height: 4.sp),
           ],
         ),
-        SpaceBox(width: 2.sp),
+        SpaceBox(width: 2),
         Column(
           children: [
             TimetableHeaderRow(weakDay: '水'),
@@ -116,8 +184,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'ITパスポート',
                   classDocumentList: ITPassportDocumentListInBasicC,
                   classImgUrl: 'passport.png',
-                  weakDay: '水曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['水']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -126,8 +194,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'ITパスポート',
                   classDocumentList: ITPassportDocumentListInBasicC,
                   classImgUrl: 'passport.png',
-                  weakDay: '水曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['水']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -144,8 +212,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   classRoom: '',
                   classDocumentList: programmingDocumentListInBasicC,
                   classImgUrl: 'programming.jpg',
-                  weakDay: '水曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['水']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -154,13 +222,13 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                     name: 'プログラミング',
                     classRoom: '',
                     classDocumentList: programmingDocumentListInBasicC,
-                    classImgUrl: 'programming.jpg,',
-                    weakDay: '水曜日',
-                    targetStudentList: studentList)),
+                    classImgUrl: 'programming.jpg',
+                    targetStudentList: studentList,
+                    weakDay: ['水'])),
             SpaceBox(height: 4.sp),
           ],
         ),
-        SpaceBox(width: 2.sp),
+        SpaceBox(width: 2),
         Column(
           children: [
             TimetableHeaderRow(weakDay: '木'),
@@ -172,8 +240,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   classRoom: '',
                   classDocumentList: programmingDocumentListInBasicC,
                   classImgUrl: 'programming.jpg',
-                  weakDay: '木曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['木曜日']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -183,8 +251,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   classRoom: '',
                   classDocumentList: programmingDocumentListInBasicC,
                   classImgUrl: 'programming.jpg',
-                  weakDay: '木曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['木曜日']),
             ),
             SpaceBox(height: 4.sp),
             Normal(),
@@ -195,8 +263,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'アートシンキング',
                   classDocumentList: artThinkingDocumentListInC,
                   classImgUrl: 'art-thinking.png',
-                  weakDay: '木曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['木曜日']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -205,15 +273,15 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'アートシンキング',
                   classDocumentList: artThinkingDocumentListInC,
                   classImgUrl: 'art-thinking.png',
-                  weakDay: '木曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['木曜日']),
             ),
             SpaceBox(height: 4.sp),
             Normal(),
             SpaceBox(height: 4.sp),
           ],
         ),
-        SpaceBox(width: 2.sp),
+        SpaceBox(width: 2),
         Column(
           children: [
             TimetableHeaderRow(weakDay: '金'),
@@ -226,8 +294,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'デザインシンキング',
                   classDocumentList: designThinkingDocumentListInBasicC,
                   classImgUrl: 'design-thinking.jpg',
-                  weakDay: '金曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['金曜日']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -236,8 +304,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   name: 'デザインシンキング',
                   classDocumentList: designThinkingDocumentListInBasicC,
                   classImgUrl: 'design-thinking.jpg',
-                  weakDay: '金曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['金曜日']),
             ),
             SpaceBox(height: 4.sp),
             Normal(),
@@ -249,8 +317,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   classRoom: '',
                   classDocumentList: programmingDocumentListInBasicC,
                   classImgUrl: 'programming.jpg',
-                  weakDay: '金曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['金曜日']),
             ),
             SpaceBox(height: 4.sp),
             Lesson(
@@ -260,8 +328,8 @@ class TimetableContentCaseOfBasicC extends StatelessWidget {
                   classRoom: '',
                   classDocumentList: programmingDocumentListInBasicC,
                   classImgUrl: 'programming.jpg',
-                  weakDay: '金曜日',
-                  targetStudentList: studentList),
+                  targetStudentList: studentList,
+                  weakDay: ['金曜日']),
             ),
             SpaceBox(height: 4.sp),
           ],

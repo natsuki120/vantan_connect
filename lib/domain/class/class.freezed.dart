@@ -22,7 +22,7 @@ Class _$ClassFromJson(Map<String, dynamic> json) {
 mixin _$Class {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get weakDay => throw _privateConstructorUsedError;
+  List<dynamic> get weakDay => throw _privateConstructorUsedError;
   String get classRoom => throw _privateConstructorUsedError;
   String get classImgUrl => throw _privateConstructorUsedError;
   String get overView => throw _privateConstructorUsedError;
@@ -59,7 +59,7 @@ abstract class $ClassCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
-      String weakDay,
+      List<dynamic> weakDay,
       String classRoom,
       String classImgUrl,
       String overView,
@@ -133,7 +133,7 @@ class _$ClassCopyWithImpl<$Res, $Val extends Class>
       weakDay: null == weakDay
           ? _value.weakDay
           : weakDay // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<dynamic>,
       classRoom: null == classRoom
           ? _value.classRoom
           : classRoom // ignore: cast_nullable_to_non_nullable
@@ -231,7 +231,7 @@ abstract class _$$_ClassCopyWith<$Res> implements $ClassCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
-      String weakDay,
+      List<dynamic> weakDay,
       String classRoom,
       String classImgUrl,
       String overView,
@@ -299,9 +299,9 @@ class __$$_ClassCopyWithImpl<$Res> extends _$ClassCopyWithImpl<$Res, _$_Class>
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       weakDay: null == weakDay
-          ? _value.weakDay
+          ? _value._weakDay
           : weakDay // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<dynamic>,
       classRoom: null == classRoom
           ? _value.classRoom
           : classRoom // ignore: cast_nullable_to_non_nullable
@@ -396,7 +396,7 @@ class _$_Class implements _Class {
   const _$_Class(
       {this.id = '',
       this.name = '',
-      this.weakDay = '',
+      final List<dynamic> weakDay = const [],
       this.classRoom = '',
       this.classImgUrl = '',
       this.overView = '',
@@ -418,7 +418,8 @@ class _$_Class implements _Class {
       final List<Map<String, dynamic>> document = const [],
       final List<dynamic> startTimeList = const [],
       final List<dynamic> endTimeList = const []})
-      : _classDocumentList = classDocumentList,
+      : _weakDay = weakDay,
+        _classDocumentList = classDocumentList,
         _studentIdList = studentIdList,
         _teacherIdList = teacherIdList,
         _targetStudentList = targetStudentList,
@@ -437,9 +438,15 @@ class _$_Class implements _Class {
   @override
   @JsonKey()
   final String name;
+  final List<dynamic> _weakDay;
   @override
   @JsonKey()
-  final String weakDay;
+  List<dynamic> get weakDay {
+    if (_weakDay is EqualUnmodifiableListView) return _weakDay;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_weakDay);
+  }
+
   @override
   @JsonKey()
   final String classRoom;
@@ -572,7 +579,7 @@ class _$_Class implements _Class {
             other is _$_Class &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.weakDay, weakDay) || other.weakDay == weakDay) &&
+            const DeepCollectionEquality().equals(other._weakDay, _weakDay) &&
             (identical(other.classRoom, classRoom) ||
                 other.classRoom == classRoom) &&
             (identical(other.classImgUrl, classImgUrl) ||
@@ -621,7 +628,7 @@ class _$_Class implements _Class {
         runtimeType,
         id,
         name,
-        weakDay,
+        const DeepCollectionEquality().hash(_weakDay),
         classRoom,
         classImgUrl,
         overView,
@@ -663,7 +670,7 @@ abstract class _Class implements Class {
   const factory _Class(
       {final String id,
       final String name,
-      final String weakDay,
+      final List<dynamic> weakDay,
       final String classRoom,
       final String classImgUrl,
       final String overView,
@@ -693,7 +700,7 @@ abstract class _Class implements Class {
   @override
   String get name;
   @override
-  String get weakDay;
+  List<dynamic> get weakDay;
   @override
   String get classRoom;
   @override

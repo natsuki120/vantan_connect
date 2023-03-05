@@ -95,3 +95,12 @@ final secondProvider = StreamProvider<String>((ref) async* {
     //表示例 15   ※秒は含まれない
   );
 });
+
+final weekProvider = StreamProvider((ref) {
+  initializeDateFormatting('ja');
+  return Stream.periodic(Duration(days: 1), (_) {
+    var now = DateTime.now();
+    var weekday = DateFormat.E().format(now);
+    return weekday;
+  });
+});

@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vantan_connect/component/local/grades_table/grades_table_body/elements/todays_lesson/elements/elements/todays_lesson_list/hooks/hooks.dart';
 import 'package:vantan_connect/component/shared/single/riverpod/riverpod.dart';
+import 'package:vantan_connect/component/shared/single/student_list/student_list.dart';
+import 'package:vantan_connect/component/shared/single/test_data/test_data.dart';
 import 'package:vantan_connect/domain/class_document/class_document.dart';
 import 'package:vantan_connect/domain/riverpod_argument/class_and_document/class_and_document.dart';
 import '../../../../../../../../shared/single/color/color.dart';
@@ -28,52 +30,46 @@ class TodaysLessonList extends ConsumerWidget {
                 itemCount: data.length <= 3 ? data.length : 3,
                 itemBuilder: (BuildContext context, int index) {
                   var classInfo = data[index];
+                  final attendedStudent = ref.watch(
+                    fetchStudentAttendanceByClass(
+                      ClassAndDocument(
+                        classInfo: classInfo,
+                        classDocument: ClassDocument(day: testClassDocument),
+                      ),
+                    ),
+                  );
+                  final absentStudent = ref.watch(
+                    fetchStudentNotAttendanceByClass(
+                      ClassAndDocument(
+                        classInfo: classInfo,
+                        classDocument: ClassDocument(day: testClassDocument),
+                      ),
+                    ),
+                  );
                   return ref.watch(today).when(
                         data: (today) {
                           return TodaysLessonCard(
                             classInfo: classInfo,
-                            attendanceClassmate: ref
-                                .watch(fetchStudentAttendanceByClass(
-                                    ClassAndDocument(
-                                  classInfo: classInfo,
-                                  classDocument: ClassDocument(day: '2月16日'),
-                                )))
-                                .when(
-                                  data: (data) => Text(
-                                      '${data.length.toString()}人',
-                                      style: headerMedium(midEmphasis)),
-                                  error: (error, stack) => Text('error',
-                                      style: headerMedium(midEmphasis)),
-                                  loading: () => CircularProgressIndicator(),
-                                ),
-                            tardyClassmate: ref
-                                .watch(fetchStudentNotAttendanceByClass(
-                                    ClassAndDocument(
-                                  classInfo: classInfo,
-                                  classDocument: today,
-                                )))
-                                .when(
-                                  data: (data) => Text(
-                                      '${data.length.toString()}人',
-                                      style: headerMedium(midEmphasis)),
-                                  error: (error, stack) => Text('error',
-                                      style: headerMedium(midEmphasis)),
-                                  loading: () => CircularProgressIndicator(),
-                                ),
-                            otherClassmate: ref
-                                .watch(
-                                    fetchStudentOtherByClass(ClassAndDocument(
-                                  classInfo: classInfo,
-                                  classDocument: today,
-                                )))
-                                .when(
-                                  data: (data) => Text(
-                                      '${data.length.toString()}人',
-                                      style: headerMedium(midEmphasis)),
-                                  error: (error, stack) => Text('error',
-                                      style: headerMedium(midEmphasis)),
-                                  loading: () => CircularProgressIndicator(),
-                                ),
+                            attendanceClassmate: attendedStudent.when(
+                              data: (data) => Text('${data.length.toString()}人',
+                                  style: headerMedium(midEmphasis)),
+                              error: (error, stack) => Text('error',
+                                  style: headerMedium(midEmphasis)),
+                              loading: () => CircularProgressIndicator(),
+                            ),
+                            tardyClassmate: absentStudent.when(
+                              data: (data) => Text('${data.length.toString()}人',
+                                  style: headerMedium(midEmphasis)),
+                              error: (error, stack) => Text('error',
+                                  style: headerMedium(midEmphasis)),
+                              loading: () => CircularProgressIndicator(),
+                            ),
+                            otherClassmate: attendedStudent.value == null ||
+                                    absentStudent.value == null
+                                ? CircularProgressIndicator()
+                                : Text(
+                                    '${studentList.length - absentStudent.value!.length - attendedStudent.value!.length}人',
+                                    style: headerMedium(midEmphasis)),
                           );
                         },
                         error: (err, stack) => Text('読み込みエラーです。開発者にお問合せください'),
@@ -84,7 +80,10 @@ class TodaysLessonList extends ConsumerWidget {
             ),
           );
         },
-        error: (error, stack) => Text(error.toString()),
+        error: (error, stack) {
+          print(error);
+          return Text(error.toString());
+        },
         loading: () => CircularProgressIndicator());
   }
 }

@@ -20,7 +20,7 @@ class Lesson extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    AsyncValue studentAttendance = ref.watch(
+    AsyncValue<Student> studentAttendance = ref.watch(
       queryServiceProvider(
         StudentAttendance(
             student: ref.watch(myAccountProvider.notifier).state,
@@ -30,12 +30,14 @@ class Lesson extends ConsumerWidget {
     return GestureDetector(
       // TODO
       onTap: () {
-        if (classInfo.name != '昼休憩' && classInfo.name != 'S校サポート')
+        if (classInfo.name != '昼休憩' &&
+            classInfo.name != 'S高サポート' &&
+            classInfo.name != 'HR')
           attendanceModal(
               context,
               classInfo,
               ref,
-              Student(id: '高橋夏輝', name: '高橋夏輝'),
+              ref.watch(myAccountProvider.notifier).state,
               ClassName(name: classInfo.name),
               studentAttendance);
       },
@@ -61,7 +63,6 @@ class Lesson extends ConsumerWidget {
                 ],
               ),
             ),
-            SpaceBox(height: 8.sp),
           ],
         ),
       ),

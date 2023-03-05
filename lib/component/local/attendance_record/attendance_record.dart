@@ -59,7 +59,7 @@ class AttendanceRecord extends HookConsumerWidget {
                   classInfo: classInfo,
                   classDocument: classDocument,
                 ),
-              if (selectedAttendanceButtonText == '遅刻')
+              if (selectedAttendanceButtonText == 'その他')
                 OtherStudentList(
                   classInfo: classInfo,
                   classDocument: classDocument,
