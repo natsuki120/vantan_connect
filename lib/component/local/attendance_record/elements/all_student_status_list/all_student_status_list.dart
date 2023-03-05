@@ -33,11 +33,13 @@ class AllStudentList extends ConsumerWidget {
                       return AttendedStudent(student: student);
                     else if (data.attendanceState == '遅刻')
                       return LateAttendedStudent(student: student);
-                  } else if (data.attendanceState == '欠席') {
-                    return NotAttendedStudent(student: student);
-                  } else {
-                    return OtherStudent(student: student);
+                    else if (data.attendanceState == '欠席') {
+                      return NotAttendedStudent(student: student);
+                    } else {
+                      return OtherStudent(student: student);
+                    }
                   }
+                return Container();
               }),
           error: (error, _) => Icon(Icons.error),
           loading: () => CircularProgressIndicator(),
