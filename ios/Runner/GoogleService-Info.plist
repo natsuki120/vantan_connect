@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>155305456263-b6m37ao0pgurtrtg338g7kr6juj2me7h.apps.googleusercontent.com</string>
+	<string>155305456263-rbfrf7gabarg68433ip8ijc753oosa1v.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.155305456263-b6m37ao0pgurtrtg338g7kr6juj2me7h</string>
+	<string>com.googleusercontent.apps.155305456263-rbfrf7gabarg68433ip8ijc753oosa1v</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCzoHm7BCmudW-dlPdXUZGur2Xwle4jQkE</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.vantanConnect</string>
+	<string>com.example.vantanConnectForMac</string>
 	<key>PROJECT_ID</key>
 	<string>vantan-connect</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:155305456263:ios:b34d2a78982232b9a1be22</string>
+	<string>1:155305456263:ios:c2d121092d6b1296a1be22</string>
 </dict>
 </plist>

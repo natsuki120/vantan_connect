@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vantan_connect/infrastructure/fake_class_repository.dart';
-import '../../domain/class/class.dart';
-import 'class_use_case.dart';
+
+import '/domain/class/class.dart';
+import '../../infrastructure/actor/class_repository.dart';
 
 class SelectableClassNotifier extends StateNotifier<List<Class>> {
   SelectableClassNotifier(this.classRepository) : super([]);
@@ -19,6 +19,6 @@ class SelectableClassNotifier extends StateNotifier<List<Class>> {
 
 final selectableClass = StateNotifierProvider(
   (ref) => SelectableClassNotifier(
-    FakeClassRepository(testClassList),
+    ClassRepository(),
   ),
 );
